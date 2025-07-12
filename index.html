@@ -1,1 +1,220 @@
-<p>hi</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OT Vibez Studio | Edmonton Recording Studio for Artists, Bands & Creators</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="OT Vibez Studio is a premium recording studio in Edmonton offering professional-grade space for artists, bands, and creators. Book your session today." />
+  <meta name="keywords" content="recording studio Edmonton, music studio Edmonton, book studio session, artist recording space, band studio Edmonton, OT Vibez Studio" />
+  <meta name="author" content="OT Vibez Studio" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="OT Vibez Studio | Record. Create. Elevate." />
+  <meta property="og:description" content="Edmonton-based recording studio for artists, bands, and creatives. Book professional sessions with ease." />
+  <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets\images\favicon.ico" type="image/x-icon" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
+</head>
+<body class="bg-white text-black font-sans antialiased">
+
+<!-- Header -->
+<header class="w-full py-6 px-6 bg-white/80 backdrop-blur-lg sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center relative">
+    <!-- Logo -->
+    <a href="/" aria-label="OT Vibez Studio Home">
+      <img src="assets/images/ot-vibez-logo.svg" alt="OT Vibez Logo" class="h-12 sm:h-16 w-auto">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide text-black">
+  <a href="#services" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
+    Services
+    <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
+  </a>
+  <a href="#booking" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
+    Booking
+    <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
+  </a>
+  <a href="#contact" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
+    Contact
+    <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
+  </a>
+</nav>
+
+
+    <!-- Stylized Mobile Menu Button (Stair-Step Style) -->
+<button id="mobile-btn" class="md:hidden relative z-50 w-10 h-10 flex flex-col justify-center items-center group">
+  <!-- Top bar -->
+  <span class="bar top absolute w-6 h-0.5 bg-black rounded transition-all duration-300 ease-in-out -translate-y-2"></span>
+  <!-- Middle bar -->
+  <span class="bar middle absolute w-5 h-0.5 bg-black rounded transition-all duration-300 ease-in-out"></span>
+  <!-- Bottom bar -->
+  <span class="bar bottom absolute w-4 h-0.5 bg-black rounded transition-all duration-300 ease-in-out translate-y-2"></span>
+</button>
+
+
+    <!-- Mobile Dropdown -->
+<div
+  id="dropdown-menu"
+  class="absolute right-0 top-[4.5rem] w-64 bg-white/90 backdrop-blur-2xl border border-black/10 rounded-2xl shadow-2xl py-6 px-6 flex flex-col space-y-3 text-black text-base opacity-0 pointer-events-none z-40 scale-y-0 origin-top transition-all duration-300"
+>
+  <a href="#services" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-semibold tracking-wide text-left">Services</a>
+  <div class="h-px bg-black/10"></div>
+
+  <a href="#booking" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-semibold tracking-wide text-left">Booking</a>
+  <div class="h-px bg-black/10"></div>
+
+  <a href="#contact" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-semibold tracking-wide text-left">Contact</a>
+</div>
+
+
+
+</header>
+
+<!-- Toggle Script -->
+<script>
+  const mobileBtn = document.getElementById("mobile-btn");
+  const dropdownMenu = document.getElementById("dropdown-menu");
+  const bars = mobileBtn.querySelectorAll(".bar");
+
+  function toggleDropdown() {
+    const isOpen = !dropdownMenu.classList.contains("opacity-0");
+
+    if (isOpen) {
+      dropdownMenu.classList.add("opacity-0", "pointer-events-none", "scale-y-0");
+      bars[0].classList.remove("rotate-45", "translate-y-2");
+      bars[1].classList.remove("opacity-0");
+      bars[2].classList.remove("-rotate-45", "-translate-y-2");
+    } else {
+      dropdownMenu.classList.remove("opacity-0", "pointer-events-none", "scale-y-0");
+      bars[0].classList.add("rotate-45", "translate-y-2");
+      bars[1].classList.add("opacity-0");
+      bars[2].classList.add("-rotate-45", "-translate-y-2");
+    }
+  }
+
+  mobileBtn.addEventListener("click", toggleDropdown);
+</script>
+
+
+
+<!-- Font Awesome CDN for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Footer -->
+<footer class="w-full bg-white text-gray-600 py-10 px-6 text-sm">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    
+    <!-- Left -->
+    <div class="text-center md:text-left">
+      <p class="mb-1">&copy; 2025 <span class="text-black font-semibold">OT Vibez Studio</span>. All rights reserved.</p>
+      <p class="text-xs text-gray-500">Recording. Engineering. Vibes that hit.</p>
+    </div>
+
+    <!-- Right -->
+    <div class="text-center md:text-right text-xs space-y-2">
+      <a href="mailto:otvibezstudio@example.com" class="hover:text-black transition block">otvibezstudio@example.com</a>
+
+      <!-- Social Links with Icons -->
+      <div class="flex justify-center md:justify-end items-center space-x-4 mt-2 text-lg">
+        <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener" class="text-gray-500 hover:text-pink-600 transition" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@otvibezstudio?_t=8hoLadFHSy6&_r=1" target="_blank" rel="noopener" class="text-gray-500 hover:text-black transition" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-700 transition" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="space-x-3 mt-2">
+        <a href="/privacy-policy.html" class="hover:text-black transition">Privacy Policy</a>
+        <span class="text-gray-400">|</span>
+        <a href="/terms.html" class="hover:text-black transition">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- AOS Init -->
+<script>
+  AOS.init({ once: true, duration: 800 });
+</script>
+
+<!-- Pixel Animations -->
+<style>
+  @layer utilities {
+    @keyframes pixel-open {
+      0% {
+        transform: scaleY(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scaleY(0.5);
+        opacity: 0.3;
+      }
+      100% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes pixel-close {
+      0% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scaleY(0.5);
+        opacity: 0.3;
+      }
+      100% {
+        transform: scaleY(0);
+        opacity: 0;
+      }
+    }
+
+    .animate-pixel-open {
+      animation: pixel-open 300ms steps(5, end) forwards;
+      transform-origin: top;
+    }
+
+    .animate-pixel-close {
+      animation: pixel-close 300ms steps(5, end) forwards;
+      transform-origin: top;
+    }
+
+    .menu-open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+  }
+</style>
+
+</body>
+</html>
