@@ -161,9 +161,29 @@
 <!-- Include Typed.js from CDN -->
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-<section class="relative w-full bg-white text-black px-4 pt-[calc(50vh-180px)] pb-[100px]">
+<section class="relative w-full bg-white text-black px-4 pt-[calc(40vh-180px)] pb-[100px] overflow-hidden">
+
+  <!-- Animated SVG Waveform Background -->
+  <svg class="absolute top-[-80px] left-0 w-full h-[200px] z-[-1] opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path 
+      fill="none" 
+      stroke="black" 
+      stroke-width="2"
+      stroke-dasharray="12 6"
+      stroke-dashoffset="0"
+      d="M0,160 C180,260 360,60 540,160 C720,260 900,60 1080,160 C1260,260 1440,60 1620,160">
+      <animate 
+        attributeName="stroke-dashoffset" 
+        from="0" 
+        to="-200" 
+        dur="4s" 
+        repeatCount="indefinite" />
+    </path>
+  </svg>
+
+
   <!-- Hero Content -->
-  <div class="w-full max-w-4xl mx-auto text-center flex flex-col items-center">
+<div class="relative z-0 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
     <h1 class="font-heading text-4xl sm:text-6xl font-extrabold mb-4 leading-tight tracking-tight" data-aos="fade-up">
       Craft Your Sound.<br />
       <span class="text-neutral-700">
@@ -175,7 +195,7 @@
       OT Vibez Studio is Edmonton’s go-to space for artists, bands, and creatives who take their sound seriously.
     </p>
 
-    <!-- CTA + Scroll Indicator in one flex container -->
+    <!-- CTA + Scroll Indicator -->
     <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
       <a href="#booking"
          class="font-heading inline-block bg-black text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-neutral-800 transition-all duration-300 shadow-lg">
@@ -192,6 +212,7 @@
     </div>
   </div>
 </section>
+
 
 
 
@@ -248,19 +269,30 @@
 </script>
 
 <!-- Featured Services -->
-<section id="services" class="font-heading py-20 bg-white text-black ">
+<section id="services" class="font-heading py-20 bg-white text-black">
   <div class="max-w-7xl mx-auto px-6">
-   <!-- Premium Section Title -->
-<div class="text-center mb-16" data-aos="fade-up">
-  <!-- Tiny Sub‐heading -->
-  <p class="text-xs uppercase text-gray-500 tracking-widest mb-2">What We Offer</p>
+    
+    <!-- Premium Section Title -->
+    <div class="relative text-center mb-16" data-aos="fade-up">
+      <!-- Subheading -->
+      <p class="text-xs uppercase text-gray-500 tracking-widest mb-2">What We Offer</p>
 
-  <!-- Main Title -->
-  <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider text-black px-4 mb-4">
-    Our Services
-    <!-- Underline Accent -->
-  </h2>
-</div>
+      <!-- Animated SVG Background -->
+      <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 stroke-black/10 -z-10 pointer-events-none" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="85" stroke-width="1.2" stroke-dasharray="534" stroke-dashoffset="534">
+          <animate attributeName="stroke-dashoffset" from="534" to="0" dur="6s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="100" cy="100" r="60" stroke-width="0.8" stroke-dasharray="377" stroke-dashoffset="377">
+          <animate attributeName="stroke-dashoffset" from="377" to="0" dur="8s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+
+      <!-- Main Title -->
+      <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider text-black px-4 mb-4">
+        Our Services
+      </h2>
+    </div>
+
 
 
 
@@ -352,6 +384,99 @@
     </div>
   </div>
 </section>
+
+<!-- Why Choose OT Vibez -->
+<section id="why" class="font-heading py-20 bg-white text-black">
+  <div class="max-w-7xl mx-auto px-6">
+    
+   <!-- Section Header -->
+<div class="relative text-center mb-16" data-aos="fade-up">
+  <!-- Subheading -->
+  <p class="text-xs uppercase text-gray-500 tracking-widest mb-2">What Sets Us Apart</p>
+
+  <!-- Animated Stroke SVG Background -->
+  <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 stroke-black/10 -z-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="90" stroke-width="1" stroke-dasharray="565" stroke-dashoffset="565">
+      <animate attributeName="stroke-dashoffset" from="565" to="0" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="100" cy="100" r="70" stroke-width="0.5" stroke-dasharray="440" stroke-dashoffset="440">
+      <animate attributeName="stroke-dashoffset" from="440" to="0" dur="7s" repeatCount="indefinite" />
+    </circle>
+  </svg>
+
+  <!-- Main Heading -->
+  <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider text-black px-4 mb-4">
+    Why Choose OT Vibez
+  </h2>
+</div>
+
+
+
+
+    <!-- Feature Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- Feature: Engineers -->
+      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
+                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
+           data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
+                    group-hover:bg-black/10 transition-colors duration-300">
+          <i class="fas fa-headphones-alt text-2xl text-black"></i>
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Professional Engineers</h3>
+        <p class="text-sm text-black/60 leading-relaxed">
+          Work with expert audio engineers who bring your sound to life.
+        </p>
+      </div>
+
+      <!-- Feature: Equipment -->
+      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
+                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
+           data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
+                    group-hover:bg-black/10 transition-colors duration-300">
+          <i class="fas fa-bolt text-2xl text-black"></i>
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Top-Tier Gear</h3>
+        <p class="text-sm text-black/60 leading-relaxed">
+          Industry-grade mics, preamps, and software — no compromises.
+        </p>
+      </div>
+
+      <!-- Feature: Vibe -->
+      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
+                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
+           data-aos="fade-up" data-aos-delay="300">
+        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
+                    group-hover:bg-black/10 transition-colors duration-300">
+          <i class="fas fa-heart text-2xl text-black"></i>
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Artist-Centered Vibe</h3>
+        <p class="text-sm text-black/60 leading-relaxed">
+          Chill, creative, and inspiring — designed with musicians in mind.
+        </p>
+      </div>
+
+      <!-- Feature: Community -->
+      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
+                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
+           data-aos="fade-up" data-aos-delay="400">
+        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
+                    group-hover:bg-black/10 transition-colors duration-300">
+          <i class="fas fa-users text-2xl text-black"></i>
+        </div>
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Local Artist Hub</h3>
+        <p class="text-sm text-black/60 leading-relaxed">
+          A place where Edmonton’s music scene connects, grows, and levels up.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 
 <!-- Footer -->
