@@ -200,28 +200,68 @@
 
   <!-- Hero Content -->
 <div class="relative z-0 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-   <!-- Complex Sound Wave SVG Background -->
-  <svg class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-10 w-[130%] max-w-[900px] opacity-10 pointer-events-none"
-       viewBox="0 0 900 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M0,100 
-         C30,60 70,140 100,100 
-         S170,60 200,100 
-         S270,140 300,100 
-         S370,60 400,100 
-         S470,140 500,100 
-         S570,60 600,100 
-         S670,140 700,100 
-         S770,60 800,100 
-         S870,140 900,100"
-      stroke="black"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-dasharray="12 6"
-      stroke-dashoffset="0">
-      <animate attributeName="stroke-dashoffset" values="0;-18" dur="3s" repeatCount="indefinite" />
-    </path>
-  </svg>    
+   <!-- Complex Multi-Line Audio Wave SVG Background -->
+<svg class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-10 w-[130%] max-w-[900px] opacity-10 pointer-events-none z-0"
+     viewBox="0 0 900 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- Line 1 -->
+  <path d="M0,100 
+           C50,60 150,140 200,100 
+           S350,60 400,100 
+           S550,140 600,100 
+           S750,60 800,100 
+           S850,140 900,100" 
+        stroke="black" stroke-width="1.5" stroke-linecap="round">
+    <animate attributeName="d"
+             dur="5s"
+             repeatCount="indefinite"
+             values="
+               M0,100 C50,60 150,140 200,100 S350,60 400,100 S550,140 600,100 S750,60 800,100 S850,140 900,100;
+               M0,100 C50,80 150,120 200,100 S350,80 400,100 S550,120 600,100 S750,80 800,100 S850,120 900,100;
+               M0,100 C50,40 150,160 200,100 S350,40 400,100 S550,160 600,100 S750,40 800,100 S850,160 900,100;
+               M0,100 C50,60 150,140 200,100 S350,60 400,100 S550,140 600,100 S750,60 800,100 S850,140 900,100"
+    />
+  </path>
+
+  <!-- Line 2 -->
+  <path d="M0,120 
+           C70,80 130,160 200,120 
+           S330,80 400,120 
+           S530,160 600,120 
+           S730,80 800,120 
+           S870,160 900,120" 
+        stroke="black" stroke-width="1" stroke-linecap="round">
+    <animate attributeName="d"
+             dur="6s"
+             repeatCount="indefinite"
+             values="
+               M0,120 C70,80 130,160 200,120 S330,80 400,120 S530,160 600,120 S730,80 800,120 S870,160 900,120;
+               M0,120 C70,100 130,140 200,120 S330,100 400,120 S530,140 600,120 S730,100 800,120 S870,140 900,120;
+               M0,120 C70,60 130,180 200,120 S330,60 400,120 S530,180 600,120 S730,60 800,120 S870,180 900,120;
+               M0,120 C70,80 130,160 200,120 S330,80 400,120 S530,160 600,120 S730,80 800,120 S870,160 900,120"
+    />
+  </path>
+
+  <!-- Line 3 -->
+  <path d="M0,140 
+           C50,100 150,180 200,140 
+           S350,100 400,140 
+           S550,180 600,140 
+           S750,100 800,140 
+           S850,180 900,140" 
+        stroke="black" stroke-width="0.8" stroke-linecap="round">
+    <animate attributeName="d"
+             dur="7s"
+             repeatCount="indefinite"
+             values="
+               M0,140 C50,100 150,180 200,140 S350,100 400,140 S550,180 600,140 S750,100 800,140 S850,180 900,140;
+               M0,140 C50,120 150,160 200,140 S350,120 400,140 S550,160 600,140 S750,120 800,140 S850,160 900,140;
+               M0,140 C50,80 150,200 200,140 S350,80 400,140 S550,200 600,140 S750,80 800,140 S850,200 900,140;
+               M0,140 C50,100 150,180 200,140 S350,100 400,140 S550,180 600,140 S750,100 800,140 S850,180 900,140"
+    />
+  </path>
+</svg>
+    
   <h1 class="font-heading text-4xl sm:text-6xl font-extrabold mb-4 leading-tight tracking-tight relative z-10" data-aos="fade-up">
     Craft Your Sound.<br />
     <span id="fade-word"
