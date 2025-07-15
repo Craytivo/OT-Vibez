@@ -200,10 +200,24 @@
 
   <!-- Hero Content -->
 <div class="relative z-0 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-    <h1 class="font-heading text-4xl sm:text-6xl font-extrabold mb-4 leading-tight tracking-tight" data-aos="fade-up">
-      Craft Your Sound.<br />
-      <span id="fade-word" class="font-mono italic font-medium text-inherit whitespace-nowrap transition-opacity duration-500 opacity-100 text-black font-heading text-inherit"></span>
-    </h1>
+  <!-- Sound Wave SVG Behind Title -->
+  <svg class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-6 w-full max-w-xl opacity-10 pointer-events-none"
+       viewBox="0 0 600 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,50 Q75,10 150,50 T300,50 T450,50 T600,50"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-dasharray="10 5"
+          stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="0;-15" dur="2s" repeatCount="indefinite" />
+    </path>
+  </svg>    
+  <h1 class="font-heading text-4xl sm:text-6xl font-extrabold mb-4 leading-tight tracking-tight relative z-10" data-aos="fade-up">
+    Craft Your Sound.<br />
+    <span id="fade-word"
+          class="font-mono italic font-medium whitespace-nowrap transition-opacity duration-500 opacity-100 text-black font-heading">
+    </span>
+  </h1>
 
     <p class="text-base sm:text-lg text-black/70 max-w-2xl mb-6" data-aos="fade-up" data-aos-delay="150">
       OT Vibez Studio is Edmonton’s go-to space for artists, bands, and creatives who take their sound seriously.
