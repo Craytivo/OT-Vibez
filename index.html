@@ -82,52 +82,58 @@
 <!-- Header -->
 <header id="site-header" class="w-full py-6 px-6 bg-white/30 backdrop-blur-xl sticky top-0 z-50 transition-all duration-300">
   <div class="max-w-6xl mx-auto flex justify-between items-center relative">
+    
     <!-- Logo -->
     <a href="/" aria-label="OT Vibez Studio Home">
       <img src="assets/images/ot-vibez-logo.svg" alt="OT Vibez Logo" class="h-20 sm:h-22 w-auto">
     </a>
 
     <!-- Desktop Nav -->
-<nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide text-black font-heading">  <a href="#services" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
-    Services
-    <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
-  </a>
-  <a href="#booking" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
-    Booking
-    <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
-  </a>
-  <a href="#contact" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
-    Contact
-    <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
-  </a>
-</nav>
+    <nav class="hidden md:flex space-x-8 text-sm font-heading tracking-wide text-black font-medium">
+      <a href="#services" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
+        Services
+        <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
+      </a>
+      <a href="#showcase" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
+        Gallery
+        <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
+      </a>
+      <a href="#booking" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
+        Booking
+        <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
+      </a>
+      <a href="#contact" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
+        Contact
+        <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
+      </a>
+    </nav>
 
+    <!-- Stylized Mobile Menu Button -->
+    <button id="mobile-btn" class="md:hidden relative z-50 w-10 h-10 flex flex-col justify-center items-center group">
+      <span class="bar top absolute w-6 h-0.5 bg-black rounded transition-all duration-300 ease-in-out -translate-y-2"></span>
+      <span class="bar middle absolute w-5 h-0.5 bg-black rounded transition-all duration-300 ease-in-out"></span>
+      <span class="bar bottom absolute w-4 h-0.5 bg-black rounded transition-all duration-300 ease-in-out translate-y-2"></span>
+    </button>
 
-    <!-- Stylized Mobile Menu Button (Stair-Step Style) -->
-<button id="mobile-btn" class="md:hidden relative z-50 w-10 h-10 flex flex-col justify-center items-center group">
-  <!-- Top bar -->
-  <span class="bar top absolute w-6 h-0.5 bg-black rounded transition-all duration-300 ease-in-out -translate-y-2"></span>
-  <!-- Middle bar -->
-  <span class="bar middle absolute w-5 h-0.5 bg-black rounded transition-all duration-300 ease-in-out"></span>
-  <!-- Bottom bar -->
-  <span class="bar bottom absolute w-4 h-0.5 bg-black rounded transition-all duration-300 ease-in-out translate-y-2"></span>
-</button>
+    <!-- Mobile Dropdown Menu -->
+    <div
+      id="dropdown-menu"
+      class="absolute right-0 top-[4.5rem] w-64 bg-white/90 backdrop-blur-2xl border border-black/10 rounded-2xl shadow-2xl py-6 px-6 flex flex-col space-y-3 text-black font-heading text-base opacity-0 pointer-events-none z-40 scale-y-0 origin-top transition-all duration-300"
+    >
+      <a href="#services" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-medium tracking-wide">Services</a>
+      <div class="h-px bg-black/10"></div>
 
+      <a href="#showcase" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-medium tracking-wide">Gallery</a>
+      <div class="h-px bg-black/10"></div>
 
-    <!-- Mobile Dropdown -->
-<div
-  id="dropdown-menu"
-  class="absolute right-0 top-[4.5rem] w-64 bg-white/90 backdrop-blur-2xl border border-black/10 rounded-2xl shadow-2xl py-6 px-6 flex flex-col space-y-3 text-black text-base opacity-0 pointer-events-none z-40 scale-y-0 origin-top transition-all duration-300"
->
-  <a href="#services" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-semibold tracking-wide text-left">Services</a>
-  <div class="h-px bg-black/10"></div>
+      <a href="#booking" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-medium tracking-wide">Booking</a>
+      <div class="h-px bg-black/10"></div>
 
-  <a href="#booking" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-semibold tracking-wide text-left">Booking</a>
-  <div class="h-px bg-black/10"></div>
-
-  <a href="#contact" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-semibold tracking-wide text-left">Contact</a>
-</div>
+      <a href="#contact" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-medium tracking-wide">Contact</a>
+    </div>
+  </div>
 </header>
+
 
 <style>
   .header-scroll {
@@ -201,19 +207,28 @@
   <!-- Hero Content -->
 <div class="relative z-0 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
    <!-- Complex Multi-Line Audio Wave SVG Background -->
-<svg class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-10 w-[130%] max-w-[900px] opacity-10 pointer-events-none z-0"
+<svg class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-10 w-[130%] max-w-[900px] opacity-20 pointer-events-none z-0"
      viewBox="0 0 900 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  
-  <!-- Line 1 -->
+
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="waveGradient" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4C8EFF" />
+      <stop offset="50%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#FF4C60" />
+    </linearGradient>
+  </defs>
+
+  <!-- Wave Line 1 -->
   <path d="M0,100 
            C50,60 150,140 200,100 
            S350,60 400,100 
            S550,140 600,100 
            S750,60 800,100 
-           S850,140 900,100" 
-        stroke="black" stroke-width="1.5" stroke-linecap="round">
+           S850,140 900,100"
+        stroke="url(#waveGradient)" stroke-width="2" stroke-linecap="round">
     <animate attributeName="d"
-             dur="5s"
+             dur="6s"
              repeatCount="indefinite"
              values="
                M0,100 C50,60 150,140 200,100 S350,60 400,100 S550,140 600,100 S750,60 800,100 S850,140 900,100;
@@ -223,41 +238,41 @@
     />
   </path>
 
-  <!-- Line 2 -->
-  <path d="M0,120 
-           C70,80 130,160 200,120 
-           S330,80 400,120 
-           S530,160 600,120 
-           S730,80 800,120 
-           S870,160 900,120" 
-        stroke="black" stroke-width="1" stroke-linecap="round">
-    <animate attributeName="d"
-             dur="6s"
-             repeatCount="indefinite"
-             values="
-               M0,120 C70,80 130,160 200,120 S330,80 400,120 S530,160 600,120 S730,80 800,120 S870,160 900,120;
-               M0,120 C70,100 130,140 200,120 S330,100 400,120 S530,140 600,120 S730,100 800,120 S870,140 900,120;
-               M0,120 C70,60 130,180 200,120 S330,60 400,120 S530,180 600,120 S730,60 800,120 S870,180 900,120;
-               M0,120 C70,80 130,160 200,120 S330,80 400,120 S530,160 600,120 S730,80 800,120 S870,160 900,120"
-    />
-  </path>
-
-  <!-- Line 3 -->
-  <path d="M0,140 
-           C50,100 150,180 200,140 
-           S350,100 400,140 
-           S550,180 600,140 
-           S750,100 800,140 
-           S850,180 900,140" 
-        stroke="black" stroke-width="0.8" stroke-linecap="round">
+  <!-- Wave Line 2 -->
+  <path d="M0,130 
+           C70,90 130,170 200,130 
+           S330,90 400,130 
+           S530,170 600,130 
+           S730,90 800,130 
+           S870,170 900,130"
+        stroke="url(#waveGradient)" stroke-width="1.5" stroke-linecap="round">
     <animate attributeName="d"
              dur="7s"
              repeatCount="indefinite"
              values="
-               M0,140 C50,100 150,180 200,140 S350,100 400,140 S550,180 600,140 S750,100 800,140 S850,180 900,140;
-               M0,140 C50,120 150,160 200,140 S350,120 400,140 S550,160 600,140 S750,120 800,140 S850,160 900,140;
-               M0,140 C50,80 150,200 200,140 S350,80 400,140 S550,200 600,140 S750,80 800,140 S850,200 900,140;
-               M0,140 C50,100 150,180 200,140 S350,100 400,140 S550,180 600,140 S750,100 800,140 S850,180 900,140"
+               M0,130 C70,90 130,170 200,130 S330,90 400,130 S530,170 600,130 S730,90 800,130 S870,170 900,130;
+               M0,130 C70,110 130,150 200,130 S330,110 400,130 S530,150 600,130 S730,110 800,130 S870,150 900,130;
+               M0,130 C70,70 130,190 200,130 S330,70 400,130 S530,190 600,130 S730,70 800,130 S870,190 900,130;
+               M0,130 C70,90 130,170 200,130 S330,90 400,130 S530,170 600,130 S730,90 800,130 S870,170 900,130"
+    />
+  </path>
+
+  <!-- Wave Line 3 -->
+  <path d="M0,160 
+           C50,120 150,180 200,160 
+           S350,120 400,160 
+           S550,180 600,160 
+           S750,120 800,160 
+           S850,180 900,160"
+        stroke="url(#waveGradient)" stroke-width="1" stroke-linecap="round">
+    <animate attributeName="d"
+             dur="8s"
+             repeatCount="indefinite"
+             values="
+               M0,160 C50,120 150,180 200,160 S350,120 400,160 S550,180 600,160 S750,120 800,160 S850,180 900,160;
+               M0,160 C50,140 150,160 200,160 S350,140 400,160 S550,160 600,160 S750,140 800,160 S850,160 900,160;
+               M0,160 C50,100 150,200 200,160 S350,100 400,160 S550,200 600,160 S750,100 800,160 S850,200 900,160;
+               M0,160 C50,120 150,180 200,160 S350,120 400,160 S550,180 600,160 S750,120 800,160 S850,180 900,160"
     />
   </path>
 </svg>
