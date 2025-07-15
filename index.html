@@ -32,7 +32,32 @@
   }
 </style>
 
+<!-- AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+<!-- Swiper.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Swiper Init Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".testimonials-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  });
+</script>
 
 
   <!-- AOS -->
@@ -270,8 +295,6 @@
 </style>
 
 
-
-
 <!-- Featured Services -->
 <section id="services" class="font-heading py-20 bg-white text-black">
   <div class="max-w-7xl mx-auto px-6">
@@ -296,8 +319,6 @@
         Our Services
       </h2>
     </div>
-
-
 
 
     <!-- Services Grid -->
@@ -476,6 +497,144 @@
         </p>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- Studio Showcase -->
+<section id="showcase" class="py-24 bg-white text-black">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Header -->
+   <div class="text-center mb-16 relative" data-aos="fade-up">
+  <p class="text-xs uppercase text-gray-400 tracking-widest mb-2">Studio Vibes</p>
+
+  <!-- SVG Background -->
+  <svg class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-24 opacity-20 -z-10" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M10 60 Q 60 10 110 50 T 210 50 Q 250 90 290 40"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-dasharray="600"
+      stroke-dashoffset="600">
+      <animate
+        attributeName="stroke-dashoffset"
+        from="600"
+        to="0"
+        dur="2s"
+        begin="0.3s"
+        repeatCount="indefinite"
+        fill="freeze" />
+    </path>
+  </svg>
+
+  <!-- Title -->
+  <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider px-4">
+    Studio Showcase
+  </h2>
+</div>
+
+
+    <!-- Swiper Carousel -->
+    <div class="swiper showcase-swiper" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-wrapper">
+        <!-- Replace these image paths with your actual images -->
+         <div class="swiper-slide">
+          <img src="assets\images\2024-09-26 (3).webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets\images\2024-09-26.webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets\images\2025-06-05 (1).webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets\images\2025-06-05.webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets\images\2023-09-25.webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets\images\2024-09-26 (1).webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets\images\2024-09-26 (2).webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
+        </div>
+    
+      </div>
+      <div class="swiper-pagination mt-6"></div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  AOS.init();
+
+  const showcaseSwiper = new Swiper('.showcase-swiper', {
+    loop: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+
+<section id="testimonials" class="bg-white py-24 text-black relative overflow-hidden">
+  <!-- Animated Stroke SVG Background for Title -->
+  <svg class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[80px] z-0 pointer-events-none" viewBox="0 0 800 100" fill="none">
+    <path d="M10 50 C 150 10, 650 90, 790 50" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="1000">
+      <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="2s" fill="freeze" repeatCount="indefinite"/>
+    </path>
+  </svg>
+
+  <!-- Section Title -->
+  <div class="text-center mb-20 relative z-10" data-aos="fade-up">
+    <p class="text-xs uppercase text-gray-400 tracking-widest mb-2">Client Feedback</p>
+    <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider px-4">
+      Testimonials
+    </h2>
+  </div>
+
+  <!-- Testimonials Slider -->
+  <div class="swiper testimonials-swiper max-w-6xl mx-auto px-6" data-aos="fade-up" data-aos-delay="150">
+    <div class="swiper-wrapper">
+
+      <!-- Testimonial 1 -->
+      <div class="swiper-slide bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
+        <p class="text-black/70 text-base leading-relaxed mb-4">"OT Vibez helped me get the cleanest vocal mix I’ve ever had. Highly recommend for artists who care about quality."</p>
+        <div class="font-semibold text-black text-sm">— Aisha T., Vocalist</div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="swiper-slide bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
+        <p class="text-black/70 text-base leading-relaxed mb-4">"From rehearsal to live recording, everything was smooth. Loved the gear and the vibe in the studio."</p>
+        <div class="font-semibold text-black text-sm">— JayDee, Producer</div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="swiper-slide bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
+        <p class="text-black/70 text-base leading-relaxed mb-4">"Booked a podcast session and the sound quality was crisp. Plus the team made me feel super welcome."</p>
+        <div class="font-semibold text-black text-sm">— Lisa M., Podcaster</div>
+      </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex justify-center gap-4 mt-8">
+      <button class="swiper-button-prev text-black hover:text-neutral-600">&#8592;</button>
+      <button class="swiper-button-next text-black hover:text-neutral-600">&#8594;</button>
     </div>
   </div>
 </section>
