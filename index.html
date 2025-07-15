@@ -200,16 +200,26 @@
 
   <!-- Hero Content -->
 <div class="relative z-0 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-  <!-- Sound Wave SVG Behind Title -->
-  <svg class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-6 w-full max-w-xl opacity-10 pointer-events-none"
-       viewBox="0 0 600 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,50 Q75,10 150,50 T300,50 T450,50 T600,50"
-          stroke="black"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-dasharray="10 5"
-          stroke-dashoffset="0">
-      <animate attributeName="stroke-dashoffset" values="0;-15" dur="2s" repeatCount="indefinite" />
+   <!-- Complex Sound Wave SVG Background -->
+  <svg class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-10 w-[130%] max-w-[900px] opacity-10 pointer-events-none"
+       viewBox="0 0 900 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M0,100 
+         C30,60 70,140 100,100 
+         S170,60 200,100 
+         S270,140 300,100 
+         S370,60 400,100 
+         S470,140 500,100 
+         S570,60 600,100 
+         S670,140 700,100 
+         S770,60 800,100 
+         S870,140 900,100"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-dasharray="12 6"
+      stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" values="0;-18" dur="3s" repeatCount="indefinite" />
     </path>
   </svg>    
   <h1 class="font-heading text-4xl sm:text-6xl font-extrabold mb-4 leading-tight tracking-tight relative z-10" data-aos="fade-up">
