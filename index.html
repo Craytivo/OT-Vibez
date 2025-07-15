@@ -59,7 +59,7 @@
   <div class="max-w-6xl mx-auto flex justify-between items-center relative">
     <!-- Logo -->
     <a href="/" aria-label="OT Vibez Studio Home">
-      <img src="assets/images/ot-vibez-logo.svg" alt="OT Vibez Logo" class="h-20 sm:h-20 w-auto">
+      <img src="assets/images/ot-vibez-logo.svg" alt="OT Vibez Logo" class="h-20 sm:h-22 w-auto">
     </a>
 
     <!-- Desktop Nav -->
@@ -119,15 +119,25 @@
 <script>
   const header = document.getElementById("site-header");
 
+  let isScrolled = false;
+  let lastScrollY = 0;
+
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      header.classList.add("header-scroll");
-    } else {
-      header.classList.remove("header-scroll");
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > 10 && !isScrolled) {
+      header.classList.add("header-scroll", "animate-header-in");
+      header.classList.remove("animate-header-out");
+      isScrolled = true;
+    } else if (currentScrollY <= 10 && isScrolled) {
+      header.classList.remove("header-scroll", "animate-header-in");
+      header.classList.add("animate-header-out");
+      isScrolled = false;
     }
+
+    lastScrollY = currentScrollY;
   });
 </script>
-
 
 
 <!-- Toggle Script -->
@@ -163,32 +173,11 @@
 
 <section class="relative w-full bg-white text-black px-4 pt-[calc(40vh-180px)] pb-[100px] overflow-hidden">
 
-  <!-- Animated SVG Waveform Background -->
-  <svg class="absolute top-[-80px] left-0 w-full h-[200px] z-[-1] opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path 
-      fill="none" 
-      stroke="black" 
-      stroke-width="2"
-      stroke-dasharray="12 6"
-      stroke-dashoffset="0"
-      d="M0,160 C180,260 360,60 540,160 C720,260 900,60 1080,160 C1260,260 1440,60 1620,160">
-      <animate 
-        attributeName="stroke-dashoffset" 
-        from="0" 
-        to="-200" 
-        dur="4s" 
-        repeatCount="indefinite" />
-    </path>
-  </svg>
-
-
   <!-- Hero Content -->
 <div class="relative z-0 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
     <h1 class="font-heading text-4xl sm:text-6xl font-extrabold mb-4 leading-tight tracking-tight" data-aos="fade-up">
       Craft Your Sound.<br />
-      <span class="text-neutral-700">
-        <span id="typed" class="whitespace-nowrap"></span>
-      </span>
+      <span id="fade-word" class="font-mono italic font-medium text-inherit whitespace-nowrap transition-opacity duration-500 opacity-100 text-black font-heading text-inherit"></span>
     </h1>
 
     <p class="text-base sm:text-lg text-black/70 max-w-2xl mb-6" data-aos="fade-up" data-aos-delay="150">
@@ -213,8 +202,12 @@
   </div>
 </section>
 
-
-
+<style>
+   #fade-word {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+} 
+</style>
 
 <style>
 @media (max-width: 640px) {
@@ -240,33 +233,44 @@
 
 <!-- Dynamic Word Swapper -->
 <script>
-  const words = ["Record", "Mix", "Create", "Vibe"];
-  let i = 0;
-  setInterval(() => {
-    const el = document.getElementById("dynamic-word");
-    el.classList.remove("opacity-100");
-    el.classList.add("opacity-0");
-
-    setTimeout(() => {
-      i = (i + 1) % words.length;
-      el.textContent = words[i];
-      el.classList.remove("opacity-0");
-      el.classList.add("opacity-100");
-    }, 300);
-  }, 2500);
   document.addEventListener("DOMContentLoaded", function () {
-    new Typed("#typed", {
-      strings: ["Record like a pro.", "Mix your next hit.", "Create without limits.", "Elevate your sound."],
-      typeSpeed: 50,
-      backSpeed: 30,
-      backDelay: 2000,
-      startDelay: 500,
-      loop: true,
-      showCursor: true,
-      cursorChar: "|"
-    });
+    const words = ["Record like a pro.", "Mix your next hit.", "Create without limits.", "Elevate your sound."];
+    const colors = ["#FF4C60", "#4C8EFF", "#22C55E", "#F59E0B"]; // red, blue, green, amber
+
+    const fadeEl = document.getElementById("fade-word");
+    let i = 0;
+
+    function fadeWords() {
+      fadeEl.classList.remove("opacity-100");
+      fadeEl.classList.add("opacity-0");
+
+      setTimeout(() => {
+        fadeEl.textContent = words[i];
+        fadeEl.style.color = colors[i % colors.length];
+        fadeEl.classList.remove("opacity-0");
+        fadeEl.classList.add("opacity-100");
+
+        i = (i + 1) % words.length;
+      }, 500);
+    }
+
+    // Initialize
+    fadeEl.textContent = words[0];
+    fadeEl.style.color = colors[0];
+
+    // Start loop
+    setInterval(fadeWords, 3000);
   });
 </script>
+
+<style>
+  #fade-word {
+    transition: opacity 0.5s ease;
+  }
+</style>
+
+
+
 
 <!-- Featured Services -->
 <section id="services" class="font-heading py-20 bg-white text-black">
