@@ -3,829 +3,1034 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OT Vibez Studio | Edmonton Recording Studio for Artists, Bands & Creators</title>
+  <title>OT Vibez Studio | Edmonton Rehearsal Space</title>
 
-  <!-- SEO Meta -->
-  <meta name="description" content="OT Vibez Studio is a premium recording studio in Edmonton offering professional-grade space for artists, bands, and creators. Book your session today." />
-  <meta name="keywords" content="recording studio Edmonton, music studio Edmonton, book studio session, artist recording space, band studio Edmonton, OT Vibez Studio" />
-  <meta name="author" content="OT Vibez Studio" />
+  <!-- Fonts: Poppins (Heading) + Source Sans Pro (Body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="OT Vibez Studio | Record. Create. Elevate." />
-  <meta property="og:description" content="Edmonton-based recording studio for artists, bands, and creatives. Book professional sessions with ease." />
-  <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta property="og:type" content="website" />
-
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN (for dev use) -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['"Source Sans Pro"', 'sans-serif'],
+          },
+          colors: {
+            primary: '#000000',
+            accent: '#5f5f5f',
+          },
+        },
+      }
+    };
+  </script>
+
   <style>
-  /* Roboto for all body copy */
-  html {
-    font-family: 'Roboto', sans-serif;
+    html, body {
+      font-family: "Source Sans Pro", sans-serif;
+    }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Backdrop Overlay (initially hidden) -->
+  <div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-30 md:hidden"></div>
+
+  <!-- Transparent Header with Mobile Menu -->
+  <header class="w-full fixed top-0 left-0 z-50 px-6 py-3 flex items-center justify-between backdrop-blur-xl bg-transparent">
+    <!-- Logo -->
+    <a href="#" class="flex items-center space-x-3">
+      <img src="assets/images/otvibez.png" alt="OT Vibez Logo" class="max-h-20 w-auto object-contain">
+    </a>
+
+    <!-- Premium Desktop Nav -->
+<nav class="hidden md:flex space-x-8 font-body text-sm font-semibold tracking-wide text-black">
+  <a href="#about" class="nav-link">About</a>
+  <a href="#services" class="nav-link">Services</a>
+  <a href="#studio" class="nav-link">Studio</a>
+  <a href="#booking" class="nav-link">Booking</a>
+  <a href="#contact" class="nav-link">Contact</a>
+</nav>
+
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden text-black focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black/80 backdrop-blur-lg text-white py-8 px-6 md:hidden transition-all duration-300 shadow-lg z-40">
+  <nav class="flex flex-col space-y-6 font-body text-lg font-medium">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#studio" class="mobile-link">Studio</a>
+    <a href="#booking" class="mobile-link">Booking</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+</div>
+
+  </header>
+
+
+<!-- Mobile Menu Burger -->
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const backdrop = document.getElementById('mobile-backdrop');
+  const mobileLinks = document.querySelectorAll('#mobile-menu a');
+
+  const openMenu = () => {
+    mobileMenu.classList.remove('hidden');
+    backdrop.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden'); // prevent scroll
+  };
+
+  const closeMenu = () => {
+    mobileMenu.classList.add('hidden');
+    backdrop.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  };
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  // Close when clicking on backdrop
+  backdrop.addEventListener('click', closeMenu);
+
+  // Close when clicking on any nav link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
+
+
+<!-- Nav Utility Style -->
+<style>
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
   }
 
-  /* Poppins for anything you tag with .font-heading */
-  h1, h2, h3, h4, h5, h6,
-  .font-heading {
-    font-family: 'Poppins', sans-serif;
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link:hover {
+    color: #374151; /* text-gray-700 */
+  }
+  .mobile-link {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+
+  .mobile-link:hover::after {
+    width: 50%;
+  }
+
+  .mobile-link:hover {
+    color: #d1d5db; /* text-gray-300 */
   }
 </style>
 
-<!-- AOS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-<!-- Swiper.js -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-<!-- Swiper Init Script -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    new Swiper(".testimonials-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
+  const menuLinks = document.querySelectorAll('#mobile-menu a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('hidden');
     });
   });
 </script>
 
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Vanta.js + Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="assets\images\favicon.ico" type="image/x-icon" />
+<!-- Hero Section with White Background -->
+<section id="vanta-bg" class="relative h-screen w-full flex items-center justify-center overflow-hidden px-6 bg-white text-black">
 
-  <!-- Robots -->
-  <meta name="robots" content="index, follow" />
+  <!-- Glassmorphism Hero Card for White BG - More Transparent -->
+  <div data-aos="fade-up" class="relative z-10 w-full max-w-5xl bg-white/10 backdrop-blur-lg border border-gray-200 rounded-3xl px-10 py-16 text-center shadow-xl transition-all duration-700">
 
-<!-- Google Fonts -->
-<link
-   href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap"
-   rel="stylesheet"
-/>
-
-
-</head>
-<body class="bg-white text-black antialiased">
-<!-- Header -->
-<header id="site-header" class="w-full py-6 px-6 bg-white/30 backdrop-blur-xl sticky top-0 z-50 transition-all duration-300">
-  <div class="max-w-6xl mx-auto flex justify-between items-center relative">
-    
-    <!-- Logo -->
-    <a href="/" aria-label="OT Vibez Studio Home">
-      <img src="assets/images/ot-vibez-logo.svg" alt="OT Vibez Logo" class="h-20 sm:h-22 w-auto">
-    </a>
-
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex space-x-8 text-sm font-heading tracking-wide text-black font-medium">
-      <a href="#services" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
-        Services
-        <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
-      </a>
-      <a href="#showcase" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
-        Gallery
-        <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
-      </a>
-      <a href="#booking" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
-        Booking
-        <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
-      </a>
-      <a href="#contact" class="relative px-2 py-1 group transition-all duration-200 hover:text-gray-700">
-        Contact
-        <span class="absolute left-0 -bottom-0.5 w-0 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-200"></span>
-      </a>
-    </nav>
-
-    <!-- Stylized Mobile Menu Button -->
-    <button id="mobile-btn" class="md:hidden relative z-50 w-10 h-10 flex flex-col justify-center items-center group">
-      <span class="bar top absolute w-6 h-0.5 bg-black rounded transition-all duration-300 ease-in-out -translate-y-2"></span>
-      <span class="bar middle absolute w-5 h-0.5 bg-black rounded transition-all duration-300 ease-in-out"></span>
-      <span class="bar bottom absolute w-4 h-0.5 bg-black rounded transition-all duration-300 ease-in-out translate-y-2"></span>
-    </button>
-
-    <!-- Mobile Dropdown Menu -->
-    <div
-      id="dropdown-menu"
-      class="absolute right-0 top-[4.5rem] w-64 bg-white/90 backdrop-blur-2xl border border-black/10 rounded-2xl shadow-2xl py-6 px-6 flex flex-col space-y-3 text-black font-heading text-base opacity-0 pointer-events-none z-40 scale-y-0 origin-top transition-all duration-300"
-    >
-      <a href="#services" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-medium tracking-wide">Services</a>
-      <div class="h-px bg-black/10"></div>
-
-      <a href="#showcase" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-medium tracking-wide">Gallery</a>
-      <div class="h-px bg-black/10"></div>
-
-      <a href="#booking" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-medium tracking-wide">Booking</a>
-      <div class="h-px bg-black/10"></div>
-
-      <a href="#contact" onclick="toggleDropdown()" class="py-2 px-4 rounded-md transition duration-200 hover:text-gray-700 hover:scale-[1.02] font-medium tracking-wide">Contact</a>
+    <!-- Label -->
+    <div class="mb-6">
+      <span class="inline-block text-xs font-semibold uppercase tracking-widest text-gray-700 border border-gray-300 px-4 py-1 rounded-full bg-gray-100 backdrop-blur-sm">
+        Plug & Play Studio · Edmonton
+      </span>
     </div>
-  </div>
-</header>
+
+    <!-- Heading with Dynamic Typing -->
+    <h1 class="font-heading text-5xl md:text-6xl font-bold leading-tight mb-6 text-gray-900">
+  <span class="block">Craft Your Sound</span>
+  <span class="block text-center whitespace-nowrap overflow-hidden">
+    <span id="typed-text" class="font-heading"></span>
+  </span>
+</h1>
 
 
-<style>
-  .header-scroll {
-    transition: all 0.4s ease;
-    background-color: white !important;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    padding-top: 0.75rem !important;
-    padding-bottom: 0.75rem !important;
-  }
-</style>
-
-<!-- Header Scroll Script -->
-<script>
-  const header = document.getElementById("site-header");
-
-  let isScrolled = false;
-  let lastScrollY = 0;
-
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > 10 && !isScrolled) {
-      header.classList.add("header-scroll", "animate-header-in");
-      header.classList.remove("animate-header-out");
-      isScrolled = true;
-    } else if (currentScrollY <= 10 && isScrolled) {
-      header.classList.remove("header-scroll", "animate-header-in");
-      header.classList.add("animate-header-out");
-      isScrolled = false;
-    }
-
-    lastScrollY = currentScrollY;
-  });
-</script>
-
-
-<!-- Toggle Script -->
-<script>
-  const mobileBtn = document.getElementById("mobile-btn");
-  const dropdownMenu = document.getElementById("dropdown-menu");
-  const bars = mobileBtn.querySelectorAll(".bar");
-
-  function toggleDropdown() {
-    const isOpen = !dropdownMenu.classList.contains("opacity-0");
-
-    if (isOpen) {
-      dropdownMenu.classList.add("opacity-0", "pointer-events-none", "scale-y-0");
-      bars[0].classList.remove("rotate-45", "translate-y-2");
-      bars[1].classList.remove("opacity-0");
-      bars[2].classList.remove("-rotate-45", "-translate-y-2");
-    } else {
-      dropdownMenu.classList.remove("opacity-0", "pointer-events-none", "scale-y-0");
-      bars[0].classList.add("rotate-45", "translate-y-2");
-      bars[1].classList.add("opacity-0");
-      bars[2].classList.add("-rotate-45", "-translate-y-2");
-    }
-  }
-
-  mobileBtn.addEventListener("click", toggleDropdown);
-</script>
-
-<!-- Font Awesome CDN for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- Include Typed.js from CDN -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-<section class="relative w-full bg-white text-black px-4 pt-[calc(40vh-180px)] pb-[100px] overflow-hidden">
-
-  <!-- Hero Content -->
-<div class="relative z-0 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-   <!-- Complex Multi-Line Audio Wave SVG Background -->
-<svg class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-10 w-[130%] max-w-[900px] opacity-20 pointer-events-none z-0"
-     viewBox="0 0 900 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-  <!-- Gradient Definition -->
-  <defs>
-    <linearGradient id="waveGradient" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#4C8EFF" />
-      <stop offset="50%" stop-color="#22C55E" />
-      <stop offset="100%" stop-color="#FF4C60" />
-    </linearGradient>
-  </defs>
-
-  <!-- Wave Line 1 -->
-  <path d="M0,100 
-           C50,60 150,140 200,100 
-           S350,60 400,100 
-           S550,140 600,100 
-           S750,60 800,100 
-           S850,140 900,100"
-        stroke="url(#waveGradient)" stroke-width="2" stroke-linecap="round">
-    <animate attributeName="d"
-             dur="6s"
-             repeatCount="indefinite"
-             values="
-               M0,100 C50,60 150,140 200,100 S350,60 400,100 S550,140 600,100 S750,60 800,100 S850,140 900,100;
-               M0,100 C50,80 150,120 200,100 S350,80 400,100 S550,120 600,100 S750,80 800,100 S850,120 900,100;
-               M0,100 C50,40 150,160 200,100 S350,40 400,100 S550,160 600,100 S750,40 800,100 S850,160 900,100;
-               M0,100 C50,60 150,140 200,100 S350,60 400,100 S550,140 600,100 S750,60 800,100 S850,140 900,100"
-    />
-  </path>
-
-  <!-- Wave Line 2 -->
-  <path d="M0,130 
-           C70,90 130,170 200,130 
-           S330,90 400,130 
-           S530,170 600,130 
-           S730,90 800,130 
-           S870,170 900,130"
-        stroke="url(#waveGradient)" stroke-width="1.5" stroke-linecap="round">
-    <animate attributeName="d"
-             dur="7s"
-             repeatCount="indefinite"
-             values="
-               M0,130 C70,90 130,170 200,130 S330,90 400,130 S530,170 600,130 S730,90 800,130 S870,170 900,130;
-               M0,130 C70,110 130,150 200,130 S330,110 400,130 S530,150 600,130 S730,110 800,130 S870,150 900,130;
-               M0,130 C70,70 130,190 200,130 S330,70 400,130 S530,190 600,130 S730,70 800,130 S870,190 900,130;
-               M0,130 C70,90 130,170 200,130 S330,90 400,130 S530,170 600,130 S730,90 800,130 S870,170 900,130"
-    />
-  </path>
-
-  <!-- Wave Line 3 -->
-  <path d="M0,160 
-           C50,120 150,180 200,160 
-           S350,120 400,160 
-           S550,180 600,160 
-           S750,120 800,160 
-           S850,180 900,160"
-        stroke="url(#waveGradient)" stroke-width="1" stroke-linecap="round">
-    <animate attributeName="d"
-             dur="8s"
-             repeatCount="indefinite"
-             values="
-               M0,160 C50,120 150,180 200,160 S350,120 400,160 S550,180 600,160 S750,120 800,160 S850,180 900,160;
-               M0,160 C50,140 150,160 200,160 S350,140 400,160 S550,160 600,160 S750,140 800,160 S850,160 900,160;
-               M0,160 C50,100 150,200 200,160 S350,100 400,160 S550,200 600,160 S750,100 800,160 S850,200 900,160;
-               M0,160 C50,120 150,180 200,160 S350,120 400,160 S550,180 600,160 S750,120 800,160 S850,180 900,160"
-    />
-  </path>
-</svg>
-    
-  <h1 class="font-heading text-4xl sm:text-6xl font-extrabold mb-4 leading-tight tracking-tight relative z-10" data-aos="fade-up">
-    Craft Your Sound.<br />
-    <span id="fade-word"
-          class="font-mono italic font-medium whitespace-nowrap transition-opacity duration-500 opacity-100 text-black font-heading">
-    </span>
-  </h1>
-
-    <p class="text-base sm:text-lg text-black/70 max-w-2xl mb-6" data-aos="fade-up" data-aos-delay="150">
-      OT Vibez Studio is Edmonton’s go-to space for artists, bands, and creatives who take their sound seriously.
+    <!-- Subtitle -->
+    <p class="font-body text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Walk into a fully equipped, acoustically treated rehearsal space designed for musicians, bands, and creators. No setup — just pure creativity.
     </p>
 
-    <!-- CTA + Scroll Indicator -->
-    <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
-      <a href="#booking"
-         class="font-heading inline-block bg-black text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-neutral-800 transition-all duration-300 shadow-lg">
-        Book Your Session
-      </a>
+    <!-- CTA Button -->
+    <a href="#booking" class="inline-flex items-center gap-2 text-white bg-black px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-800 transition group">
+      Book Now
+      <svg class="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+      </svg>
+    </a>
 
-      <div id="scroll-indicator"
-           class="mt-6 text-black/40 flex flex-col items-center animate-bounce transition-opacity duration-500">
-        <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-        <span class="text-xs uppercase tracking-wider">Scroll</span>
-      </div>
-    </div>
   </div>
 </section>
 
-<style>
-   #fade-word {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-} 
-</style>
 
-<style>
-@media (max-width: 640px) {
-  section.hero-balance {
-    padding-top: calc(35vh - 150px);
+<!-- JS Typed -->
+ <style>
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
-}
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+</style>
+
+<style>
+  /* Cursor blink effect */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Inject blinking cursor via ::after */
+  #typed-text::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 6px;
+    animation: blink 1s infinite;
+  }
 </style>
 
 
-<!-- Scroll Indicator Fade-->
-<script>
-  const scrollIndicator = document.getElementById("scroll-indicator");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      scrollIndicator.classList.add("opacity-0");
-    } else {
-      scrollIndicator.classList.remove("opacity-0");
-    }
-  });
-</script>
-
-<!-- Dynamic Word Swapper -->
+<!-- Typing Effect Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const words = ["Record like a pro.", "Mix your next hit.", "Create without limits.", "Elevate your sound."];
-    const colors = ["#FF4C60", "#4C8EFF", "#22C55E", "#F59E0B"]; // red, blue, green, amber
+    const phrases = [
+      { text: "Record like a pro.", color: "text-rose-600" },
+{ text: "Mix your next hit.", color: "text-sky-600" },
+{ text: "Create Without Limits.", color: "text-emerald-600" },
+{ text: "Elevate Your Sound.", color: "text-indigo-600" },
+{ text: "Stream-Ready Quality.", color: "text-amber-600" }
 
-    const fadeEl = document.getElementById("fade-word");
-    let i = 0;
 
-    function fadeWords() {
-      fadeEl.classList.remove("opacity-100");
-      fadeEl.classList.add("opacity-0");
+    ];
 
-      setTimeout(() => {
-        fadeEl.textContent = words[i];
-        fadeEl.style.color = colors[i % colors.length];
-        fadeEl.classList.remove("opacity-0");
-        fadeEl.classList.add("opacity-100");
+    const typedText = document.getElementById("typed-text");
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-        i = (i + 1) % words.length;
-      }, 500);
+    function type() {
+      const current = phrases[phraseIndex];
+      const fullText = current.text;
+      const colorClass = current.color;
+
+      // Update color class
+      typedText.className = `font-heading text-3xl md:text-4xl font-bold text-center transition-colors duration-500 ${colorClass}`;
+
+      // Update text content
+      if (!isDeleting) {
+        typedText.textContent = fullText.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === fullText.length) {
+          isDeleting = true;
+          setTimeout(type, 2000); // Hold before deleting
+          return;
+        }
+      } else {
+        typedText.textContent = fullText.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+      }
+
+      setTimeout(type, isDeleting ? 40 : 100);
     }
 
-    // Initialize
-    fadeEl.textContent = words[0];
-    fadeEl.style.color = colors[0];
-
-    // Start loop
-    setInterval(fadeWords, 3000);
+    type();
   });
 </script>
 
-<style>
-  #fade-word {
-    transition: opacity 0.5s ease;
-  }
-</style>
 
 
-<!-- Featured Services -->
-<section id="services" class="font-heading py-20 bg-white text-black">
-  <div class="max-w-7xl mx-auto px-6">
-    
-    <!-- Premium Section Title -->
-    <div class="relative text-center mb-16" data-aos="fade-up">
-      <!-- Subheading -->
-      <p class="text-xs uppercase text-gray-500 tracking-widest mb-2">What We Offer</p>
-
-      <!-- Animated SVG Background -->
-      <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 stroke-black/10 -z-10 pointer-events-none" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="85" stroke-width="1.2" stroke-dasharray="534" stroke-dashoffset="534">
-          <animate attributeName="stroke-dashoffset" from="534" to="0" dur="6s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="100" cy="100" r="60" stroke-width="0.8" stroke-dasharray="377" stroke-dashoffset="377">
-          <animate attributeName="stroke-dashoffset" from="377" to="0" dur="8s" repeatCount="indefinite" />
-        </circle>
-      </svg>
-
-      <!-- Main Title -->
-      <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider text-black px-4 mb-4">
-        Our Services
-      </h2>
-    </div>
-
-
-    <!-- Services Grid -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Recording Sessions -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="100">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-microphone-alt text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Recording Sessions</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Capture vocals, instruments, podcasts or voice-overs in our acoustically treated studio.
-        </p>
-      </div>
-
-      <!-- Live Recording & Music Videos -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="200">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-video text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Live Recording & Music Videos</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Record live sets, jam sessions, or film a music video with pro gear and lighting.
-        </p>
-      </div>
-
-      <!-- Mixing & Mastering -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-sliders-h text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Mixing & Mastering</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Turn raw tracks into polished, radio-ready songs with pro mixing & mastering.
-        </p>
-      </div>
-
-      <!-- Rehearsal Space -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="400">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-music text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Rehearsal Space</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Practice, tighten your set, and soundcheck with our full rehearsal setup.
-        </p>
-      </div>
-
-      <!-- Podcast & Voice-Over -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="500">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-podcast text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Podcast & Voice-Over</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Quiet, professional space perfect for podcasting or voice-over recording.
-        </p>
-      </div>
-
-      <!-- Custom Projects -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="600">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-cogs text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Custom Projects</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Need something special? Talk to us about bespoke audio or visual production.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Why Choose OT Vibez -->
-<section id="why" class="font-heading py-20 bg-white text-black">
-  <div class="max-w-7xl mx-auto px-6">
-    
-   <!-- Section Header -->
-<div class="relative text-center mb-16" data-aos="fade-up">
-  <!-- Subheading -->
-  <p class="text-xs uppercase text-gray-500 tracking-widest mb-2">What Sets Us Apart</p>
-
-  <!-- Animated Stroke SVG Background -->
-  <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 stroke-black/10 -z-10" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="90" stroke-width="1" stroke-dasharray="565" stroke-dashoffset="565">
-      <animate attributeName="stroke-dashoffset" from="565" to="0" dur="5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="100" cy="100" r="70" stroke-width="0.5" stroke-dasharray="440" stroke-dashoffset="440">
-      <animate attributeName="stroke-dashoffset" from="440" to="0" dur="7s" repeatCount="indefinite" />
-    </circle>
-  </svg>
-
-  <!-- Main Heading -->
-  <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider text-black px-4 mb-4">
-    Why Choose OT Vibez
-  </h2>
-</div>
-
-
-
-
-    <!-- Feature Grid -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-      
-      <!-- Feature: Engineers -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="100">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-headphones-alt text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Professional Engineers</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Work with expert audio engineers who bring your sound to life.
-        </p>
-      </div>
-
-      <!-- Feature: Equipment -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="200">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-bolt text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Top-Tier Gear</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Industry-grade mics, preamps, and software — no compromises.
-        </p>
-      </div>
-
-      <!-- Feature: Vibe -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="300">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-heart text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Artist-Centered Vibe</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          Chill, creative, and inspiring — designed with musicians in mind.
-        </p>
-      </div>
-
-      <!-- Feature: Community -->
-      <div class="group bg-white border border-gray-200 rounded-2xl p-8 text-center flex flex-col items-center
-                  hover:shadow-xl hover:-translate-y-1 transition transform duration-300"
-           data-aos="fade-up" data-aos-delay="400">
-        <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full mb-6
-                    group-hover:bg-black/10 transition-colors duration-300">
-          <i class="fas fa-users text-2xl text-black"></i>
-        </div>
-        <h3 class="text-lg font-semibold mb-2 group-hover:text-black transition-colors">Local Artist Hub</h3>
-        <p class="text-sm text-black/60 leading-relaxed">
-          A place where Edmonton’s music scene connects, grows, and levels up.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Studio Showcase -->
-<section id="showcase" class="py-24 bg-white text-black">
-  <div class="max-w-7xl mx-auto px-6">
-    <!-- Section Header -->
-   <div class="text-center mb-16 relative" data-aos="fade-up">
-  <p class="text-xs uppercase text-gray-400 tracking-widest mb-2">Studio Vibes</p>
-
-  <!-- SVG Background -->
-  <svg class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-24 opacity-20 -z-10" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M10 60 Q 60 10 110 50 T 210 50 Q 250 90 290 40"
-      stroke="black"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-dasharray="600"
-      stroke-dashoffset="600">
-      <animate
-        attributeName="stroke-dashoffset"
-        from="600"
-        to="0"
-        dur="2s"
-        begin="0.3s"
-        repeatCount="indefinite"
-        fill="freeze" />
-    </path>
-  </svg>
-
-  <!-- Title -->
-  <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider px-4">
-    Studio Showcase
-  </h2>
-</div>
-
-
-    <!-- Swiper Carousel -->
-    <div class="swiper showcase-swiper" data-aos="fade-up" data-aos-delay="200">
-      <div class="swiper-wrapper">
-        <!-- Replace these image paths with your actual images -->
-         <div class="swiper-slide">
-          <img src="assets\images\2024-09-26 (3).webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets\images\2024-09-26.webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets\images\2025-06-05 (1).webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets\images\2025-06-05.webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets\images\2023-09-25.webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 1" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets\images\2024-09-26 (1).webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 2" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets\images\2024-09-26 (2).webp" class="rounded-2xl shadow-lg object-cover w-full h-96" alt="Studio View 3" />
-        </div>
-    
-      </div>
-      <div class="swiper-pagination mt-6"></div>
-    </div>
-  </div>
-</section>
+<!-- Hero Animation -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,           // Only animate once
+    duration: 1000,       // Animation duration in ms
+    easing: 'ease-out-cubic'
+  });
+</script>
 
 
 <script>
-  AOS.init();
-
-  const showcaseSwiper = new Swiper('.showcase-swiper', {
-    loop: true,
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    breakpoints: {
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
-    }
+  VANTA.WAVES({
+    el: "#vanta-bg",
+   mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xb1b1b1,
+  shininess: 8.00,
+  waveHeight: 9.50,
+  waveSpeed: 0.55,
+  zoom: 0.7
   });
 </script>
 
-<section id="testimonials" class="bg-white py-24 text-black relative overflow-hidden">
-  <!-- Animated Stroke SVG Background for Title -->
-  <svg class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[80px] z-0 pointer-events-none" viewBox="0 0 800 100" fill="none">
-    <path d="M10 50 C 150 10, 650 90, 790 50" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="1000">
-      <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="2s" fill="freeze" repeatCount="indefinite"/>
-    </path>
-  </svg>
 
-  <!-- Section Title -->
-  <div class="text-center mb-20 relative z-10" data-aos="fade-up">
-    <p class="text-xs uppercase text-gray-400 tracking-widest mb-2">Client Feedback</p>
-    <h2 class="relative inline-block font-heading text-4xl sm:text-5xl font-semibold uppercase tracking-wider px-4">
-      Testimonials
-    </h2>
+
+
+
+<!-- Why Choose OT Vibez -->
+<section id="about" class="relative py-24 px-6 bg-white text-black font-body overflow-hidden">
+
+  <!-- Brand Accent -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-sky-600 rounded-b-full"></div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+    <!-- LEFT: Pitch -->
+    <div class="text-center md:text-left max-w-xl mx-auto md:mx-0" data-aos="fade-right">
+      <p class="uppercase tracking-widest text-gray-500 text-sm mb-3">Why Creators Choose Us</p>
+      <h2 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 leading-tight mb-6">
+        A Studio <span class="text-sky-600">Built for Artists</span>
+      </h2>
+      <p class="text-gray-700 mb-8 text-lg leading-relaxed">
+        At OT Vibez, we’ve created a space where artists, bands, and content creators can walk in, plug in, and get to work.
+        No clutter. No confusion. Just a premium, acoustically treated environment where your creativity takes center stage.
+      </p>
+
+      <ul class="space-y-4 mb-10 text-left md:text-left">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-sky-600 text-white text-xs">✓</span>
+          <span class="text-gray-800 text-base">Fully equipped with mics, amps, and monitors — ready to go.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-sky-600 text-white text-xs">✓</span>
+          <span class="text-gray-800 text-base">Perfect for solo artists, full bands, or content creators.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-sky-600 text-white text-xs">✓</span>
+          <span class="text-gray-800 text-base">Book online. Show up. Sound great.</span>
+        </li>
+      </ul>
+
+      <a href="#booking"
+         class="inline-block bg-sky-600 text-white px-7 py-3 rounded-md font-heading font-semibold
+                hover:bg-sky-700 hover:-translate-y-0.5 transition-transform duration-300 shadow-lg">
+        Book a Session
+      </a>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto" data-aos="fade-left">
+
+      <!-- Card: Rehearsal Ready -->
+<div class="group bg-white/10 backdrop-blur-xl border border-white/20 h-full p-6 rounded-2xl shadow-md transition hover:-translate-y-2 hover:shadow-lg">
+  <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4 bg-purple-100 text-purple-600 group-hover:scale-110 transition-transform">
+    <!-- Guitar Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M15 6l3 3m0 0l-3-3m3 3L6 21l-3-3L18 6z" />
+      <circle cx="6" cy="18" r="1" />
+    </svg>
+  </div>
+  <h3 class="font-heading font-semibold text-lg text-gray-900 mb-2">Rehearsal Ready</h3>
+  <p class="text-gray-700 text-sm">
+    Premium space with backline and PA — just bring your sound and plug in.
+  </p>
+</div>
+
+<!-- Card: Record-Ready -->
+<div class="group bg-white/10 backdrop-blur-xl border border-white/20 h-full p-6 rounded-2xl shadow-md transition hover:-translate-y-2 hover:shadow-lg">
+  <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4 bg-blue-100 text-blue-600 group-hover:scale-110 transition-transform">
+    <!-- Microphone Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M12 1v10m0 0a3 3 0 01-3-3V4a3 3 0 016 0v4a3 3 0 01-3 3z" />
+      <path d="M19 10v2a7 7 0 01-14 0v-2m7 7v4m-4 0h8" />
+    </svg>
+  </div>
+  <h3 class="font-heading font-semibold text-lg text-gray-900 mb-2">Record-Ready</h3>
+  <p class="text-gray-700 text-sm">
+    Use your own gear or ours — treated acoustics make every take crisp and clean.
+  </p>
+</div>
+
+<!-- Card: Content Creation -->
+<div class="group bg-white/10 backdrop-blur-xl border border-white/20 h-full p-6 rounded-2xl shadow-md transition hover:-translate-y-2 hover:shadow-lg">
+  <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4 bg-green-100 text-green-600 group-hover:scale-110 transition-transform">
+    <!-- Camera Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 7h8a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2z" />
+    </svg>
+  </div>
+  <h3 class="font-heading font-semibold text-lg text-gray-900 mb-2">Content Creation</h3>
+  <p class="text-gray-700 text-sm">
+    Bring your visuals to life with lighting, backdrop, and camera setups available.
+  </p>
+</div>
+
+<!-- Card: Engineer On Demand -->
+<div class="group bg-white/10 backdrop-blur-xl border border-white/20 h-full p-6 rounded-2xl shadow-md transition hover:-translate-y-2 hover:shadow-lg">
+  <div class="w-12 h-12 flex items-center justify-center rounded-full mb-4 bg-yellow-100 text-yellow-600 group-hover:scale-110 transition-transform">
+    <!-- Slider Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M10 6h10M10 12h10M10 18h10M4 6h.01M4 12h.01M4 18h.01" />
+    </svg>
+  </div>
+  <h3 class="font-heading font-semibold text-lg text-gray-900 mb-2">Engineer On Demand</h3>
+  <p class="text-gray-700 text-sm">
+    Need help dialing in your sound? Book a seasoned studio engineer to assist with recording, mixing, or gear setup.
+  </p>
+</div>
+
+</div>
+
+
+    </div>
   </div>
 
-  <!-- Testimonials Slider -->
-  <div class="swiper testimonials-swiper max-w-6xl mx-auto px-6" data-aos="fade-up" data-aos-delay="150">
-    <div class="swiper-wrapper">
+<!-- Studio Access Plans Info -->
+<div class="mt-28 max-w-5xl mx-auto text-center px-4 md:px-0" data-aos="fade-up">
+  <!-- Section Badge -->
+  <span class="inline-block uppercase tracking-wider text-emerald-600 bg-emerald-100/60 text-xs font-semibold px-4 py-1 rounded-full mb-4 backdrop-blur-sm">
+    Flexible Studio Plans
+  </span>
 
-      <!-- Testimonial 1 -->
-      <div class="swiper-slide bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
-        <p class="text-black/70 text-base leading-relaxed mb-4">"OT Vibez helped me get the cleanest vocal mix I’ve ever had. Highly recommend for artists who care about quality."</p>
-        <div class="font-semibold text-black text-sm">— Aisha T., Vocalist</div>
+  <!-- Heading -->
+  <h3 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 mb-5 leading-tight">
+    Lock In <span class="text-emerald-600">Your Studio Time</span>
+  </h3>
+
+  <!-- Subtext -->
+  <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10 max-w-3xl mx-auto">
+    Whether you’re rehearsing weekly or recording monthly, our flexible access plans make sure your creative space is always ready.
+    Choose between a <strong class="text-gray-900 font-medium">monthly subscription</strong> or a <strong class="text-gray-900 font-medium">discounted annual plan</strong> to guarantee your favorite time slot and save on session rates.
+    No more scrambling for space — just plug in and create.
+  </p>
+
+  <!-- CTA Button -->
+  <a href="#booking"
+     class="inline-block bg-emerald-600 text-white px-8 py-3 text-base sm:text-lg rounded-full font-heading font-semibold
+            hover:bg-emerald-700 hover:-translate-y-0.5 transition-transform duration-300 shadow-lg">
+    Explore Access Plans
+  </a>
+</div>
+</section>
+
+
+<!-- OT Vibez Services Section -->
+<section id="services" class="-mt-20 py-24 px-6 bg-white text-black font-body">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="inline-block uppercase tracking-wider text-purple-600 bg-purple-100 text-xs font-semibold px-4 py-1 rounded-full mb-4">
+        Studio Features
+      </span>
+      <h3 class="text-4xl sm:text-5xl font-heading font-extrabold mb-5 leading-tight">
+        What You Get at <span class="text-purple-600">OT Vibez</span>
+      </h3>
+      <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+        Every OT Vibez booking includes access to high-end studio features so you can create, rehearse, and record with no hassle — just plug in and vibe.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10" data-aos="fade-up">
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col text-left transition hover:scale-105 duration-300">
+        <img src="assets\images\Equipment\klim-musalimov-fxHq67K11-E-unsplash.jpg" alt="Pro Mics" class="rounded-xl mb-5 h-48 w-full object-cover">
+        <h4 class="text-xl font-semibold text-gray-900 mb-3">Professional Microphones</h4>
+        <ul class="text-sm text-gray-700 space-y-2 leading-relaxed">
+          <li>• Studio-grade XLR microphones.</li>
+          <li>• Shock mounts & pop filters included.</li>
+          <li>• Ideal for vocals, podcasting, or voiceovers.</li>
+        </ul>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col text-left transition hover:scale-105 duration-300">
+        <img src="assets\images\Equipment\yassine-khalfalli-I3ZzOkiAbTI-unsplash.jpg" alt="Mixing Station" class="rounded-xl mb-5 h-48 w-full object-cover">
+        <h4 class="text-xl font-semibold text-gray-900 mb-3">Digital Mixing Station</h4>
+        <ul class="text-sm text-gray-700 space-y-2 leading-relaxed">
+          <li>• Control your mix in real time.</li>
+          <li>• Preconfigured for rapid setup.</li>
+          <li>• Compatible with major DAWs.</li>
+        </ul>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col text-left transition hover:scale-105 duration-300">
+        <img src="assets\images\Equipment\hc-digital-5tbq37qDO64-unsplash.jpg" alt="Lighting" class="rounded-xl mb-5 h-48 w-full object-cover">
+        <h4 class="text-xl font-semibold text-gray-900 mb-3">Mood Lighting & Ambience</h4>
+        <ul class="text-sm text-gray-700 space-y-2 leading-relaxed">
+          <li>• RGB controllable lighting scenes.</li>
+          <li>• Enhance performance or video mood.</li>
+          <li>• Remote & app-controlled options.</li>
+        </ul>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col text-left transition hover:scale-105 duration-300">
+        <img src="assets\images\Equipment\shaq-hossain-uXY3EvzDQ78-unsplash.jpg" alt="Soundproofing" class="rounded-xl mb-5 h-48 w-full object-cover">
+        <h4 class="text-xl font-semibold text-gray-900 mb-3">Acoustic Treatment</h4>
+        <ul class="text-sm text-gray-700 space-y-2 leading-relaxed">
+          <li>• Fully soundproofed rehearsal rooms.</li>
+          <li>• Professionally treated for audio clarity.</li>
+          <li>• Clean, dry sound for vocals & instruments.</li>
+        </ul>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col text-left transition hover:scale-105 duration-300">
+        <img src="assets\images\Equipment\sandy-kawadkar-i-FJ4obOoyM-unsplash.jpg" alt="Studio Monitors" class="rounded-xl mb-5 h-48 w-full object-cover">
+        <h4 class="text-xl font-semibold text-gray-900 mb-3">Studio Monitor Speakers</h4>
+        <ul class="text-sm text-gray-700 space-y-2 leading-relaxed">
+          <li>• Crystal-clear monitoring.</li>
+          <li>• Balanced for mixing & playback.</li>
+          <li>• Volume control at your fingertips.</li>
+        </ul>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col text-left transition hover:scale-105 duration-300">
+        <img src="assets\images\Equipment\bruno-guerrero-hP0yzStvp-M-unsplash.jpg" alt="Plug and Play" class="rounded-xl mb-5 h-48 w-full object-cover">
+        <h4 class="text-xl font-semibold text-gray-900 mb-3">Plug & Play Setup</h4>
+        <ul class="text-sm text-gray-700 space-y-2 leading-relaxed">
+          <li>• No setup needed — everything is ready.</li>
+          <li>• Bring your instrument or laptop and go.</li>
+          <li>• Instant creativity unlocked.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="studio" class="py-24 px-6 bg-gray-50 text-black font-body">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Heading -->
+    <div class="text-center mb-12" data-aos="fade-up">
+      <span class="inline-block uppercase tracking-wider text-indigo-600 bg-indigo-100 text-xs font-semibold px-4 py-1 rounded-full mb-4">
+        Studio Showcase
+      </span>
+      <h2 class="text-4xl sm:text-5xl font-heading font-extrabold mb-4 leading-tight">
+        Inside <span class="text-indigo-600">OT Vibez Studio</span>
+      </h2>
+      <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+        Explore our professionally designed rehearsal & recording space — clean, acoustically treated, and optimized for creators.
+      </p>
+    </div>
+
+    <!-- Desktop Studio Gallery Carousel: 2x2 Grid -->
+<div class="hidden md:block overflow-x-auto scroll-smooth pb-4">
+  <div class="flex gap-6 w-max">
+
+    <!-- Group 1 -->
+    <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
+      <img src="assets/images/2024-09-26 (1).webp" alt="Vocal Mic" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/2024-09-26 (2).webp" alt="Drum Kit" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/o.jpg" alt="Lighting" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/2024-09-26 (3).webp" alt="Mixer" class="rounded-xl shadow-lg object-cover w-full h-64">
+    </div>
+
+    <!-- Group 2 -->
+    <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
+      <img src="assets/images/2024-09-26.webp" alt="Snacks" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/2025-06-05 (1).webp" alt="Monitor" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/2025-06-05.webp" alt="Keyboard" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/unnamed (1).webp" alt="Seating" class="rounded-xl shadow-lg object-cover w-full h-64">
+    </div>
+
+    <!-- Group 3 -->
+    <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
+      <img src="assets/images/o (1).jpg" alt="Lighting" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/o (2).jpg" alt="Mixer" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/o (3).jpg" alt="Snacks" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/o (4).jpg" alt="Monitor" class="rounded-xl shadow-lg object-cover w-full h-64">
+    </div>
+
+    <!-- Group 4 -->
+    <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
+      <img src="assets/images/o (5).jpg" alt="Keyboard" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/unnamed.webp" alt="Keyboard" class="rounded-xl shadow-lg object-cover w-full h-64">
+      <img src="assets/images/2023-09-25.webp" alt="Wide Room View" class="rounded-xl shadow-lg object-cover w-full h-64">
+    </div>
+
+  </div>
+</div>
+
+
+
+    <!-- Mobile Horizontal Scroll Carousel -->
+<div class="md:hidden flex space-x-4 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory" data-aos="fade-up">
+  <img src="assets/images/2024-09-26 (1).webp" alt="Vocal Mic" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/2024-09-26 (2).webp" alt="Drum Kit" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/o.jpg" alt="Lighting" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/2024-09-26 (3).webp" alt="Mixer" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/2024-09-26.webp" alt="Snacks" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/2025-06-05 (1).webp" alt="Monitor" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/2025-06-05.webp" alt="Keyboard" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/unnamed (1).webp" alt="Seating" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/o (1).jpg" alt="Lighting" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/o (2).jpg" alt="Mixer" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/o (3).jpg" alt="Snacks" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/o (4).jpg" alt="Monitor" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/o (5).jpg" alt="Keyboard" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/unnamed.webp" alt="Keyboard" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+  <img src="assets/images/2023-09-25.webp" alt="Wide Room View" class="w-80 h-52 object-cover rounded-xl shadow-md snap-start shrink-0">
+</div>
+
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-28 px-6 bg-white text-black font-body">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Heading -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="inline-block uppercase tracking-wider text-rose-600 bg-purple-100 text-xs font-semibold px-4 py-1 rounded-full mb-4">
+        What Artists Are Saying
+      </span>
+      <h3 class="text-4xl sm:text-5xl font-heading font-extrabold mb-5 leading-tight">
+        Real Voices from <span class="text-rose-600">OT Vibez</span>
+      </h3>
+      <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+        Our clients create unforgettable sessions — and they’re not shy about sharing it.
+      </p>
+    </div>
+
+    <!-- Irregular Testimonial Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[1fr] gap-6" data-aos="fade-up">
+
+      <!-- Testimonial 1 (Large) -->
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-6 rounded-2xl shadow-xl col-span-2 row-span-2 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-gray-800 text-lg mb-4">“The vibe was right, the sound was tight. Best rehearsal spot in town hands down.”</p>
+        <div class="font-semibold text-gray-900">Jay Styles</div>
+        <div class="text-sm text-gray-500">Touring Artist</div>
       </div>
 
       <!-- Testimonial 2 -->
-      <div class="swiper-slide bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
-        <p class="text-black/70 text-base leading-relaxed mb-4">"From rehearsal to live recording, everything was smooth. Loved the gear and the vibe in the studio."</p>
-        <div class="font-semibold text-black text-sm">— JayDee, Producer</div>
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-5 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-sm text-gray-700">“Everything was set up and ready. Just plugged in and started recording — no hassle!”</p>
+        <div class="mt-3 font-semibold text-gray-900 text-sm">Amara K.</div>
       </div>
 
       <!-- Testimonial 3 -->
-      <div class="swiper-slide bg-white border border-gray-200 rounded-2xl p-8 shadow-md">
-        <p class="text-black/70 text-base leading-relaxed mb-4">"Booked a podcast session and the sound quality was crisp. Plus the team made me feel super welcome."</p>
-        <div class="font-semibold text-black text-sm">— Lisa M., Podcaster</div>
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-5 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-sm text-gray-700">“The lighting setup took our music video to the next level. Highly recommend!”</p>
+        <div class="mt-3 font-semibold text-gray-900 text-sm">Trill Visuals</div>
+      </div>
+
+      <!-- Testimonial 4 (Wide) -->
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-6 rounded-2xl shadow-xl col-span-2 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-base text-gray-800 mb-3">“Clean acoustics and a relaxed environment. Great for voiceover work too.”</p>
+        <div class="font-semibold text-gray-900">Natalie Rivers</div>
+        <div class="text-sm text-gray-500">Voice Artist</div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-5 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-sm text-gray-700">“I booked the engineer add-on — super helpful and professional!”</p>
+        <div class="mt-3 font-semibold text-gray-900 text-sm">Devon L.</div>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-5 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-sm text-gray-700">“OT Vibez is my go-to for podcast recording. Never disappoints.”</p>
+        <div class="mt-3 font-semibold text-gray-900 text-sm">Marcus G.</div>
+      </div>
+
+      <!-- Testimonial 7 -->
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-5 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-sm text-gray-700">“Soundproofing is perfect — felt completely locked in.”</p>
+        <div class="mt-3 font-semibold text-gray-900 text-sm">Rhea S.</div>
+      </div>
+
+      <!-- Testimonial 8 (Tall) -->
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-6 rounded-2xl shadow-xl row-span-2 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-base text-gray-800 mb-3">“Feels like a creative sanctuary. All the tech you need, and a dope vibe to match.”</p>
+        <div class="font-semibold text-gray-900">Tony Blaze</div>
+        <div class="text-sm text-gray-500">Producer & Artist</div>
+      </div>
+
+      <!-- Testimonial 9 -->
+      <div class="bg-white/50 backdrop-blur-lg border border-gray-200 p-5 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <div class="text-yellow-500 text-sm mb-2" data-aos="zoom-in">★★★★★</div>
+        <p class="text-sm text-gray-700">“I love how everything’s already connected and configured. Just show up and create.”</p>
+        <div class="mt-3 font-semibold text-gray-900 text-sm">Lena F.</div>
       </div>
 
     </div>
-
-    <!-- Navigation -->
-<div class="relative mt-12">
-  <div class="swiper-button-prev !text-black absolute left-0 top-1/2 -translate-y-1/2 z-10 text-3xl hover:text-neutral-600 transition">
-    &#10094;
-  </div>
-  <div class="swiper-button-next !text-black absolute right-0 top-1/2 -translate-y-1/2 z-10 text-3xl hover:text-neutral-600 transition">
-    &#10095;
-  </div>
-</div>
-
-
   </div>
 </section>
 
 
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- AOS Script (at the end of body) -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true, // animate only once
+    duration: 800, // duration of animations
+    easing: 'ease-out-cubic', // smooth easing
+  });
+</script>
 
 
-<!-- Footer -->
-<footer class="w-full bg-white text-gray-600 py-10 px-6 text-sm">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-    
-    <!-- Left -->
-    <div class="text-center md:text-left">
-      <p class="mb-1">&copy; 2025 <span class="text-black font-semibold">OT Vibez Studio</span>. All rights reserved.</p>
-      <p class="text-xs text-gray-500">Recording. Engineering. Vibes that hit.</p>
+ <!-- Booking & Contact Section -->
+<section id="booking" class="relative z-10 bg-white py-32 px-6 font-body text-gray-900">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start relative">
+
+    <!-- Booking Section -->
+    <div class="bg-white/60 backdrop-blur-xl border border-gray-200 rounded-3xl shadow-xl p-10 space-y-6">
+      <!-- Icon -->
+      <div class="w-12 h-12 flex items-center justify-center rounded-full bg-pink-100 text-pink-600">
+        <!-- SVG Booking Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3M5 11h14M5 19h14M5 15h14" />
+        </svg>
+      </div>
+
+      <!-- Title -->
+      <h2 class="text-3xl font-heading font-bold">Book Your Studio Time</h2>
+
+      <!-- Text -->
+      <p class="text-gray-700 text-base leading-relaxed">
+        Secure your rehearsal or recording session at OT Vibez. Pick your preferred time, add extras like an engineer or lighting setup, and you're ready to go.
+      </p>
+      <p class="text-gray-700 text-base leading-relaxed">
+        Use our live booking portal to check real-time availability. You’ll get instant confirmation once your session is locked in.
+      </p>
+
+      <!-- CTA Button -->
+      <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services"
+         target="_blank"
+         class="inline-block bg-pink-600 text-white px-8 py-3 text-base rounded-full font-heading font-semibold hover:bg-pink-700 hover:-translate-y-0.5 transition-transform duration-300 shadow-lg">
+        Book Now
+      </a>
     </div>
 
-    <!-- Right -->
-    <div class="text-center md:text-right text-xs space-y-2">
-      <a href="mailto:otvibezstudio@gmail.com" class="hover:text-black transition block">otvibezstudio@gmail.com</a>
-
-      <!-- Social Links with Icons -->
-      <div class="flex justify-center md:justify-end items-center space-x-4 mt-2 text-lg">
-        <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener" class="text-gray-500 hover:text-pink-600 transition" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.tiktok.com/@otvibezstudio?_t=8hoLadFHSy6&_r=1" target="_blank" rel="noopener" class="text-gray-500 hover:text-black transition" aria-label="TikTok">
-          <i class="fab fa-tiktok"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-700 transition" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
+    <!-- Contact Form Section -->
+    <div class="bg-white/60 backdrop-blur-xl border border-gray-200 rounded-3xl shadow-xl p-10 relative">
+      <!-- Icon -->
+      <div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-6">
+        <!-- SVG Mail Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
       </div>
 
-      <!-- Legal Links -->
-      <div class="space-x-3 mt-2">
-        <a href="/privacy-policy.html" class="hover:text-black transition">Privacy Policy</a>
-        <span class="text-gray-400">|</span>
-        <a href="/terms.html" class="hover:text-black transition">Terms</a>
-      </div>
+      <h2 class="text-3xl font-heading font-bold mb-6">Contact OT Vibez</h2>
+
+      <!-- Form -->
+      <form id="contact" action="https://formspree.io/f/xzzvzeap" method="POST" class="space-y-5">
+
+        <!-- Name -->
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+          <input type="text" id="name" name="name" required
+                 class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-pink-500 focus:border-pink-500">
+          <p class="mt-1 text-sm text-red-500 hidden" id="error-name">Name is required.</p>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+          <input type="email" id="email" name="email" required
+                 class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-pink-500 focus:border-pink-500">
+          <p class="mt-1 text-sm text-red-500 hidden" id="error-email">Valid email is required.</p>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" required
+                    class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-pink-500 focus:border-pink-500"></textarea>
+          <p class="mt-1 text-sm text-red-500 hidden" id="error-message">Please enter a message.</p>
+        </div>
+
+        <!-- Submit -->
+        <div class="relative">
+          <button type="submit"
+                  class="w-full flex items-center justify-center bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+            <span id="submitText">Send Message</span>
+            <svg id="spinner" class="ml-3 w-5 h-5 animate-spin hidden text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor"
+                    d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div id="successModal" class="fixed inset-0 z-50 hidden bg-black/60 flex items-center justify-center">
+    <div class="bg-white rounded-2xl p-8 max-w-md text-center shadow-2xl">
+      <h3 class="text-xl font-bold mb-3 text-purple-700">Message Sent!</h3>
+      <p class="text-gray-700 mb-6">Thanks for reaching out — we’ll get back to you shortly.</p>
+      <button onclick="closeModal()"
+              class="bg-purple-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-purple-700 transition">
+        Close
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const spinner = document.getElementById('spinner');
+  const submitText = document.getElementById('submitText');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Reset error visibility
+    document.querySelectorAll('[id^="error-"]').forEach(el => el.classList.add('hidden'));
+
+    // Basic Validation
+    let valid = true;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name) {
+      document.getElementById('error-name').classList.remove('hidden');
+      valid = false;
+    }
+    if (!email || !email.includes('@')) {
+      document.getElementById('error-email').classList.remove('hidden');
+      valid = false;
+    }
+    if (!message) {
+      document.getElementById('error-message').classList.remove('hidden');
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    // Show spinner
+    spinner.classList.remove('hidden');
+    submitText.textContent = 'Sending...';
+
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    // Reset UI
+    spinner.classList.add('hidden');
+    submitText.textContent = 'Send Message';
+
+    if (res.ok) {
+      form.reset();
+      document.getElementById('successModal').classList.remove('hidden');
+    }
+  });
+
+  function closeModal() {
+    document.getElementById('successModal').classList.add('hidden');
+  }
+</script>
+
+
+  <!-- Footer -->
+<footer class="relative z-10 bg-black text-white font-body px-6 pt-20 pb-12 overflow-hidden">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start text-sm" data-aos="fade-up">
+
+    <!-- Branding & Contact -->
+    <div class="space-y-4">
+      <h4 class="text-xl font-heading font-semibold tracking-wide text-white">OT Vibez Studio</h4>
+      <p class="text-gray-400">Where sound meets soul. Based in Edmonton, booking 7 days a week.</p>
+      <p>
+        <a href="mailto:otvibezstudio@gmail.com" class="underline underline-offset-4 hover:text-white transition">
+          otvibezstudio@gmail.com
+        </a>
+      </p>
+
+      <!-- Social Icons -->
+      <div class="flex space-x-5 mt-4">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/otvibezstudio" target="_blank" aria-label="Instagram"
+           class="hover:text-rose-500 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z" />
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true"
+           target="_blank" aria-label="LinkedIn" class="hover:text-blue-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98 1.09 0 1.97-.88 1.97-1.98 0-1.1-.88-1.98-1.97-1.98zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z" />
+          </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@otvibezstudio?_t=8hoLadFHSy6&_r=1" target="_blank" aria-label="TikTok"
+           class="hover:scale-110 transition">
+          <svg class="w-6 h-6" fill="#010101" viewBox="0 0 24 24">
+            <path d="M21 8.5v2.25a6.75 6.75 0 0 1-6.75-6.75H12a6.25 6.25 0 1 0 6.25 6.25V8.5h2.75zm-5.75 3.15a4.75 4.75 0 1 1-4.75-4.75v2a2.75 2.75 0 1 0 2.75 2.75h2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="space-y-3 text-gray-400">
+      <h5 class="uppercase text-xs tracking-wider text-white font-semibold mb-2">Quick Links</h5>
+      <ul class="space-y-2">
+        <li><a href="#studio" class="hover:text-white transition duration-300">Studio</a></li>
+        <li><a href="#booking-contact" class="hover:text-white transition duration-300">Book a Session</a></li>
+        <li><a href="/privacy.html" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+        <li><a href="/terms.html" class="hover:text-white transition duration-300">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Craytivo Credits -->
+    <div class="flex md:justify-end items-start md:items-end flex-col-reverse md:flex-col space-y-3 md:text-right text-gray-400">
+      <p>&copy; 2025 OT Vibez Studio</p>
+      <p>
+        Website by 
+        <a href="https://craytivo.com" class="text-purple-400 hover:text-white font-medium underline underline-offset-4 transition">
+          Craytivo
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Decorative Glow -->
+  <div class="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+<!-- Decorative Wave -->
+<div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-0 pointer-events-none">
+  <svg class="relative block w-[200%] h-32 animate-wave-slow" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#9b903f1f" />
+  </svg>
+</div>
+
+<style>
+  @keyframes wave-slow {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-wave-slow {
+    animation: wave-slow 18s linear infinite;
+  }
+</style>
+
 </footer>
 
+<!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn"
+    class="fixed bottom-6 right-6 z-50 bg-purple-600 text-white rounded-full p-3 shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:scale-105 hover:bg-purple-700"
+    aria-label="Scroll to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
 
-<!-- AOS Init -->
+  <!-- Scroll Button Script -->
+  <script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.remove("opacity-0", "pointer-events-none");
+      } else {
+        scrollBtn.classList.add("opacity-0", "pointer-events-none");
+      }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({ once: true, duration: 800 });
 </script>
 
-<!-- Pixel Animations -->
-<style>
-  @layer utilities {
-    @keyframes pixel-open {
-      0% {
-        transform: scaleY(0);
-        opacity: 0;
-      }
-      50% {
-        transform: scaleY(0.5);
-        opacity: 0.3;
-      }
-      100% {
-        transform: scaleY(1);
-        opacity: 1;
-      }
-    }
-
-    @keyframes pixel-close {
-      0% {
-        transform: scaleY(1);
-        opacity: 1;
-      }
-      50% {
-        transform: scaleY(0.5);
-        opacity: 0.3;
-      }
-      100% {
-        transform: scaleY(0);
-        opacity: 0;
-      }
-    }
-
-    .animate-pixel-open {
-      animation: pixel-open 300ms steps(5, end) forwards;
-      transform-origin: top;
-    }
-
-    .animate-pixel-close {
-      animation: pixel-close 300ms steps(5, end) forwards;
-      transform-origin: top;
-    }
-
-    .menu-open .bar:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
-  }
-
-  .menu-open .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-open .bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
-  }
-  }
-</style>
 
 </body>
 </html>
