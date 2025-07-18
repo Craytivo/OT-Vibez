@@ -39,42 +39,115 @@
   <!-- Backdrop Overlay (initially hidden) -->
   <div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-30 md:hidden"></div>
 
-  <!-- Transparent Header with Mobile Menu -->
-  <header class="w-full fixed top-0 left-0 z-50 px-6 py-3 flex items-center justify-between backdrop-blur-xl bg-transparent">
-    <!-- Logo -->
-    <a href="#" class="flex items-center space-x-3">
-      <img src="assets/images/otvibez.png" alt="OT Vibez Logo" class="max-h-20 w-auto object-contain">
+<!-- Premium Transparent Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-xl shadow-sm transition-all">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+    <!-- Logo (Left) -->
+    <a href="#" id="logo-container" class="flex items-center space-x-3 transition-transform duration-300">
+      <img src="assets/images/otvibez.png" alt="OT Vibez Logo" class="max-h-16 w-auto object-contain">
     </a>
 
-    <!-- Premium Desktop Nav -->
-<nav class="hidden md:flex space-x-8 font-body text-sm font-semibold tracking-wide text-black">
-  <a href="#about" class="nav-link">About</a>
-  <a href="#services" class="nav-link">Services</a>
-  <a href="#studio" class="nav-link">Studio</a>
-  <a href="#booking" class="nav-link">Booking</a>
-  <a href="#contact" class="nav-link">Contact</a>
+    <!-- Centered Nav with Pale Blue-Grey Underlines -->
+<nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-[15px] font-medium tracking-wide text-gray-800 font-body">
+  <a href="#about" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+    About
+    <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+  </a>
+  <a href="#services" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+    Services
+    <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+  </a>
+  <a href="#studio" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+    Studio
+    <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+  </a>
+  <a href="#booking" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+    Booking
+    <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+  </a>
+  <a href="#contact" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+    Contact
+    <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+  </a>
 </nav>
 
 
+
+
+    <!-- Social Icons (Right) -->
+    <div class="hidden md:flex space-x-5 items-center">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/otvibezstudio" target="_blank" aria-label="Instagram" class="hover:scale-110 transition-transform text-[#E1306C]">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z" />
+        </svg>
+      </a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" aria-label="TikTok" class="hover:scale-110 transition-transform text-[#69C9D0]">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 256 256">
+          <path d="M232 64v32a88 88 0 1 1-88-88h32v40a8 8 0 0 0 8 8h40zM160 54.63V40h-16a72 72 0 1 0 72 72v-16h-13.61A56.42 56.42 0 0 1 160 54.63z"/>
+        </svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" aria-label="LinkedIn" class="hover:scale-110 transition-transform text-[#0077B5]">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.09 0 1.97-.88 1.97-1.98S6.07 3.5 4.98 3.5zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z" />
+        </svg>
+      </a>
+    </div>
+
     <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class="md:hidden text-black focus:outline-none">
+    <button id="menu-toggle" class="md:hidden text-black focus:outline-none z-50">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
+  </div>
 
-    <!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black/80 backdrop-blur-lg text-white py-8 px-6 md:hidden transition-all duration-300 shadow-lg z-40">
-  <nav class="flex flex-col space-y-6 font-body text-lg font-medium">
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#services" class="mobile-link">Services</a>
-    <a href="#studio" class="mobile-link">Studio</a>
-    <a href="#booking" class="mobile-link">Booking</a>
-    <a href="#contact" class="mobile-link">Contact</a>
-  </nav>
-</div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-black/80 backdrop-blur-lg text-white py-8 px-6 transition-all duration-300 shadow-lg z-40">
+    <nav class="flex flex-col space-y-6 font-body text-lg font-semibold tracking-wide">
+  <a href="#about" class="mobile-link hover:text-purple-400 transition">About</a>
+  <a href="#services" class="mobile-link hover:text-purple-400 transition">Services</a>
+  <a href="#studio" class="mobile-link hover:text-purple-400 transition">Studio</a>
+  <a href="#booking" class="mobile-link hover:text-purple-400 transition">Booking</a>
+  <a href="#contact" class="mobile-link hover:text-purple-400 transition">Contact</a>
+</nav>
 
-  </header>
+  </div>
+</header>
+
+<script>
+  // Shrink logo on scroll (if not already added)
+  const logoContainer = document.getElementById("logo-container");
+  window.addEventListener("scroll", () => {
+    if (logoContainer) {
+      logoContainer.classList.toggle("scale-90", window.scrollY > 40);
+    }
+  });
+
+  // Add click behavior to existing mobile toggle and menu
+  const menuBtn = document.getElementById("menu-toggle");
+  const menuPanel = document.getElementById("mobile-menu");
+
+  if (menuBtn && menuPanel) {
+    menuBtn.addEventListener("click", () => {
+      menuPanel.classList.toggle("hidden");
+    });
+
+    // Close menu when a link is clicked
+    menuPanel.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menuPanel.classList.add("hidden");
+      });
+    });
+  }
+</script>
+
+
+
+
 
 
 <!-- Mobile Menu Burger -->
@@ -998,29 +1071,37 @@
 
 
 <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn"
-    class="fixed bottom-6 right-6 z-50 bg-purple-600 text-white rounded-full p-3 shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:scale-105 hover:bg-purple-700"
-    aria-label="Scroll to top">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<button id="scrollToTopBtn"
+  class="fixed bottom-6 right-6 z-50 bg-gradient-to-tr from-purple-600 via-purple-500 to-pink-500 text-white rounded-full p-4 shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] group"
+  aria-label="Scroll to top">
+  <div class="relative">
+    <!-- Glow Pulse -->
+    <span class="absolute inset-0 rounded-full bg-purple-500 opacity-20 blur-lg animate-ping z-0"></span>
+
+    <!-- Icon -->
+    <svg class="relative z-10 w-6 h-6 stroke-current transition-transform duration-300 group-hover:-translate-y-1"
+         fill="none" stroke-width="2" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
     </svg>
-  </button>
+  </div>
+</button>
 
-  <!-- Scroll Button Script -->
-  <script>
-    const scrollBtn = document.getElementById("scrollToTopBtn");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        scrollBtn.classList.remove("opacity-0", "pointer-events-none");
-      } else {
-        scrollBtn.classList.add("opacity-0", "pointer-events-none");
-      }
-    });
+<!-- Script -->
+<script>
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.remove("opacity-0", "pointer-events-none");
+    } else {
+      scrollBtn.classList.add("opacity-0", "pointer-events-none");
+    }
+  });
 
-    scrollBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
 
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
