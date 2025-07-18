@@ -98,22 +98,31 @@
     </div>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class="md:hidden text-black focus:outline-none z-50">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
+<button id="menu-toggle" class="md:hidden text-black focus:outline-none z-50">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+</button>
+
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-black/80 backdrop-blur-lg text-white py-8 px-6 transition-all duration-300 shadow-lg z-40">
-    <nav class="flex flex-col space-y-6 font-body text-lg font-semibold tracking-wide">
-  <a href="#about" class="mobile-link hover:text-purple-400 transition">About</a>
-  <a href="#services" class="mobile-link hover:text-purple-400 transition">Services</a>
-  <a href="#studio" class="mobile-link hover:text-purple-400 transition">Studio</a>
-  <a href="#booking" class="mobile-link hover:text-purple-400 transition">Booking</a>
-  <a href="#contact" class="mobile-link hover:text-purple-400 transition">Contact</a>
+<!-- Mobile Backdrop -->
+<div id="mobile-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+<!-- Mobile Menu (Dropdown Style) -->
+<nav id="mobile-menu"
+     class="fixed top-0 left-0 w-full max-h-[100vh] pt-[5.5rem] md:pt-0 overflow-y-auto bg-white/50 backdrop-blur-xl z-40 hidden shadow-lg">
+  <ul class="flex flex-col items-start gap-6 p-6 text-lg font-semibold">
+    <li><a href="#home" class="block w-full">Home</a></li>
+    <li><a href="#services" class="block w-full">Services</a></li>
+    <li><a href="#portfolio" class="block w-full">Portfolio</a></li>
+    <li><a href="#testimonials" class="block w-full">Testimonials</a></li>
+    <li><a href="#booking" class="block w-full">Booking</a></li>
+    <li><a href="#contact" class="block w-full">Contact</a></li>
+  </ul>
 </nav>
+
+
 
   </div>
 </header>
@@ -126,23 +135,6 @@
       logoContainer.classList.toggle("scale-90", window.scrollY > 40);
     }
   });
-
-  // Add click behavior to existing mobile toggle and menu
-  const menuBtn = document.getElementById("menu-toggle");
-  const menuPanel = document.getElementById("mobile-menu");
-
-  if (menuBtn && menuPanel) {
-    menuBtn.addEventListener("click", () => {
-      menuPanel.classList.toggle("hidden");
-    });
-
-    // Close menu when a link is clicked
-    menuPanel.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        menuPanel.classList.add("hidden");
-      });
-    });
-  }
 </script>
 
 
