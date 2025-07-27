@@ -79,75 +79,75 @@
 <body class="bg-white text-gray-900">
 
   <!-- Backdrop Overlay (initially hidden) -->
-  <div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-30 md:hidden"></div>
+<div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-30 md:hidden"></div>
 
-  <!-- Premium Transparent Header -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-xl shadow-sm transition-all" role="banner">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+<!-- Premium Transparent Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-xl shadow-sm transition-all" role="banner">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <!-- Logo (Left) -->
+    <a href="/" id="logo-container" class="flex items-center space-x-3 transition-transform duration-300" aria-label="OT Vibez Edmonton Studio Home">
+      <img src="assets/images/otvibez.png" alt="OT Vibez Studio - Edmonton Rehearsal & Recording Space" class="max-h-16 w-auto object-contain">
+    </a>
 
-      <!-- Logo (Left) -->
-      <a href="/" id="logo-container" class="flex items-center space-x-3 transition-transform duration-300" aria-label="OT Vibez Edmonton Studio Home">
-        <img src="assets/images/otvibez.png" alt="OT Vibez Studio - Edmonton Rehearsal & Recording Space" class="max-h-16 w-auto object-contain">
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-[15px] font-medium tracking-wide text-gray-800 font-body" aria-label="Main Navigation">
+      <a href="#about" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+        About
+        <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
       </a>
+      <a href="services.html" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+        Services
+        <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+      </a>
+      <a href="#studio" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+        Studio
+        <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+      </a>
+      <a href="#booking" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+        Booking
+        <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+      </a>
+      <a href="#contact" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
+        Contact
+        <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
+      </a>
+    </nav>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-[15px] font-medium tracking-wide text-gray-800 font-body" aria-label="Main Navigation">
-        <a href="#about" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
-          About
-          <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
-        </a>
-        <a href="#services" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
-          Services
-          <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
-        </a>
-        <a href="#studio" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
-          Studio
-          <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
-        </a>
-        <a href="#booking" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
-          Booking
-          <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
-        </a>
-        <a href="#contact" class="nav-link relative group transition-all duration-300 hover:text-purple-700">
-          Contact
-          <span class="block h-[1.5px] bg-[#b0c4de]/40 scale-x-100 group-hover:opacity-100 opacity-50 transition-opacity mt-1"></span>
-        </a>
-      </nav>
-
-      <!-- Social Icons -->
-      <div class="hidden md:flex space-x-5 items-center">
-        <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram @otvibezstudio" title="Follow OT Vibez on Instagram" class="hover:scale-110 transition-transform text-[#E1306C]">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok @otvibezstudio" title="Follow OT Vibez on TikTok" class="hover:scale-110 transition-transform text-[#69C9D0]">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 256 256"><path d="M232 64v32a88 88 0 1 1-88-88h32v40a8 8 0 0 0 8 8h40zM160 54.63V40h-16a72 72 0 1 0 72 72v-16h-13.61A56.42 56.42 0 0 1 160 54.63z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="OT Vibez on LinkedIn" title="Connect with OT Vibez on LinkedIn" class="hover:scale-110 transition-transform text-[#0077B5]">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.09 0 1.97-.88 1.97-1.98S6.07 3.5 4.98 3.5zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/></svg>
-        </a>
-      </div>
-
-      <!-- Mobile Menu Toggle -->
-      <button id="menu-toggle" class="md:hidden text-black focus:outline-none z-50" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
+    <!-- Social Icons -->
+    <div class="hidden md:flex space-x-5 items-center">
+      <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram @otvibezstudio" title="Follow OT Vibez on Instagram" class="hover:scale-110 transition-transform text-[#E1306C]">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok @otvibezstudio" title="Follow OT Vibez on TikTok" class="hover:scale-110 transition-transform text-[#69C9D0]">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 256 256"><path d="M232 64v32a88 88 0 1 1-88-88h32v40a8 8 0 0 0 8 8h40zM160 54.63V40h-16a72 72 0 1 0 72 72v-16h-13.61A56.42 56.42 0 0 1 160 54.63z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="OT Vibez on LinkedIn" title="Connect with OT Vibez on LinkedIn" class="hover:scale-110 transition-transform text-[#0077B5]">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.09 0 1.97-.88 1.97-1.98S6.07 3.5 4.98 3.5zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/></svg>
+      </a>
     </div>
 
-    <!-- Mobile Menu -->
-    <nav id="mobile-menu"
-         class="fixed top-0 left-0 w-full max-h-[100vh] pt-[5.5rem] md:pt-0 overflow-y-auto bg-white/50 backdrop-blur-xl z-40 hidden shadow-lg"
-         aria-label="Mobile Navigation">
-      <ul class="flex flex-col items-start gap-6 p-6 text-lg font-semibold">
-        <li><a href="#home" class="block w-full">Home</a></li>
-        <li><a href="#services" class="block w-full">Services</a></li>
-        <li><a href="#studio" class="block w-full">Studio</a></li>
-        <li><a href="#booking" class="block w-full">Booking</a></li>
-        <li><a href="#contact" class="block w-full">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Mobile Menu Toggle -->
+    <button id="menu-toggle" class="md:hidden text-black focus:outline-none z-50" aria-label="Toggle menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu"
+       class="fixed top-0 left-0 w-full max-h-[100vh] pt-[5.5rem] md:pt-0 overflow-y-auto bg-white/50 backdrop-blur-xl z-40 hidden shadow-lg"
+       aria-label="Mobile Navigation">
+    <ul class="flex flex-col items-start gap-6 p-6 text-lg font-semibold">
+      <li><a href="#home" class="block w-full">Home</a></li>
+      <li><a href="services.html" class="block w-full">Services</a></li>
+      <li><a href="#studio" class="block w-full">Studio</a></li>
+      <li><a href="#booking" class="block w-full">Booking</a></li>
+      <li><a href="#contact" class="block w-full">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
 
 <!-- Navigation Styles -->
@@ -249,7 +249,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
 
 <!-- Hero Section: Optimized for SEO and Performance -->
-<section id="vanta-bg" class="relative h-screen w-full flex items-center justify-center overflow-hidden px-6 pt-32 sm:pt-36 bg-white text-black">
+<section id="vanta-bg" class="relative min-h-[100svh] md:min-h-screen w-full flex items-center justify-center overflow-hidden px-6 pt-32 sm:pt-36 bg-white text-black">
 
   <!-- Hero Card -->
   <div id="home" data-aos="fade-up" class="relative z-10 w-full max-w-5xl bg-white/10 backdrop-blur-lg border border-gray-200 rounded-3xl px-10 py-16 text-center shadow-xl transition-all duration-700">
@@ -262,17 +262,11 @@
     </div>
 
     <h1 class="font-heading text-5xl md:text-6xl font-bold leading-tight mb-6 text-gray-900">
-  <span class="block mb-4">Rehearse. Record. Create.</span>
-  <span
-    class="block text-center whitespace-normal overflow-visible min-h-[6.5rem] sm:min-h-[5rem] flex items-center justify-center transition-all duration-300 ease-in-out max-w-full px-4"
-  >
-    <span id="typed-text"
-      class="font-heading break-words text-balance w-full max-w-4xl mx-auto text-lg sm:text-xl md:text-2xl leading-snug"
-    ></span>
-  </span>
-</h1>
-
-
+      <span class="block mb-4">Rehearse. Record. Create.</span>
+      <span class="block text-center whitespace-normal overflow-visible min-h-[6.5rem] sm:min-h-[5rem] flex items-center justify-center transition-all duration-300 ease-in-out max-w-full px-4">
+        <span id="typed-text" class="font-heading break-words text-balance w-full max-w-4xl mx-auto text-lg sm:text-xl md:text-2xl leading-snug"></span>
+      </span>
+    </h1>
 
     <!-- Description with SEO Keywords -->
     <p class="font-body text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -289,6 +283,7 @@
 
   </div>
 </section>
+
 
 
 
@@ -477,27 +472,78 @@
     </div>
   </div>
 
-  <!-- Subscription Plans -->
-  <div class="mt-28 max-w-5xl mx-auto text-center px-4 md:px-0" data-aos="fade-up">
-    <span class="inline-block uppercase tracking-wider text-emerald-600 bg-emerald-100/60 text-xs font-semibold px-4 py-1 rounded-full mb-4 backdrop-blur-sm">
+<!-- Subscription Plans -->
+<!-- Subscription Plans -->
+<div class="mt-28 max-w-6xl mx-auto px-6 md:px-8" data-aos="fade-up">
+  <!-- Tag -->
+  <div class="text-center mb-6">
+    <span class="inline-block uppercase tracking-wider text-emerald-600 bg-emerald-100/60 text-xs font-semibold px-4 py-1 rounded-full backdrop-blur-sm">
       Flexible Studio Access
     </span>
+  </div>
 
-    <h3 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 mb-5 leading-tight">
-      Lock In <span class="text-emerald-600">Your Studio Time</span>
-    </h3>
+  <!-- Title -->
+  <h3 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 text-center leading-tight mb-6">
+    Lock In <span class="text-emerald-600">Your Studio Time</span>
+  </h3>
 
-    <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10 max-w-3xl mx-auto">
-      Whether you're rehearsing weekly or recording monthly, our flexible studio plans keep your space reserved. Choose from a <strong class="text-gray-900 font-medium">monthly pass</strong> or a <strong class="text-gray-900 font-medium">discounted annual plan</strong> to secure your ideal slot and save on booking rates.
-    </p>
+  <!-- Description -->
+  <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
+    One-off bookings add up fast. With our flexible monthly and yearly plans, you save more and secure your space in advance. No stress, no scrambling — just music.
+  </p>
 
+  <!-- 2 Column Layout -->
+  <div class="grid md:grid-cols-2 gap-10 items-center bg-emerald-50/70 border border-emerald-200 rounded-xl shadow-md p-8 mb-10">
+    
+    <!-- Left: Text Content -->
+    <div>
+      <p class="text-lg sm:text-xl font-medium text-emerald-800 mb-4">
+        <strong>Monthly & Annual Plans:</strong> Get discounted rates and guaranteed studio access when you subscribe. Ideal for artists, bands, podcasters, and creatives who need consistent space.
+      </p>
+      <p class="text-lg sm:text-xl font-medium text-emerald-800">
+        <strong>Alberta Music Members</strong> receive <span class="text-emerald-900 font-semibold">exclusive discounts</span> on all access plans — just one more reason to join the province’s vibrant music community.
+      </p>
+    </div>
+
+    <!-- Right: Alberta Music Partner Highlight -->
+    <div class="flex flex-col items-center md:items-end text-center md:text-right space-y-4">
+      <img
+        src="assets/images/Alberta-Music-300x225-removebg.png"
+        alt="Alberta Music Logo"
+        class="h-80 w-auto object-contain transform transition-transform duration-300 hover:scale-105"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="text-sm sm:text-base text-emerald-800 leading-relaxed max-w-xs">
+        We’re proud to partner with <strong>Alberta Music</strong> — supporting artists, building community, and helping local talent grow. Members enjoy access to industry perks, grants, and exclusive OT Vibez discounts.
+      </p>
+      <a href="https://www.albertamusic.org/" target="_blank" rel="noopener noreferrer"
+         class="text-sm font-semibold text-emerald-700 underline hover:text-emerald-900 transition">
+        Learn more at albertamusic.org
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA Button -->
+  <div class="text-center">
     <a href="#booking"
        class="inline-block bg-emerald-600 text-white px-8 py-3 text-base sm:text-lg rounded-full font-heading font-semibold hover:bg-emerald-700 hover:-translate-y-0.5 transition-transform duration-300 shadow-lg"
        aria-label="Explore studio access plans at OT Vibez">
       Explore Access Plans
     </a>
   </div>
-</section>
+
+  <!-- Optional Divider -->
+  <hr class="border-t border-emerald-100 mt-20 max-w-3xl mx-auto" />
+</div>
+
+
+
+
+
+
+
+
 
 <!-- OT Vibez Services Section -->
 <section id="services" class="-mt-20 py-24 px-6 bg-white text-black font-body">
@@ -942,6 +988,7 @@
 <section id="testimonials" class="hidden lg:block py-28 px-6 bg-white text-black font-body">
   <div class="max-w-7xl mx-auto">
 
+
     <!-- Heading -->
     <div class="text-center mb-16" data-aos="fade-up">
       <span class="inline-block uppercase tracking-wider text-rose-600 bg-purple-100 text-xs font-semibold px-4 py-1 rounded-full mb-4">
@@ -954,6 +1001,28 @@
         Our clients create unforgettable sessions — and they’re not shy about sharing it.
       </p>
     </div>
+
+<!-- Video Embed with Themed Background Accent -->
+<div class="relative max-w-4xl mx-auto mb-16" data-aos="fade-up">
+  <!-- Offset Background Card -->
+  <div class="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl bg-[#E1306C]/20 border border-[#E1306C]/30 -z-10"></div>
+
+  <!-- Video Container -->
+  <div class="overflow-hidden rounded-2xl shadow-xl border border-gray-200 bg-white">
+    <div class="relative w-full" style="padding-bottom: 56.25%;">
+      <iframe
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/m182N84PILo?rel=0"
+        title="OT Vibez Video Testimonial"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+
 
     <!-- Responsive Testimonial Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto" data-aos="fade-up">
@@ -1186,262 +1255,102 @@
 </script>
 
 
- <!-- Booking & Contact Section -->
-<section id="booking" class="relative z-10 bg-white py-10 px-6 font-body text-gray-900">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start relative">
+<!-- Booking Section -->
+<section id="booking" class="relative z-10 py-12 px-4 sm:px-6 bg-white font-body text-gray-900">
+  <!-- Offset Background -->
+  <div class="absolute inset-0 max-w-6xl mx-auto rounded-3xl bg-[#E1306C] opacity-10 -rotate-1 -z-10 shadow-md"></div>
 
-    <!-- Booking Section -->
-    <div class="bg-white/60 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl p-10 space-y-6 text-gray-800">
+  <div class="relative max-w-6xl mx-auto bg-white/90 backdrop-blur-xl border border-white/30 rounded-3xl shadow-xl px-6 sm:px-10 py-12 space-y-12 text-gray-800">
 
-      <!-- Icon -->
-      <div class="w-12 h-12 flex items-center justify-center rounded-full bg-pink-100 text-pink-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3M5 11h14M5 19h14M5 15h14" />
-        </svg>
-      </div>
-
-      <!-- Title -->
-      <h2 class="text-3xl font-heading font-bold">Book Your Studio Time</h2>
-
-      <!-- Description -->
-      <p class="text-base leading-relaxed text-gray-700">
-        Reserve your spot at OT Vibez — Edmonton’s favorite plug-and-play <strong>rehearsal space</strong> and <strong>recording studio</strong>. Whether you're prepping for a live show or tracking vocals, we make it simple.
+    <!-- Title -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold tracking-tight text-gray-900">
+        Book Your Studio Time
+      </h2>
+      <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+        Reserve your spot at <span class="text-[#E1306C] font-semibold">OT Vibez</span> — Edmonton’s go-to plug-and-play studio.
       </p>
-      <p class="text-base leading-relaxed text-gray-700">
-        Choose your session time, add services like an engineer or extra lighting, and confirm instantly through our <strong>online studio booking portal</strong>.
-      </p>
-
-      <!-- Contact Info -->
-      <div class="space-y-1 text-base text-gray-800">
-        <p><strong>Location:</strong> 8762 50 Ave NW #202, Edmonton, AB T6B 1E8</p>
-        <p><strong>Phone:</strong> <a href="tel:+17805221807" class="text-pink-600 hover:underline">(780) 522-1807</a></p>
-        <p><strong>Hours:</strong> Open Daily — 8 a.m. to 2 a.m.</p>
-      </div>
-
-      <!-- Embedded Map Styled -->
-      <div class="rounded-3xl overflow-hidden border border-white/20 shadow-xl">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24161.357758432823!2d-113.453!3d53.4723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021dbb576e065%3A0xf305162c1e999e4a!2s8762%2050%20Ave%20NW%20%23202%2C%20Edmonton%2C%20AB%20T6B%201E8!5e0!3m2!1sen!2sca!4v1717798495473!5m2!1sen!2sca"
-          width="100%"
-          height="250"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="w-full h-[250px] border-0">
-        </iframe>
-      </div>
-
-      <!-- CTA Button -->
-      <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services"
-         target="_blank"
-         class="inline-block bg-pink-600 text-white px-8 py-3 text-base rounded-full font-heading font-semibold hover:bg-pink-700 hover:-translate-y-0.5 transition-transform duration-300 shadow-lg">
-        Book Now
-      </a>
     </div>
 
+    <!-- Grid Layout -->
+    <div class="grid md:grid-cols-2 gap-10 items-start md:items-center">
 
-    <!-- Contact Form Section -->
-<div class="bg-white/60 backdrop-blur-xl border border-gray-200 rounded-3xl shadow-xl p-10 relative">
+      <!-- Left: Booking Copy -->
+      <div class="space-y-5 text-sm sm:text-base">
+        <p class="text-gray-700 leading-relaxed">
+          Whether you're rehearsing or recording, our space is built for high-performance creativity. No setup required.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Add session engineers, lighting setups, or gear. Book hourly or weekly at discounted rates.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Trusted by over <strong>200 artists, labels, and podcasters</strong> in Edmonton.
+        </p>
+        <p class="text-base font-semibold text-[#E1306C]">
+          Peak hours book fast — secure your time today.
+        </p>
 
-  <!-- Icon -->
-  <div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-6">
-    <!-- Mail Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-    </svg>
-  </div>
-
-  <!-- Title -->
-  <h2 class="text-3xl font-heading font-bold mb-2 text-gray-900">Contact OT Vibez</h2>
-  <p class="text-gray-700 mb-6 text-base font-body leading-relaxed max-w-2xl">
-    Got a question about booking, availability, or custom sessions? Fill out the form below and we’ll respond as soon as possible.
+        <!-- Call-to-Action -->
+<div class="relative isolate bg-[#E1306C] text-white rounded-2xl shadow-xl p-6 sm:p-8 mt-6 sm:mt-8 text-center border border-[#c0255b] overflow-hidden">
+  <h3 class="text-xl sm:text-2xl font-heading font-bold mb-3 tracking-tight">
+    Ready to Lock In Your Studio Time?
+  </h3>
+  <p class="text-sm sm:text-base text-white/90 mb-5 max-w-xl mx-auto">
+    We’re Edmonton’s go-to plug-and-play studio — and prime slots fill up fast. Secure yours now.
   </p>
 
-  <!-- Form -->
-  <form id="contactForm" action="https://formspree.io/f/xzzvzeap" method="POST" class="space-y-6">
-
-    <!-- Full Name -->
-<div>
-  <label for="name" class="block text-sm font-medium text-gray-800">Full Name</label>
-  <input
-    type="text"
-    id="name"
-    name="name"
-    required
-    class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-purple-500 focus:border-purple-500 px-4 py-2 text-gray-900"
-  />
-  <p class="mt-1 text-sm text-red-500 hidden" id="error-name">Name is required.</p>
-</div>
-
-<!-- Email Address -->
-<div>
-  <label for="email" class="block text-sm font-medium text-gray-800">Email Address</label>
-  <input
-    type="email"
-    id="email"
-    name="email"
-    required
-    class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-purple-500 focus:border-purple-500 px-4 py-2 text-gray-900"
-  />
-  <p class="mt-1 text-sm text-red-500 hidden" id="error-email">Valid email is required.</p>
-</div>
-
-<!-- Session Type -->
-<div class="relative">
-  <label for="sessionType" class="block text-sm font-medium text-gray-800 mb-1">Session Type</label>
-
-  <select
-  id="sessionType"
-  name="sessionType"
-  required
-  class="w-full bg-white text-gray-900 text-sm px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition"
->
-  <option value="">Select a session type</option>
-  <option value="Rehearsal" class="text-sm">🎸 Rehearsal</option>
-  <option value="Recording" class="text-sm">🎙️ Recording</option>
-  <option value="Podcast" class="text-sm">🎧 Podcast</option>
-  <option value="Other" class="text-sm">✨ Other</option>
-  <option value="N/A" class="text-sm">🚫 N/A</option>
-</select>
-
-
-
-  <p class="mt-1 text-sm text-red-500 hidden" id="error-sessionType">Please select a session type.</p>
-</div>
-
-<!-- Message -->
-<div>
-  <label for="message" class="block text-sm font-medium text-gray-800">Message</label>
-  <textarea
-    id="message"
-    name="message"
-    rows="5"
-    required
-    class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-purple-500 focus:border-purple-500 px-4 py-3 text-gray-900 resize-none"
-  ></textarea>
-  <p class="mt-1 text-sm text-red-500 hidden" id="error-message">Please enter a message.</p>
+  <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services"
+     target="_blank"
+     onclick="gtag('event', 'book_now_click', { 'event_category': 'Booking', 'event_label': 'Prominent Booking CTA' });"
+     class="inline-block bg-white text-[#E1306C] px-8 py-4 text-base sm:text-lg font-heading font-bold rounded-full shadow-lg hover:bg-pink-100 transition-transform transform hover:-translate-y-1 duration-300">
+    Book Now
+  </a>
 </div>
 
 
-    <!-- Submit Button -->
-    <div class="relative">
-      <button type="submit"
-              class="w-full flex items-center justify-center bg-purple-600 text-white px-6 py-3 rounded-lg font-heading font-semibold hover:bg-purple-700 transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-purple-400">
-        <span id="submitText">Send Message</span>
-        <svg id="spinner" class="ml-3 w-5 h-5 animate-spin hidden text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-             viewBox="0 0 24 24">
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
-        </svg>
-      </button>
-    </div>
-  </form>
-</div>
-
-  </div>
-
-  <!-- Modal -->
-<div id="successModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc"
-     class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center transition-opacity duration-300 ease-in-out">
-  <div class="bg-white rounded-3xl max-w-lg w-full mx-6 p-8 shadow-2xl text-center transform scale-100 sm:scale-105 transition-transform duration-300">
-    
-    <!-- Icon -->
-    <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 shadow-inner">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-      </svg>
-    </div>
-
-    <!-- Heading -->
-    <h3 id="modal-title" class="text-2xl font-heading font-bold text-purple-700 mb-3">Message Sent Successfully</h3>
-
-    <!-- Description -->
-    <p id="modal-desc" class="text-gray-700 text-base leading-relaxed mb-6 font-body">
-      Thanks for reaching out to <strong>OT Vibez Studio</strong>. A member of our team will respond shortly.
-    </p>
-
-    <!-- Close Button -->
-    <button onclick="closeModal()"
-            class="bg-purple-600 text-white px-6 py-2.5 rounded-full font-semibold font-heading shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400 transition">
-      Close
-    </button>
+        <!-- Social Proof -->
+<div class="pt-8 border-t border-gray-300 mt-6">
+  <p class="text-xs text-gray-600 mb-3">In partnership with:</p>
+  <div class="flex items-center gap-4 flex-wrap">
+    <img src="assets/images/alberta_music-removebg-preview.png" alt="Alberta Music" class="h-16 object-contain" />
+    <img src="assets/images/melafrique.png" alt="Melafrique" class="h-12 object-contain" />
+    <img src="assets/images/stone_hearts-removebg-preview.png" alt="Stone Hearts" class="h-16 object-contain" />
   </div>
 </div>
 
+      </div>
 
+      <!-- Right: Studio Info + Map -->
+      <div class="flex flex-col justify-start items-center md:items-start text-center md:text-left gap-4 bg-[#fff0f5] border border-[#E1306C]/20 rounded-2xl p-5 text-sm sm:text-base">
+        <p><strong>Location:</strong><br> 8762 50 Ave NW #202, Edmonton, AB T6B 1E8</p>
+        <p><strong>Phone:</strong> <a href="tel:+17805221807" class="text-[#E1306C] hover:underline">(780) 522-1807</a></p>
+        <p><strong>Hours:</strong><br> Daily · 8 a.m. – 2 a.m.</p>
+
+        <!-- Map (Mobile-Optimized) -->
+        <div class="w-full rounded-xl overflow-hidden border border-white/30 shadow-md mt-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24161.357758432823!2d-113.453!3d53.4723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021dbb576e065%3A0xf305162c1e999e4a!2s8762%2050%20Ave%20NW%20%23202%2C%20Edmonton%2C%20AB%20T6B%201E8!5e0!3m2!1sen!2sca!4v1717798495473!5m2!1sen!2sca"
+            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            class="w-full h-[200px] border-0">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Google Analytics (example for gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
-  const form = document.getElementById('contactForm');
-  const spinner = document.getElementById('spinner');
-  const submitText = document.getElementById('submitText');
-  const submitButton = form.querySelector('button[type="submit"]');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // Reset error visibility
-    document.querySelectorAll('[id^="error-"]').forEach(el => el.classList.add('hidden'));
-
-    // Basic Validation
-    let valid = true;
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    if (!name) {
-      document.getElementById('error-name').classList.remove('hidden');
-      valid = false;
-    }
-    if (!email || !email.includes('@')) {
-      document.getElementById('error-email').classList.remove('hidden');
-      valid = false;
-    }
-    if (!message) {
-      document.getElementById('error-message').classList.remove('hidden');
-      valid = false;
-    }
-
-    if (!valid) return;
-
-    // Prevent double submission
-    submitButton.disabled = true;
-    spinner.classList.remove('hidden');
-    submitText.textContent = 'Sending...';
-
-    try {
-      const data = new FormData(form);
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      spinner.classList.add('hidden');
-      submitText.textContent = 'Send Message';
-
-      if (res.ok) {
-        form.reset();
-        document.getElementById('successModal').classList.remove('hidden');
-      } else {
-        alert('Something went wrong. Please try again.');
-        submitButton.disabled = false;
-      }
-    } catch (error) {
-      console.error(error);
-      alert('An error occurred. Please try again.');
-      spinner.classList.add('hidden');
-      submitText.textContent = 'Send Message';
-      submitButton.disabled = false;
-    }
-  });
-
-  function closeModal() {
-    document.getElementById('successModal').classList.add('hidden');
-    // Re-enable button after modal closes (optional)
-    const submitButton = form.querySelector('button[type="submit"]');
-    if (submitButton) submitButton.disabled = false;
-  }
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
 </script>
+
 
 
 
@@ -1452,7 +1361,7 @@
 
     <!-- Branding & Contact -->
     <div class="space-y-4">
-      <h2 class="text-xl font-heading font-semibold tracking-wide text-gray-900">OT Vibez Studio</h2>
+      <h2 class="text-xl font-heading font-semibold tracking-wide text-gray-900">OT Vibez Music Rehearsal Space & Studio</h2>
       <p class="text-gray-700 leading-relaxed">
         Professional music rehearsal space and recording studio in Edmonton — open daily for artists, podcasters, and creatives.
       </p>
