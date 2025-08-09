@@ -14,5 +14,11 @@ Allow: /services.html
 Allow: /privacy.html
 Allow: /terms.html
 
+# Allow favicon and manifest files
+Allow: /favicon.ico
+Allow: /site.webmanifest
+Allow: /assets/images/favicon.ico
+Allow: /assets/images/otvibez-white-bg.png
+
 # Crawl delay (optional)
 Crawl-delay: 1
