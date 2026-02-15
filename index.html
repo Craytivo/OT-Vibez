@@ -300,23 +300,6 @@
       border-radius: 4px;
     }
 
-    /* Skip to main content link for screen readers */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #8b5cf6;
-      color: white;
-      padding: 8px;
-      text-decoration: none;
-      border-radius: 4px;
-      z-index: 10000;
-    }
-
-    .skip-link:focus {
-      top: 6px;
-    }
-
     /* Improved contrast for better readability */
     .text-gray-700 {
       color: #374151;
@@ -439,13 +422,13 @@
     /* Mobile responsiveness improvements */
     @media (max-width: 640px) {
       .hero-title {
-        font-size: clamp(2rem, 8vw, 3rem);
-        line-height: 1.1;
+        font-size: clamp(1.85rem, 7.4vw, 2.4rem);
+        line-height: 1.08;
       }
       
       .hero-subtitle {
-        font-size: clamp(1rem, 4vw, 1.25rem);
-        line-height: 1.4;
+        font-size: clamp(1rem, 3.9vw, 1.15rem);
+        line-height: 1.5;
       }
       
       /* Better touch targets for mobile */
@@ -457,12 +440,12 @@
       
       /* Improved mobile spacing */
       section {
-        padding: 4rem 1rem;
+        padding: 3.5rem 1rem;
       }
       
       .card {
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
+        padding: 1.1rem;
+        margin-bottom: 0.9rem;
       }
       
       /* Better mobile text sizing */
@@ -485,8 +468,47 @@
       
       /* Better mobile navigation */
       .mobile-nav-link {
-        min-height: 60px;
-        padding: 12px;
+        min-height: 52px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      body {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 3.1rem 0.95rem;
+      }
+
+      .hero-title {
+        font-size: clamp(1.75rem, 8.4vw, 2.18rem);
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      #vanta-bg {
+        padding-top: 5.9rem;
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+      }
+
+      #home {
+        padding: 1.45rem 1.05rem 1.7rem;
+        border-radius: 1.1rem;
+      }
+
+      #main-content .cta-primary,
+      #main-content .btn-primary {
+        min-height: 46px;
+      }
+
+      #mobile-menu .security-badge {
+        font-size: 0.78rem;
+        padding: 0.42rem 0.72rem;
       }
     }
 
@@ -536,18 +558,15 @@
 
 <body class="bg-white text-gray-900">
 
-  <!-- Skip to main content link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
   <!-- Backdrop Overlay (initially hidden) -->
 <div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] md:hidden"></div>
 
 <!-- Premium Transparent Header with Enhanced Contact Info -->
 <header class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-xl shadow-sm transition-all" role="banner">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
     <!-- Logo (Left) -->
     <a href="/" id="logo-container" class="flex items-center space-x-3 transition-transform duration-300" aria-label="OT Vibez Edmonton Studio Home">
-      <img src="assets/images/otvibez.png" alt="OT Vibez Studio - Edmonton Rehearsal & Recording Space" class="max-h-16 w-auto object-contain" loading="eager">
+      <img src="assets/images/otvibez.png" alt="OT Vibez Studio - Edmonton Rehearsal & Recording Space" class="h-11 sm:h-12 md:h-14 w-auto object-contain" loading="eager">
     </a>
 
     <!-- Desktop Nav -->
@@ -585,7 +604,7 @@
     </div>
 
     <!-- Mobile Menu Toggle -->
-    <button id="menu-toggle" class="md:hidden p-2 rounded-lg bg-white/20 backdrop-blur-sm border border-gray-200/50 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 z-50 transition-all duration-200" aria-label="Toggle menu">
+    <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl bg-white/70 hover:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 z-50 transition-all duration-200" aria-label="Toggle menu">
       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
@@ -595,14 +614,13 @@
 
 <!-- Mobile Menu -->
 <nav id="mobile-menu"
-     class="fixed top-0 left-0 w-full h-full pt-[5.5rem] md:pt-0 overflow-y-auto bg-white/95 backdrop-blur-xl z-[9999] hidden shadow-2xl transform transition-all duration-300 ease-in-out"
+     class="fixed top-0 left-0 w-full h-full pt-[4.8rem] md:pt-0 overflow-y-auto bg-white/95 backdrop-blur-xl z-[9999] hidden shadow-2xl transform transition-all duration-300 ease-in-out"
      aria-label="Mobile Navigation">
   <div class="flex flex-col h-full">
     <!-- Mobile Menu Header -->
-    <div class="flex items-center justify-between p-6 border-b border-gray-200">
+    <div class="flex items-center justify-between p-4 sm:p-5 border-b border-gray-200">
       <div class="flex items-center space-x-3">
-        <img src="assets/images/otvibez.png" alt="OT Vibez Studio" class="h-8 w-auto">
-        <span class="text-lg font-semibold text-gray-900">Menu</span>
+        <img src="assets/images/otvibez.png" alt="OT Vibez Studio" class="h-9 w-auto">
       </div>
       <button id="mobile-close" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200" aria-label="Close menu">
         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -612,7 +630,7 @@
     </div>
     
     <!-- Mobile Menu Links -->
-    <ul class="flex flex-col p-6 space-y-2">
+    <ul class="flex flex-col p-4 sm:p-5 space-y-2">
       <li>
         <a href="#home" class="mobile-nav-link group">
           <div class="flex items-center space-x-4 p-4 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100 hover:border-purple-200 transition-all duration-200">
@@ -622,7 +640,7 @@
               </svg>
             </div>
             <div>
-              <span class="block text-lg font-semibold text-gray-900 group-hover:text-purple-700 transition-colors duration-200">Home</span>
+              <span class="block text-base sm:text-lg font-semibold text-gray-900 group-hover:text-purple-700 transition-colors duration-200">Home</span>
               <span class="block text-sm text-gray-600">Back to main page</span>
             </div>
             <svg class="w-5 h-5 text-gray-400 group-hover:text-purple-500 transition-colors duration-200 ml-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -640,7 +658,7 @@
               </svg>
             </div>
             <div>
-              <span class="block text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">Services</span>
+              <span class="block text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">Services</span>
               <span class="block text-sm text-gray-600">What we offer</span>
             </div>
             <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors duration-200 ml-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -658,7 +676,7 @@
               </svg>
             </div>
             <div>
-              <span class="block text-lg font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">Studio</span>
+              <span class="block text-base sm:text-lg font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">Studio</span>
               <span class="block text-sm text-gray-600">Our space & equipment</span>
             </div>
             <svg class="w-5 h-5 text-gray-400 group-hover:text-green-500 transition-colors duration-200 ml-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -676,7 +694,7 @@
               </svg>
             </div>
             <div>
-              <span class="block text-lg font-semibold text-gray-900 group-hover:text-pink-700 transition-colors duration-200">Booking</span>
+              <span class="block text-base sm:text-lg font-semibold text-gray-900 group-hover:text-pink-700 transition-colors duration-200">Booking</span>
               <span class="block text-sm text-gray-600">Reserve your time</span>
             </div>
             <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-500 transition-colors duration-200 ml-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -688,7 +706,7 @@
     </ul>
 
     <!-- Mobile Contact Info & CTAs -->
-    <div class="px-6 py-4 space-y-4">
+    <div class="px-4 sm:px-5 py-3 space-y-3.5">
       <!-- Contact Info -->
       <div class="bg-gray-50 rounded-xl p-4 space-y-3">
         <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Contact Info</h3>
@@ -741,7 +759,7 @@
     </div>
     
     <!-- Mobile Menu Footer -->
-    <div class="mt-auto p-6 border-t border-gray-200">
+    <div class="mt-auto p-4 sm:p-5 border-t border-gray-200">
       <div class="flex items-center justify-center space-x-6">
         <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" class="p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-white hover:scale-110 transition-transform duration-200">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -837,14 +855,12 @@
 
 <main id="main-content" class="flex-grow">
   <!-- Vanta.js + Three.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
 
 <!-- Hero Section: Optimized for SEO and Performance -->
-<section id="vanta-bg" class="relative min-h-[100svh] md:min-h-screen w-full flex items-center justify-center overflow-hidden px-6 pt-32 sm:pt-36 bg-white text-black">
+<section id="vanta-bg" class="relative min-h-[100svh] md:min-h-screen w-full flex items-center justify-center overflow-hidden px-4 sm:px-6 pt-24 sm:pt-32 bg-white text-black">
 
   <!-- Hero Card -->
-  <div id="home" data-aos="fade-up" class="relative z-10 w-full max-w-5xl bg-white/10 backdrop-blur-lg border border-gray-200 rounded-3xl px-8 sm:px-12 py-12 sm:py-16 text-center shadow-xl transition-all duration-700">
+  <div id="home" data-aos="fade-up" class="relative z-10 w-full max-w-5xl bg-white/10 backdrop-blur-lg border border-gray-200 rounded-3xl px-5 sm:px-12 py-8 sm:py-16 text-center shadow-xl transition-all duration-700">
 
     <!-- Hero Tagline -->
     <div class="mb-8">
@@ -855,18 +871,18 @@
 
     <h1 class="hero-title font-heading font-bold text-gray-900 mb-8">
       <span class="block mb-6">Rehearse. Record. Create.</span>
-      <span class="block text-center whitespace-normal overflow-visible min-h-[6.5rem] sm:min-h-[5rem] flex items-center justify-center transition-all duration-300 ease-in-out max-w-full px-4">
+      <span class="block text-center whitespace-normal overflow-visible min-h-[5rem] sm:min-h-[5rem] flex items-center justify-center transition-all duration-300 ease-in-out max-w-full px-2 sm:px-4">
         <span id="typed-text" class="font-heading break-words text-balance w-full max-w-4xl mx-auto text-xl sm:text-2xl md:text-3xl leading-snug"></span>
       </span>
     </h1>
 
     <!-- Description with SEO Keywords -->
-    <p class="hero-subtitle font-body text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">
+    <p class="hero-subtitle font-body text-gray-700 max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed">
       OT Vibez is Edmonton's top-rated rehearsal studio for bands, artists, and creators. Our acoustically treated space is fully equipped — just walk in and start making music.
     </p>
 
     <!-- Primary Call-to-Action -->
-    <a href="#booking" class="btn-primary inline-flex items-center gap-3 text-white bg-black px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition-all duration-300 group hover:-translate-y-1" aria-label="Book rehearsal space at OT Vibez">
+    <a href="#booking" class="btn-primary inline-flex items-center gap-3 text-white bg-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition-all duration-300 group hover:-translate-y-1" aria-label="Book rehearsal space at OT Vibez">
       Book Your Session
       <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
@@ -997,12 +1013,12 @@
 </script>
 
 <!-- Why Choose OT Vibez -->
-<section id="about" class="relative py-24 px-6 bg-white text-black font-body overflow-hidden">
+<section id="about" class="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-white text-black font-body overflow-hidden">
 
   <!-- Decorative Accent -->
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-sky-600 rounded-b-full"></div>
 
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
 
     <!-- LEFT: Studio Benefits -->
     <div class="text-center md:text-left max-w-xl mx-auto md:mx-0" data-aos="fade-right">
@@ -1010,15 +1026,15 @@
         Why Musicians and Creators Choose OT Vibez
       </p>
 
-      <h2 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 leading-tight mb-8">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 leading-tight mb-6 sm:mb-8">
         A Studio <span class="text-sky-600">Built for Artists</span>
       </h2>
 
-      <p class="text-gray-700 mb-10 text-lg leading-relaxed">
+      <p class="text-gray-700 mb-8 sm:mb-10 text-base sm:text-lg leading-relaxed">
         At OT Vibez Studio in Edmonton, we've created a fully equipped rehearsal and recording space where bands, solo artists, and content creators can walk in and get started — no hassle. Enjoy top-tier acoustics and a plug-and-play setup designed to maximize your creativity.
       </p>
 
-      <ul class="space-y-6 mb-12 text-left">
+      <ul class="space-y-5 sm:space-y-6 mb-8 sm:mb-12 text-left">
         <li class="flex items-start gap-4">
           <span class="mt-1 w-6 h-6 flex items-center justify-center rounded-full bg-sky-600 text-white text-sm font-semibold">✓</span>
           <span class="text-gray-800 text-base leading-relaxed">Plug-and-play studio with mics, amps, and monitors included.</span>
@@ -1034,14 +1050,14 @@
       </ul>
 
       <a href="#booking"
-         class="btn-primary inline-block bg-sky-600 text-white px-8 py-4 rounded-md font-heading font-semibold hover:bg-sky-700 hover:-translate-y-1 transition-all duration-300 shadow-lg"
+         class="btn-primary inline-block bg-sky-600 text-white px-7 sm:px-8 py-3 sm:py-4 rounded-md font-heading font-semibold hover:bg-sky-700 hover:-translate-y-1 transition-all duration-300 shadow-lg"
          aria-label="Book a studio session at OT Vibez">
         Book a Session
       </a>
     </div>
 
     <!-- RIGHT: Features Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto" data-aos="fade-left">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-3xl mx-auto" data-aos="fade-left">
 
       <!-- Feature Card -->
       <div class="card group bg-white/10 backdrop-blur-xl border border-white/20 h-full rounded-2xl shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
@@ -1097,7 +1113,7 @@
   </div>
 
 <!-- Subscription Plans -->
-<div class="mt-28 max-w-6xl mx-auto px-6 md:px-8" data-aos="fade-up">
+<div class="mt-14 sm:mt-20 max-w-6xl mx-auto px-4 sm:px-6 md:px-8" data-aos="fade-up">
   <!-- Tag -->
   <div class="text-center mb-8">
     <span class="inline-block uppercase tracking-wider text-emerald-600 bg-emerald-100/60 text-xs font-semibold px-4 py-2 rounded-full backdrop-blur-sm">
@@ -1106,17 +1122,17 @@
   </div>
 
   <!-- Title -->
-  <h3 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 text-center leading-tight mb-8">
+  <h3 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 text-center leading-tight mb-6 sm:mb-8">
     Lock In <span class="text-emerald-600">Your Studio Time</span>
   </h3>
 
   <!-- Description -->
-  <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-16 text-center max-w-3xl mx-auto">
+  <p class="text-base sm:text-xl text-gray-700 leading-relaxed mb-10 sm:mb-16 text-center max-w-3xl mx-auto">
     One-off bookings add up fast. With our flexible monthly and yearly plans, you save more and secure your space in advance. No stress, no scrambling — just music.
   </p>
 
   <!-- 2 Column Layout -->
-  <div class="grid md:grid-cols-2 gap-12 items-center bg-emerald-50/70 border border-emerald-200 rounded-xl shadow-md p-8 sm:p-12 mb-12">
+  <div class="grid md:grid-cols-2 gap-6 sm:gap-10 items-center bg-emerald-50/70 border border-emerald-200 rounded-xl shadow-md p-5 sm:p-8 md:p-10 mb-10 sm:mb-12">
     
     <!-- Left: Text Content -->
     <div class="space-y-6">
@@ -1129,11 +1145,11 @@
     </div>
 
     <!-- Right: Alberta Music Partner Highlight -->
-    <div class="flex flex-col items-center md:items-end text-center md:text-right space-y-6">
+    <div class="flex flex-col items-center md:items-end text-center md:text-right space-y-4 sm:space-y-6">
       <img
         src="assets/images/Alberta-Music-300x225-removebg.png"
         alt="Alberta Music Logo"
-        class="h-80 w-auto object-contain transform transition-transform duration-300 hover:scale-105"
+        class="h-40 sm:h-52 md:h-56 lg:h-60 w-auto object-contain transform transition-transform duration-300 hover:scale-105"
         loading="lazy"
         decoding="async"
       />
@@ -1157,7 +1173,7 @@
   </div>
 
   <!-- Optional Divider -->
-  <hr class="border-t border-emerald-100 mt-20 max-w-3xl mx-auto" />
+  <hr class="border-t border-emerald-100 mt-12 sm:mt-20 max-w-3xl mx-auto" />
 </div>
 
 
@@ -1169,11 +1185,11 @@
 
 
 <!-- OT Vibez Services Section -->
-<section id="services" class="-mt-20 py-24 px-6 bg-white text-black font-body">
+<section id="services" class="-mt-8 sm:-mt-12 md:-mt-20 py-14 sm:py-20 md:py-24 px-4 sm:px-6 bg-white text-black font-body">
   <div class="max-w-7xl mx-auto">
 
 <!-- Equipment Section -->
-<section id="equipment" class="bg-white pt-24 pb-20 px-6 md:px-0">
+<section id="equipment" class="bg-white pt-14 sm:pt-20 pb-14 sm:pb-20 px-4 sm:px-6 md:px-0">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
     
     <!-- Text Column -->
@@ -1181,7 +1197,7 @@
       <span class="inline-block uppercase tracking-wider text-purple-600 bg-purple-100 text-xs font-semibold px-4 py-1 rounded-full mb-3">
         Equipment & Gear
       </span>
-      <h2 class="text-4xl font-heading font-extrabold text-gray-900 mb-4 leading-tight">
+      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-gray-900 mb-4 leading-tight">
         Premium Studio <span class="text-purple-600">Equipment</span>
       </h2>
       <p class="text-gray-700 text-lg leading-relaxed mb-6">
@@ -1197,7 +1213,7 @@
       <div class="rounded-2xl overflow-hidden shadow-xl border border-purple-200 bg-white/10 backdrop-blur-xl transition hover:scale-105 duration-300">
         <img src="assets/images/Equipment/yassine-khalfalli-I3ZzOkiAbTI-unsplash.jpg"
              alt="Studio gear preview"
-             class="object-cover w-full h-full max-h-[400px]">
+             class="object-cover w-full h-full max-h-[340px] lg:max-h-[380px]">
       </div>
     </div>
 
@@ -1206,18 +1222,18 @@
 
 
 
-<section id="studio" class="py-20 px-6 bg-gray-50 text-black font-body">
+<section id="studio" class="py-14 sm:py-18 px-4 sm:px-6 bg-gray-50 text-black font-body">
   <div class="max-w-7xl mx-auto">
 
     <!-- Section Heading -->
-    <div class="text-center mb-14" data-aos="fade-up">
-      <span class="inline-block uppercase tracking-wider text-indigo-600 bg-indigo-100 text-xs font-semibold px-4 py-1 mb-3">
+    <div class="text-center mb-10 sm:mb-14" data-aos="fade-up">
+      <span class="inline-block uppercase tracking-wider text-indigo-600 bg-indigo-100 text-xs font-semibold px-4 py-1 rounded-full mb-3">
         Studio Showcase
       </span>
-      <h2 class="text-4xl sm:text-5xl font-heading font-extrabold mb-4 leading-tight">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold mb-4 leading-tight">
         Inside <span class="text-indigo-600">OT Vibez Studio</span>
       </h2>
-      <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+      <p class="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto">
         Explore our acoustically treated rehearsal and recording spaces — clean, professional, and optimized for creators.
       </p>
     </div>
@@ -1228,76 +1244,76 @@
 
         <!-- Image Panel -->
         <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
-          <img src="assets/images/2024-09-26 (1).webp" alt="Professional Microphone Setup" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (1).webp">
-          <img src="assets/images/2024-09-26 (2).webp" alt="Professional Drum Kit Setup" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (2).webp">
-          <img src="assets/images/o.jpg" alt="Professional Studio Lighting Setup" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/o.jpg">
-          <img src="assets/images/2024-09-26 (3).webp" alt="Professional Audio Mixer Setup" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (3).webp">
+          <img src="assets/images/2024-09-26 (1).webp" alt="Professional Microphone Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (1).webp">
+          <img src="assets/images/2024-09-26 (2).webp" alt="Professional Drum Kit Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (2).webp">
+          <img src="assets/images/o.jpg" alt="Professional Studio Lighting Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/o.jpg">
+          <img src="assets/images/2024-09-26 (3).webp" alt="Professional Audio Mixer Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (3).webp">
         </div>
 
         <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
-          <img src="assets/images/2024-09-26.webp" alt="Studio Snack Bar and Refreshments" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/2024-09-26.webp">
-          <img src="assets/images/2025-06-05 (1).webp" alt="Professional Studio Monitor Setup" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/2025-06-05 (1).webp">
-          <img src="assets/images/2025-06-05.webp" alt="Professional Keyboard and Piano Setup" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/2025-06-05.webp">
-          <img src="assets/images/unnamed (1).webp" alt="Studio Lounge and Relaxation Area" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/unnamed (1).webp">
+          <img src="assets/images/2024-09-26.webp" alt="Studio Snack Bar and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/2024-09-26.webp">
+          <img src="assets/images/2025-06-05 (1).webp" alt="Professional Studio Monitor Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/2025-06-05 (1).webp">
+          <img src="assets/images/2025-06-05.webp" alt="Professional Keyboard and Piano Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/2025-06-05.webp">
+          <img src="assets/images/unnamed (1).webp" alt="Studio Lounge and Relaxation Area" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/unnamed (1).webp">
         </div>
 
         <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
-          <img src="assets/images/o (1).jpg" alt="Professional LED Lighting System" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/o (1).jpg">
-          <img src="assets/images/o (2).jpg" alt="Professional Mixer and Audio Equipment" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/o (2).jpg">
-          <img src="assets/images/o (3).jpg" alt="Studio Snack Station and Refreshments" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/o (3).jpg">
-          <img src="assets/images/o (4).jpg" alt="Dual Monitor Professional Setup" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/o (4).jpg">
+          <img src="assets/images/o (1).jpg" alt="Professional LED Lighting System" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/o (1).jpg">
+          <img src="assets/images/o (2).jpg" alt="Professional Mixer and Audio Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/o (2).jpg">
+          <img src="assets/images/o (3).jpg" alt="Studio Snack Station and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/o (3).jpg">
+          <img src="assets/images/o (4).jpg" alt="Dual Monitor Professional Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/o (4).jpg">
         </div>
 
         <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
-          <img src="assets/images/o (5).jpg" alt="Professional Keyboard and Piano Equipment" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/o (5).jpg">
-          <img src="assets/images/unnamed.webp" alt="Professional Studio Desk Setup" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/unnamed.webp">
-          <img src="assets/images/2023-09-25.webp" alt="Wide Studio View with Professional Equipment" class="shadow-lg object-cover w-full h-64 lazy-load" loading="lazy" data-src="assets/images/2023-09-25.webp">
+          <img src="assets/images/o (5).jpg" alt="Professional Keyboard and Piano Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/o (5).jpg">
+          <img src="assets/images/unnamed.webp" alt="Professional Studio Desk Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/unnamed.webp">
+          <img src="assets/images/2023-09-25.webp" alt="Wide Studio View with Professional Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/2023-09-25.webp">
         </div>
 
       </div>
     </div>
 
     <!-- Mobile Gallery -->
-    <div class="md:hidden flex space-x-4 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory" data-aos="fade-up">
-      <img src="assets/images/2024-09-26 (1).webp" alt="Professional Microphone Setup" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (1).webp">
-      <img src="assets/images/2024-09-26 (2).webp" alt="Professional Drum Kit Setup" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (2).webp">
-      <img src="assets/images/o.jpg" alt="Professional Studio Lighting Setup" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o.jpg">
-      <img src="assets/images/2024-09-26 (3).webp" alt="Professional Audio Mixer Setup" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (3).webp">
-      <img src="assets/images/2024-09-26.webp" alt="Studio Snack Bar and Refreshments" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2024-09-26.webp">
-      <img src="assets/images/2025-06-05 (1).webp" alt="Professional Studio Monitor Setup" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2025-06-05 (1).webp">
-      <img src="assets/images/2025-06-05.webp" alt="Professional Keyboard and Piano Setup" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2025-06-05.webp">
-      <img src="assets/images/unnamed (1).webp" alt="Studio Lounge and Relaxation Area" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/unnamed (1).webp">
-      <img src="assets/images/o (1).jpg" alt="Professional LED Lighting System" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (1).jpg">
-      <img src="assets/images/o (2).jpg" alt="Professional Mixer and Audio Equipment" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (2).jpg">
-      <img src="assets/images/o (3).jpg" alt="Studio Snack Station and Refreshments" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (3).jpg">
-      <img src="assets/images/o (4).jpg" alt="Dual Monitor Professional Setup" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (4).jpg">
-      <img src="assets/images/o (5).jpg" alt="Professional Keyboard and Piano Equipment" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (5).jpg">
-      <img src="assets/images/unnamed.webp" alt="Professional Studio Desk Setup" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/unnamed.webp">
-      <img src="assets/images/2023-09-25.webp" alt="Wide Studio View with Professional Equipment" class="w-80 h-52 object-cover shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2023-09-25.webp">
+    <div class="md:hidden flex space-x-3 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory" data-aos="fade-up">
+      <img src="assets/images/2024-09-26 (1).webp" alt="Professional Microphone Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (1).webp">
+      <img src="assets/images/2024-09-26 (2).webp" alt="Professional Drum Kit Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (2).webp">
+      <img src="assets/images/o.jpg" alt="Professional Studio Lighting Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o.jpg">
+      <img src="assets/images/2024-09-26 (3).webp" alt="Professional Audio Mixer Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2024-09-26 (3).webp">
+      <img src="assets/images/2024-09-26.webp" alt="Studio Snack Bar and Refreshments" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2024-09-26.webp">
+      <img src="assets/images/2025-06-05 (1).webp" alt="Professional Studio Monitor Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2025-06-05 (1).webp">
+      <img src="assets/images/2025-06-05.webp" alt="Professional Keyboard and Piano Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2025-06-05.webp">
+      <img src="assets/images/unnamed (1).webp" alt="Studio Lounge and Relaxation Area" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/unnamed (1).webp">
+      <img src="assets/images/o (1).jpg" alt="Professional LED Lighting System" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (1).jpg">
+      <img src="assets/images/o (2).jpg" alt="Professional Mixer and Audio Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (2).jpg">
+      <img src="assets/images/o (3).jpg" alt="Studio Snack Station and Refreshments" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (3).jpg">
+      <img src="assets/images/o (4).jpg" alt="Dual Monitor Professional Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (4).jpg">
+      <img src="assets/images/o (5).jpg" alt="Professional Keyboard and Piano Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/o (5).jpg">
+      <img src="assets/images/unnamed.webp" alt="Professional Studio Desk Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/unnamed.webp">
+      <img src="assets/images/2023-09-25.webp" alt="Wide Studio View with Professional Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/2023-09-25.webp">
     </div>
 
   </div>
 </section>
 
 <!-- Testimonials Section -->
-<section id="testimonials" class="py-28 px-6 bg-white text-black font-body">
+<section id="testimonials" class="py-16 sm:py-22 px-4 sm:px-6 bg-white text-black font-body">
   <div class="max-w-7xl mx-auto">
 
     <!-- Heading -->
-    <div class="text-center mb-16" data-aos="fade-up">
+    <div class="text-center mb-10 sm:mb-14" data-aos="fade-up">
       <span class="inline-block uppercase tracking-wider text-rose-600 bg-purple-100 text-xs font-semibold px-4 py-2 rounded-full mb-6">
         What Artists Are Saying
       </span>
-      <h3 class="text-4xl sm:text-5xl font-heading font-extrabold mb-6 leading-tight">
+      <h3 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold mb-5 sm:mb-6 leading-tight">
         Real Voices from <span class="text-rose-600">OT Vibez</span>
       </h3>
-      <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+      <p class="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
         Our clients create unforgettable sessions — and they're not shy about sharing it.
       </p>
     </div>
 
     <!-- Video Embed -->
-    <div class="relative max-w-4xl mx-auto mb-16" data-aos="fade-up">
+    <div class="relative max-w-4xl mx-auto mb-10 sm:mb-16" data-aos="fade-up">
       <div class="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl bg-[#E1306C]/20 border border-[#E1306C]/30 -z-10"></div>
       <div class="overflow-hidden rounded-2xl shadow-xl border border-gray-200 bg-white">
         <div class="relative w-full" style="padding-bottom: 56.25%;">
@@ -1314,7 +1330,7 @@
     </div>
 
     <!-- Responsive Testimonial Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto" data-aos="fade-up" id="testimonial-grid">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 auto-rows-auto" data-aos="fade-up" id="testimonial-grid">
 
       <!-- Testimonial Cards -->
       <!-- Testimonials 1–4 (Always Visible) -->
@@ -1848,6 +1864,38 @@
 
 
 
+
+<!-- Craytivo Partner Section -->
+<section id="partner-craytivo" class="py-12 sm:py-14 px-4 sm:px-6 bg-white font-body">
+  <div class="max-w-6xl mx-auto" data-aos="fade-up">
+    <div class="rounded-2xl border border-violet-200 bg-gradient-to-r from-violet-50 via-white to-sky-50 p-5 sm:p-7 md:p-8 shadow-sm">
+      <div class="grid md:grid-cols-[1fr_auto] gap-5 md:gap-8 items-center">
+        <div>
+          <span class="inline-block uppercase tracking-wider text-violet-700 bg-violet-100 text-xs font-semibold px-4 py-2 rounded-full mb-4">
+            Partner / Website by Craytivo
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-heading font-bold text-gray-900 mb-3 leading-tight">
+            Built and optimized with <span class="text-violet-700">Craytivo</span>
+          </h3>
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-0 max-w-3xl">
+            OT Vibez is proudly partnered with Craytivo for website design, mobile performance, SEO structure, and ongoing growth improvements.
+          </p>
+        </div>
+        <div class="md:text-right">
+          <a href="https://craytivo.com" target="_blank" rel="noopener noreferrer"
+             class="btn-primary inline-flex items-center gap-2 bg-violet-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-violet-800 transition-all duration-300"
+             aria-label="Visit Craytivo website">
+            Visit Craytivo
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 <!-- Footer -->
 <footer class="w-full bg-white/10 backdrop-blur-xl border-t border-white/20 text-gray-800 font-body px-6 pt-20 pb-12 overflow-hidden shadow-inner">
@@ -1941,7 +1989,6 @@
     animation: pulse-slow 12s ease-in-out infinite;
   }
 </style>
-</footer>
 
 <!-- Scroll to Top Button -->
 <button id="scrollToTopBtn"
