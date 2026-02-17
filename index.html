@@ -1211,55 +1211,62 @@
   <!-- Vanta.js + Three.js -->
 
 <!-- Hero Section: Optimized for SEO and Performance -->
-<section id="vanta-bg" class="relative min-h-[100svh] md:min-h-screen w-full flex items-center justify-center overflow-hidden px-4 sm:px-6 pt-24 sm:pt-32 bg-white text-black">
+<section id="vanta-bg" class="relative min-h-[100svh] md:min-h-screen w-full flex items-center justify-center overflow-hidden px-4 sm:px-6 pt-24 sm:pt-28 bg-white text-black">
   <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-    <div class="absolute -top-16 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-sky-200/25 blur-2xl"></div>
-    <div class="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-rose-200/20 blur-2xl"></div>
+    <div class="absolute -top-16 left-1/2 h-52 w-52 -translate-x-1/2 rounded-full bg-sky-200/20 blur-2xl"></div>
+    <div class="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-rose-200/15 blur-2xl"></div>
   </div>
 
   <!-- Hero Card -->
-  <div id="home" data-aos="fade-up" class="relative z-10 w-full max-w-5xl rounded-3xl border border-white/70 bg-white/72 px-5 sm:px-12 py-8 sm:py-14 text-center shadow-[0_18px_60px_rgba(15,23,42,0.13)] backdrop-blur-lg transition-all duration-700 flex flex-col items-center">
+  <div id="home" data-aos="fade-up" class="relative z-10 w-full max-w-[68rem] rounded-3xl border border-white/70 bg-white/74 px-5 sm:px-11 py-8 sm:py-12 text-center shadow-[0_16px_52px_rgba(15,23,42,0.11)] backdrop-blur-md transition-all duration-700 flex flex-col items-center">
     <div class="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/70 to-transparent" aria-hidden="true"></div>
 
     <!-- Hero Tagline -->
-    <div class="mb-7 sm:mb-8">
-      <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gray-700 border border-gray-300 px-4 py-2 rounded-full bg-gray-100/90">
+    <div class="mb-6 sm:mb-7">
+      <span class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-700 border border-gray-300 px-3.5 py-1.5 rounded-full bg-gray-100/90">
         <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
         Edmonton Rehearsal Studio - Plug and Play Setup
       </span>
     </div>
 
-    <h1 class="hero-title font-heading font-bold text-gray-900 mb-7 sm:mb-8">
-      <span class="block mb-5 sm:mb-6">Rehearse. Record. Create.</span>
+    <h1 class="hero-title font-heading font-bold text-gray-900 mb-6 sm:mb-7">
+      <span class="block mb-4 sm:mb-5">Rehearse. Record. Create.</span>
       <span class="block text-center whitespace-normal overflow-visible min-h-[4.5rem] sm:min-h-[5rem] flex items-center justify-center transition-all duration-300 ease-in-out max-w-full px-2 sm:px-4">
         <span id="typed-text" class="font-heading break-words text-balance w-full max-w-4xl mx-auto text-xl sm:text-2xl md:text-3xl leading-snug font-bold text-sky-600"></span>
       </span>
     </h1>
 
-    <p class="hero-subtitle font-body text-gray-700 max-w-2xl mx-auto mb-7 sm:mb-10 leading-relaxed">
-      OT Vibez is an Edmonton rehearsal studio offering hourly rehearsal, recording, and podcast sessions. Our acoustically treated plug-and-play room is fully equipped so you can walk in, plug in, and start creating fast.
+    <p class="hero-subtitle font-body text-gray-700 max-w-[44rem] mx-auto mb-6 sm:mb-8 leading-relaxed">
+      OT Vibez is Edmonton's plug-and-play rehearsal studio for bands, artists, and creators. Walk in, plug in, and start fast with an acoustically treated room and pro backline ready to go.
     </p>
 
-    <div class="hero-stagger order-2 sm:order-1 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-0 sm:mb-10 mt-3 sm:mt-0" id="hero-reveal-group">
+    <div class="hero-stagger order-2 sm:order-1 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-2 sm:mb-8 mt-2 sm:mt-0" id="hero-reveal-group">
       <span data-hero-stagger style="--hero-delay: 70ms;" class="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-sky-700">Pro Backline Included</span>
       <span data-hero-stagger style="--hero-delay: 150ms;" class="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-emerald-700">Fast Online Booking</span>
       <span data-hero-stagger style="--hero-delay: 230ms;" class="hidden sm:inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-amber-700">Open Daily by Booking</span>
     </div>
 
-    <div class="hero-stagger order-1 sm:order-2 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-2.5" id="hero-cta-group">
+    <div class="hero-stagger order-1 sm:order-2 flex w-full flex-col sm:w-auto sm:flex-row items-center justify-center gap-2 sm:gap-2.5" id="hero-cta-group">
       <a data-hero-stagger style="--hero-delay: 320ms;"
          href="/services.html"
          onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { 'event_category': 'Hero', 'event_label': 'Hero Primary CTA' }); }"
-         class="btn-primary inline-flex items-center gap-3 text-white bg-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition-all duration-300 group hover:-translate-y-1"
+         class="btn-primary inline-flex w-full sm:w-auto items-center justify-center gap-3 text-white bg-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition-all duration-300 group hover:-translate-y-1"
          aria-label="Book rehearsal space at OT Vibez">
         Book Now
         <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
         </svg>
       </a>
-      <a data-hero-stagger style="--hero-delay: 400ms;" href="#studio" aria-label="View Edmonton rehearsal space photos and setup" class="inline-flex items-center justify-center rounded-full border border-gray-200/80 bg-white/45 px-3.5 py-2 text-[10px] sm:text-[11px] font-medium text-gray-400 transition-colors duration-300 hover:border-gray-300 hover:bg-white/60 hover:text-gray-500 mt-0 sm:mt-0">
+      <a data-hero-stagger style="--hero-delay: 400ms;" href="#studio" aria-label="View Edmonton rehearsal space photos and setup" class="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-gray-300/80 bg-white/70 px-4 py-2.5 text-xs sm:text-sm font-medium text-gray-600 transition-colors duration-300 hover:border-gray-400 hover:bg-white hover:text-gray-700 mt-0 sm:mt-0">
         View Space
       </a>
+    </div>
+
+    <div class="hero-stagger order-3 mt-4 sm:mt-5">
+      <p data-hero-stagger style="--hero-delay: 470ms;" class="inline-flex items-center gap-1.5 rounded-full border border-fuchsia-200 bg-fuchsia-50 px-4 py-1.5 text-xs sm:text-sm font-semibold text-fuchsia-800">
+        <span class="text-fuchsia-600">Rehearsal Session</span>
+        <span class="text-fuchsia-900">Starting at $70/2hr</span>
+      </p>
     </div>
   </div>
 </section>

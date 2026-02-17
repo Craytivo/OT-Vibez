@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
   <!-- Google Analytics -->
@@ -475,9 +475,34 @@
     }
 
     /* Mobile-optimized service cards */
+    #services-grid {
+      gap: 0.8rem;
+    }
+
     .service-card {
-      min-height: 200px;
-      padding: 1.5rem;
+      min-height: 0;
+      padding: 1.05rem;
+      border-radius: 0.95rem;
+    }
+
+    #services-grid .service-card h3 {
+      font-size: 1.02rem;
+      line-height: 1.3;
+    }
+
+    #services-grid .service-mobile-trim {
+      display: none;
+    }
+
+    #services-grid .service-book-btn {
+      min-height: 44px;
+      font-size: 14px;
+      margin-top: 0.75rem;
+    }
+
+    #services-grid .service-card details {
+      margin-top: 0.6rem;
+      padding: 0.65rem 0.75rem;
     }
   }
 
@@ -536,9 +561,9 @@
 
   <div class="relative mx-auto max-w-7xl">
     <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-      <span class="mb-4 inline-flex rounded-full border border-purple-200 bg-purple-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-purple-700">All Square Services</span>
-      <h1 class="font-heading text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Edmonton Rehearsal, Recording & Podcast Services</h1>
-      <p class="mt-5 text-base text-gray-700 sm:text-lg">Every OT Vibez service is listed below, including hourly rehearsal studio options, recording sessions, and podcast room rental in Edmonton. Filter by category, compare quickly, and book in one click.</p>
+      <span class="mb-4 inline-flex rounded-full border border-purple-200 bg-purple-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-purple-700">Studio Services</span>
+      <h1 class="font-heading text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Edmonton Rehearsal Studio Services: Hourly Rehearsal, Recording & Podcast Room Rental</h1>
+      <p class="mt-5 text-base text-gray-700 sm:text-lg">Compare OT Vibez services for bands, artists, and creators in Edmonton, Alberta. Book hourly rehearsal sessions, live recording, video and podcast studio time, or memberships online in minutes.</p>
     </div>
 
     <div class="mt-8 flex flex-wrap items-center justify-center gap-2.5" data-aos="fade-up" data-aos-delay="80">
@@ -549,20 +574,37 @@
       <button type="button" class="service-filter-btn rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-700 transition hover:border-purple-300 hover:text-purple-700" data-filter="consult" aria-pressed="false">Consult</button>
     </div>
     <p id="services-filter-count" class="mt-3 text-center text-sm text-gray-600" data-aos="fade-up" data-aos-delay="100" role="status" aria-live="polite">Showing 11 services</p>
+    <div class="mx-auto mt-3 flex max-w-4xl flex-wrap items-center justify-center gap-2.5 rounded-xl border border-purple-100 bg-purple-50/60 px-3 py-2 text-xs text-gray-700" data-aos="fade-up" data-aos-delay="110">
+      <span class="font-semibold uppercase tracking-wide text-purple-700">Recommended Path</span>
+      <a href="#starter-rehearsal" class="rounded-full border border-purple-200 bg-white px-2.5 py-1 font-semibold text-purple-700 transition hover:border-purple-300">Start: 2-Hour Rehearsal</a>
+      <a href="#starter-production" class="rounded-full border border-rose-200 bg-white px-2.5 py-1 font-semibold text-rose-700 transition hover:border-rose-300">Need Video: Full Production</a>
+      <a href="#starter-solo" class="rounded-full border border-purple-200 bg-white px-2.5 py-1 font-semibold text-purple-700 transition hover:border-purple-300">Solo: 1-Hour Practice</a>
+    </div>
 
     <div id="services-grid" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3" data-aos="fade-up" data-aos-delay="120">
-      <article class="service-card featured-service featured-rank-1 group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
-        <div class="mb-3 flex items-center justify-between gap-2">
-          <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">On Sale</span>
-          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">2 hr+</span>
+      <article id="starter-rehearsal" class="service-card featured-service featured-rank-1 group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
+        <div class="mb-3 flex flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="whitespace-nowrap rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
+            <span class="whitespace-nowrap rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">On Sale</span>
+          </div>
+          <span class="shrink-0 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">2 hr</span>
         </div>
-        <h3 class="font-heading text-xl font-semibold text-gray-900">Hourly Rehearsal Session</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Flexible drop-in rehearsal time for last-minute sessions, warmups, and focused band practice.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">Price varies</span>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">2-Hour Rehearsal Session</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Flexible drop-in rehearsal for last-minute bookings with no membership commitment. Built for quick band practice, auditions, jams, and music-video prep.</p>
+        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-500">Best For</p>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Drop-ins</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Quick Practice</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Audition Prep</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Jamming Sessions</span>
+        </div>
+        <p class="service-mobile-trim mt-3 text-xs leading-relaxed text-gray-600">Pay only for the time you need with optional on-site support and add-ons available on request.</p>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">CA$70.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4" target="_blank" rel="noopener noreferrer" data-service-name="Hourly Rehearsal Session" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Rehearsal</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4" target="_blank" rel="noopener noreferrer" data-service-name="2-Hour Rehearsal Session" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Rehearsal</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
@@ -571,110 +613,163 @@
           <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">15 min</span>
         </div>
         <h3 class="font-heading text-xl font-semibold text-gray-900">Monthly Membership - Rehearsal Space</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Membership option walkthrough for recurring artists. Built for consistent rehearsal routines and savings.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">Price varies</span>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Month-to-month rehearsal membership with reserved slots and stronger value than drop-in bookings.</p>
+        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-500">Options</p>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">8 hrs/month</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">12 hrs/month</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">20 hrs/month</span>
+        </div>
+        <p class="service-mobile-trim mt-3 text-xs leading-relaxed text-gray-600">Reserve your recurring slot, save up to CA$50/month, and stay month-to-month with no long-term lock-in.</p>
+        <p class="service-mobile-trim mt-1 text-xs leading-relaxed text-gray-600">Regular price CA$350/month. Questions: (780) 522-1807</p>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">From CA$270.00/mo</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Membership</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/FHA4D47WMC3NYVV4FRBDKY4J" target="_blank" rel="noopener noreferrer" data-service-name="Monthly Membership - Rehearsal Space" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Start Membership</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/FHA4D47WMC3NYVV4FRBDKY4J" target="_blank" rel="noopener noreferrer" data-service-name="Monthly Membership - Rehearsal Space" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Start Membership</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
         <div class="mb-3 flex items-center justify-between gap-2">
           <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">On Sale</span>
-          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">30 min+</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">Year Plan</span>
         </div>
         <h3 class="font-heading text-xl font-semibold text-gray-900">Yearly Membership - Rehearsal Space</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Long-term membership planning for committed artists who want guaranteed rehearsal access year-round.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">Price varies</span>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Year-round membership with locked weekly rehearsal slots and long-term savings on monthly billing.</p>
+        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-500">Options</p>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">96 hrs/year</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">144 hrs/year</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Monthly Billing</span>
+        </div>
+        <details class="mt-3 rounded-xl border border-purple-100 bg-white/85 p-3">
+          <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-purple-700">Yearly Plan Benefits & Terms</summary>
+          <ul class="mt-2 space-y-1.5 text-xs leading-relaxed text-gray-600">
+            <li>Lock your rehearsal day/time months in advance for consistency.</li>
+            <li>Save up to CA$1,500/year compared to drop-in rates.</li>
+            <li>Monthly billing available; no large upfront payment required.</li>
+            <li>Optional tax-deductible usage for eligible creative businesses (check with accountant).</li>
+            <li>Non-transferable, non-refundable, one artist or band per membership.</li>
+          </ul>
+          <p class="mt-2 text-xs text-gray-600">Starting option: 96 hours/year (8 hours/month) from CA$270/month.</p>
+          <p class="mt-1 text-xs text-gray-600">Regular pricing varies by yearly tier and configuration.</p>
+          <p class="mt-1 text-xs text-gray-600">Questions: (780) 522-1807 or otvibezstudio@gmail.com</p>
+        </details>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">From CA$270.00/mo</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Membership</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VCXXIL2ZOHMOUW5XFXZHSU7Q" target="_blank" rel="noopener noreferrer" data-service-name="Yearly Membership - Rehearsal Space" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Start Yearly Plan</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VCXXIL2ZOHMOUW5XFXZHSU7Q" target="_blank" rel="noopener noreferrer" data-service-name="Yearly Membership - Rehearsal Space" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Start Yearly Plan</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-sky-200/70 bg-gradient-to-br from-white via-sky-50/40 to-indigo-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="recording">
         <div class="mb-3 flex items-center justify-between gap-2">
           <span class="rounded-full bg-sky-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Studio</span>
-          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr+</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
         <h3 class="font-heading text-xl font-semibold text-gray-900">Live Band Recording</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Record songs, voiceover, and effects in a controlled room with performance-ready sound capture.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-[11px] font-semibold text-sky-700">Price varies</span>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Record songs, voiceovers, and sound effects in a treated studio built for clean, performance-ready capture.</p>
+        <p class="mt-3 text-xs leading-relaxed text-gray-600">Includes optional engineer support (or bring your own) with live monitoring during takes.</p>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-[11px] font-semibold text-sky-700">CA$105.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Recording</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/4AX5CVUXZHF5CUP5PD2RDR2J" target="_blank" rel="noopener noreferrer" data-service-name="Live Band Recording" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Recording</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/4AX5CVUXZHF5CUP5PD2RDR2J" target="_blank" rel="noopener noreferrer" data-service-name="Live Band Recording" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Recording</a>
       </article>
 
-      <article class="service-card featured-service featured-rank-3 group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast">
-        <div class="mb-3 flex items-center justify-between gap-2">
-          <span class="rounded-full bg-rose-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Full Production</span>
-          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr+</span>
+      <article id="starter-production" class="service-card featured-service featured-rank-3 group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast">
+        <div class="mb-3 flex flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="whitespace-nowrap rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
+            <span class="whitespace-nowrap rounded-full bg-rose-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Full Production</span>
+          </div>
+          <span class="shrink-0 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
-        <h3 class="font-heading text-xl font-semibold text-gray-900">Video & Podcast Production (Pro Videographer Included)</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">High-impact podcast or video session with professional camera setup and on-site videographer support.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">Price varies</span>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Video & Podcast Production (Professional Videographer & Set Up Included)</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Record podcasts, informative videos, and music videos with pro videographer Tomiwa Ladejoh and A/B camera capture.</p>
+        <details class="mt-3 rounded-xl border border-rose-100 bg-white/85 p-3">
+          <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rose-700">Included Gear & Setup</summary>
+          <ul class="mt-2 space-y-1.5 text-xs leading-relaxed text-gray-600">
+            <li>Two-camera capture: Sony FX30 (A-cam) + Sony ZV-E10 (B-cam).</li>
+            <li>Pro audio chain: Rode PodMics + DJI Wireless Mic 2 pairing.</li>
+            <li>Lighting and backdrops included: black, greenscreen, and white-wall options.</li>
+            <li>Editing add-on: CA$50/hour (1 hour usable content = 1 hour editing).</li>
+          </ul>
+        </details>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">CA$195.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Podcast</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Production (Pro Videographer Included)" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Full Production</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Production (Professional Videographer & Set Up Included)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Full Production</a>
       </article>
 
-      <article class="service-card group flex flex-col rounded-2xl border border-emerald-200/70 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/40 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="consult">
+      <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
         <div class="mb-3 flex items-center justify-between gap-2">
-          <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Free</span>
+          <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Free</span>
           <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
         <h3 class="font-heading text-xl font-semibold text-gray-900">Free Space Tour</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">See the room in person, review gear options, and confirm fit before committing to a paid session.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">Free</span>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Unsure about booking? Tour our space and check out our amenities and equipment before you commit.</p>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">CA$0.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Tour</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-service-name="Free Space Tour" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Free Tour</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-service-name="Free Space Tour" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Free Tour</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast">
         <div class="mb-3 flex items-center justify-between gap-2">
           <span class="rounded-full bg-rose-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Self-Managed</span>
-          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr+</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
-        <h3 class="font-heading text-xl font-semibold text-gray-900">Video & Podcast Space (No Videographer)</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Use the same production-ready room setup when you just need the space and equipment access.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">Price varies</span>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Video & Podcast Space (NO Videographer)</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Ideal for videos and podcasts when you already have your own production team. No videographer included.</p>
+        <p class="mt-3 text-xs leading-relaxed text-gray-600">Includes plug-and-play gear, lighting, backdrop options, and optional GoPro rental (+CA$25/hour).</p>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">CA$45.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Podcast</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/OWSWZBPK5I6AWOENY4NLVSTZ" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Space (No Videographer)" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Studio Only</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/OWSWZBPK5I6AWOENY4NLVSTZ" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Space (NO Videographer)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Studio Only</a>
       </article>
 
-      <article class="service-card featured-service featured-rank-2 group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
-        <div class="mb-3 flex items-center justify-between gap-2">
-          <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Solo Artist</span>
-          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr+</span>
+      <article id="starter-solo" class="service-card featured-service featured-rank-2 group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
+        <div class="mb-3 flex flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="whitespace-nowrap rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
+            <span class="whitespace-nowrap rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Solo Artist</span>
+          </div>
+          <span class="shrink-0 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
-        <h3 class="font-heading text-xl font-semibold text-gray-900">Hourly Solo Practice</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Dedicated focused practice time for individual artists in a distraction-free, treated environment.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">Price varies</span>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">1-Hour Solo Practice</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Focused solo practice in an acoustically treated room to sharpen technique and performance confidence.</p>
+        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-500">Best For</p>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Beginners</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Working Pros</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Audition Prep</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Skill Building</span>
+        </div>
+        <p class="service-mobile-trim mt-3 text-xs leading-relaxed text-gray-600">A distraction-free room with flexible booking so you can practice consistently and improve faster.</p>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">CA$35.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VKHZ23S3ZQTKDTZXG3LYLHZX" target="_blank" rel="noopener noreferrer" data-service-name="Hourly Solo Practice" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Solo Practice</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VKHZ23S3ZQTKDTZXG3LYLHZX" target="_blank" rel="noopener noreferrer" data-service-name="1-Hour Solo Practice" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Solo Practice</a>
       </article>
 
-      <article class="service-card group flex flex-col rounded-2xl border border-emerald-200/70 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/40 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
+      <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
         <div class="mb-3 flex items-center justify-between gap-2">
-          <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Free</span>
+          <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Free</span>
           <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">15 min</span>
         </div>
         <h3 class="font-heading text-xl font-semibold text-gray-900">XL Tour Rehearsals</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Large-format rehearsal consultation for touring prep, bigger setups, and expanded performance planning.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">Free</span>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Secure, spacious, sound-treated rehearsal built for tour prep and full performance run-throughs.</p>
+        <p class="service-mobile-trim mt-3 text-xs leading-relaxed text-gray-600">Private setup, bring-your-own backline, and touring-grade room conditions trusted by pro artists.</p>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">CA$0.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/2TRQ6MXV3Q7RLUNIEG2YGTTO" target="_blank" rel="noopener noreferrer" data-service-name="XL Tour Rehearsals" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book XL Rehearsal</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/2TRQ6MXV3Q7RLUNIEG2YGTTO" target="_blank" rel="noopener noreferrer" data-service-name="XL Tour Rehearsals" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book XL Rehearsal</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-emerald-200/70 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/40 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="consult">
@@ -683,26 +778,43 @@
           <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
         <h3 class="font-heading text-xl font-semibold text-gray-900">Musical Direction Consult</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Work directly with a professional musical director to sharpen your live show and creative direction.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">Free</span>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Book a virtual or in-person consult with Musical Director Oshane Samuels for expert performance and arrangement direction.</p>
+        <p class="service-mobile-trim mt-3 text-xs leading-relaxed text-gray-600">Get guidance on live-show strategy, arrangements, and assembling the right creative team.</p>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">CA$0.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Consult</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/64WOMPUP6BSOV7JYZ2DOW4XJ" target="_blank" rel="noopener noreferrer" data-service-name="Musical Direction Consult" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Consult</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/64WOMPUP6BSOV7JYZ2DOW4XJ" target="_blank" rel="noopener noreferrer" data-service-name="Musical Direction Consult" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Consult</a>
       </article>
 
-      <article class="service-card group flex flex-col rounded-2xl border border-amber-200/80 bg-gradient-to-br from-white via-amber-50/40 to-orange-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast recording">
+      <article class="service-card group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast recording">
         <div class="mb-3 flex items-center justify-between gap-2">
-          <span class="rounded-full bg-amber-500 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Featured</span>
+          <span class="rounded-full bg-rose-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Featured</span>
           <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
         <h3 class="font-heading text-xl font-semibold text-gray-900">Solo Go Pro Video & Audio Session (1-Camera Angle)</h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700">Content-focused performance session for clean one-angle capture ready for social, YouTube, and promos.</p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-[11px] font-semibold text-amber-700">CA$120.00</span>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Perfect for content creation with one dynamic 4K GoPro angle and synced mixed audio, ready for social clips and promo content.</p>
+        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-500">Best For</p>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Cover Videos</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Live Run-throughs</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Behind-the-Scenes</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Reels/TikToks</span>
+        </div>
+        <details class="mt-3 rounded-xl border border-rose-100 bg-white/85 p-3">
+          <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rose-700">You Will Receive</summary>
+          <ul class="mt-2 space-y-1.5 text-xs leading-relaxed text-gray-600">
+            <li>One dynamic 4K GoPro camera angle.</li>
+            <li>Synced recorded + mixed audio with basic color correction.</li>
+            <li>Transfer-ready file or instant download link.</li>
+            <li>Optional upgrade: edited clips, overlays, logo, and music sync.</li>
+          </ul>
+        </details>
+        <div class="mt-4 mb-2 flex flex-wrap gap-2.5">
+          <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">CA$120.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Audio</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/6KE77ISTDMYVAOQIFYK7X5HK" target="_blank" rel="noopener noreferrer" data-service-name="Solo Go Pro Video & Audio Session (1-Camera Angle)" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Go Pro Session</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/6KE77ISTDMYVAOQIFYK7X5HK" target="_blank" rel="noopener noreferrer" data-service-name="Solo Go Pro Video & Audio Session (1-Camera Angle)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Go Pro Session</a>
       </article>
     </div>
   </div>
