@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
   <!-- Google Analytics -->
@@ -15,23 +15,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Page Title & SEO -->
-  <title>Services | OT Vibez Studio - Edmonton Music Rehearsal & Recording</title>
-  <meta name="description" content="Explore OT Vibez Studio’s professional music services — from solo and band rehearsals to podcast recording and production support. Book directly online." />
-  <meta name="keywords" content="music studio services Edmonton, rehearsal space Edmonton, podcast studio, OT Vibez Studio, studio booking Edmonton" />
+  <title>Edmonton Studio Services | Hourly Rehearsal, Recording & Podcast | OT Vibez</title>
+  <meta name="description" content="Browse OT Vibez services in Edmonton, including hourly rehearsal studio sessions, recording, podcast room rental, and solo practice. Compare options and book online in minutes." />
+  <meta name="keywords" content="Edmonton studio services, hourly rehearsal studio Edmonton, band rehearsal space Edmonton, recording studio Edmonton, podcast room rental Edmonton, solo practice room Edmonton, OT Vibez services" />
   <link rel="canonical" href="https://otvibezstudio.com/services.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Services | OT Vibez Studio - Edmonton Rehearsal & Recording" />
-  <meta property="og:description" content="Explore OT Vibez Studio’s professional services for musicians, creators, and podcasters. Rehearse, record, and create with ease." />
+  <meta property="og:title" content="Edmonton Studio Services | OT Vibez" />
+  <meta property="og:description" content="Hourly rehearsal studio, recording, and podcast room rental services in Edmonton. Compare sessions and book OT Vibez online." />
   <meta property="og:url" content="https://otvibezstudio.com/services.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://otvibezstudio.com/assets/images/og-cover.jpg" />
+  <meta property="og:image" content="https://otvibezstudio.com/assets/images/otvibez.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Services | OT Vibez Studio - Edmonton Music Space" />
-  <meta name="twitter:description" content="Discover OT Vibez’s full range of creative studio services — from live recording to video podcast production." />
-  <meta name="twitter:image" content="https://otvibezstudio.com/assets/images/og-cover.jpg" />
+  <meta name="twitter:title" content="Edmonton Studio Services | OT Vibez" />
+  <meta name="twitter:description" content="Compare hourly rehearsal, recording, and podcast services at OT Vibez Studio in Edmonton." />
+  <meta name="twitter:image" content="https://otvibezstudio.com/assets/images/otvibez.png" />
 
   <!-- Favicon -->
   <link rel="icon" href="assets/images/otvibez-white-bg.png" type="image/x-icon" />
@@ -72,7 +72,7 @@
 <body class="min-h-screen flex flex-col bg-white text-gray-800">
 
   <!-- Backdrop Overlay (initially hidden) -->
-<div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] md:hidden"></div>
+<div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] lg:hidden"></div>
 
 <!-- Premium Transparent Header -->
 <header class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-xl shadow-sm transition-all" role="banner">
@@ -83,7 +83,7 @@
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-[15px] font-medium tracking-wide text-gray-800 font-body" aria-label="Main Navigation">
+    <nav class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-[15px] font-medium tracking-wide text-gray-800 font-body" aria-label="Main Navigation">
       <a href="/#about" class="nav-link hover:text-purple-700">
         About
       </a>
@@ -98,24 +98,31 @@
       </a>
     </nav>
 
-    <!-- Social Icons -->
-    <div class="hidden md:flex space-x-5 items-center">
-      <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram @otvibezstudio" title="Follow OT Vibez on Instagram" class="hover:scale-110 transition-transform text-[#E1306C]">
-        <!-- Instagram Icon -->
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/></svg>
+    <!-- Desktop Booking + Social -->
+    <div class="hidden lg:flex items-center space-x-4">
+      <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services"
+         target="_blank" rel="noopener noreferrer"
+         onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Header CTA' }); }"
+         class="inline-flex items-center rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800">
+        Book Now
       </a>
-      <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok @otvibezstudio" title="Follow OT Vibez on TikTok" class="hover:scale-110 transition-transform text-[#69C9D0]">
-        <!-- TikTok Icon -->
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 256 256"><path d="M232 64v32a88 88 0 1 1-88-88h32v40a8 8 0 0 0 8 8h40zM160 54.63V40h-16a72 72 0 1 0 72 72v-16h-13.61A56.42 56.42 0 0 1 160 54.63z"/></svg>
+      <div class="flex items-center gap-2.5">
+      <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram @otvibezstudio" title="Follow OT Vibez on Instagram" class="p-2 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/></svg>
       </a>
-      <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/" target="_blank" rel="noopener noreferrer" aria-label="OT Vibez on LinkedIn" title="Connect with OT Vibez on LinkedIn" class="hover:scale-110 transition-transform text-[#0077B5]">
-        <!-- LinkedIn Icon -->
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.09 0 1.97-.88 1.97-1.98S6.07 3.5 4.98 3.5zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/></svg>
+      <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok @otvibezstudio" title="Follow OT Vibez on TikTok" class="p-2 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+        </svg>
       </a>
+      <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="OT Vibez on LinkedIn" title="Connect with OT Vibez on LinkedIn" class="p-2 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.09 0 1.97-.88 1.97-1.98S6.07 3.5 4.98 3.5zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/></svg>
+      </a>
+      </div>
     </div>
 
     <!-- Mobile Menu Toggle -->
-    <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl bg-white/70 hover:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 z-50 transition-all duration-200" aria-label="Toggle menu">
+    <button id="menu-toggle" class="lg:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl bg-white/70 hover:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 z-50 transition-all duration-200" aria-label="Toggle menu">
       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
@@ -125,7 +132,7 @@
 
 <!-- Mobile Menu -->
 <nav id="mobile-menu"
-     class="fixed top-0 left-0 w-full h-full pt-[4.8rem] md:pt-0 overflow-y-auto bg-white/95 backdrop-blur-xl z-[9999] hidden shadow-2xl transform transition-all duration-300 ease-in-out"
+     class="fixed top-0 left-0 w-full h-full pt-[4.8rem] lg:pt-0 overflow-y-auto bg-white/95 backdrop-blur-xl z-[9999] hidden shadow-2xl transform transition-all duration-300 ease-in-out"
      aria-label="Mobile Navigation">
     <div class="flex flex-col h-full">
       <!-- Mobile Menu Header -->
@@ -216,20 +223,77 @@
         </li>
       </ul>
       
+      <!-- Mobile Contact Info & CTAs -->
+      <div class="px-4 sm:px-5 py-3 space-y-3.5">
+        <div class="bg-gray-50 rounded-xl p-4 space-y-3">
+          <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Contact Info</h3>
+          <div class="space-y-2">
+            <a href="tel:+1-780-522-1807" class="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-colors">
+              <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span class="text-sm font-medium">(780) 522-1807</span>
+            </a>
+            <div class="flex items-center space-x-3 text-gray-700">
+              <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-sm">Daily 8AM - 2AM</span>
+            </div>
+            <div class="flex items-center space-x-3 text-gray-700">
+              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span class="text-sm">8762 50 Ave NW #202</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <div class="security-badge">
+            <span class="checkmark-badge" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+            </span>
+            <span>SSL Secure</span>
+          </div>
+          <div class="security-badge">
+            <span class="checkmark-badge" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+            </span>
+            <span>Daily Booking</span>
+          </div>
+        </div>
+
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services"
+           target="_blank" rel="noopener noreferrer"
+           onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { 'event_category': 'Menu', 'event_label': 'Mobile Menu CTA' }); }"
+           class="cta-primary w-full justify-center">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          Book Now
+        </a>
+      </div>
+
       <!-- Mobile Menu Footer -->
       <div class="mt-auto p-4 sm:p-5 border-t border-gray-200">
-        <div class="flex items-center justify-center space-x-6">
-          <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" class="p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-white hover:scale-110 transition-transform duration-200">
+        <div class="flex items-center justify-center gap-5">
+          <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram @otvibezstudio" title="Follow OT Vibez on Instagram" class="p-2.5 md:p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 transition-transform duration-200">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/>
             </svg>
           </a>
-          <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" class="p-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full text-white hover:scale-110 transition-transform duration-200">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 256 256">
-              <path d="M232 64v32a88 88 0 11-88-88h32v40c0 2.2 1.8 4 4 4h40zM160 54.63V40h-16a72 72 0 1 0 72 72v-16h-13.61A56.42 56.42 0 0 1 160 54.63z"/>
+          <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok @otvibezstudio" title="Follow OT Vibez on TikTok" class="p-2.5 md:p-3 bg-gradient-to-r from-black to-gray-800 rounded-full text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 transition-transform duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="p-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full text-white hover:scale-110 transition-transform duration-200">
+          <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="OT Vibez on LinkedIn" title="Connect with OT Vibez on LinkedIn" class="p-2.5 md:p-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition-transform duration-200">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.09 0 1.97-.88 1.97-1.98S6.07 3.5 4.98 3.5zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/>
             </svg>
@@ -239,7 +303,6 @@
       </div>
     </div>
   </nav>
-</header>
 
 <main class="flex-grow">
 
@@ -269,6 +332,98 @@
 
   .mobile-nav-link:active {
     transform: scale(0.98);
+  }
+
+  .featured-service {
+    border-color: rgba(147, 51, 234, 0.45);
+    box-shadow: 0 14px 34px rgba(147, 51, 234, 0.12);
+    background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(245,243,255,0.95) 46%, rgba(252,231,243,0.88) 100%);
+  }
+
+  .featured-service .service-book-btn {
+    background: linear-gradient(90deg, #7c3aed 0%, #db2777 100%);
+  }
+
+  .featured-service .service-book-btn:hover {
+    filter: brightness(1.03);
+  }
+
+  #services-grid .featured-rank-1 {
+    order: -30;
+  }
+
+  #services-grid .featured-rank-2 {
+    order: -29;
+  }
+
+  #services-grid .featured-rank-3 {
+    order: -28;
+  }
+
+  @media (max-width: 639px) {
+    #services-grid .featured-rank-1,
+    #services-grid .featured-rank-2,
+    #services-grid .featured-rank-3 {
+      order: -30;
+    }
+  }
+
+  .security-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.55rem 0.9rem;
+    background: rgba(240, 249, 255, 0.7);
+    border: 1px solid #bae6fd;
+    border-radius: 0.75rem;
+    font-size: 0.8125rem;
+    color: #1f2937;
+    line-height: 1.2;
+    box-shadow: 0 1px 0 rgba(2, 132, 199, 0.08);
+    transition: all 0.2s ease;
+  }
+
+  .security-badge:hover {
+    background: rgba(224, 242, 254, 0.8);
+    border-color: #7dd3fc;
+  }
+
+  .security-badge .checkmark-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+    background: #0284c7;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  .security-badge .checkmark-badge svg {
+    width: 0.65rem;
+    height: 0.65rem;
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(90deg, #7c3aed 0%, #db2777 100%);
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.9rem 1.25rem;
+    border-radius: 9999px;
+    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.26);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+    box-shadow: 0 14px 28px rgba(124, 58, 237, 0.28);
   }
 
   /* Mobile responsiveness improvements */
@@ -315,7 +470,7 @@
     }
 
     /* Mobile-optimized service cards */
-    .group {
+    .service-card {
       min-height: 200px;
       padding: 1.5rem;
     }
@@ -369,125 +524,247 @@
   });
 </script>
 
-<!-- Enhanced Service Cards with Animated Modals -->
-<section class="pt-36 pb-24 px-6 bg-white relative z-10 overflow-hidden">
-  <div class="max-w-7xl mx-auto text-center" data-aos="fade-up">
-    <span class="inline-block uppercase tracking-wider text-purple-700 bg-purple-100 text-xs font-semibold px-4 py-1 rounded-full mb-4">
-      What We Offer
-    </span>
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold mb-6 leading-tight">
-      Explore Our <span class="text-purple-700">Services</span>
-    </h2>
-    <p class="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
-      Tap a card below for full service details. Booking is handled through our Square calendar.
-    </p>
-  </div>
+<!-- Full Services Catalog -->
+<section class="relative z-10 overflow-hidden bg-white px-4 pb-20 pt-36 sm:px-6">
+  <div class="pointer-events-none absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-200/50 blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 translate-y-1/3 rounded-full bg-pink-200/40 blur-3xl"></div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-    <!-- Cards -->
-    <div onclick="openModal('rehearsalModal')" class="group cursor-pointer relative bg-white border border-gray-200 rounded-md p-6 shadow-md hover:shadow-xl hover:border-purple-400 flex flex-col justify-between text-center">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-transparent opacity-0 group-hover:opacity-60 rounded-md transition-opacity duration-300 pointer-events-none"></div>
-      <div>
-        <h3 class="text-xl font-heading font-semibold text-gray-900 group-hover:text-purple-700 mb-4">Rehearsals</h3>
-        <p class="text-sm text-gray-700 mb-4">Hourly, monthly, or yearly practice slots. Solo or band welcome.</p>
-      </div>
-      <button class="text-sm text-purple-700 font-semibold mt-auto group-hover:underline">Details</button>
+  <div class="relative mx-auto max-w-7xl">
+    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+      <span class="mb-4 inline-flex rounded-full border border-purple-200 bg-purple-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-purple-700">All Square Services</span>
+      <h1 class="font-heading text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Edmonton Rehearsal, Recording & Podcast Services</h1>
+      <p class="mt-5 text-base text-gray-700 sm:text-lg">Every OT Vibez service is listed below, including hourly rehearsal studio options, recording sessions, and podcast room rental in Edmonton. Filter by category, compare quickly, and book in one click.</p>
     </div>
 
-    <div onclick="openModal('recordingModal')" class="group cursor-pointer relative bg-white border border-gray-200 rounded-md p-6 shadow-md hover:shadow-xl hover:border-purple-400 flex flex-col justify-between text-center">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-transparent opacity-0 group-hover:opacity-60 rounded-md transition-opacity duration-300 pointer-events-none"></div>
-      <div>
-        <h3 class="text-xl font-heading font-semibold text-gray-900 group-hover:text-purple-700 mb-4">Live Recording</h3>
-        <p class="text-sm text-gray-700 mb-4">Vocal, voiceover, or band recordings. Engineer optional.</p>
-      </div>
-      <button class="text-sm text-purple-700 font-semibold mt-auto group-hover:underline">Details</button>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-2.5" data-aos="fade-up" data-aos-delay="80">
+      <button type="button" class="service-filter-btn rounded-full bg-gray-900 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="service-filter-btn rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-700 transition hover:border-purple-300 hover:text-purple-700" data-filter="rehearsal" aria-pressed="false">Rehearsal</button>
+      <button type="button" class="service-filter-btn rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-700 transition hover:border-purple-300 hover:text-purple-700" data-filter="recording" aria-pressed="false">Recording</button>
+      <button type="button" class="service-filter-btn rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-700 transition hover:border-purple-300 hover:text-purple-700" data-filter="video-podcast" aria-pressed="false">Video/Podcast</button>
+      <button type="button" class="service-filter-btn rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-700 transition hover:border-purple-300 hover:text-purple-700" data-filter="consult" aria-pressed="false">Consult</button>
     </div>
+    <p id="services-filter-count" class="mt-3 text-center text-sm text-gray-600" data-aos="fade-up" data-aos-delay="100" role="status" aria-live="polite">Showing 11 services</p>
 
-    <div onclick="openModal('podcastModal')" class="group cursor-pointer relative bg-white border border-gray-200 rounded-md p-6 shadow-md hover:shadow-xl hover:border-purple-400 flex flex-col justify-between text-center">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-transparent opacity-0 group-hover:opacity-60 rounded-md transition-opacity duration-300 pointer-events-none"></div>
-      <div>
-        <h3 class="text-xl font-heading font-semibold text-gray-900 group-hover:text-purple-700 mb-4">Podcast Production</h3>
-        <p class="text-sm text-gray-700 mb-4">Full podcast setup. Cameras, lights, mics, and optional videographer.</p>
-      </div>
-      <button class="text-sm text-purple-700 font-semibold mt-auto group-hover:underline">Details</button>
-    </div>
+    <div id="services-grid" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3" data-aos="fade-up" data-aos-delay="120">
+      <article class="service-card featured-service featured-rank-1 group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">On Sale</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">2 hr+</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Hourly Rehearsal Session</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Flexible drop-in rehearsal time for last-minute sessions, warmups, and focused band practice.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">Price varies</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4" target="_blank" rel="noopener noreferrer" data-service-name="Hourly Rehearsal Session" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Rehearsal</a>
+      </article>
 
-    <div onclick="openModal('directionModal')" class="group cursor-pointer relative bg-white border border-gray-200 rounded-md p-6 shadow-md hover:shadow-xl hover:border-purple-400 flex flex-col justify-between text-center">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-transparent opacity-0 group-hover:opacity-60 rounded-md transition-opacity duration-300 pointer-events-none"></div>
-      <div>
-        <h3 class="text-xl font-heading font-semibold text-gray-900 group-hover:text-purple-700 mb-4">Musical Direction</h3>
-        <p class="text-sm text-gray-700 mb-4">Guidance from Oshane Samuels for live or studio success.</p>
-      </div>
-      <button class="text-sm text-purple-700 font-semibold mt-auto group-hover:underline">Details</button>
+      <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">On Sale</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">15 min</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Monthly Membership - Rehearsal Space</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Membership option walkthrough for recurring artists. Built for consistent rehearsal routines and savings.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">Price varies</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Membership</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/FHA4D47WMC3NYVV4FRBDKY4J" target="_blank" rel="noopener noreferrer" data-service-name="Monthly Membership - Rehearsal Space" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Start Membership</a>
+      </article>
+
+      <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">On Sale</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">30 min+</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Yearly Membership - Rehearsal Space</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Long-term membership planning for committed artists who want guaranteed rehearsal access year-round.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">Price varies</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Membership</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VCXXIL2ZOHMOUW5XFXZHSU7Q" target="_blank" rel="noopener noreferrer" data-service-name="Yearly Membership - Rehearsal Space" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Start Yearly Plan</a>
+      </article>
+
+      <article class="service-card group flex flex-col rounded-2xl border border-sky-200/70 bg-gradient-to-br from-white via-sky-50/40 to-indigo-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="recording">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-sky-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Studio</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr+</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Live Band Recording</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Record songs, voiceover, and effects in a controlled room with performance-ready sound capture.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-[11px] font-semibold text-sky-700">Price varies</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Recording</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/4AX5CVUXZHF5CUP5PD2RDR2J" target="_blank" rel="noopener noreferrer" data-service-name="Live Band Recording" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Recording</a>
+      </article>
+
+      <article class="service-card featured-service featured-rank-3 group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-rose-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Full Production</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr+</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Video & Podcast Production (Pro Videographer Included)</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">High-impact podcast or video session with professional camera setup and on-site videographer support.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">Price varies</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Podcast</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Production (Pro Videographer Included)" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Full Production</a>
+      </article>
+
+      <article class="service-card group flex flex-col rounded-2xl border border-emerald-200/70 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/40 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="consult">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Free</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Free Space Tour</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">See the room in person, review gear options, and confirm fit before committing to a paid session.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">Free</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Tour</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-service-name="Free Space Tour" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Free Tour</a>
+      </article>
+
+      <article class="service-card group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-rose-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Self-Managed</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr+</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Video & Podcast Space (No Videographer)</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Use the same production-ready room setup when you just need the space and equipment access.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">Price varies</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Podcast</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/OWSWZBPK5I6AWOENY4NLVSTZ" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Space (No Videographer)" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Studio Only</a>
+      </article>
+
+      <article class="service-card featured-service featured-rank-2 group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Solo Artist</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr+</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Hourly Solo Practice</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Dedicated focused practice time for individual artists in a distraction-free, treated environment.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">Price varies</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VKHZ23S3ZQTKDTZXG3LYLHZX" target="_blank" rel="noopener noreferrer" data-service-name="Hourly Solo Practice" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Solo Practice</a>
+      </article>
+
+      <article class="service-card group flex flex-col rounded-2xl border border-emerald-200/70 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/40 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Free</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">15 min</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">XL Tour Rehearsals</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Large-format rehearsal consultation for touring prep, bigger setups, and expanded performance planning.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">Free</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/2TRQ6MXV3Q7RLUNIEG2YGTTO" target="_blank" rel="noopener noreferrer" data-service-name="XL Tour Rehearsals" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book XL Rehearsal</a>
+      </article>
+
+      <article class="service-card group flex flex-col rounded-2xl border border-emerald-200/70 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/40 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="consult">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Free</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Musical Direction Consult</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Work directly with a professional musical director to sharpen your live show and creative direction.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">Free</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Consult</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/64WOMPUP6BSOV7JYZ2DOW4XJ" target="_blank" rel="noopener noreferrer" data-service-name="Musical Direction Consult" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Consult</a>
+      </article>
+
+      <article class="service-card group flex flex-col rounded-2xl border border-amber-200/80 bg-gradient-to-br from-white via-amber-50/40 to-orange-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast recording">
+        <div class="mb-3 flex items-center justify-between gap-2">
+          <span class="rounded-full bg-amber-500 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Featured</span>
+          <span class="rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
+        </div>
+        <h3 class="font-heading text-xl font-semibold text-gray-900">Solo Go Pro Video & Audio Session (1-Camera Angle)</h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700">Content-focused performance session for clean one-angle capture ready for social, YouTube, and promos.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-[11px] font-semibold text-amber-700">CA$120.00</span>
+          <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Audio</span>
+        </div>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/6KE77ISTDMYVAOQIFYK7X5HK" target="_blank" rel="noopener noreferrer" data-service-name="Solo Go Pro Video & Audio Session (1-Camera Angle)" class="service-book-btn mt-5 inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-black">Book Go Pro Session</a>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Modal Container -->
-<div id="modalContainer"></div>
-
 <script>
-  const modalContent = {
-    rehearsalModal: `
-      <h3 class='text-2xl font-heading font-bold mb-4 text-purple-700'>Rehearsals</h3>
-      <p class='text-gray-800 mb-4'>Solo or full band. Memberships start monthly with year-long options available.</p>
-      <ul class='list-disc ml-5 text-sm text-gray-700 space-y-1 mb-6'>
-        <li>Hourly drop-ins or booked slots</li>
-        <li>8h, 12h, or 20h monthly tiers</li>
-        <li>Annual 96h or 144h options</li>
-        <li>Premium private acoustic studio</li>
-      </ul>
-      <a href='https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services' target='_blank' class='bg-purple-700 text-white font-semibold px-6 py-3 rounded hover:bg-purple-800 transition'>Book Now</a>
-    `,
-    recordingModal: `
-      <h3 class='text-2xl font-heading font-bold mb-4 text-purple-700'>Live Recording</h3>
-      <p class='text-gray-800 mb-4'>Capture vocals, instrumentals, or spoken content in high definition. Engineer optional.</p>
-      <ul class='list-disc ml-5 text-sm text-gray-700 space-y-1 mb-6'>
-        <li>Top vocal and multi-track capture</li>
-        <li>Use our engineer or bring yours</li>
-        <li>Quiet, acoustically tuned studio</li>
-      </ul>
-      <a href='https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services' target='_blank' class='bg-purple-700 text-white font-semibold px-6 py-3 rounded hover:bg-purple-800 transition'>Book Now</a>
-    `,
-    podcastModal: `
-      <h3 class='text-2xl font-heading font-bold mb-4 text-purple-700'>Podcast Production</h3>
-      <p class='text-gray-800 mb-4'>Professional setup for audio & video podcasting with custom backdrops and lighting.</p>
-      <ul class='list-disc ml-5 text-sm text-gray-700 space-y-1 mb-6'>
-        <li>FX30 + ZV-E10 cameras</li>
-        <li>Rode PodMics, DJI Wireless</li>
-        <li>COB LEDs + color wash lights</li>
-        <li>Black, green, or white backdrop</li>
-      </ul>
-      <a href='https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services' target='_blank' class='bg-purple-700 text-white font-semibold px-6 py-3 rounded hover:bg-purple-800 transition'>Book Now</a>
-    `,
-    directionModal: `
-      <h3 class='text-2xl font-heading font-bold mb-4 text-purple-700'>Musical Direction</h3>
-      <p class='text-gray-800 mb-4'>Custom guidance from Oshane Samuels. Great for bands, worship leaders, and touring artists.</p>
-      <ul class='list-disc ml-5 text-sm text-gray-700 space-y-1 mb-6'>
-        <li>Performance arrangement</li>
-        <li>Set planning + creative consulting</li>
-        <li>Live or online sessions available</li>
-      </ul>
-      <a href='https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services' target='_blank' class='bg-purple-700 text-white font-semibold px-6 py-3 rounded hover:bg-purple-800 transition'>Book Now</a>
-    `
-  };
+  (function () {
+    var filterButtons = document.querySelectorAll(".service-filter-btn");
+    var cards = document.querySelectorAll(".service-card");
+    var bookButtons = document.querySelectorAll(".service-book-btn");
+    var filterCount = document.getElementById("services-filter-count");
 
-  function openModal(id) {
-    const modal = document.createElement("div");
-    modal.id = "modalOverlay";
-    modal.className = "fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4";
-    modal.innerHTML = `
-      <div class="bg-white rounded-md shadow-2xl max-w-2xl w-full p-8 relative animate-fadeIn">
-        <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl">&times;</button>
-        ${modalContent[id]}
-      </div>
-    `;
-    document.getElementById("modalContainer").appendChild(modal);
-  }
+    function updateVisibleCount() {
+      var visible = 0;
+      cards.forEach(function (card) {
+        if (!card.classList.contains("hidden")) visible += 1;
+      });
+      if (filterCount) {
+        filterCount.textContent = "Showing " + visible + " service" + (visible === 1 ? "" : "s");
+      }
+    }
 
-  function closeModal() {
-    document.getElementById("modalContainer").innerHTML = '';
-  }
+    function setActiveFilter(activeBtn) {
+      filterButtons.forEach(function (btn) {
+        btn.classList.remove("bg-gray-900", "text-white", "border-gray-900");
+        btn.classList.add("border", "border-gray-300", "bg-white", "text-gray-700");
+        btn.setAttribute("aria-pressed", "false");
+      });
+      activeBtn.classList.remove("border-gray-300", "bg-white", "text-gray-700");
+      activeBtn.classList.add("bg-gray-900", "text-white", "border-gray-900");
+      activeBtn.setAttribute("aria-pressed", "true");
+    }
+
+    filterButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var filter = btn.getAttribute("data-filter");
+        setActiveFilter(btn);
+        cards.forEach(function (card) {
+          var categories = (card.getAttribute("data-category") || "").split(/\s+/);
+          var show = filter === "all" || categories.includes(filter);
+          card.classList.toggle("hidden", !show);
+        });
+        updateVisibleCount();
+        var firstVisible = Array.prototype.find.call(cards, function (card) {
+          return !card.classList.contains("hidden");
+        });
+        if (firstVisible) {
+          var stickyBtn = document.getElementById("mobile-sticky-book");
+          var matchingLink = firstVisible.querySelector(".service-book-btn");
+          if (stickyBtn && matchingLink) stickyBtn.href = matchingLink.href;
+        }
+      });
+    });
+
+    bookButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "book_now_click", {
+            event_category: "Services",
+            event_label: "Service Card - " + (btn.getAttribute("data-service-name") || "Unknown")
+          });
+        }
+      });
+    });
+
+    updateVisibleCount();
+  })();
 </script>
 
 
@@ -495,101 +772,72 @@
 
 </main>
    <!-- Footer -->
-<footer class="w-full bg-white/10 backdrop-blur-xl border-t border-white/20 text-gray-800 font-body px-6 pt-20 pb-12 overflow-hidden shadow-inner">  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start text-sm" data-aos="fade-up">
-
-    <!-- Branding & Contact -->
-    <div class="space-y-4">
-      <h2 class="text-xl font-heading font-semibold tracking-wide text-gray-900">OT Vibez Music Rehearsal Space & Studio</h2>
-      <p class="text-gray-700 leading-relaxed">
-        Professional music rehearsal space and recording studio in Edmonton — open daily for artists, podcasters, and creatives.
-      </p>
-      <address class="not-italic text-gray-700">
-        <a href="mailto:otvibezstudio@gmail.com"
-           class="inline-block text-purple-800 hover:text-black underline underline-offset-4 transition"
-           aria-label="Email OT Vibez Studio">
-          otvibezstudio@gmail.com
-        </a>
-      </address>
-
-      <!-- Social Icons -->
-      <nav aria-label="Social Media" class="flex space-x-5 mt-5">
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/otvibezstudio" target="_blank" aria-label="Instagram"
-           class="hover:scale-110 transition-transform duration-300 text-[#C13584]">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/>
-          </svg>
-        </a>
-
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" aria-label="TikTok"
-           class="hover:scale-110 transition-transform duration-300 text-[#010101]">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 256 256">
-            <path d="M232 64v32a88 88 0 11-88-88h32v40c0 2.2 1.8 4 4 4h40z"/>
-          </svg>
-        </a>
-
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio" target="_blank"
-           aria-label="LinkedIn"
-           class="hover:scale-110 transition-transform duration-300 text-[#0077B5]">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98 1.09 0 1.97-.88 1.97-1.98 0-1.1-.88-1.98-1.97-1.98zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/>
-          </svg>
-        </a>
-      </nav>
+<footer class="relative w-full overflow-hidden border-t border-white/40 bg-gradient-to-br from-white/90 via-white/80 to-purple-50/70 text-gray-800 backdrop-blur-xl">
+  <div class="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full bg-purple-300/25 blur-3xl"></div>
+  <div class="pointer-events-none absolute -bottom-20 -left-14 h-64 w-64 rounded-full bg-pink-200/25 blur-3xl"></div>
+  <div class="relative mx-auto max-w-7xl px-4 py-4 md:px-8 md:py-8" data-aos="fade-up">
+    <div class="grid gap-4 md:gap-5 lg:grid-cols-12">      <div class="space-y-4 lg:col-span-5">
+        <span class="inline-flex items-center rounded-full border border-purple-200/70 bg-white/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-purple-700">OT Vibez Services</span>
+        <h2 class="font-heading text-lg font-semibold leading-tight text-gray-900 md:text-2xl">Build the right session for your project.</h2>
+        <p class="max-w-xl text-sm leading-relaxed text-gray-700">From rehearsals to recordings, choose the service that matches your workflow and timeline.</p>
+        <div class="flex flex-wrap items-center gap-2">
+          <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services" target="_blank" rel="noopener noreferrer" onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Footer CTA' }); }" class="inline-flex items-center rounded-lg bg-gradient-to-r from-purple-700 to-fuchsia-600 px-4 py-2 text-xs font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 w-full sm:w-auto justify-center">Book a Session</a>
+          <a href="/" class="inline-flex items-center rounded-lg border border-gray-300/80 bg-white/70 px-4 py-2 text-xs font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700 w-full sm:w-auto justify-center">Back to Home</a>
+        </div>
+      </div>
+      <div class="space-y-3 lg:col-span-3">
+        <h3 class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Quick Links</h3>
+        <nav aria-label="Footer navigation">
+          <ul class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm font-medium text-gray-700 sm:block sm:space-y-2">
+            <li><a href="/" class="transition hover:text-purple-700">Home</a></li>
+            <li><a href="/#faq" class="transition hover:text-purple-700">FAQs</a></li>
+            <li><a href="/privacy.html" class="transition hover:text-purple-700">Privacy Policy</a></li>
+            <li><a href="/terms.html" class="transition hover:text-purple-700">Terms and Conditions</a></li>
+          </ul>
+        </nav>
+      </div>      <div class="space-y-3 lg:col-span-4">
+        <h3 class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Connect</h3>
+        <div class="space-y-2 text-xs text-gray-700 sm:text-sm">
+          <p class="rounded-lg border border-white/70 bg-white/60 px-3 py-2">Edmonton, Alberta</p>
+          <p class="rounded-lg border border-white/70 bg-white/60 px-3 py-2">Open daily by booking</p>
+        </div>
+        <nav aria-label="Social media" class="flex items-center gap-2 pt-1">
+          <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="p-2.5 md:p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 transition-transform duration-200">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="p-2.5 md:p-3 bg-gradient-to-r from-black to-gray-800 rounded-full text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 transition-transform duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="p-2.5 md:p-3 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition-transform duration-200">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98 1.09 0 1.97-.88 1.97-1.98 0-1.1-.88-1.98-1.97-1.98zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/></svg>
+          </a>
+        </nav>
+      </div>
     </div>
-
-    <!-- Quick Links -->
-    <nav class="space-y-3 text-gray-700" aria-label="Footer navigation">
-      <h5 class="uppercase text-xs tracking-wider text-gray-900 font-semibold mb-2">Quick Links</h5>
-      <ul class="space-y-2">
-        <li><a href="#studio" class="hover:text-black transition">Studio Overview</a></li>
-        <li><a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services" class="hover:text-black transition">Book a Session</a></li>
-        <li><a href="/privacy.html" class="hover:text-black transition">Privacy Policy</a></li>
-        <li><a href="/terms.html" class="hover:text-black transition">Terms & Conditions</a></li>
-      </ul>
-    </nav>
-
-    <!-- Credits -->
-    <div class="flex md:justify-end items-start md:items-end flex-col-reverse md:flex-col space-y-3 md:text-right text-gray-700">
-      <p>&copy; 2025 OT Vibez Studio. All rights reserved.</p>
-      <p>
-        Website design by 
-        <a href="https://craytivo.com" class="text-purple-700 hover:text-black underline underline-offset-4 transition">
-          Craytivo
-        </a>
-      </p>
+    <div class="mt-4 flex flex-col gap-2 border-t border-white/70 pt-3 text-xs text-gray-600 md:flex-row md:items-center md:justify-between">
+      <p>&copy; <span id="footerYear">2026</span> OT Vibez Studio. All rights reserved.</p>
+      <p>Website design by <a href="https://craytivo.com" target="_blank" rel="noopener noreferrer" class="font-medium text-purple-700 transition hover:text-purple-900">Craytivo</a></p>
     </div>
   </div>
-
-  <!-- Decorative Glow and Wave -->
-  <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 pointer-events-none z-0">
-    <div class="w-[800px] h-[800px] bg-purple-500/20 blur-3xl rounded-full animate-pulse-slow"></div>
-  </div>
 </footer>
-<!-- Footer Animation -->
-<style>
-  @keyframes pulse-slow {
-    0%, 100% {
-      opacity: 0.3;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.6;
-      transform: scale(1.1);
-    }
-  }
-
-  .animate-pulse-slow {
-    animation: pulse-slow 12s ease-in-out infinite;
-  }
-</style>
-</footer>
-
+<script>
+  (function () {
+    var footerYear = document.getElementById("footerYear");
+    if (footerYear) footerYear.textContent = new Date().getFullYear();
+  })();
+</script>
+<!-- Sticky Mobile Booking CTA -->
+<div class="fixed inset-x-0 bottom-0 z-40 border-t border-gray-200 bg-white/95 p-3 shadow-[0_-8px_24px_rgba(15,23,42,0.12)] backdrop-blur md:hidden" style="padding-bottom:calc(0.75rem + env(safe-area-inset-bottom));">
+  <a id="mobile-sticky-book" href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4"
+     target="_blank" rel="noopener noreferrer"
+     onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Mobile Sticky CTA' }); }"
+     class="inline-flex w-full items-center justify-center rounded-full bg-[#E1306C] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-all duration-300 hover:bg-[#c51d58]">
+    Book Now
+  </a>
+</div>
 <!-- Scroll to Top Button -->
 <button id="scrollToTopBtn"
-  class="fixed bottom-6 right-6 z-50 bg-gradient-to-tr from-purple-600 via-purple-500 to-pink-500 text-white rounded-full p-4 shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] group"
+  class="fixed bottom-24 md:bottom-6 right-6 z-50 bg-gradient-to-tr from-purple-600 via-purple-500 to-pink-500 text-white rounded-full p-4 shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] group"
   aria-label="Scroll to top">
   <div class="relative">
     <!-- Glow Pulse -->
@@ -619,8 +867,7 @@
 </script>
 
 <!-- AOS (Animate on Scroll) -->
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
     once: true,
@@ -632,17 +879,34 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "MusicVenue",
   "name": "OT Vibez Studio",
-  "image": "https://yourdomain.com/logo.png",
+  "description": "Hourly rehearsal studio, recording, and podcast room rental services in Edmonton for bands, artists, and creators.",
+  "image": "https://otvibezstudio.com/assets/images/otvibez.png",
+  "telephone": "+1-780-522-1807",
   "email": "otvibezstudio@gmail.com",
   "url": "https://otvibezstudio.com",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "8762 50 Ave NW #202",
     "addressLocality": "Edmonton",
     "addressRegion": "AB",
+    "postalCode": "T6B 1E8",
     "addressCountry": "CA"
   },
+  "openingHours": "Mo-Su 08:00-02:00",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Edmonton"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Alberta"
+    }
+  ],
+  "hasMap": "https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio",
+  "priceRange": "$$",
   "sameAs": [
     "https://www.instagram.com/otvibezstudio",
     "https://www.tiktok.com/@otvibezstudio",
@@ -655,3 +919,4 @@
 
 </body>
 </html>
+

@@ -1,2 +1,4 @@
-﻿User-agent: *
-Allow: / Sitemap: https://otvibezstudio.com/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://otvibezstudio.com/sitemap.xml
