@@ -1,38 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
+  <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMJ5ZCG9CX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-ZMJ5ZCG9CX');
   </script>
 
+  <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Terms of Service | OT Vibez Studio Edmonton</title>
-  <meta name="description" content="Read the OT Vibez Studio terms of service for booking policies, studio use rules, cancellations, and user responsibilities." />
-  <meta name="keywords" content="terms of service, OT Vibez Studio, studio rules, booking policy, Edmonton rehearsal" />
-  <link rel="canonical" href="https://otvibezstudio.com/terms.html" />
+  <!-- Page Title & SEO -->
+  <title>Band Rehearsal Space Edmonton | Rehearse Smarter at OT Vibez</title>
+  <meta name="description" content="Find premium band rehearsal space in Edmonton at OT Vibez. Sound-treated room, reliable setup, flexible booking, and XL tour rehearsal options." />
+  <meta name="keywords" content="band rehearsal space Edmonton, rehearsal studio for bands Edmonton, XL tour rehearsal Edmonton, music rehearsal room Edmonton, OT Vibez bands" />
+  <link rel="canonical" href="https://otvibezstudio.com/band-rehearsal-space-edmonton.html" />
 
-  <!-- OG -->
-  <meta property="og:title" content="Terms of Service | OT Vibez Studio Edmonton" />
-  <meta property="og:description" content="Understand your rights and responsibilities when booking and using OT Vibez Studio services." />
-  <meta property="og:url" content="https://otvibezstudio.com/terms.html" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Band Rehearsal Space Edmonton | OT Vibez" />
+  <meta property="og:description" content="Book a premium Edmonton band rehearsal space with pro setup, treated acoustics, and flexible options." />
+  <meta property="og:url" content="https://otvibezstudio.com/band-rehearsal-space-edmonton.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://otvibezstudio.com/assets/images/otvibez.png" />
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Terms of Service | OT Vibez Studio Edmonton" />
-  <meta name="twitter:description" content="Review booking terms, studio rules, and service conditions at OT Vibez Studio." />
+  <meta name="twitter:title" content="Band Rehearsal Space Edmonton | OT Vibez" />
+  <meta name="twitter:description" content="Premium band rehearsal space in Edmonton with flexible booking and membership options." />
   <meta name="twitter:image" content="https://otvibezstudio.com/assets/images/otvibez.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/otvibez-white-bg.png" type="image/x-icon" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS + Custom Theme -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -42,12 +49,23 @@
             heading: ['Poppins', 'sans-serif'],
             body: ['"Source Sans Pro"', 'sans-serif'],
           },
-        }
+          colors: {
+            primary: '#000000',
+            accent: '#5f5f5f',
+          },
+        },
       }
-    }
+    };
   </script>
 
-  <!-- AOS -->
+  <!-- Base Fallback Font Style -->
+  <style>
+    html, body {
+      font-family: "Source Sans Pro", sans-serif;
+    }
+  </style>
+
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     @media (min-width: 1024px) {
@@ -56,23 +74,24 @@
   </style>
 </head>
 
-<body class="bg-white text-gray-900 font-body">
+<body class="min-h-screen flex flex-col bg-white text-gray-800">
 
-<!-- Backdrop for Mobile Menu -->
+  <!-- Backdrop Overlay (initially hidden) -->
 <div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] lg:hidden"></div>
 
-<!-- Transparent Sticky Header -->
+<!-- Premium Transparent Header -->
 <header class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-xl shadow-sm transition-all" role="banner">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
-
     <!-- Logo -->
     <a href="/" id="logo-container" class="flex items-center space-x-3 transition-transform duration-300" aria-label="OT Vibez Edmonton Studio Home">
       <img src="assets/images/otvibez.png" alt="OT Vibez Studio - Edmonton Rehearsal & Recording Space" class="h-11 sm:h-12 md:h-14 w-auto object-contain">
     </a>
 
-    <!-- Desktop Navigation -->
+    <!-- Desktop Nav -->
     <nav class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-[17px] font-medium tracking-wide text-gray-800 font-body" aria-label="Main Navigation">
-      <a href="/#about" class="nav-link hover:text-purple-700">About</a>
+      <a href="/#about" class="nav-link hover:text-purple-700">
+        About
+      </a>
             <div class="relative group">
         <a href="/services.html" class="nav-link nav-dropdown-trigger hover:text-purple-700" aria-haspopup="true" aria-expanded="false">Services<svg class="h-3.5 w-3.5 shrink-0 opacity-60 transition-transform duration-150 group-hover:translate-y-px" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></a>
         <div class="invisible absolute left-1/2 top-full z-50 mt-1 w-[19rem] -translate-x-1/2 translate-y-1 rounded-2xl border border-gray-200/80 bg-white/90 p-2.5 opacity-0 shadow-lg ring-1 ring-black/5 backdrop-blur-xl transition-all duration-150 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
@@ -82,30 +101,34 @@
           <a href="/band-rehearsal-space-edmonton.html" class="mt-1 block rounded-xl px-3 py-2 text-sm font-semibold text-gray-700 transition-colors duration-150 hover:bg-gray-100/90 hover:text-gray-900 focus-visible:bg-gray-100/90 focus-visible:text-gray-900">Band Rehearsal Space Edmonton</a>
         </div>
       </div>
-      <a href="/#studio" class="nav-link hover:text-purple-700">Studio</a>
-      <a href="/#booking" class="nav-link hover:text-purple-700">Booking</a>
+      <a href="/#studio" class="nav-link hover:text-purple-700">
+        Studio
+      </a>
+      <a href="/#booking" class="nav-link hover:text-purple-700">
+        Booking
+      </a>
     </nav>
 
     <!-- Desktop Booking + Social -->
     <div class="hidden lg:flex items-center space-x-4">
       <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services"
          target="_blank" rel="noopener noreferrer"
-         onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Header', event_label: 'Desktop Header CTA' }); }"
+         onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Header CTA' }); }"
          class="inline-flex items-center rounded-full bg-black px-6 py-2.5 text-base font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800">
         Book Now
       </a>
       <div class="flex items-center gap-2.5">
-        <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram @otvibezstudio" title="Follow OT Vibez on Instagram" class="p-2.5 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
-          <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok @otvibezstudio" title="Follow OT Vibez on TikTok" class="p-2.5 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
-          <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="OT Vibez on LinkedIn" title="Connect with OT Vibez on LinkedIn" class="p-2.5 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
-          <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.09 0 1.97-.88 1.97-1.98S6.07 3.5 4.98 3.5zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/></svg>
-        </a>
+      <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram @otvibezstudio" title="Follow OT Vibez on Instagram" class="p-2.5 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
+        <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.88-2.38a1 1 0 1 1 1.24 1.56 1 1 0 0 1-1.24-1.56z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok @otvibezstudio" title="Follow OT Vibez on TikTok" class="p-2.5 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
+        <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="OT Vibez on LinkedIn" title="Connect with OT Vibez on LinkedIn" class="p-2.5 rounded-full border border-gray-300/70 bg-white/65 text-gray-600 hover:text-gray-900 hover:border-gray-400 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200">
+        <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98c1.09 0 1.97-.88 1.97-1.98S6.07 3.5 4.98 3.5zM3.5 8.75H6.5v11.75H3.5V8.75zm5.75 0H13v1.58h.05c.49-.93 1.7-1.91 3.5-1.91 3.74 0 4.43 2.46 4.43 5.65v6.43H17.5v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.25V8.75z"/></svg>
+      </a>
       </div>
     </div>
 
@@ -299,13 +322,19 @@
       </div>
     </div>
   </nav>
-</header>
+
+<main class="flex-grow">
+
+
+<!-- Navigation Styles -->
 <style>
   .nav-link {
     position: relative;
+    display: inline-block;
     padding-bottom: 4px;
     transition: color 0.2s ease;
   }
+
   .nav-dropdown-trigger {
     display: inline-flex;
     align-items: center;
@@ -315,7 +344,7 @@
   }
 
   .nav-link:hover {
-    color: #4B5563; /* Tailwind gray-700 */
+    color: #374151; /* Tailwind gray-700 */
   }
 
   .mobile-nav-link {
@@ -330,6 +359,40 @@
 
   .mobile-nav-link:active {
     transform: scale(0.98);
+  }
+
+  .featured-service {
+    border-color: rgba(147, 51, 234, 0.45);
+    box-shadow: 0 14px 34px rgba(147, 51, 234, 0.12);
+    background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(245,243,255,0.95) 46%, rgba(252,231,243,0.88) 100%);
+  }
+
+  .featured-service .service-book-btn {
+    background: linear-gradient(90deg, #7c3aed 0%, #db2777 100%);
+  }
+
+  .featured-service .service-book-btn:hover {
+    filter: brightness(1.03);
+  }
+
+  #services-grid .featured-rank-1 {
+    order: -30;
+  }
+
+  #services-grid .featured-rank-2 {
+    order: -29;
+  }
+
+  #services-grid .featured-rank-3 {
+    order: -28;
+  }
+
+  @media (max-width: 639px) {
+    #services-grid .featured-rank-1,
+    #services-grid .featured-rank-2,
+    #services-grid .featured-rank-3 {
+      order: -30;
+    }
   }
 
   .security-badge {
@@ -433,30 +496,35 @@
       padding: 12px;
     }
 
-    #mobile-menu .security-badge {
-      font-size: 0.75rem;
-      padding: 0.45rem 0.75rem;
-      gap: 0.5rem;
+    /* Mobile-optimized service cards */
+    #services-grid {
+      gap: 0.8rem;
     }
 
-    #mobile-menu .security-badge .checkmark-badge {
-      width: 0.9rem;
-      height: 0.9rem;
+    .service-card {
+      min-height: 0;
+      padding: 1.05rem;
+      border-radius: 0.95rem;
     }
 
-    #mobile-menu .security-badge .checkmark-badge svg {
-      width: 0.58rem;
-      height: 0.58rem;
+    #services-grid .service-card h3 {
+      font-size: 1.02rem;
+      line-height: 1.3;
     }
 
-    .cta-primary {
-      font-size: 0.9rem;
-      padding: 0.8rem 1.1rem;
+    #services-grid .service-mobile-trim {
+      display: none;
     }
 
-    /* Mobile-optimized content */
-    .space-y-6 > * + * {
-      margin-top: 1.5rem;
+    #services-grid .service-book-btn {
+      min-height: 44px;
+      font-size: 14px;
+      margin-top: 0.75rem;
+    }
+
+    #services-grid .service-card details {
+      margin-top: 0.6rem;
+      padding: 0.65rem 0.75rem;
     }
   }
 
@@ -468,6 +536,7 @@
   }
 </style>
 
+<!-- Header Behavior Scripts -->
 <script defer>
   document.addEventListener("DOMContentLoaded", () => {
     const logoContainer = document.getElementById("logo-container");
@@ -477,6 +546,7 @@
     const mobileCloseBtn = document.getElementById("mobile-close");
     const menuLinks = document.querySelectorAll('#mobile-menu a');
 
+    // Shrink logo on scroll
     window.addEventListener("scroll", () => {
       if (logoContainer) {
         logoContainer.classList.toggle("scale-90", window.scrollY > 40);
@@ -506,61 +576,148 @@
   });
 </script>
 
+<!-- Full Services Catalog -->
+<section class="relative z-10 overflow-hidden bg-gradient-to-b from-white via-indigo-50/30 to-white px-4 pb-16 pt-36 sm:px-6">
+  <div class="pointer-events-none absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-200/50 blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 translate-y-1/3 rounded-full bg-indigo-200/35 blur-3xl"></div>
 
-  <main class="max-w-4xl mx-auto px-6 py-32">
-  <h1 class="text-3xl md:text-4xl font-heading font-bold mb-6 text-center text-gray-900">Terms of Service</h1>
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+      <span class="mb-4 inline-flex rounded-full border border-purple-200 bg-purple-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-purple-700">Band Rehearsal Space Edmonton</span>
+      <nav aria-label="Breadcrumb" class="mb-3 text-[10px] text-gray-500">
+        <a href="/" class="transition hover:text-indigo-700">Home</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <a href="/services.html" class="transition hover:text-indigo-700">Services</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <span class="font-semibold text-indigo-700">Band Rehearsal Space Edmonton</span>
+      </nav>
+      <h1 class="font-heading text-2xl font-extrabold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Band Rehearsal Space in Edmonton That Helps You Sound Tight Faster</h1>
+      <p class="mt-5 text-base text-gray-700 sm:text-lg">OT Vibez gives Edmonton bands a clean, sound-treated rehearsal room with reliable setup, flexible booking, and room to run full sets before studio dates or live shows.</p>
+      <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Band Hero Primary" class="inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-black">Book Band Rehearsal</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/2TRQ6MXV3Q7RLUNIEG2YGTTO" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Band Hero Secondary" class="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:border-purple-300 hover:text-purple-700">Book XL Tour Rehearsal</a>
+      </div>
+      <div class="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-xl border border-indigo-100 bg-white/90 px-3 py-2 text-xs font-semibold text-gray-700">
+        <span class="rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-1 text-indigo-700">Built for full bands</span>
+        <span class="rounded-full border border-indigo-200 bg-white px-2.5 py-1 text-indigo-700">Fast online scheduling</span>
+        <span class="rounded-full border border-indigo-200 bg-white px-2.5 py-1 text-indigo-700">Walk in and run your set</span>
+      </div>
+      <div class="mt-5 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+        <span class="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-100 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-indigo-700">Tour-Ready</span>
+        <span class="inline-flex items-center rounded-full border border-indigo-200 bg-white px-2.5 py-1 text-[11px] font-semibold tracking-wide text-indigo-700">Full-Band Friendly</span>
+        <span class="hidden items-center rounded-full border border-indigo-200 bg-white px-2.5 py-1 text-[11px] font-semibold tracking-wide text-indigo-700 sm:inline-flex">Flexible Booking</span>
+      </div>
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-gray-700">
+        <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1">5.0 Stars</span>
+        <span class="rounded-full border border-amber-200 bg-white px-3 py-1">47 Google Reviews</span>
+        <span class="hidden rounded-full border border-amber-200 bg-white px-3 py-1 sm:inline-flex">Tour Prep Friendly</span>
+      </div>
+      <article class="mt-5 rounded-2xl border border-indigo-200 bg-white/90 p-4 text-left shadow-sm">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-indigo-700">Featured Review</p>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700 sm:hidden">"I recently used this rehearsal/studio space for recording bed tracks... highly recommended for recording and rehearsing."</p>
+        <p class="mt-2 hidden text-sm leading-relaxed text-gray-700 sm:block">"I recently used this rehearsal/studio space for recording bed tracks, and I was impressed by its excellent organization. It's ideal for bands or solo musicians looking to record multiple tracks for later work in their home studio. The affordability and efficiency make it a highly recommended choice for recording and rehearsing."</p>
+        <details class="mt-2 sm:hidden">
+          <summary class="cursor-pointer text-xs font-semibold text-indigo-700">Read full review</summary>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">"I recently used this rehearsal/studio space for recording bed tracks, and I was impressed by its excellent organization. It's ideal for bands or solo musicians looking to record multiple tracks for later work in their home studio. The affordability and efficiency make it a highly recommended choice for recording and rehearsing."</p>
+        </details>
+        <div class="mt-2 flex flex-wrap items-center justify-between gap-2">
+          <p class="text-xs font-semibold text-gray-900">Kory Burns · 5 stars</p>
+          <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" data-seo-track="review" data-seo-label="Band Review Kory Google" class="text-xs font-semibold text-indigo-700 underline underline-offset-2 transition hover:text-indigo-800">View on Google</a>
+        </div>
+      </article>
+      <article class="mt-3 rounded-2xl border border-indigo-200 bg-white/90 p-4 text-left shadow-sm">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-indigo-700">More Artist Feedback</p>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700 sm:hidden">"Edmonton has needed a space like OT Vibez for a long time!... professional rehearsal space at a great price."</p>
+        <p class="mt-2 hidden text-sm leading-relaxed text-gray-700 sm:block">"Edmonton has needed a space like OT Vibez for a long time! They provided a perfect environment for my rehearsal with all the necessary equipment and a great sounding and comfortable room. Even with an 8 person band we had ample space! Look no further for a professional rehearsal space at a great price."</p>
+        <details class="mt-2 sm:hidden">
+          <summary class="cursor-pointer text-xs font-semibold text-indigo-700">Read full review</summary>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">"Edmonton has needed a space like OT Vibez for a long time! They provided a perfect environment for my rehearsal with all the necessary equipment and a great sounding and comfortable room. Even with an 8 person band we had ample space! Look no further for a professional rehearsal space at a great price."</p>
+        </details>
+        <div class="mt-2 flex flex-wrap items-center justify-between gap-2">
+          <p class="text-xs font-semibold text-gray-900">Conor Wharton · 5 stars</p>
+          <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" data-seo-track="review" data-seo-label="Band Review Conor Google" class="text-xs font-semibold text-indigo-700 underline underline-offset-2 transition hover:text-indigo-800">View on Google</a>
+        </div>
+      </article>
+    </div>
 
-  <p class="mb-6">Effective Date: July 18, 2025</p>
+    <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3" data-aos="fade-up" data-aos-delay="80">
+      <article class="rounded-2xl border border-purple-100 bg-purple-50/50 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Mix-Ready Setup</h2>
+        <p class="mt-2 text-sm text-gray-700">Spend less time troubleshooting and more time playing with practical in-room setup support.</p>
+      </article>
+      <article class="rounded-2xl border border-indigo-100 bg-indigo-50/40 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Spacious Layout</h2>
+        <p class="mt-2 text-sm text-gray-700">Comfortably run six-piece sessions with dedicated zones and better stage-like spacing.</p>
+      </article>
+      <article class="rounded-2xl border border-indigo-100 bg-indigo-50/30 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Membership Options</h2>
+        <p class="mt-2 text-sm text-gray-700">Need recurring slots? Upgrade to monthly or yearly memberships for lower effective rates.</p>
+      </article>
+    </div>
 
-  <section class="space-y-6 text-gray-800 text-base leading-relaxed">
-    <p>By using the OT Vibez Studio website or booking services, you agree to the following terms and conditions. Please read them carefully.</p>
+    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="rounded-xl border border-indigo-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
+        <p class="font-semibold text-gray-900">Room to Spread Out</p>
+        <p>Built for full-band lineups and larger run-throughs.</p>
+      </div>
+      <div class="rounded-xl border border-indigo-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
+        <p class="font-semibold text-gray-900">Recurring Slots Available</p>
+        <p>Monthly/yearly plans help lock your preferred time.</p>
+      </div>
+      <div class="hidden rounded-xl border border-indigo-100 bg-white/90 px-4 py-3 text-sm text-gray-700 sm:block">
+        <p class="font-semibold text-gray-900">Pro Support Optional</p>
+        <p>Get setup help so your band can start quicker.</p>
+      </div>
+    </div>
+    <details class="mt-2 sm:hidden rounded-xl border border-indigo-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
+      <summary class="cursor-pointer font-semibold text-indigo-700">+ More</summary>
+      <div class="mt-2">
+        <p class="font-semibold text-gray-900">Pro Support Optional</p>
+        <p>Get setup help so your band can start quicker.</p>
+      </div>
+    </details>
 
-    <h2 class="text-2xl font-bold mt-10 font-heading">1. Booking & Payment</h2>
-    <ul class="list-disc list-inside space-y-1">
-      <li>All bookings must be made in advance through our website or official contact channels.</li>
-      <li>Payments are required to secure a reservation and may be processed via our third-party payment provider.</li>
-    </ul>
+    <div class="mt-10 rounded-2xl border border-indigo-200 bg-gradient-to-b from-white to-indigo-50/40 p-5 sm:p-6" data-aos="fade-up" data-aos-delay="120">
+      <h2 class="font-heading text-2xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
+      <div class="mt-4 space-y-3">
+        <details class="rounded-xl border border-indigo-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">What makes this band rehearsal space different?</summary>
+          <p class="mt-2 text-sm text-gray-700">You get a cleaner, more reliable setup with treated acoustics and practical support so sessions start quickly.</p>
+        </details>
+        <details class="rounded-xl border border-indigo-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Can I rehearse weekly at the same time?</summary>
+          <p class="mt-2 text-sm text-gray-700">Yes. Monthly and yearly membership plans help you lock recurring rehearsal slots.</p>
+        </details>
+        <details class="rounded-xl border border-indigo-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Is this space suitable for tour run-throughs?</summary>
+          <p class="mt-2 text-sm text-gray-700">Yes. Our XL rehearsal option is designed for serious tour prep and full-set performance practice.</p>
+        </details>
+      </div>
+    </div>
+    <div class="mt-6 rounded-2xl border border-indigo-200 bg-white/90 p-5" data-aos="fade-up" data-aos-delay="140">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-indigo-700">Related Services</p>
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-3">
+        <a href="/hourly-rehearsal-studio-edmonton.html" data-seo-track="related" data-seo-label="Band Related Hourly" class="rounded-xl border border-purple-200 bg-purple-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700">Hourly Rehearsal Studio Edmonton</a>
+        <a href="/podcast-room-rental-edmonton.html" data-seo-track="related" data-seo-label="Band Related Podcast" class="rounded-xl border border-rose-200 bg-rose-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">Podcast Room Rental Edmonton</a>
+        <a href="/services.html" data-seo-track="related" data-seo-label="Band Related Services" class="rounded-xl border border-indigo-200 bg-indigo-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700">All Studio Services</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h2 class="text-2xl font-bold mt-10 font-heading">2. Cancellations & Refunds</h2>
-    <ul class="list-disc list-inside space-y-1">
-      <li>Cancellations made at least 24 hours before your session are eligible for rescheduling or a full refund.</li>
-      <li>No-shows or late cancellations may not be refunded.</li>
-    </ul>
-
-    <h2 class="text-2xl font-bold mt-10 font-heading">3. Studio Use</h2>
-    <ul class="list-disc list-inside space-y-1">
-      <li>Clients are expected to treat the space and equipment with respect.</li>
-      <li>Any damages caused by misuse may result in additional charges.</li>
-    </ul>
-
-    <h2 class="text-2xl font-bold mt-10 font-heading">4. Liability</h2>
-    <p>OT Vibez Studio is not liable for any personal injury, loss, or damage to personal belongings during your session.</p>
-
-    <h2 class="text-2xl font-bold mt-10 font-heading">5. Privacy</h2>
-    <p>Your data is handled according to our <a href="/privacy.html" class="text-purple-700 underline">Privacy Policy</a>. By using our services, you agree to our collection and use of personal information as outlined.</p>
-
-    <h2 class="text-2xl font-bold mt-10 font-heading">6. Changes to Terms</h2>
-    <p>We reserve the right to update or modify these terms at any time. Continued use of our site or services constitutes your acceptance of the revised terms.</p>
-
-    <h2 class="text-2xl font-bold mt-10 font-heading">7. Contact</h2>
-    <p>If you have any questions about these terms, contact us at <a href="mailto:otvibezstudio@gmail.com" class="text-purple-700 underline">otvibezstudio@gmail.com</a>.</p>
-  </section>
 </main>
-
-
-
-<!-- Glass Footer -->
+   <!-- Footer -->
 <footer class="relative w-full overflow-hidden border-t border-white/40 bg-gradient-to-br from-white/90 via-white/80 to-purple-50/70 text-gray-800 backdrop-blur-xl">
   <div class="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full bg-purple-300/25 blur-3xl"></div>
   <div class="pointer-events-none absolute -bottom-20 -left-14 h-64 w-64 rounded-full bg-pink-200/25 blur-3xl"></div>
   <div class="relative mx-auto max-w-7xl px-4 py-4 md:px-8 md:py-8" data-aos="fade-up">
     <div class="grid gap-4 md:gap-5 lg:grid-cols-12">      <div class="space-y-4 lg:col-span-5">
-        <span class="inline-flex items-center rounded-full border border-purple-200/70 bg-white/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-purple-700">Terms</span>
-        <h2 class="font-heading text-lg font-semibold leading-tight text-gray-900 md:text-2xl">Clear terms before every session.</h2>
-        <p class="max-w-xl text-sm leading-relaxed text-gray-700">See booking, cancellation, and usage terms so you know exactly what to expect at OT Vibez.</p>
+        <span class="inline-flex items-center rounded-full border border-purple-200/70 bg-white/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-purple-700">OT Vibez Services</span>
+        <h2 class="font-heading text-lg font-semibold leading-tight text-gray-900 md:text-2xl">Build the right session for your project.</h2>
+        <p class="max-w-xl text-sm leading-relaxed text-gray-700">From rehearsals to recordings, choose the service that matches your workflow and timeline.</p>
         <div class="flex flex-wrap items-center gap-2">
-          <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg bg-gradient-to-r from-purple-700 to-fuchsia-600 px-4 py-2 text-xs font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 w-full sm:w-auto justify-center">Book a Session</a>
-          <a href="/privacy.html" class="inline-flex items-center rounded-lg border border-gray-300/80 bg-white/70 px-4 py-2 text-xs font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700 w-full sm:w-auto justify-center">Privacy Policy</a>
+          <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services" target="_blank" rel="noopener noreferrer" onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Footer CTA' }); }" class="inline-flex items-center rounded-lg bg-gradient-to-r from-purple-700 to-fuchsia-600 px-4 py-2 text-xs font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 w-full sm:w-auto justify-center">Book a Session</a>
+          <a href="/" class="inline-flex items-center rounded-lg border border-gray-300/80 bg-white/70 px-4 py-2 text-xs font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700 w-full sm:w-auto justify-center">Back to Home</a>
         </div>
       </div>
       <div class="space-y-3 lg:col-span-3">
@@ -568,9 +725,9 @@
         <nav aria-label="Footer navigation">
           <ul class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm font-medium text-gray-700 sm:block sm:space-y-2">
             <li><a href="/" class="transition hover:text-purple-700">Home</a></li>
-            <li><a href="/services.html" class="transition hover:text-purple-700">Services</a></li>
+            <li><a href="/#faq" class="transition hover:text-purple-700">FAQs</a></li>
             <li><a href="/privacy.html" class="transition hover:text-purple-700">Privacy Policy</a></li>
-            <li><a href="mailto:otvibezstudio@gmail.com" class="transition hover:text-purple-700">Contact</a></li>
+            <li><a href="/terms.html" class="transition hover:text-purple-700">Terms and Conditions</a></li>
           </ul>
         </nav>
       </div>      <div class="space-y-3 lg:col-span-4">
@@ -604,42 +761,66 @@
     if (footerYear) footerYear.textContent = new Date().getFullYear();
   })();
 </script>
-<!-- Scroll-to-top -->
+<!-- Sticky Mobile Booking CTA -->
+<div class="fixed inset-x-0 z-40 px-3 md:hidden pointer-events-none" style="bottom: env(safe-area-inset-bottom);">
+  <a id="mobile-sticky-book" href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4"
+     target="_blank" rel="noopener noreferrer"
+     onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Mobile Sticky CTA' }); }"
+     class="pointer-events-auto mx-auto inline-flex w-full max-w-xl items-center justify-center rounded-full bg-[#E1306C] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_10px_26px_rgba(225,48,108,0.35)] transition-all duration-300 hover:bg-[#c51d58]">
+    Book Now
+  </a>
+</div>
+<!-- Scroll to Top Button -->
 <button id="scrollToTopBtn"
-  class="fixed bottom-6 right-6 z-50 bg-gradient-to-tr from-purple-600 via-purple-500 to-pink-500 text-white rounded-full p-4 shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] group"
+  class="fixed bottom-24 md:bottom-6 right-6 z-50 bg-gradient-to-tr from-purple-600 via-purple-500 to-pink-500 text-white rounded-full p-4 shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] group"
   aria-label="Scroll to top">
   <div class="relative">
+    <!-- Glow Pulse -->
     <span class="absolute inset-0 rounded-full bg-purple-500 opacity-20 blur-lg animate-ping z-0"></span>
-    <svg class="relative z-10 w-6 h-6 stroke-current transition-transform duration-300 group-hover:-translate-y-1" fill="none" stroke-width="2" viewBox="0 0 24 24">
+
+    <!-- Up Arrow Icon -->
+    <svg class="relative z-10 w-6 h-6 stroke-current transition-transform duration-300 group-hover:-translate-y-1"
+         fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
     </svg>
   </div>
 </button>
 
-<!-- Scroll-to-top script -->
+<!-- Scroll-to-Top Script -->
 <script>
   const scrollBtn = document.getElementById("scrollToTopBtn");
+
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.classList.remove("opacity-0", "pointer-events-none");
-    } else {
-      scrollBtn.classList.add("opacity-0", "pointer-events-none");
-    }
+    const isVisible = window.scrollY > 300;
+    scrollBtn.classList.toggle("opacity-0", !isVisible);
+    scrollBtn.classList.toggle("pointer-events-none", !isVisible);
   });
+
   scrollBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
 
-<!-- LocalBusiness SEO -->
+<!-- AOS (Animate on Scroll) -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 800
+  });
+</script>
+
+<!-- Structured Data for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "MusicVenue",
   "name": "OT Vibez Studio",
+  "description": "Band rehearsal space in Edmonton with sound-treated rooms and flexible booking for artists and touring acts.",
   "image": "https://otvibezstudio.com/assets/images/otvibez.png",
   "telephone": "+1-780-522-1807",
   "email": "otvibezstudio@gmail.com",
+  "url": "https://otvibezstudio.com/",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "8762 50 Ave NW #202",
@@ -648,7 +829,19 @@
     "postalCode": "T6B 1E8",
     "addressCountry": "CA"
   },
-  "url": "https://otvibezstudio.com",
+  "openingHours": "Mo-Su 08:00-02:00",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Edmonton"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Alberta"
+    }
+  ],
+  "hasMap": "https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio",
+  "priceRange": "$$",
   "sameAs": [
     "https://www.instagram.com/otvibezstudio",
     "https://www.tiktok.com/@otvibezstudio",
@@ -656,14 +849,112 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Band Rehearsal Sessions",
+  "serviceType": "Band Rehearsal Space Rental",
+  "provider": {
+    "@type": "MusicVenue",
+    "name": "OT Vibez Studio",
+    "url": "https://otvibezstudio.com"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Edmonton"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "CAD",
+    "price": "70",
+    "url": "https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes this band rehearsal space different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You get a cleaner, more reliable setup with treated acoustics and practical support so sessions start quickly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I rehearse weekly at the same time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Monthly and yearly membership plans help you lock recurring rehearsal slots."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this space suitable for tour run-throughs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our XL rehearsal option is designed for serious tour prep and full-set performance practice."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://otvibezstudio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://otvibezstudio.com/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Band Rehearsal Space Edmonton",
+      "item": "https://otvibezstudio.com/band-rehearsal-space-edmonton.html"
+    }
+  ]
+}
+</script>
+<script>
+  (function () {
+    var tracked = document.querySelectorAll("[data-seo-track]");
+    tracked.forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "seo_internal_click", {
+            event_category: "SEO Landing Page",
+            event_label: link.getAttribute("data-seo-label") || link.getAttribute("href") || "unknown",
+            page_path: window.location.pathname
+          });
+        }
+      });
+    });
+  })();
+</script>
 
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ once: true, duration: 800 });</script>
+
 <script defer src="/assets/js/nav-dropdown-a11y.js"></script>
 </body>
 </html>
+
+
 
 
 
