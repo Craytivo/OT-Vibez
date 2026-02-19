@@ -2,6 +2,7 @@
   var initialized = false;
   var logoScrollBound = false;
   var focusBound = false;
+  var desktopDropdownBound = false;
 
   function initHeaderBehavior() {
     if (initialized) return;
@@ -27,12 +28,16 @@
       mobileMenu.classList.add('hidden');
       backdrop.classList.add('hidden');
       document.body.classList.remove('overflow-hidden');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
     };
 
     var openMenu = function () {
       mobileMenu.classList.remove('hidden');
       backdrop.classList.remove('hidden');
       document.body.classList.add('overflow-hidden');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      mobileMenu.setAttribute('aria-hidden', 'false');
     };
 
     toggleBtn.addEventListener('click', function () {
@@ -78,9 +83,39 @@
     focusBound = true;
   }
 
+  function bindDesktopDropdownAria() {
+    if (desktopDropdownBound) return;
+
+    var dropdown = document.querySelector('[data-desktop-services-dropdown]');
+    if (!dropdown) return;
+
+    var trigger = dropdown.querySelector('#services-menu-trigger');
+    if (!trigger) return;
+
+    var setExpanded = function (isExpanded) {
+      trigger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+    };
+
+    dropdown.addEventListener('mouseenter', function () { setExpanded(true); });
+    dropdown.addEventListener('mouseleave', function () { setExpanded(false); });
+    dropdown.addEventListener('focusin', function () { setExpanded(true); });
+    dropdown.addEventListener('focusout', function (event) {
+      if (!dropdown.contains(event.relatedTarget)) {
+        setExpanded(false);
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') setExpanded(false);
+    });
+
+    desktopDropdownBound = true;
+  }
+
   function run() {
     initHeaderBehavior();
     bindMenuFocusManagement();
+    bindDesktopDropdownAria();
   }
 
   if (document.readyState === 'loading') {

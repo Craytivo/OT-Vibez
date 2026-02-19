@@ -56,73 +56,71 @@
   <meta name="twitter:image" content="https://otvibezstudio.com/assets/images/otvibez.png" />
   <meta name="twitter:site" content="@otvibezstudio" />
 
+  <script>
+    // Single source of truth for homepage trust metrics used in UI + schema.
+    window.OTV_TRUST_METRICS = {
+      googleRating: "5.0",
+      reviewCount: "47",
+      artistsServed: "200+"
+    };
+  </script>
+
   <!-- Local Business Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicVenue",
-    "name": "OT Vibez Studio",
-    "description": "Hourly rehearsal, recording, and podcast studio rental in Edmonton for bands, artists, and creators.",
-    "url": "https://otvibezstudio.com",
-    "telephone": "+1-780-522-1807",
-    "email": "otvibezstudio@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "8762 50 Ave NW #202",
-      "addressLocality": "Edmonton",
-      "addressRegion": "AB",
-      "postalCode": "T6B 1E8",
-      "addressCountry": "CA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "53.5461",
-      "longitude": "-113.4938"
-    },
-    "openingHours": "Mo-Su 08:00-02:00",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Edmonton"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Alberta"
-      }
-    ],
-    "hasMap": "https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio",
-    "priceRange": "$$",
-    "paymentAccepted": "Cash, Credit Card, Debit Card",
-    "currenciesAccepted": "CAD",
-    "sameAs": [
-      "https://www.instagram.com/otvibezstudio",
-      "https://www.tiktok.com/@otvibezstudio",
-      "https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio"
-    ],
-    "image": "https://otvibezstudio.com/assets/images/otvibez-white-bg.png",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "47"
-    },
-    "amenityFeature": [
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Professional Audio Equipment",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Soundproof Rehearsal Space",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Online Booking Available Daily",
-        "value": true
-      }
-    ]
-  }
+  <script>
+    (function () {
+      var metrics = window.OTV_TRUST_METRICS || { googleRating: "5.0", reviewCount: "47" };
+      var schema = {
+        "@context": "https://schema.org",
+        "@type": "MusicVenue",
+        "name": "OT Vibez Studio",
+        "description": "Hourly rehearsal, recording, and podcast studio rental in Edmonton for bands, artists, and creators.",
+        "url": "https://otvibezstudio.com",
+        "telephone": "+1-780-522-1807",
+        "email": "otvibezstudio@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "8762 50 Ave NW #202",
+          "addressLocality": "Edmonton",
+          "addressRegion": "AB",
+          "postalCode": "T6B 1E8",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "53.5461",
+          "longitude": "-113.4938"
+        },
+        "openingHours": "Mo-Su 08:00-02:00",
+        "areaServed": [
+          { "@type": "City", "name": "Edmonton" },
+          { "@type": "AdministrativeArea", "name": "Alberta" }
+        ],
+        "hasMap": "https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio",
+        "priceRange": "$$",
+        "paymentAccepted": "Cash, Credit Card, Debit Card",
+        "currenciesAccepted": "CAD",
+        "sameAs": [
+          "https://www.instagram.com/otvibezstudio",
+          "https://www.tiktok.com/@otvibezstudio",
+          "https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio"
+        ],
+        "image": "https://otvibezstudio.com/assets/images/otvibez-white-bg.png",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": metrics.googleRating,
+          "reviewCount": metrics.reviewCount
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Professional Audio Equipment", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Soundproof Rehearsal Space", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Online Booking Available Daily", "value": true }
+        ]
+      };
+      var script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.text = JSON.stringify(schema);
+      document.head.appendChild(script);
+    })();
   </script>
 
   <!-- Comprehensive Favicon Implementation for Google Search -->
@@ -169,8 +167,8 @@
   <link rel="preload" href="assets/images/otvibez.png" as="image" type="image/png">
   <link rel="preload" href="assets/images/otvibez-white-bg.png" as="image" type="image/png">
 
-  <!-- Tailwind CSS CDN (for dev use) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CDN runtime vendored locally for homepage stability -->
+  <script src="/assets/vendor/tailwindcss-cdn.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -794,7 +792,7 @@
   </style>
 
   <!-- Animation on Scroll - Loaded asynchronously -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="/assets/vendor/aos-2.3.4.css" rel="stylesheet" media="print" onload="this.media='all'">
   <style>
     @media (min-width: 1024px) {
       html { font-size: 103.125%; }
@@ -1189,7 +1187,7 @@
         return;
       }
 
-      loadScriptOnce("https://unpkg.com/aos@2.3.4/dist/aos.js", "aos-lib")
+      loadScriptOnce("/assets/vendor/aos-2.3.4.js", "aos-lib")
         .then(startAOS)
         .catch(() => {});
     };
@@ -1221,15 +1219,15 @@
 
       <div class="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
         <div class="rounded-xl border border-sky-100 bg-white/90 p-3">
-          <p class="text-xl font-heading font-extrabold text-slate-900">5.0</p>
+          <p class="text-xl font-heading font-extrabold text-slate-900" data-trust-metric="googleRating">5.0</p>
           <p class="text-[11px] uppercase tracking-[0.1em] text-slate-500">Google Rating</p>
         </div>
         <div class="rounded-xl border border-sky-100 bg-white/90 p-3">
-          <p class="text-xl font-heading font-extrabold text-slate-900">47</p>
+          <p class="text-xl font-heading font-extrabold text-slate-900" data-trust-metric="reviewCount">47</p>
           <p class="text-[11px] uppercase tracking-[0.1em] text-slate-500">Reviews</p>
         </div>
         <div class="rounded-xl border border-sky-100 bg-white/90 p-3">
-          <p class="text-xl font-heading font-extrabold text-slate-900">200+</p>
+          <p class="text-xl font-heading font-extrabold text-slate-900" data-trust-metric="artistsServed">200+</p>
           <p class="text-[11px] uppercase tracking-[0.1em] text-slate-500">Artists Served</p>
         </div>
       </div>
@@ -1283,7 +1281,7 @@
         <div class="rounded-xl border border-emerald-200 bg-white p-4 text-center">
           <p class="text-xs uppercase tracking-wider text-emerald-700 font-semibold mb-2">Alberta Music Partner</p>
           <div class="flex justify-center">
-            <img src="assets/images/Alberta-Music-300x225-removebg.png" alt="Alberta Music Logo" class="h-16 sm:h-20 w-auto object-contain" loading="lazy" decoding="async" />
+            <img src="assets/images/Alberta-Music-300x225-removebg.png" alt="Alberta Music Logo" class="h-24 sm:h-[7.5rem] w-auto object-contain" loading="lazy" decoding="async" />
           </div>
           <p class="mt-2 text-sm text-gray-700 leading-relaxed">Members receive partner discounts and community perks.</p>
         </div>
@@ -1486,9 +1484,9 @@
       </p>
       <div class="mx-auto mt-4 flex w-full max-w-2xl flex-wrap items-center justify-center gap-2 rounded-xl border border-rose-100 bg-rose-50/60 px-3 py-2 text-xs sm:text-sm text-gray-700">
         <span class="font-semibold text-gray-900">Google Rating:</span>
-        <span class="font-semibold text-amber-600">5.0/5</span>
+        <span class="font-semibold text-amber-600"><span data-trust-metric="googleRating">5.0</span>/5</span>
         <span class="text-gray-400">|</span>
-        <span>47 reviews</span>
+        <span><span data-trust-metric="reviewCount">47</span> reviews</span>
         <span class="text-gray-400">|</span>
         <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="font-semibold text-rose-700 hover:text-rose-800">View on Google</a>
       </div>
@@ -1546,8 +1544,10 @@
 <script>
   // Load Alpine.js asynchronously
   function loadAlpine() {
+    if (window.Alpine) return;
+    if (document.querySelector('script[src="/assets/vendor/alpine-3.14.1.min.js"]')) return;
     const script = document.createElement('script');
-    script.src = 'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js';
+    script.src = '/assets/vendor/alpine-3.14.1.min.js';
     script.defer = true;
     document.head.appendChild(script);
   }
@@ -1584,7 +1584,7 @@
       <div class="space-y-4 text-sm sm:text-base">
         <ul class="space-y-3 text-gray-700 leading-relaxed">
           <li>Plug-and-play rehearsal and recording setup. Show up and start creating.</li>
-          <li>Trusted by <strong>200+ artists, labels, and podcasters</strong> across Edmonton.</li>
+          <li>Trusted by <strong><span data-trust-metric="artistsServed">200+</span> artists, labels, and podcasters</strong> across Edmonton.</li>
         </ul>
 
         <!-- Primary CTA -->
@@ -1608,6 +1608,7 @@
             <img src="assets/images/alberta_music-removebg-preview.png" alt="Alberta Music Industry Association" class="h-12 object-contain lazy-load" loading="lazy" data-src="assets/images/alberta_music-removebg-preview.png" />
             <img src="assets/images/melafrique.png" alt="Melafrique Music" class="h-10 object-contain lazy-load" loading="lazy" data-src="assets/images/melafrique.png" />
             <img src="assets/images/stone_hearts-removebg-preview.png" alt="Stone Hearts Entertainment" class="h-12 object-contain lazy-load" loading="lazy" data-src="assets/images/stone_hearts-removebg-preview.png" />
+            <img src="assets/images/craytivo.png" alt="Craytivo" class="h-10 object-contain lazy-load" loading="lazy" data-src="assets/images/craytivo.png" />
           </div>
         </div>
       </div>
@@ -1659,6 +1660,18 @@
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    var metrics = window.OTV_TRUST_METRICS || { googleRating: "5.0", reviewCount: "47", artistsServed: "200+" };
+    var nodes = document.querySelectorAll("[data-trust-metric]");
+    nodes.forEach(function (node) {
+      var key = node.getAttribute("data-trust-metric");
+      if (!key || typeof metrics[key] === "undefined") return;
+      node.textContent = String(metrics[key]);
+    });
+  })();
+</script>
 
 <!-- FAQ Section -->
 <section id="faq" class="border-t border-gray-200 bg-gradient-to-b from-white to-amber-50/30 px-4 pb-4 pt-12 sm:px-6 md:pb-6 md:pt-16">
@@ -1790,6 +1803,71 @@
 
 <!-- Alpine.js FAQ Logic -->
 <script>
+  window.OTV_FAQ_ITEMS = window.OTV_FAQ_ITEMS || [
+    {
+      topic: "booking",
+      q: "What are OT Vibez Studio's operating hours?",
+      a: "We're open daily from 8 a.m. to 2 a.m. for studio bookings, rehearsals, podcast sessions, and recording."
+    },
+    {
+      topic: "booking",
+      q: "Can I rent OT Vibez Studio by the hour?",
+      a: "Absolutely! Our plug-and-play studio is available for hourly rentals. You can book online and get instant confirmation."
+    },
+    {
+      topic: "booking",
+      q: "How much does hourly rehearsal studio rental cost in Edmonton?",
+      a: "Rates vary by session type and time block. Use our live booking page to see current hourly rates and real-time availability before you book.",
+      ctaUrl: "/services.html",
+      ctaLabel: "Check live rates"
+    },
+    {
+      topic: "studio",
+      q: "What is included in my studio booking?",
+      a: "Bookings include a sound-treated room, stage lighting, Bluetooth speakers, mic stands, XLR cables, lounge seating, and free parking."
+    },
+    {
+      topic: "booking",
+      q: "Do you offer same-day rehearsal studio booking in Edmonton?",
+      a: "Yes. Same-day booking is available when open slots remain on the calendar."
+    },
+    {
+      topic: "studio",
+      q: "Is OT Vibez private and sound-treated?",
+      a: "Yes. Sessions are private, and the studio is acoustically treated for clear, controlled sound."
+    },
+    {
+      topic: "podcast",
+      q: "Is this studio good for podcast recording in Edmonton?",
+      a: "Yes. OT Vibez supports podcast sessions with a treated room and flexible setup options for solo and multi-person recordings."
+    },
+    {
+      topic: "support",
+      q: "Is there a studio engineer or assistant available?",
+      a: "Yes. You can request engineering or technical support during booking for an additional fee."
+    },
+    {
+      topic: "support",
+      q: "Can I tour the studio before I book?",
+      a: "Yes. Contact us by phone, email, or Instagram to schedule a walkthrough."
+    },
+    {
+      topic: "studio",
+      q: "Is parking available?",
+      a: "Yes. Free on-site parking is available for all guests, including gear load-in."
+    },
+    {
+      topic: "podcast",
+      q: "What basic home podcast setup do you recommend for beginners?",
+      a: "For a simple starter setup, we recommend a cardioid microphone, compact audio interface, and closed-back monitoring headphones.",
+      links: [
+        { label: "AT2020 Cardioid", url: "https://amzn.to/3MTJuDb" },
+        { label: "Focusrite Scarlett Solo 4th Gen", url: "https://amzn.to/3OhnKlc" },
+        { label: "Audio Technica ATH-M40X Headphones", url: "https://amzn.to/4tLvf3M" }
+      ]
+    }
+  ];
+
   function faqComponent() {
     return {
       selectedQuestion: null,
@@ -1804,71 +1882,7 @@
         { id: 'podcast', label: 'Podcast' },
         { id: 'support', label: 'Support' }
       ],
-      faqList: [
-  {
-    topic: "booking",
-    q: "What are OT Vibez Studio's operating hours?",
-    a: "We're open daily from 8 a.m. to 2 a.m. for studio bookings, rehearsals, podcast sessions, and recording."
-  },
-  {
-    topic: "booking",
-    q: "Can I rent OT Vibez Studio by the hour?",
-    a: "Absolutely! Our plug-and-play studio is available for hourly rentals. You can book online and get instant confirmation."
-  },
-  {
-    topic: "booking",
-    q: "How much does hourly rehearsal studio rental cost in Edmonton?",
-    a: "Rates vary by session type and time block. Use our live booking page to see current hourly rates and real-time availability before you book.",
-    ctaUrl: "/services.html",
-    ctaLabel: "Check live rates"
-  },
-  {
-    topic: "studio",
-    q: "What is included in my studio booking?",
-    a: "Bookings include a sound-treated room, stage lighting, Bluetooth speakers, mic stands, XLR cables, lounge seating, and free parking."
-  },
-  {
-    topic: "booking",
-    q: "Do you offer same-day rehearsal studio booking in Edmonton?",
-    a: "Yes. Same-day booking is available when open slots remain on the calendar."
-  },
-  {
-    topic: "studio",
-    q: "Is OT Vibez private and sound-treated?",
-    a: "Yes. Sessions are private, and the studio is acoustically treated for clear, controlled sound."
-  },
-  {
-    topic: "podcast",
-    q: "Is this studio good for podcast recording in Edmonton?",
-    a: "Yes. OT Vibez supports podcast sessions with a treated room and flexible setup options for solo and multi-person recordings."
-  },
-  {
-    topic: "support",
-    q: "Is there a studio engineer or assistant available?",
-    a: "Yes. You can request engineering or technical support during booking for an additional fee."
-  },
-  {
-    topic: "support",
-    q: "Can I tour the studio before I book?",
-    a: "Yes. Contact us by phone, email, or Instagram to schedule a walkthrough."
-  },
-  {
-    topic: "studio",
-    q: "Is parking available?",
-    a: "Yes. Free on-site parking is available for all guests, including gear load-in."
-  },
-  {
-    topic: "podcast",
-    q: "What basic home podcast setup do you recommend for beginners?",
-    a: "For a simple starter setup, we recommend a cardioid microphone, compact audio interface, and closed-back monitoring headphones.",
-    links: [
-      { label: "AT2020 Cardioid", url: "https://amzn.to/3MTJuDb" },
-      { label: "Focusrite Scarlett Solo 4th Gen", url: "https://amzn.to/3OhnKlc" },
-      { label: "Audio Technica ATH-M40X Headphones", url: "https://amzn.to/4tLvf3M" }
-    ]
-  }
-]
-,
+      faqList: Array.isArray(window.OTV_FAQ_ITEMS) ? window.OTV_FAQ_ITEMS : [],
       get filteredFaqs() {
         const term = this.search.toLowerCase();
         return this.faqList.filter((item) => {
@@ -1938,110 +1952,51 @@
       },
       highlightText(text) {
         const term = this.search.trim();
-        if (!term) return text;
+        const source = String(text || '');
+        const escapeHtml = (value) => value
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+        const escapedText = escapeHtml(source);
+        if (!term) return escapedText;
         const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // escape regex
         const regex = new RegExp(`(${escapedTerm})`, 'gi');
-        return text.replace(regex, '<mark class="rounded bg-amber-200 px-0.5 text-amber-900">$1</mark>');
+        return escapedText.replace(regex, '<mark class="rounded bg-amber-200 px-0.5 text-amber-900">$1</mark>');
       }
     };
   }
 </script>
 
-<script type="application/ld+json">
+<script type="application/ld+json" id="faq-schema-jsonld">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What are OT Vibez Studio's operating hours?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We're open daily from 8 a.m. to 2 a.m. for studio bookings, rehearsals, podcast sessions, and recording."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I rent OT Vibez Studio by the hour?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely! Our plug-and-play studio is available for hourly rentals. You can book online and get instant confirmation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does hourly rehearsal studio rental cost in Edmonton?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Rates vary by session type and time block. Use our live booking page to see current hourly rates and real-time availability before you book."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is included in my studio booking?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bookings include a sound-treated room, stage lighting, Bluetooth speakers, mic stands, XLR cables, lounge seating, and free parking."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer same-day rehearsal studio booking in Edmonton?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Same-day booking is available when open slots remain on the calendar."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is OT Vibez private and sound-treated?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Sessions are private, and the studio is acoustically treated for clear, controlled sound."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this studio good for podcast recording in Edmonton?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. OT Vibez supports podcast sessions with a treated room and flexible setup options for solo and multi-person recordings."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a studio engineer or assistant available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. You can request engineering or technical support during booking for an additional fee."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I tour the studio before I book?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Contact us by phone, email, or Instagram to schedule a walkthrough."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is parking available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Free on-site parking is available for all guests, including gear load-in."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What basic home podcast setup do you recommend for beginners?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For a simple starter setup, we recommend a cardioid microphone, compact audio interface, and closed-back monitoring headphones."
-      }
-    }
-  ]
+  "mainEntity": []
 }
+</script>
+<script>
+  (function () {
+    var faqItems = Array.isArray(window.OTV_FAQ_ITEMS) ? window.OTV_FAQ_ITEMS : [];
+    var faqSchemaNode = document.getElementById("faq-schema-jsonld");
+    if (!faqSchemaNode) return;
+    var schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqItems.map(function (item) {
+        return {
+          "@type": "Question",
+          "name": item.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.a
+          }
+        };
+      })
+    };
+    faqSchemaNode.textContent = JSON.stringify(schema);
+  })();
 </script>
 
 
