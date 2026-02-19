@@ -87,6 +87,21 @@
   <!-- Backdrop Overlay (initially hidden) -->
 <div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] min-[960px]:hidden"></div>
 
+<style>
+  /* Fallback visibility control for mobile menu toggle */
+  @media (max-width: 959.98px) {
+    #menu-toggle {
+      display: inline-flex !important;
+    }
+  }
+
+  @media (min-width: 960px) {
+    #menu-toggle {
+      display: none !important;
+    }
+  }
+</style>
+
 <!-- Premium Transparent Header with Enhanced Contact Info -->
 <header class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-xl shadow-sm transition-all" role="banner">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
@@ -145,7 +160,7 @@
     </div>
 
     <!-- Mobile Menu Toggle -->
-    <button id="menu-toggle" class="min-[960px]:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl bg-white/70 hover:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 z-50 transition-all duration-200" aria-label="Toggle menu">
+    <button id="menu-toggle" class="min-[960px]:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl border border-gray-200 bg-white/90 text-gray-800 shadow-sm hover:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 z-50 transition-all duration-200" aria-label="Toggle menu">
       <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
@@ -643,6 +658,69 @@
       </article>
     </div>
 
+    <div class="mt-6 rounded-2xl border border-slate-200 bg-white/90 p-4 sm:p-5" data-related-services-block>
+  <p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-700">Related Studio Services in Edmonton</p>
+  <p class="mt-1 text-sm text-gray-600">Explore other studio options based on your session goals.</p>
+  <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+    <a href="/hourly-rehearsal-studio-edmonton.html" data-seo-track="related" data-seo-label="Related Hourly Rehearsal" class="rounded-xl border border-purple-200 bg-purple-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700">
+      <span class="block">Hourly Rehearsal Studio Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Best for quick drop-in sessions</span>
+    </a>
+    <a href="/podcast-room-rental-edmonton.html" data-seo-track="related" data-seo-label="Related Podcast Rental" class="rounded-xl border border-rose-200 bg-rose-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">
+      <span class="block">Podcast Room Rental Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Ideal for spoken-word and video podcasts</span>
+    </a>
+    <a href="/band-rehearsal-space-edmonton.html" data-seo-track="related" data-seo-label="Related Band Rehearsal" class="rounded-xl border border-indigo-200 bg-indigo-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700">
+      <span class="block">Band Rehearsal Space Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Built for full-band run-throughs</span>
+    </a>
+    <a href="/music-video-studio-edmonton.html" data-seo-track="related" data-seo-label="Related Music Video" class="rounded-xl border border-amber-200 bg-amber-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-amber-300 hover:text-amber-700">
+      <span class="block">Music Video Studio Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Performance and promo content shoots</span>
+    </a>
+    <a href="/rehearsal-membership-pricing-edmonton.html" data-seo-track="related" data-seo-label="Related Membership Pricing" class="rounded-xl border border-emerald-200 bg-emerald-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-emerald-300 hover:text-emerald-700">
+      <span class="block">Rehearsal Membership Pricing Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Recurring slots and better long-term rates</span>
+    </a>
+    <a href="/services.html" data-seo-track="related" data-seo-label="Related All Services" class="rounded-xl border border-slate-200 bg-slate-50/70 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">
+      <span class="block">All Studio Services</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Compare all booking options in one place</span>
+    </a>
+  </div>
+</div>
+<script>
+  (function () {
+    if (window.__otvibezRelatedServicesInitialized) return;
+    window.__otvibezRelatedServicesInitialized = true;
+
+    function normalizePath(path) {
+      return (path || "").replace(/\/+$/, "") || "/";
+    }
+
+    function applyRelatedServiceVisibility() {
+      var currentPath = normalizePath(window.location.pathname);
+      var blocks = document.querySelectorAll("[data-related-services-block]");
+      blocks.forEach(function (block) {
+        var links = block.querySelectorAll("a[href]");
+        links.forEach(function (link) {
+          var href = link.getAttribute("href");
+          if (!href || href.charAt(0) !== "/") return;
+          if (normalizePath(href) === currentPath) {
+            link.style.display = "none";
+          }
+        });
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", applyRelatedServiceVisibility, { once: true });
+    } else {
+      applyRelatedServiceVisibility();
+    }
+  })();
+</script>
+
+
     <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3" data-aos="fade-up" data-aos-delay="80">
       <article class="rounded-2xl border border-rose-100 bg-rose-50/50 p-5">
         <h2 class="font-heading text-lg font-extrabold text-gray-900">Performance-First Setup</h2>
@@ -697,16 +775,68 @@
         </details>
       </div>
     </div>
-    <div class="mt-6 rounded-2xl border border-rose-200 bg-white/90 p-5" data-aos="fade-up" data-aos-delay="140">
-      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-rose-700">Related Services</p>
-      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-5">
-        <a href="/hourly-rehearsal-studio-edmonton.html" data-seo-track="related" data-seo-label="MusicVideo Related Hourly" class="rounded-xl border border-purple-200 bg-purple-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700">Hourly Rehearsal Studio Edmonton</a>
-        <a href="/podcast-room-rental-edmonton.html" data-seo-track="related" data-seo-label="MusicVideo Related Podcast" class="rounded-xl border border-rose-200 bg-rose-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">Podcast Room Rental Edmonton</a>
-        <a href="/band-rehearsal-space-edmonton.html" data-seo-track="related" data-seo-label="MusicVideo Related Band" class="rounded-xl border border-indigo-200 bg-indigo-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700">Band Rehearsal Space Edmonton</a>
-        <a href="/rehearsal-membership-pricing-edmonton.html" data-seo-track="related" data-seo-label="MusicVideo Related Membership" class="rounded-xl border border-emerald-200 bg-emerald-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-emerald-300 hover:text-emerald-700">Rehearsal Membership Pricing Edmonton</a>
-        <a href="/services.html" data-seo-track="related" data-seo-label="MusicVideo Related Services" class="rounded-xl border border-rose-200 bg-rose-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">All Studio Services</a>
-      </div>
-    </div>
+    <div class="mt-6 rounded-2xl border border-slate-200 bg-white/90 p-4 sm:p-5" data-related-services-block>
+  <p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-700">Related Studio Services in Edmonton</p>
+  <p class="mt-1 text-sm text-gray-600">Explore other studio options based on your session goals.</p>
+  <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+    <a href="/hourly-rehearsal-studio-edmonton.html" data-seo-track="related" data-seo-label="Related Hourly Rehearsal" class="rounded-xl border border-purple-200 bg-purple-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700">
+      <span class="block">Hourly Rehearsal Studio Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Best for quick drop-in sessions</span>
+    </a>
+    <a href="/podcast-room-rental-edmonton.html" data-seo-track="related" data-seo-label="Related Podcast Rental" class="rounded-xl border border-rose-200 bg-rose-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">
+      <span class="block">Podcast Room Rental Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Ideal for spoken-word and video podcasts</span>
+    </a>
+    <a href="/band-rehearsal-space-edmonton.html" data-seo-track="related" data-seo-label="Related Band Rehearsal" class="rounded-xl border border-indigo-200 bg-indigo-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700">
+      <span class="block">Band Rehearsal Space Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Built for full-band run-throughs</span>
+    </a>
+    <a href="/music-video-studio-edmonton.html" data-seo-track="related" data-seo-label="Related Music Video" class="rounded-xl border border-amber-200 bg-amber-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-amber-300 hover:text-amber-700">
+      <span class="block">Music Video Studio Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Performance and promo content shoots</span>
+    </a>
+    <a href="/rehearsal-membership-pricing-edmonton.html" data-seo-track="related" data-seo-label="Related Membership Pricing" class="rounded-xl border border-emerald-200 bg-emerald-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-emerald-300 hover:text-emerald-700">
+      <span class="block">Rehearsal Membership Pricing Edmonton</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Recurring slots and better long-term rates</span>
+    </a>
+    <a href="/services.html" data-seo-track="related" data-seo-label="Related All Services" class="rounded-xl border border-slate-200 bg-slate-50/70 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">
+      <span class="block">All Studio Services</span>
+      <span class="mt-0.5 block text-xs font-medium text-gray-600">Compare all booking options in one place</span>
+    </a>
+  </div>
+</div>
+<script>
+  (function () {
+    if (window.__otvibezRelatedServicesInitialized) return;
+    window.__otvibezRelatedServicesInitialized = true;
+
+    function normalizePath(path) {
+      return (path || "").replace(/\/+$/, "") || "/";
+    }
+
+    function applyRelatedServiceVisibility() {
+      var currentPath = normalizePath(window.location.pathname);
+      var blocks = document.querySelectorAll("[data-related-services-block]");
+      blocks.forEach(function (block) {
+        var links = block.querySelectorAll("a[href]");
+        links.forEach(function (link) {
+          var href = link.getAttribute("href");
+          if (!href || href.charAt(0) !== "/") return;
+          if (normalizePath(href) === currentPath) {
+            link.style.display = "none";
+          }
+        });
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", applyRelatedServiceVisibility, { once: true });
+    } else {
+      applyRelatedServiceVisibility();
+    }
+  })();
+</script>
+
   </div>
 </section>
 
@@ -726,28 +856,61 @@
         </div>
         <a href="mailto:otvibezstudio@gmail.com" class="sm:hidden inline-flex text-[11px] font-medium text-gray-500 underline underline-offset-2 transition hover:text-purple-700">Email studio</a>
       </div>
-      <div class="space-y-3 lg:col-span-3">
+      <div class="space-y-3 lg:col-span-4">
         <h3 class="type-label text-gray-500">Quick Links</h3>
         <nav aria-label="Footer navigation">
-          <ul class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm font-medium text-gray-700 sm:block sm:space-y-2">
-            <li><a href="#studio" class="transition hover:text-purple-700">Edmonton Rehearsal Space</a></li>
-            <li><a href="#faq" class="transition hover:text-purple-700">Edmonton Studio FAQs</a></li>
-            <li><a href="/services.html" class="transition hover:text-purple-700">Rehearsal & Recording Services</a></li>
-            <li><a href="/hourly-rehearsal-studio-edmonton.html" class="transition hover:text-purple-700">Hourly Rehearsal Studio Edmonton</a></li>
-            <li><a href="/podcast-room-rental-edmonton.html" class="transition hover:text-purple-700">Podcast Room Rental Edmonton</a></li>
-            <li><a href="/band-rehearsal-space-edmonton.html" class="transition hover:text-purple-700">Band Rehearsal Space Edmonton</a></li>
-            <li><a href="/music-video-studio-edmonton.html" class="transition hover:text-purple-700">Music Video Studio Edmonton</a></li>
-            <li><a href="/rehearsal-membership-pricing-edmonton.html" class="transition hover:text-purple-700">Rehearsal Membership Pricing Edmonton</a></li>
-            <li><a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="transition hover:text-purple-700">Google Reviews</a></li>
-            <li><a href="https://www.google.com/maps/dir/?api=1&destination=OT+Vibez+Music+Rehearsal+Space+%26+Studio+Edmonton" target="_blank" rel="noopener noreferrer" class="transition hover:text-purple-700">Get Directions</a></li>
-            <li><a href="/privacy.html" class="transition hover:text-purple-700">Privacy Policy</a></li>
-          </ul>
+          <div class="space-y-2 sm:hidden">
+            <details class="rounded-xl border border-gray-200/80 bg-white/70 px-3 py-2">
+              <summary class="cursor-pointer text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-600">Studio Services</summary>
+              <ul class="mt-2 space-y-2 text-sm font-medium text-gray-700">
+                <li><a href="/services.html" class="transition hover:text-purple-700">All Services</a></li>
+                <li><a href="/hourly-rehearsal-studio-edmonton.html" class="transition hover:text-purple-700">Hourly Rehearsal Studio</a></li>
+                <li><a href="/podcast-room-rental-edmonton.html" class="transition hover:text-purple-700">Podcast Room Rental</a></li>
+                <li><a href="/band-rehearsal-space-edmonton.html" class="transition hover:text-purple-700">Band Rehearsal Space</a></li>
+                <li><a href="/music-video-studio-edmonton.html" class="transition hover:text-purple-700">Music Video Studio</a></li>
+                <li><a href="/rehearsal-membership-pricing-edmonton.html" class="transition hover:text-purple-700">Membership Pricing</a></li>
+              </ul>
+            </details>
+            <details class="rounded-xl border border-gray-200/80 bg-white/70 px-3 py-2">
+              <summary class="cursor-pointer text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-600">Company & Info</summary>
+              <ul class="mt-2 space-y-2 text-sm font-medium text-gray-700">
+                <li><a href="/#studio" class="transition hover:text-purple-700">Edmonton Rehearsal Space</a></li>
+                <li><a href="/#faq" class="transition hover:text-purple-700">Studio FAQs</a></li>
+                <li><a href="/privacy.html" class="transition hover:text-purple-700">Privacy Policy</a></li>
+              </ul>
+            </details>
+          </div>
+          <div class="hidden grid-cols-1 gap-4 sm:grid sm:grid-cols-2">
+            <div>
+              <p class="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">Studio Services</p>
+              <ul class="space-y-2 text-sm font-medium text-gray-700">
+                <li><a href="/services.html" class="transition hover:text-purple-700">All Services</a></li>
+                <li><a href="/hourly-rehearsal-studio-edmonton.html" class="transition hover:text-purple-700">Hourly Rehearsal Studio</a></li>
+                <li><a href="/podcast-room-rental-edmonton.html" class="transition hover:text-purple-700">Podcast Room Rental</a></li>
+                <li><a href="/band-rehearsal-space-edmonton.html" class="transition hover:text-purple-700">Band Rehearsal Space</a></li>
+                <li><a href="/music-video-studio-edmonton.html" class="transition hover:text-purple-700">Music Video Studio</a></li>
+                <li><a href="/rehearsal-membership-pricing-edmonton.html" class="transition hover:text-purple-700">Membership Pricing</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="mb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">Company & Info</p>
+              <ul class="space-y-2 text-sm font-medium text-gray-700">
+                <li><a href="/#studio" class="transition hover:text-purple-700">Edmonton Rehearsal Space</a></li>
+                <li><a href="/#faq" class="transition hover:text-purple-700">Studio FAQs</a></li>
+                <li><a href="/privacy.html" class="transition hover:text-purple-700">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
-      </div>      <div class="space-y-3 lg:col-span-4">
+      </div>      <div class="space-y-3 lg:col-span-3">
         <h3 class="type-label text-gray-500">Connect</h3>
         <div class="space-y-2 text-xs text-gray-700 sm:text-sm">
           <p class="rounded-lg border border-white/70 bg-white/60 px-3 py-2" data-site-address>Edmonton, Alberta</p>
           <p class="rounded-lg border border-white/70 bg-white/60 px-3 py-2">Open daily by booking</p>
+          <div class="grid grid-cols-2 gap-2">
+            <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-white/70 bg-white/60 px-3 py-2 text-center font-medium transition hover:text-purple-700">Reviews</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=OT+Vibez+Music+Rehearsal+Space+%26+Studio+Edmonton" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-white/70 bg-white/60 px-3 py-2 text-center font-medium transition hover:text-purple-700">Directions</a>
+          </div>
         </div>
         <nav aria-label="Social media" class="flex items-center gap-2 pt-1">
           <a href="https://www.instagram.com/otvibezstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="p-2.5 md:p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 transition-transform duration-200">
@@ -762,9 +925,12 @@
         </nav>
       </div>
     </div>
-    <div class="mt-4 flex flex-col gap-2 border-t border-white/70 pt-3 text-xs text-gray-600 md:flex-row md:items-center md:justify-between">
+    <div class="mt-4 border-t border-white/70 pt-3 text-xs text-gray-600">
+      <p class="mb-2">As an Amazon Associate, OT Vibez Studio earns from qualifying purchases.</p>
+      <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
       <p>&copy; <span id="footerYear">2026</span> OT Vibez Studio. All rights reserved.</p>
       <p>Website design by <a href="https://craytivo.com" target="_blank" rel="noopener noreferrer" class="font-medium text-purple-700 transition hover:text-purple-900">Craytivo</a></p>
+      </div>
     </div>
   </div>
 </footer>
@@ -975,6 +1141,9 @@
 </script>
 </body>
 </html>
+
+
+
 
 
 
