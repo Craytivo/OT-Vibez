@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', function () {
+function initNavDropdownA11y() {
   var triggers = document.querySelectorAll('.nav-dropdown-trigger');
   if (!triggers.length) return;
 
@@ -23,7 +23,7 @@
 
   triggers.forEach(function (trigger) {
     var group = trigger.closest('.group');
-    if (!group) return;
+    if (!group || group.dataset.dropdownBound === 'true') return;
 
     var panel = group.querySelector('div[class*="absolute"]');
     if (!panel) return;
@@ -73,5 +73,9 @@
         setPanelState(trigger, panel, false);
       }
     });
+
+    group.dataset.dropdownBound = 'true';
   });
-});
+}
+
+document.addEventListener('DOMContentLoaded', initNavDropdownA11y);

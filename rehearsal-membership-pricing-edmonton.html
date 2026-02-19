@@ -1,12 +1,12 @@
-<!-- GENERATED FILE: Do not edit privacy.html directly. Edit src/privacy.src.html and run tools/build-includes.ps1 -->
+<!-- GENERATED FILE: Do not edit rehearsal-membership-pricing-edmonton.html directly. Edit src/rehearsal-membership-pricing-edmonton.src.html and run tools/build-includes.ps1 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
+  <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMJ5ZCG9CX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-ZMJ5ZCG9CX');
   </script>
@@ -18,29 +18,36 @@
     })(window, document, "clarity", "script", "shimdl0fzx");
   </script>
 
+  <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Privacy Policy | OT Vibez Studio Edmonton</title>
-  <meta name="description" content="Read the OT Vibez Studio privacy policy. Learn how we collect, use, and protect personal information when you use our Edmonton studio website and booking services." />
-  <meta name="keywords" content="privacy policy, data protection, OT Vibez Studio, Edmonton studio privacy" />
-  <link rel="canonical" href="https://otvibezstudio.com/privacy.html" />
+  <!-- Page Title & SEO -->
+  <title>Rehearsal Membership Pricing Edmonton | Monthly & Yearly Plans | OT Vibez</title>
+  <meta name="description" content="Compare rehearsal membership pricing in Edmonton at OT Vibez. Monthly and yearly rehearsal plans with reserved slots, lower hourly cost, and flexible billing." />
+  <meta name="keywords" content="rehearsal membership Edmonton, rehearsal space pricing Edmonton, monthly rehearsal membership Edmonton, yearly rehearsal plan Edmonton, OT Vibez membership" />
+  <link rel="canonical" href="https://otvibezstudio.com/rehearsal-membership-pricing-edmonton.html" />
 
-  <!-- OG -->
-  <meta property="og:title" content="Privacy Policy | OT Vibez Studio Edmonton" />
-  <meta property="og:description" content="Learn how OT Vibez Studio protects your data and handles personal information for website and booking use." />
-  <meta property="og:url" content="https://otvibezstudio.com/privacy.html" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rehearsal Membership Pricing Edmonton | OT Vibez" />
+  <meta property="og:description" content="Monthly and yearly rehearsal memberships in Edmonton with reserved slots and better long-term value." />
+  <meta property="og:url" content="https://otvibezstudio.com/rehearsal-membership-pricing-edmonton.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://otvibezstudio.com/assets/images/otvibez.png" />
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy | OT Vibez Studio Edmonton" />
-  <meta name="twitter:description" content="How OT Vibez Studio handles personal information, cookies, and website data." />
+  <meta name="twitter:title" content="Rehearsal Membership Pricing Edmonton | OT Vibez" />
+  <meta name="twitter:description" content="See monthly and yearly rehearsal plan pricing in Edmonton and book the right membership." />
   <meta name="twitter:image" content="https://otvibezstudio.com/assets/images/otvibez.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/otvibez-white-bg.png" type="image/x-icon" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS + Custom Theme -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -50,12 +57,23 @@
             heading: ['Poppins', 'sans-serif'],
             body: ['"Source Sans Pro"', 'sans-serif'],
           },
-        }
+          colors: {
+            primary: '#000000',
+            accent: '#5f5f5f',
+          },
+        },
       }
-    }
+    };
   </script>
 
-  <!-- AOS -->
+  <!-- Base Fallback Font Style -->
+  <style>
+    html, body {
+      font-family: "Source Sans Pro", sans-serif;
+    }
+  </style>
+
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     @media (min-width: 1024px) {
@@ -64,9 +82,9 @@
   </style>
 </head>
 
-<body class="bg-white text-gray-900 font-body">
+<body class="min-h-screen flex flex-col bg-white text-gray-800">
 
-<!-- Backdrop Overlay (initially hidden) -->
+  <!-- Backdrop Overlay (initially hidden) -->
 <div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] min-[960px]:hidden"></div>
 
 <!-- Premium Transparent Header with Enhanced Contact Info -->
@@ -324,12 +342,15 @@
 </nav>
 
 
+<!-- Navigation Styles -->
 <style>
   .nav-link {
     position: relative;
+    display: inline-block;
     padding-bottom: 4px;
     transition: color 0.2s ease;
   }
+
   .nav-dropdown-trigger {
     display: inline-flex;
     align-items: center;
@@ -339,7 +360,7 @@
   }
 
   .nav-link:hover {
-    color: #4B5563; /* Tailwind gray-700 */
+    color: #374151; /* Tailwind gray-700 */
   }
 
   .mobile-nav-link {
@@ -354,6 +375,40 @@
 
   .mobile-nav-link:active {
     transform: scale(0.98);
+  }
+
+  .featured-service {
+    border-color: rgba(147, 51, 234, 0.45);
+    box-shadow: 0 14px 34px rgba(147, 51, 234, 0.12);
+    background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(245,243,255,0.95) 46%, rgba(252,231,243,0.88) 100%);
+  }
+
+  .featured-service .service-book-btn {
+    background: linear-gradient(90deg, #7c3aed 0%, #db2777 100%);
+  }
+
+  .featured-service .service-book-btn:hover {
+    filter: brightness(1.03);
+  }
+
+  #services-grid .featured-rank-1 {
+    order: -30;
+  }
+
+  #services-grid .featured-rank-2 {
+    order: -29;
+  }
+
+  #services-grid .featured-rank-3 {
+    order: -28;
+  }
+
+  @media (max-width: 639px) {
+    #services-grid .featured-rank-1,
+    #services-grid .featured-rank-2,
+    #services-grid .featured-rank-3 {
+      order: -30;
+    }
   }
 
   .security-badge {
@@ -457,30 +512,35 @@
       padding: 12px;
     }
 
-    #mobile-menu .security-badge {
-      font-size: 0.75rem;
-      padding: 0.45rem 0.75rem;
-      gap: 0.5rem;
+    /* Mobile-optimized service cards */
+    #services-grid {
+      gap: 0.8rem;
     }
 
-    #mobile-menu .security-badge .checkmark-badge {
-      width: 0.9rem;
-      height: 0.9rem;
+    .service-card {
+      min-height: 0;
+      padding: 1.05rem;
+      border-radius: 0.95rem;
     }
 
-    #mobile-menu .security-badge .checkmark-badge svg {
-      width: 0.58rem;
-      height: 0.58rem;
+    #services-grid .service-card h3 {
+      font-size: 1.02rem;
+      line-height: 1.3;
     }
 
-    .cta-primary {
-      font-size: 0.9rem;
-      padding: 0.8rem 1.1rem;
+    #services-grid .service-mobile-trim {
+      display: none;
     }
 
-    /* Mobile-optimized content */
-    .space-y-12 > * + * {
-      margin-top: 2rem;
+    #services-grid .service-book-btn {
+      min-height: 44px;
+      font-size: 14px;
+      margin-top: 0.75rem;
+    }
+
+    #services-grid .service-card details {
+      margin-top: 0.6rem;
+      padding: 0.65rem 0.75rem;
     }
   }
 
@@ -492,6 +552,7 @@
   }
 </style>
 
+<!-- Header Behavior Scripts -->
 <script defer>
   document.addEventListener("DOMContentLoaded", () => {
     const logoContainer = document.getElementById("logo-container");
@@ -501,6 +562,7 @@
     const mobileCloseBtn = document.getElementById("mobile-close");
     const menuLinks = document.querySelectorAll('#mobile-menu a');
 
+    // Shrink logo on scroll
     window.addEventListener("scroll", () => {
       if (logoContainer) {
         logoContainer.classList.toggle("scale-90", window.scrollY > 40);
@@ -530,116 +592,130 @@
   });
 </script>
 
+<!-- Full Services Catalog -->
+<section class="relative z-10 overflow-hidden bg-gradient-to-b from-white via-purple-50/35 to-white px-4 pb-16 pt-36 sm:px-6">
+  <div class="pointer-events-none absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-200/50 blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 translate-y-1/3 rounded-full bg-pink-200/40 blur-3xl"></div>
 
-  <main class="max-w-4xl mx-auto px-6 sm:px-8 py-32 text-gray-800 font-body">
-
-  <!-- Title -->
-  <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4 text-center text-gray-900">
-    Privacy Policy
-  </h1>
-  <p class="text-center text-sm text-gray-600 mb-12">Last updated: July 18, 2025</p>
-
-  <section class="space-y-12 text-base leading-relaxed">
-
-    <p class="text-gray-700">
-      At OT Vibez Studio, your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our website, booking platform, or interact with our services in any form.
-    </p>
-
-    <!-- Section 1 -->
-    <div>
-      <h2 class="text-2xl font-bold font-heading text-gray-900 mb-4">1. Information We Collect</h2>
-      <p class="text-gray-700 mb-2">We collect information to provide and improve our services. This includes:</p>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li><strong>Personal Information:</strong> Full name, email address, phone number, and service preferences collected through our booking and contact forms.</li>
-        <li><strong>Session Information:</strong> Details such as your selected service, preferred time, and any notes you provide when booking or contacting us.</li>
-        <li><strong>Usage Data:</strong> IP address, browser type, device type, access times, and how you navigate and interact with our site.</li>
-        <li><strong>Cookies & Tracking:</strong> Data collected using cookies, pixels, and similar technologies to analyze user behavior and enhance your experience.</li>
-      </ul>
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+      <span class="mb-4 inline-flex rounded-full border border-purple-200 bg-purple-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-purple-700">Rehearsal Membership Edmonton</span>
+      <nav aria-label="Breadcrumb" class="mb-3 text-[10px] text-gray-500">
+        <a href="/" class="transition hover:text-purple-700">Home</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <a href="/services.html" class="transition hover:text-purple-700">Services</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <span class="font-semibold text-purple-700">Rehearsal Membership Pricing Edmonton</span>
+      </nav>
+      <h1 class="font-heading text-2xl font-extrabold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Rehearsal Membership Pricing in Edmonton for Bands and Artists</h1>
+      <p class="mt-5 text-base text-gray-700 sm:text-lg">Lock in recurring rehearsal time with monthly or yearly plans at OT Vibez. Save on hourly cost, keep consistent slots, and stay session-ready in Edmonton.</p>
+      <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/FHA4D47WMC3NYVV4FRBDKY4J" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Membership Hero Primary" class="inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-black">Start Monthly Membership</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VCXXIL2ZOHMOUW5XFXZHSU7Q" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Membership Hero Secondary" class="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:border-purple-300 hover:text-purple-700">Start Yearly Membership</a>
+      </div>
+      <div class="mt-3 flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-gray-600">
+        <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 transition hover:text-purple-700">Read Google Reviews</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=OT+Vibez+Music+Rehearsal+Space+%26+Studio+Edmonton" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 transition hover:text-purple-700">Get Directions</a>
+      </div>
+      <div class="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-xl border border-purple-100 bg-white/90 px-3 py-2 text-xs font-semibold text-gray-700">
+        <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-purple-700">Reserved recurring slots</span>
+        <span class="rounded-full border border-purple-200 bg-white px-2.5 py-1 text-purple-700">Lower effective hourly rate</span>
+        <span class="rounded-full border border-purple-200 bg-white px-2.5 py-1 text-purple-700">Monthly billing options</span>
+      </div>
+      <div class="mt-5 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-100 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-purple-700">Most Booked</span>
+        <span class="inline-flex items-center rounded-full border border-purple-200 bg-white px-2.5 py-1 text-[11px] font-semibold tracking-wide text-purple-700">From CA$270 / month</span>
+        <span class="hidden items-center rounded-full border border-purple-200 bg-white px-2.5 py-1 text-[11px] font-semibold tracking-wide text-purple-700 sm:inline-flex">Reserved Weekly Slots</span>
+      </div>
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-gray-700">
+        <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1">5.0 Stars</span>
+        <span class="rounded-full border border-amber-200 bg-white px-3 py-1">47 Google Reviews</span>
+        <span class="hidden rounded-full border border-amber-200 bg-white px-3 py-1 sm:inline-flex">Month-to-Month Option</span>
+      </div>
+      <article class="mt-5 rounded-2xl border border-purple-200 bg-white/90 p-4 text-left shadow-sm">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-purple-700">Featured Review</p>
+        <p class="mt-2 text-sm leading-relaxed text-gray-700 sm:hidden">"BOOK YOUR REHEARSALS HERE!!!! ... the flexibility in booking and cancelling options!"</p>
+        <p class="mt-2 hidden text-sm leading-relaxed text-gray-700 sm:block">"BOOK YOUR REHEARSALS HERE!!!! I booked in my band for the first time earlier this month. The online booking process was a breeze, and I appreciated the flexibility in their booking and cancelling options!"</p>
+        <details class="mt-2 sm:hidden">
+          <summary class="cursor-pointer text-xs font-semibold text-purple-700">Read full review</summary>
+          <p class="mt-2 text-sm leading-relaxed text-gray-700">"BOOK YOUR REHEARSALS HERE!!!! I booked in my band for the first time earlier this month. The online booking process was a breeze, and I appreciated the flexibility in their booking and cancelling options!"</p>
+        </details>
+        <div class="mt-2 flex flex-wrap items-center justify-between gap-2">
+          <p class="text-xs font-semibold text-gray-900">Cassandra Tomas - 5 stars</p>
+          <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" data-seo-track="review" data-seo-label="Membership Review Google" class="text-xs font-semibold text-purple-700 underline underline-offset-2 transition hover:text-purple-800">View on Google</a>
+        </div>
+      </article>
     </div>
 
-    <!-- Section 2 -->
-    <div>
-      <h2 class="text-2xl font-bold font-heading text-gray-900 mb-4">2. How We Use Your Information</h2>
-      <p class="mb-2 text-gray-700">We use your information to:</p>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li>Confirm, manage, and follow up on your studio bookings or inquiries</li>
-        <li>Send appointment reminders, service updates, or promotional offers (with your consent)</li>
-        <li>Improve our website functionality and understand usage trends</li>
-        <li>Maintain the security and integrity of our systems and data</li>
-      </ul>
+    <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3" data-aos="fade-up" data-aos-delay="80">
+      <article class="rounded-2xl border border-purple-100 bg-purple-50/50 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Reserved Weekly Access</h2>
+        <p class="mt-2 text-sm text-gray-700">Secure your regular day/time and avoid last-minute slot hunting during busy rehearsal weeks.</p>
+      </article>
+      <article class="rounded-2xl border border-purple-100 bg-purple-50/40 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Better Long-Term Value</h2>
+        <p class="mt-2 text-sm text-gray-700">Monthly and yearly plans reduce effective hourly cost versus repeated drop-in sessions.</p>
+      </article>
+      <article class="rounded-2xl border border-purple-100 bg-purple-50/30 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Flexible Commitments</h2>
+        <p class="mt-2 text-sm text-gray-700">Choose month-to-month access or yearly structure with monthly billing to match your season.</p>
+      </article>
     </div>
 
-    <!-- Section 3 -->
-    <div>
-      <h2 class="text-2xl font-bold font-heading text-gray-900 mb-4">3. Sharing Your Data</h2>
-      <p class="text-gray-700">
-        We do not sell, rent, or trade your personal information. We only share your data with trusted third-party providers that support our services (e.g., Formspree for contact submissions or Google Analytics for usage insights). All partners are required to handle your data securely and only for the purpose of providing their services.
-      </p>
+    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="rounded-xl border border-purple-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
+        <p class="font-semibold text-gray-900">Monthly Plans</p>
+        <p>8, 12, and 20-hour options built for consistent weekly rehearsals.</p>
+      </div>
+      <div class="rounded-xl border border-purple-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
+        <p class="font-semibold text-gray-900">Yearly Plans</p>
+        <p>96 or 144-hour annual structures with monthly billing and stronger savings.</p>
+      </div>
+      <div class="hidden rounded-xl border border-purple-100 bg-white/90 px-4 py-3 text-sm text-gray-700 sm:block">
+        <p class="font-semibold text-gray-900">Tax-Deductible Potential</p>
+        <p>Registered creative businesses may qualify. Confirm with your accountant.</p>
+      </div>
     </div>
+    <details class="mt-2 sm:hidden rounded-xl border border-purple-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
+      <summary class="cursor-pointer font-semibold text-purple-700">+ More</summary>
+      <div class="mt-2">
+        <p class="font-semibold text-gray-900">Tax-Deductible Potential</p>
+        <p>Registered creative businesses may qualify. Confirm with your accountant.</p>
+      </div>
+    </details>
 
-    <!-- Section 4 -->
-    <div>
-      <h2 class="text-2xl font-bold font-heading text-gray-900 mb-4">4. Cookies & Tracking Technologies</h2>
-      <p class="text-gray-700 mb-2">
-        Cookies help us enhance your browsing experience and measure performance. Types of cookies we use include:
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li><strong>Essential Cookies:</strong> Enable core site functionality like navigation and form submission.</li>
-        <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website.</li>
-      </ul>
-      <p class="mt-2 text-gray-700">
-        You can modify your browser settings to control or disable cookies at any time. Please note that some site features may not function properly without cookies enabled.
-      </p>
+    <div class="mt-10 rounded-2xl border border-purple-200 bg-gradient-to-b from-white to-purple-50/50 p-5 sm:p-6" data-aos="fade-up" data-aos-delay="120">
+      <h2 class="font-heading text-2xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
+      <div class="mt-4 space-y-3">
+        <details class="rounded-xl border border-purple-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">How much does rehearsal membership cost in Edmonton?</summary>
+          <p class="mt-2 text-sm text-gray-700">Monthly membership plans start from CA$270/month during sale pricing, with yearly options for stronger long-term value.</p>
+        </details>
+        <details class="rounded-xl border border-purple-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">What is included in monthly rehearsal memberships?</summary>
+          <p class="mt-2 text-sm text-gray-700">Monthly plans include reserved recurring slots, lower effective hourly rates, and access to the same pro rehearsal environment.</p>
+        </details>
+        <details class="rounded-xl border border-purple-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Do yearly rehearsal memberships require upfront annual payment?</summary>
+          <p class="mt-2 text-sm text-gray-700">No. Yearly memberships are billed monthly while keeping long-term savings and consistent scheduling.</p>
+        </details>
+      </div>
     </div>
-
-    <!-- Section 5 -->
-    <div>
-      <h2 class="text-2xl font-bold font-heading text-gray-900 mb-4">5. Data Security</h2>
-      <p class="text-gray-700">
-        We implement security measures to protect your personal information, including HTTPS encryption, data access controls, and periodic audits. While no online system is completely immune to threats, we follow industry best practices to minimize risk and unauthorized access.
-      </p>
+    <div class="mt-6 rounded-2xl border border-purple-200 bg-white/90 p-5" data-aos="fade-up" data-aos-delay="140">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-purple-700">Related Services</p>
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-5">
+        <a href="/hourly-rehearsal-studio-edmonton.html" data-seo-track="related" data-seo-label="Membership Related Hourly" class="rounded-xl border border-purple-200 bg-purple-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700">Hourly Rehearsal Studio Edmonton</a>
+        <a href="/podcast-room-rental-edmonton.html" data-seo-track="related" data-seo-label="Membership Related Podcast" class="rounded-xl border border-rose-200 bg-rose-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">Podcast Room Rental Edmonton</a>
+        <a href="/band-rehearsal-space-edmonton.html" data-seo-track="related" data-seo-label="Membership Related Band" class="rounded-xl border border-indigo-200 bg-indigo-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700">Band Rehearsal Space Edmonton</a>
+        <a href="/music-video-studio-edmonton.html" data-seo-track="related" data-seo-label="Membership Related MusicVideo" class="rounded-xl border border-rose-200 bg-rose-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">Music Video Studio Edmonton</a>
+        <a href="/services.html" data-seo-track="related" data-seo-label="Membership Related Services" class="rounded-xl border border-purple-200 bg-purple-50/50 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700">All Studio Services</a>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Section 6 -->
-    <div>
-      <h2 class="text-2xl font-bold font-heading text-gray-900 mb-4">6. Your Rights</h2>
-      <p class="text-gray-700 mb-2">
-        Depending on your location, you may have rights under privacy regulations such as the GDPR or PIPEDA. These may include the right to:
-      </p>
-      <ul class="list-disc list-inside space-y-2 text-gray-700">
-        <li>Access, correct, or delete your personal data</li>
-        <li>Withdraw consent for communications</li>
-        <li>Request a copy of the data we hold about you</li>
-      </ul>
-      <p class="mt-2 text-gray-700">
-        To make any such request, contact us at
-        <a href="mailto:otvibezstudio@gmail.com" class="text-purple-700 underline hover:text-purple-800">otvibezstudio@gmail.com</a>.
-      </p>
-    </div>
-
-    <!-- Section 7 -->
-    <div>
-      <h2 class="text-2xl font-bold font-heading text-gray-900 mb-4">7. Policy Updates</h2>
-      <p class="text-gray-700">
-        This Privacy Policy may be updated to reflect changes to our practices, technologies, or legal requirements. We encourage you to review it periodically. The date at the top indicates the latest revision.
-      </p>
-    </div>
-
-    <!-- Section 8 -->
-    <div>
-      <h2 class="text-2xl font-bold font-heading text-gray-900 mb-4">8. Contact</h2>
-      <p class="text-gray-700">
-        For questions, feedback, or privacy-related requests, please contact us at
-        <a href="mailto:otvibezstudio@gmail.com" class="text-purple-700 underline hover:text-purple-800">otvibezstudio@gmail.com</a>.
-      </p>
-    </div>
-
-  </section>
 </main>
-
-
-
-<!-- Footer -->
+   <!-- Footer -->
 <footer class="relative w-full overflow-hidden border-t border-white/40 bg-gradient-to-br from-white/90 via-white/80 to-purple-50/70 text-gray-800 backdrop-blur-xl">
   <div class="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full bg-purple-300/25 blur-3xl"></div>
   <div class="pointer-events-none absolute -bottom-20 -left-14 h-64 w-64 rounded-full bg-pink-200/25 blur-3xl"></div>
@@ -704,16 +780,35 @@
     if (footerYear) footerYear.textContent = new Date().getFullYear();
   })();
 </script>
-<!-- Scroll-to-top -->
-<!-- LocalBusiness SEO -->
+<!-- Sticky Mobile Booking CTA -->
+<div class="fixed inset-x-0 z-40 px-3 md:hidden pointer-events-none" style="bottom: env(safe-area-inset-bottom);">
+  <a id="mobile-sticky-book" href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/FHA4D47WMC3NYVV4FRBDKY4J"
+     target="_blank" rel="noopener noreferrer"
+     onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Mobile Sticky CTA' }); }"
+     class="pointer-events-auto mx-auto inline-flex w-full max-w-xl items-center justify-center rounded-full bg-[#E1306C] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_10px_26px_rgba(225,48,108,0.35)] transition-all duration-300 hover:bg-[#c51d58]">
+    Book Now
+  </a>
+</div>
+<!-- AOS (Animate on Scroll) -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 800
+  });
+</script>
+
+<!-- Structured Data for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "MusicVenue",
   "name": "OT Vibez Studio",
+  "description": "Rehearsal membership and pricing plans in Edmonton for artists and bands that need consistent weekly studio access.",
   "image": "https://otvibezstudio.com/assets/images/otvibez.png",
   "telephone": "+1-780-522-1807",
   "email": "otvibezstudio@gmail.com",
+  "url": "https://otvibezstudio.com/",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "8762 50 Ave NW #202",
@@ -722,19 +817,132 @@
     "postalCode": "T6B 1E8",
     "addressCountry": "CA"
   },
-  "url": "https://otvibezstudio.com",
+  "openingHours": "Mo-Su 08:00-02:00",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Edmonton"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Alberta"
+    }
+  ],
+  "hasMap": "https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio",
+  "priceRange": "$$",
   "sameAs": [
     "https://www.instagram.com/otvibezstudio",
     "https://www.tiktok.com/@otvibezstudio",
     "https://www.linkedin.com/company/ot-vibez-music-rehearsal-space-and-recording-studio"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "47"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Monthly Rehearsal Membership",
+  "serviceType": "Monthly and Yearly Rehearsal Membership",
+  "provider": {
+    "@type": "MusicVenue",
+    "name": "OT Vibez Studio",
+    "url": "https://otvibezstudio.com"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Edmonton"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "CAD",
+    "price": "270",
+    "url": "https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/FHA4D47WMC3NYVV4FRBDKY4J",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does rehearsal membership cost in Edmonton?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly membership plans start from CA$270/month during sale pricing, with yearly options for stronger long-term value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in monthly rehearsal memberships?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly plans include reserved recurring slots, lower effective hourly rates, and access to the same pro rehearsal environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do yearly rehearsal memberships require upfront annual payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Yearly memberships are billed monthly while keeping long-term savings and consistent scheduling."
+      }
+    }
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://otvibezstudio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://otvibezstudio.com/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Rehearsal Membership Pricing Edmonton",
+      "item": "https://otvibezstudio.com/rehearsal-membership-pricing-edmonton.html"
+    }
+  ]
+}
+</script>
+<script>
+  (function () {
+    var tracked = document.querySelectorAll("[data-seo-track]");
+    tracked.forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "seo_internal_click", {
+            event_category: "SEO Landing Page",
+            event_label: link.getAttribute("data-seo-label") || link.getAttribute("href") || "unknown",
+            page_path: window.location.pathname
+          });
+        }
+      });
+    });
+  })();
+</script>
 
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ once: true, duration: 800 });</script>
+
 <script defer src="/assets/js/nav-dropdown-a11y.js"></script>
   <script defer src="assets/js/site-config.js"></script>
 <!-- Back to Top (Minimal) -->
@@ -771,6 +979,11 @@
 </script>
 </body>
 </html>
+
+
+
+
+
 
 
 
