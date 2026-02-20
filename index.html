@@ -1184,7 +1184,7 @@
     <div class="hero-stagger order-3 mt-4 sm:mt-5">
       <p data-hero-stagger style="--hero-delay: 470ms;" class="inline-flex items-center gap-1.5 rounded-full border border-fuchsia-200 bg-fuchsia-50 px-4 py-1.5 text-xs sm:text-sm font-semibold text-fuchsia-800">
         <span class="text-fuchsia-600">Rehearsal Session</span>
-        <span class="text-fuchsia-900">Starting at $70/2hr</span>
+        <span class="text-fuchsia-900">Starting at $45/hr</span>
       </p>
     </div>
   </div>
@@ -1209,6 +1209,7 @@
 
   .hero-aurora {
     isolation: isolate;
+    contain: paint;
   }
 
   .hero-aurora-orb {
@@ -1225,7 +1226,6 @@
     width: min(46vw, 520px);
     height: min(46vw, 520px);
     background: radial-gradient(circle at 30% 35%, rgba(56, 189, 248, 0.3), rgba(56, 189, 248, 0));
-    animation: hero-aurora-drift-a 16s ease-in-out infinite;
   }
 
   .hero-aurora-orb-b {
@@ -1234,7 +1234,6 @@
     width: min(50vw, 560px);
     height: min(50vw, 560px);
     background: radial-gradient(circle at 65% 40%, rgba(244, 114, 182, 0.28), rgba(244, 114, 182, 0));
-    animation: hero-aurora-drift-b 18s ease-in-out infinite;
   }
 
   .hero-aurora-orb-c {
@@ -1243,6 +1242,17 @@
     width: min(42vw, 470px);
     height: min(42vw, 470px);
     background: radial-gradient(circle at 48% 46%, rgba(129, 140, 248, 0.24), rgba(129, 140, 248, 0));
+  }
+
+  .hero-aurora.is-live .hero-aurora-orb-a {
+    animation: hero-aurora-drift-a 16s ease-in-out infinite;
+  }
+
+  .hero-aurora.is-live .hero-aurora-orb-b {
+    animation: hero-aurora-drift-b 18s ease-in-out infinite;
+  }
+
+  .hero-aurora.is-live .hero-aurora-orb-c {
     animation: hero-aurora-drift-c 20s ease-in-out infinite;
   }
 
@@ -1465,11 +1475,27 @@
         .catch(() => {});
     };
 
+    const deferUntilIdle = (fn, timeout) => {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(fn, { timeout: timeout || 1200 });
+        return;
+      }
+      setTimeout(fn, 64);
+    };
+
     onReady(() => {
       initHeroCtaExperiment();
-      initTypewriter();
       initHeroStagger();
-      initAOS();
+
+      deferUntilIdle(() => {
+        const aurora = document.querySelector(".hero-aurora");
+        if (aurora) aurora.classList.add("is-live");
+        initTypewriter();
+      }, 1000);
+
+      window.addEventListener("load", () => {
+        deferUntilIdle(initAOS, 2000);
+      }, { once: true });
     });
   })();
 </script>
