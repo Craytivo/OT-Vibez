@@ -3,21 +3,20 @@
 <head>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMJ5ZCG9CX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZMJ5ZCG9CX');
+  function gtag() { dataLayer.push(arguments); }
+  window.__otvTracking = {
+    gtagId: "G-ZMJ5ZCG9CX",
+    clarityId: "shimdl0fzx"
+  };
 </script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "shimdl0fzx");
-</script>
+<script defer src="/assets/js/telemetry-init.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://book.squareup.com" crossorigin>
+<link rel="dns-prefetch" href="//book.squareup.com">
+<link rel="dns-prefetch" href="//www.google.com">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -163,41 +162,10 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Preload critical images -->
+  <!-- Preload critical image -->
   <link rel="preload" href="assets/images/otvibez.png" as="image" type="image/png">
-  <link rel="preload" href="assets/images/otvibez-white-bg.png" as="image" type="image/png">
 
-  <!-- Tailwind CDN runtime vendored locally for homepage stability -->
-  <script src="/assets/vendor/tailwindcss-cdn.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            heading: ['Poppins', 'sans-serif'],
-            body: ['"Source Sans Pro"', 'sans-serif'],
-          },
-          colors: {
-            primary: '#000000',
-            accent: '#5f5f5f',
-          },
-          spacing: {
-            '18': '4.5rem',
-            '88': '22rem',
-            '128': '32rem',
-          },
-          lineHeight: {
-            'extra-tight': '1.1',
-            'relaxed': '1.75',
-          },
-          letterSpacing: {
-            'wider': '0.1em',
-            'widest': '0.15em',
-          }
-        },
-      }
-    };
-  </script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
   <!-- Enhanced Typography and Accessibility CSS -->
   <style>
@@ -505,10 +473,10 @@
       padding: 0;
     }
 
-    /* Lazy loading implementation */
+    /* Keep lazy images visible with native loading=lazy */
     .lazy-load {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out;
     }
 
     .lazy-load.loaded {
@@ -965,9 +933,14 @@
       </span>
     </h1>
 
-    <p class="hero-subtitle font-body text-gray-700 max-w-[40rem] mx-auto mb-5 sm:mb-7 leading-relaxed">
-      OT Vibez is an Edmonton rehearsal studio for bands, artists, and creators. Check live availability, book in minutes, and walk into a room with pro backline ready.
+    <p class="hero-subtitle font-body text-gray-700 max-w-[42rem] mx-auto mb-4 sm:mb-5 leading-relaxed">
+      Private, loud-friendly Edmonton rehearsal studio with live availability, transparent policies, and music-first backline. Book fast and start on time.
     </p>
+    <div class="hero-stagger mb-5 sm:mb-6 flex w-full flex-wrap items-center justify-center gap-2 text-xs sm:text-sm">
+      <span class="inline-flex items-center rounded-full border border-fuchsia-200 bg-fuchsia-50 px-3 py-1 font-semibold text-fuchsia-800">Starting at $35/hr</span>
+      <span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-700">2-hour minimum</span>
+      <span class="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-semibold text-emerald-700">Gear included, no setup fee</span>
+    </div>
 
     <div class="hero-stagger hidden sm:flex items-center justify-center gap-2.5 mb-6 mt-1" id="hero-reveal-group">
       <span data-hero-stagger style="--hero-delay: 70ms;" class="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-sky-700">Pro Backline Included</span>
@@ -981,7 +954,7 @@
          data-analytics-category="Hero"
          data-analytics-label="Hero Primary CTA - Check Availability"
          class="btn-primary inline-flex w-full sm:w-auto items-center justify-center gap-3 text-white bg-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition-all duration-300 group hover:-translate-y-1"
-         aria-label="Book rehearsal space at OT Vibez">
+         aria-label="Check availability at OT Vibez">
         Check Availability
         <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
@@ -992,10 +965,10 @@
       </a>
     </div>
 
-    <div class="hero-stagger order-3 mt-4 sm:mt-5">
+    <div class="hero-stagger order-3 mt-3 sm:mt-4">
       <p data-hero-stagger style="--hero-delay: 470ms;" class="inline-flex items-center gap-1.5 rounded-full border border-fuchsia-200 bg-fuchsia-50 px-4 py-1.5 text-xs sm:text-sm font-semibold text-fuchsia-800">
-        <span class="text-fuchsia-600">Rehearsal Session</span>
-        <span class="text-fuchsia-900">Starting at $45/hr</span>
+        <span class="text-fuchsia-600">Open Daily</span>
+        <span class="text-fuchsia-900">8 a.m. to 2 a.m.</span>
       </p>
     </div>
   </div>
@@ -1168,7 +1141,8 @@
       ];
 
       const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduceMotion) {
+      const isMobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
+      if (reduceMotion || isMobile) {
         typedText.textContent = phrases[0].text;
         typedText.classList.remove(...HERO_COLOR_CLASSES);
         typedText.classList.add(phrases[0].color);
@@ -1264,6 +1238,9 @@
     };
 
     const initAOS = () => {
+      const isMobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
+      if (isMobile) return;
+
       const startAOS = () => {
         if (!window.AOS) return;
         window.AOS.init({
@@ -1526,12 +1503,16 @@
       </div>
     </div>
 
-    <div class="mt-5 flex flex-col items-center justify-center gap-2 sm:flex-row">
-      <a href="/services.html" class="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800">Compare Session Options</a>
-      <a href="/hourly-rehearsal-studio-edmonton.html" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900">View Hourly Rehearsal</a>
+    <div class="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50/70 px-4 py-4 sm:px-5" data-aos="fade-up">
+      <p class="text-sm font-semibold text-emerald-900">What to bring</p>
+      <p class="mt-1 text-sm leading-relaxed text-emerald-900">Bring nothing&mdash;gear is included. Bring your instruments, sticks, and project files only if you want personal preferences in your setup.</p>
+      <div class="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center">
+        <a href="/services.html" class="inline-flex w-full items-center justify-center rounded-full bg-emerald-800 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-900 sm:w-auto">Check Availability</a>
+        <a href="/hourly-rehearsal-studio-edmonton.html" class="inline-flex w-full items-center justify-center rounded-full border border-emerald-300 bg-white px-5 py-2.5 text-sm font-semibold text-emerald-800 transition hover:border-emerald-400 sm:w-auto">View Hourly Rehearsal Details</a>
+      </div>
     </div>
 
-    <p class="mt-3 text-center text-[11px] leading-relaxed text-slate-500 sm:text-xs">
+    <p class="mt-3 mb-6 text-center text-[11px] leading-relaxed text-slate-500 sm:mb-8 sm:text-xs">
       Factual comparison based on publicly listed policies as of February 20, 2026. Always confirm current rules before booking.
     </p>
   </div>
@@ -1608,7 +1589,11 @@
       <div class="rounded-2xl overflow-hidden shadow-xl border border-purple-200 bg-white/10 backdrop-blur-xl transition hover:scale-105 duration-300">
         <img src="assets/images/Equipment/yassine-khalfalli-I3ZzOkiAbTI-unsplash.jpg"
              alt="Studio gear preview"
-             class="object-cover w-full h-full max-h-[340px] lg:max-h-[380px]">
+             class="object-cover w-full h-full max-h-[340px] lg:max-h-[380px]"
+             loading="lazy"
+             decoding="async"
+             width="1200"
+             height="800">
       </div>
     </div>
 
@@ -1638,28 +1623,28 @@
       <div class="flex gap-6 w-max">
 
         <!-- Image Panel -->
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
+        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
           <img src="assets/images/studio-gallery/microphone-setup.webp" alt="Professional Microphone Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/microphone-setup.webp">
           <img src="assets/images/studio-gallery/drum-kit-setup.webp" alt="Professional Drum Kit Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/drum-kit-setup.webp">
           <img src="assets/images/studio-gallery/studio-lighting-setup.jpg" alt="Professional Studio Lighting Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-lighting-setup.jpg">
           <img src="assets/images/studio-gallery/audio-mixer-setup.webp" alt="Professional Audio Mixer Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/audio-mixer-setup.webp">
         </div>
 
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
+        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
           <img src="assets/images/studio-gallery/snack-bar-refreshments.webp" alt="Studio Snack Bar and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-bar-refreshments.webp">
           <img src="assets/images/studio-gallery/studio-monitor-setup.webp" alt="Professional Studio Monitor Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-monitor-setup.webp">
           <img src="assets/images/studio-gallery/keyboard-piano-setup.webp" alt="Professional Keyboard and Piano Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-piano-setup.webp">
           <img src="assets/images/studio-gallery/lounge-area.webp" alt="Studio Lounge and Relaxation Area" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/lounge-area.webp">
         </div>
 
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
+        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
           <img src="assets/images/studio-gallery/led-lighting-system.jpg" alt="Professional LED Lighting System" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/led-lighting-system.jpg">
           <img src="assets/images/studio-gallery/mixer-audio-equipment.jpg" alt="Professional Mixer and Audio Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/mixer-audio-equipment.jpg">
           <img src="assets/images/studio-gallery/snack-station.jpg" alt="Studio Snack Station and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-station.jpg">
           <img src="assets/images/studio-gallery/dual-monitor-setup.jpg" alt="Dual Monitor Professional Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/dual-monitor-setup.jpg">
         </div>
 
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[800px]">
+        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
           <img src="assets/images/studio-gallery/keyboard-equipment.jpg" alt="Professional Keyboard and Piano Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-equipment.jpg">
           <img src="assets/images/studio-gallery/studio-desk-setup.webp" alt="Professional Studio Desk Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-desk-setup.webp">
           <img src="assets/images/studio-gallery/wide-studio-view.webp" alt="Wide Studio View with Professional Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/wide-studio-view.webp">
@@ -1770,8 +1755,8 @@
     </div>
 
     <div class="mt-8 flex flex-col items-center justify-center gap-2 sm:flex-row" data-aos="fade-up">
-      <a href="/services.html" data-analytics-event="book_now_click" data-analytics-category="Testimonials" data-analytics-label="Testimonials CTA - See Studio Availability" class="inline-flex items-center justify-center rounded-full bg-[#E1306C] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#c51d58]">
-        See Studio Availability
+      <a href="/services.html" data-analytics-event="book_now_click" data-analytics-category="Testimonials" data-analytics-label="Testimonials CTA - Check Availability" class="inline-flex items-center justify-center rounded-full bg-[#E1306C] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#c51d58]">
+        Check Availability
       </a>
       <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-5 py-3 text-sm font-semibold text-gray-700 transition hover:border-rose-300 hover:text-rose-700">
         Read More Reviews
@@ -1782,23 +1767,145 @@
 
 
 
-<!-- Alpine.js - Loaded asynchronously for better performance -->
+<!-- FAQ + Alpine boot: lazy-load when FAQ is near viewport -->
 <script>
-  // Load Alpine.js asynchronously
-  function loadAlpine() {
-    if (window.Alpine) return;
-    if (document.querySelector('script[src="/assets/vendor/alpine-3.14.1.min.js"]')) return;
-    const script = document.createElement('script');
-    script.src = '/assets/vendor/alpine-3.14.1.min.js';
-    script.defer = true;
-    document.head.appendChild(script);
+  (function () {
+    function loadScriptOnce(src) {
+      return new Promise(function (resolve, reject) {
+        var existing = document.querySelector('script[src="' + src + '"]');
+        if (existing) {
+          if (existing.dataset.loaded === "true") {
+            resolve();
+            return;
+          }
+          existing.addEventListener("load", function () { resolve(); }, { once: true });
+          existing.addEventListener("error", function () { reject(new Error("Failed to load " + src)); }, { once: true });
+          return;
+        }
+
+        var script = document.createElement("script");
+        script.src = src;
+        script.defer = true;
+        script.onload = function () {
+          script.dataset.loaded = "true";
+          resolve();
+        };
+        script.onerror = function () { reject(new Error("Failed to load " + src)); };
+        document.head.appendChild(script);
+      });
+    }
+
+    function bootFaqInteractive() {
+      loadScriptOnce("/assets/js/index-faq.js")
+        .then(function () {
+          return loadScriptOnce("/assets/vendor/alpine-3.14.1.min.js");
+        })
+        .catch(function () {});
+    }
+
+    function scheduleBoot() {
+      var faqSection = document.getElementById("faq");
+      if (!faqSection || !("IntersectionObserver" in window)) {
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(bootFaqInteractive, { timeout: 2200 });
+        } else {
+          setTimeout(bootFaqInteractive, 1200);
+        }
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i += 1) {
+          if (entries[i].isIntersecting) {
+            observer.disconnect();
+            bootFaqInteractive();
+            break;
+          }
+        }
+      }, { rootMargin: "280px 0px" });
+
+      observer.observe(faqSection);
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(bootFaqInteractive, { timeout: 3500 });
+      } else {
+        setTimeout(bootFaqInteractive, 2000);
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", scheduleBoot, { once: true });
+    } else {
+      scheduleBoot();
+    }
+  })();
+</script>
+
+<!-- FAQ data for deferred hydration -->
+<script type="application/json" id="otv-faq-data">
+[
+  {
+    "topic": "booking",
+    "q": "What are OT Vibez Studio's operating hours?",
+    "a": "We're open daily from 8 a.m. to 2 a.m. for rehearsals, recording, and podcast sessions."
+  },
+  {
+    "topic": "booking",
+    "q": "Can I rent OT Vibez Studio by the hour?",
+    "a": "Yes. You can book by the hour online and get instant confirmation."
+  },
+  {
+    "topic": "booking",
+    "q": "How much does hourly rehearsal studio rental cost in Edmonton?",
+    "a": "Rates vary by session type and time block. Use our live booking page to see current hourly rates and real-time availability before you book.",
+    "ctaUrl": "/services.html",
+    "ctaLabel": "Check live rates"
+  },
+  {
+    "topic": "studio",
+    "q": "What is included in my studio booking?",
+    "a": "Your booking includes a sound-treated room, stage lighting, Bluetooth audio, mic stands, XLR cables, lounge seating, and free parking."
+  },
+  {
+    "topic": "booking",
+    "q": "Do you offer same-day rehearsal studio booking in Edmonton?",
+    "a": "Yes. You can book same-day when open slots are still available."
+  },
+  {
+    "topic": "studio",
+    "q": "Is OT Vibez private and sound-treated?",
+    "a": "Yes. Sessions are private, and the studio is acoustically treated for clear, controlled sound."
+  },
+  {
+    "topic": "podcast",
+    "q": "Is this studio good for podcast recording in Edmonton?",
+    "a": "Yes. The treated room works well for both solo and multi-person podcast sessions."
+  },
+  {
+    "topic": "support",
+    "q": "Is there a studio engineer or assistant available?",
+    "a": "Yes. You can add engineering or technical support during booking for an additional fee."
+  },
+  {
+    "topic": "support",
+    "q": "Can I tour the studio before I book?",
+    "a": "Yes. Contact us by phone, email, or Instagram to schedule a walkthrough."
+  },
+  {
+    "topic": "studio",
+    "q": "Is parking available?",
+    "a": "Yes. Free on-site parking is available for all guests, including gear load-in."
+  },
+  {
+    "topic": "podcast",
+    "q": "What basic home podcast setup do you recommend for beginners?",
+    "a": "For a simple starter setup, we recommend a cardioid microphone, compact audio interface, and closed-back monitoring headphones.",
+    "links": [
+      { "label": "AT2020 Cardioid", "url": "https://amzn.to/3MTJuDb" },
+      { "label": "Focusrite Scarlett Solo 4th Gen", "url": "https://amzn.to/3OhnKlc" },
+      { "label": "Audio Technica ATH-M40X Headphones", "url": "https://amzn.to/4tLvf3M" }
+    ]
   }
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadAlpine);
-  } else {
-    loadAlpine();
-  }
+]
 </script>
 
 
@@ -2035,184 +2142,18 @@
 
     <div class="mt-6 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-purple-50 p-4 sm:p-5" data-aos="fade-up" data-aos-delay="80">
       <p class="type-kicker mb-3 text-amber-700">Related Pages</p>
-      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-5">
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
         <a href="/hourly-rehearsal-studio-edmonton.html" class="rounded-xl border border-amber-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-amber-300 hover:text-amber-700">Hourly Rehearsal Studio Edmonton</a>
         <a href="/podcast-room-rental-edmonton.html" class="rounded-xl border border-purple-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700">Podcast Room Rental Edmonton</a>
         <a href="/band-rehearsal-space-edmonton.html" class="rounded-xl border border-indigo-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700">Band Rehearsal Space Edmonton</a>
         <a href="/music-video-studio-edmonton.html" class="rounded-xl border border-rose-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">Music Video Studio Edmonton</a>
         <a href="/rehearsal-membership-pricing-edmonton.html" class="rounded-xl border border-emerald-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-emerald-300 hover:text-emerald-700">Rehearsal Membership Pricing Edmonton</a>
+        <a href="/do-i-need-gear-to-rehearse.html" class="rounded-xl border border-slate-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">Do I Need Gear to Rehearse?</a>
+        <a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="rounded-xl border border-slate-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">Hourly vs Minimum-Block Rentals</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Alpine.js FAQ Logic -->
-<script>
-  window.OTV_FAQ_ITEMS = window.OTV_FAQ_ITEMS || [
-    {
-      topic: "booking",
-      q: "What are OT Vibez Studio's operating hours?",
-      a: "We're open daily from 8 a.m. to 2 a.m. for rehearsals, recording, and podcast sessions."
-    },
-    {
-      topic: "booking",
-      q: "Can I rent OT Vibez Studio by the hour?",
-      a: "Yes. You can book by the hour online and get instant confirmation."
-    },
-    {
-      topic: "booking",
-      q: "How much does hourly rehearsal studio rental cost in Edmonton?",
-      a: "Rates vary by session type and time block. Use our live booking page to see current hourly rates and real-time availability before you book.",
-      ctaUrl: "/services.html",
-      ctaLabel: "Check live rates"
-    },
-    {
-      topic: "studio",
-      q: "What is included in my studio booking?",
-      a: "Your booking includes a sound-treated room, stage lighting, Bluetooth audio, mic stands, XLR cables, lounge seating, and free parking."
-    },
-    {
-      topic: "booking",
-      q: "Do you offer same-day rehearsal studio booking in Edmonton?",
-      a: "Yes. You can book same-day when open slots are still available."
-    },
-    {
-      topic: "studio",
-      q: "Is OT Vibez private and sound-treated?",
-      a: "Yes. Sessions are private, and the studio is acoustically treated for clear, controlled sound."
-    },
-    {
-      topic: "podcast",
-      q: "Is this studio good for podcast recording in Edmonton?",
-      a: "Yes. The treated room works well for both solo and multi-person podcast sessions."
-    },
-    {
-      topic: "support",
-      q: "Is there a studio engineer or assistant available?",
-      a: "Yes. You can add engineering or technical support during booking for an additional fee."
-    },
-    {
-      topic: "support",
-      q: "Can I tour the studio before I book?",
-      a: "Yes. Contact us by phone, email, or Instagram to schedule a walkthrough."
-    },
-    {
-      topic: "studio",
-      q: "Is parking available?",
-      a: "Yes. Free on-site parking is available for all guests, including gear load-in."
-    },
-    {
-      topic: "podcast",
-      q: "What basic home podcast setup do you recommend for beginners?",
-      a: "For a simple starter setup, we recommend a cardioid microphone, compact audio interface, and closed-back monitoring headphones.",
-      links: [
-        { label: "AT2020 Cardioid", url: "https://amzn.to/3MTJuDb" },
-        { label: "Focusrite Scarlett Solo 4th Gen", url: "https://amzn.to/3OhnKlc" },
-        { label: "Audio Technica ATH-M40X Headphones", url: "https://amzn.to/4tLvf3M" }
-      ]
-    }
-  ];
-
-  function faqComponent() {
-    return {
-      selectedQuestion: null,
-      search: '',
-      activeTopic: 'all',
-      defaultVisible: 6,
-      expanded: false,
-      topics: [
-        { id: 'all', label: 'All' },
-        { id: 'booking', label: 'Booking' },
-        { id: 'studio', label: 'Studio' },
-        { id: 'podcast', label: 'Podcast' },
-        { id: 'support', label: 'Support' }
-      ],
-      faqList: Array.isArray(window.OTV_FAQ_ITEMS) ? window.OTV_FAQ_ITEMS : [],
-      get filteredFaqs() {
-        const term = this.search.toLowerCase();
-        return this.faqList.filter((item) => {
-          const topicMatch = this.activeTopic === 'all' || item.topic === this.activeTopic;
-          const termMatch = item.q.toLowerCase().includes(term) || item.a.toLowerCase().includes(term);
-          return topicMatch && termMatch;
-        });
-      },
-      get displayedFaqs() {
-        if (this.search.trim().length || this.expanded) return this.filteredFaqs;
-        return this.filteredFaqs.slice(0, this.defaultVisible);
-      },
-      toggleFaq(question) {
-        const wasOpen = this.selectedQuestion === question;
-        this.selectedQuestion = wasOpen ? null : question;
-        this.trackEvent("faq_item_toggle", {
-          event_category: "FAQ",
-          event_label: question,
-          faq_state: wasOpen ? "closed" : "opened"
-        });
-      },
-      isOpen(question) {
-        return this.selectedQuestion === question;
-      },
-      setTopic(topicId) {
-        if (this.activeTopic === topicId) return;
-        this.activeTopic = topicId;
-        this.expanded = false;
-        this.selectedQuestion = null;
-        this.trackEvent("faq_topic_select", {
-          event_category: "FAQ",
-          event_label: topicId
-        });
-      },
-      toggleExpanded() {
-        this.expanded = !this.expanded;
-        this.trackEvent("faq_visibility_toggle", {
-          event_category: "FAQ",
-          event_label: this.expanded ? "show_all" : "show_fewer"
-        });
-      },
-      trackAffiliateClick(label, url) {
-        this.trackEvent("affiliate_click", {
-          event_category: "Affiliate",
-          event_label: label,
-          affiliate_url: url
-        });
-      },
-      trackEvent(name, params) {
-        if (typeof gtag === "function") {
-          gtag("event", name, params || {});
-        }
-      },
-      clearSearch() {
-        this.search = '';
-      },
-      init() {
-        this.$watch('search', (value) => {
-          const term = value.trim().toLowerCase();
-          const results = this.filteredFaqs;
-          if (!term) {
-            this.selectedQuestion = null;
-            return;
-          }
-          this.selectedQuestion = results.length ? results[0].q : null;
-        });
-      },
-      highlightText(text) {
-        const term = this.search.trim();
-        const source = String(text || '');
-        const escapeHtml = (value) => value
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#39;');
-        const escapedText = escapeHtml(source);
-        if (!term) return escapedText;
-        const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // escape regex
-        const regex = new RegExp(`(${escapedTerm})`, 'gi');
-        return escapedText.replace(regex, '<mark class="rounded bg-amber-200 px-0.5 text-amber-900">$1</mark>');
-      }
-    };
-  }
-</script>
 
 <script type="application/ld+json" id="faq-schema-jsonld">
 {
@@ -2221,32 +2162,24 @@
   "mainEntity": []
 }
 </script>
-<script>
-  (function () {
-    var faqItems = Array.isArray(window.OTV_FAQ_ITEMS) ? window.OTV_FAQ_ITEMS : [];
-    var faqSchemaNode = document.getElementById("faq-schema-jsonld");
-    if (!faqSchemaNode) return;
-    var schema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqItems.map(function (item) {
-        return {
-          "@type": "Question",
-          "name": item.q,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": item.a
-          }
-        };
-      })
-    };
-    faqSchemaNode.textContent = JSON.stringify(schema);
-  })();
-</script>
 
-
-
-
+<section class="px-4 pb-10 sm:px-6" aria-label="Helpful resources">
+  <div class="mx-auto max-w-6xl rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 via-white to-emerald-50/50 p-4 sm:p-6" data-aos="fade-up">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div class="max-w-3xl">
+        <p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-700">Resources</p>
+        <h2 class="mt-1 font-heading text-xl font-extrabold text-gray-900 sm:text-2xl">Plan your next Edmonton rehearsal faster</h2>
+        <p class="mt-2 text-sm text-gray-700 sm:text-base">Use quick, neutral guides to compare booking options, reduce setup friction, and show up prepared.</p>
+      </div>
+      <a href="/services.html" class="inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto">Check Availability</a>
+    </div>
+    <div class="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/edmonton-rehearsal-checklist.html" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">Edmonton Rehearsal Checklist</a>
+      <a href="/do-i-need-gear-to-rehearse.html" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">Do I Need Gear to Rehearse?</a>
+      <a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">Hourly vs Minimum-Block Rentals</a>
+    </div>
+  </div>
+</section>
 
 </main>
 <!-- @include partials/footer.html -->
@@ -2262,47 +2195,6 @@
     Check Availability
   </a>
 </div>
-<!-- Enhanced Lazy Loading Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Lazy loading implementation
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.add('loaded');
-          observer.unobserve(img);
-        }
-      });
-    });
-
-    lazyImages.forEach(img => {
-      imageObserver.observe(img);
-    });
-
-    // Enhanced keyboard navigation
-    document.addEventListener('keydown', function(e) {
-      // Skip to main content with 'S' key
-      if (e.key === 'S' && (e.ctrlKey || e.metaKey)) {
-        e.preventDefault();
-        document.getElementById('main-content').focus();
-      }
-      
-      // Close mobile menu with Escape key
-      if (e.key === 'Escape') {
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-          document.getElementById('mobile-close').click();
-        }
-      }
-    });
-
-  });
-</script>
-
 <script defer src="/assets/js/nav-dropdown-a11y.js"></script>
   <script defer src="assets/js/site-config.js"></script>
 <!-- Back to Top (Minimal) -->
@@ -2339,6 +2231,10 @@
 </script>
 </body>
 </html>
+
+
+
+
 
 
 
