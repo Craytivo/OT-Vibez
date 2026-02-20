@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://otvibezstudio.com/sitemap.xml
+Sitemap: https://otvibez.com/sitemap.xml
