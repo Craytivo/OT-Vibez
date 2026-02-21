@@ -3,68 +3,49 @@
 <html lang="en">
   <head>
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMJ5ZCG9CX"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-ZMJ5ZCG9CX');
-  </script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "shimdl0fzx");
-  </script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.__otvTracking = {
+    gtagId: "G-ZMJ5ZCG9CX",
+    clarityId: "shimdl0fzx"
+  };
+</script>
+<script defer src="/assets/js/telemetry-init.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Page Title & SEO -->
-  <title>Podcast Room Rental Edmonton | Video + Podcast Studio | OT Vibez</title>
-  <meta name="description" content="Rent a podcast room in Edmonton at OT Vibez. Book full video production with videographer or room-only podcast/video setup with flexible hourly pricing." />
-  <meta name="keywords" content="podcast room rental Edmonton, podcast studio Edmonton, video podcast production Edmonton, content studio rental Edmonton, OT Vibez podcast" />
+  <title>Podcast Recording Studio Edmonton | Video Podcast Production | OT Vibez</title>
+  <meta name="description" content="Book a podcast recording studio in Edmonton at OT Vibez. Full video podcast production includes videographer, A/B cameras, pro audio, lighting, and clear hourly pricing." />
+  <meta name="keywords" content="podcast recording studio Edmonton, video podcast production Edmonton, podcast studio Edmonton, podcast room rental Edmonton, OT Vibez podcast studio" />
   <link rel="canonical" href="https://otvibez.com/podcast-room-rental-edmonton.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Podcast Room Rental Edmonton | OT Vibez" />
-  <meta property="og:description" content="Book Edmonton podcast and video studio rental with full production or room-only options." />
+  <meta property="og:title" content="Podcast Recording Studio Edmonton | OT Vibez" />
+  <meta property="og:description" content="Video podcast production in Edmonton with videographer, A/B camera setup, pro audio, and clear hourly pricing." />
   <meta property="og:url" content="https://otvibez.com/podcast-room-rental-edmonton.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://otvibez.com/assets/images/otvibez.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Podcast Room Rental Edmonton | OT Vibez" />
-  <meta name="twitter:description" content="Edmonton podcast room rental with pro camera/audio setup and optional videographer support." />
+  <meta name="twitter:title" content="Podcast Recording Studio Edmonton | OT Vibez" />
+  <meta name="twitter:description" content="Book a podcast recording studio in Edmonton with full videographer-led setup, A/B cameras, and pro audio." />
   <meta name="twitter:image" content="https://otvibez.com/assets/images/otvibez.png" />
 
   <!-- Favicon -->
   <link rel="icon" href="assets/images/otvibez-white-bg.png" type="image/x-icon" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Tailwind CSS + Custom Theme -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            heading: ['Poppins', 'sans-serif'],
-            body: ['"Source Sans Pro"', 'sans-serif'],
-          },
-          colors: {
-            primary: '#000000',
-            accent: '#5f5f5f',
-          },
-        },
-      }
-    };
-  </script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
   <!-- Base Fallback Font Style -->
   <style>
@@ -74,7 +55,7 @@
   </style>
 
   <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="/assets/vendor/aos-2.3.4.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <style>
     @media (min-width: 1024px) {
       html { font-size: 103.125%; }
@@ -88,6 +69,45 @@
 <div id="mobile-backdrop" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] min-[960px]:hidden"></div>
 
 <style>
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+  }
+
+  .nav-dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown-trigger svg {
+    flex-shrink: 0;
+    margin-left: 0.1rem;
+  }
+
+  .nav-link:hover {
+    color: #374151;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-nav-link:hover {
+    transform: translateX(4px);
+  }
+
+  .mobile-nav-link:active {
+    transform: scale(0.98);
+  }
+
   /* Fallback visibility control for mobile menu toggle */
   @media (max-width: 959.98px) {
     #menu-toggle {
@@ -107,15 +127,12 @@
   <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 min-[960px]:grid min-[960px]:grid-cols-[1fr_auto_1fr] min-[960px]:items-center min-[960px]:gap-4">
     <!-- Logo (Left) -->
     <a href="/" id="logo-container" class="flex items-center space-x-3 transition-transform duration-300 min-[960px]:justify-self-start" aria-label="OT Vibez Edmonton Studio Home">
-      <img src="assets/images/otvibez.png" alt="OT Vibez Studio - Edmonton Rehearsal & Recording Space" class="h-11 sm:h-12 md:h-14 w-auto object-contain" loading="eager">
+      <img src="assets/images/otvibez.png" alt="OT Vibez Studio - Edmonton Rehearsal & Recording Space" class="h-11 sm:h-12 md:h-14 w-auto object-contain" loading="eager" decoding="async" fetchpriority="high" width="143" height="133">
     </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden min-[960px]:flex items-center gap-7 lg:gap-9 text-[15px] lg:text-[16px] font-medium tracking-wide text-gray-800 font-body min-[960px]:justify-self-center" aria-label="Main Navigation">
-      <a href="/#about" class="nav-link hover:text-purple-700">
-        About
-      </a>
-      <div class="relative group" data-desktop-services-dropdown>
+      <div class="relative group" data-desktop-nav-dropdown>
         <a id="services-menu-trigger" href="/services.html" class="nav-link nav-dropdown-trigger hover:text-purple-700" aria-haspopup="true" aria-controls="services-mega-menu" aria-expanded="false">Services<svg class="h-3.5 w-3.5 shrink-0 opacity-60 transition-transform duration-150 group-hover:translate-y-px" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></a>
         <div id="services-mega-menu" class="invisible absolute left-1/2 top-full z-50 mt-1 w-[19rem] -translate-x-1/2 translate-y-1 rounded-2xl border border-gray-200/80 bg-white/90 p-2.5 opacity-0 shadow-lg ring-1 ring-black/5 backdrop-blur-xl transition-all duration-150 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
           <p class="px-2 pb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">Popular Pages</p>
@@ -126,12 +143,15 @@
           <a href="/rehearsal-membership-pricing-edmonton.html" class="mt-1 block rounded-xl px-3 py-2 text-sm font-semibold text-gray-700 transition-colors duration-150 hover:bg-gray-100/90 hover:text-gray-900 focus-visible:bg-gray-100/90 focus-visible:text-gray-900">Rehearsal Membership Pricing Edmonton</a>
         </div>
       </div>
-      <a href="/#studio" class="nav-link hover:text-purple-700">
-        Studio
-      </a>
-      <a href="/services.html" class="nav-link hover:text-purple-700">
-        Booking
-      </a>
+      <div class="relative group" data-desktop-nav-dropdown>
+        <a href="/edmonton-rehearsal-checklist.html" class="nav-link nav-dropdown-trigger hover:text-purple-700" aria-haspopup="true" aria-controls="resources-mega-menu" aria-expanded="false">Resources<svg class="h-3.5 w-3.5 shrink-0 opacity-60 transition-transform duration-150 group-hover:translate-y-px" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></a>
+        <div id="resources-mega-menu" class="invisible absolute left-1/2 top-full z-50 mt-1 w-[18rem] -translate-x-1/2 translate-y-1 rounded-2xl border border-gray-200/80 bg-white/90 p-2.5 opacity-0 shadow-lg ring-1 ring-black/5 backdrop-blur-xl transition-all duration-150 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+          <p class="px-2 pb-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">Helpful Resources</p>
+          <a href="/edmonton-rehearsal-checklist.html" class="block rounded-xl px-3 py-2 text-sm font-semibold text-gray-700 transition-colors duration-150 hover:bg-gray-100/90 hover:text-gray-900 focus-visible:bg-gray-100/90 focus-visible:text-gray-900">Edmonton Rehearsal Checklist</a>
+          <a href="/do-i-need-gear-to-rehearse.html" class="block rounded-xl px-3 py-2 text-sm font-semibold text-gray-700 transition-colors duration-150 hover:bg-gray-100/90 hover:text-gray-900 focus-visible:bg-gray-100/90 focus-visible:text-gray-900">Do I Need Gear to Rehearse?</a>
+          <a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="mt-1 block rounded-xl px-3 py-2 text-sm font-semibold text-gray-700 transition-colors duration-150 hover:bg-gray-100/90 hover:text-gray-900 focus-visible:bg-gray-100/90 focus-visible:text-gray-900">Hourly vs Minimum-Block Rentals</a>
+        </div>
+      </div>
     </nav>
 
 <!-- Clean Right Section with Social Icons -->
@@ -141,7 +161,7 @@
          data-analytics-category="Header"
          data-analytics-label="Desktop Header CTA"
          class="inline-flex items-center rounded-full bg-black px-6 py-2.5 text-base font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800">
-        Book Now
+        Check Availability
       </a>
       <!-- Social Icons -->
       <div class="flex items-center gap-2 rounded-full border border-gray-200/70 bg-white/60 px-2 py-1">
@@ -177,7 +197,7 @@
     <!-- Mobile Menu Header -->
     <div class="flex items-center justify-between p-4 sm:p-5 border-b border-gray-200">
       <div class="flex items-center space-x-3">
-        <img src="assets/images/otvibez.png" alt="OT Vibez Studio" class="h-9 w-auto">
+        <img src="assets/images/otvibez.png" alt="OT Vibez Studio" class="h-9 w-auto" loading="lazy" decoding="async" width="143" height="133">
       </div>
       <button id="mobile-close" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200" aria-label="Close menu">
         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -235,40 +255,30 @@
         </div>
       </li>
       <li>
-        <a href="/#studio" class="mobile-nav-link group">
+        <a href="/edmonton-rehearsal-checklist.html" class="mobile-nav-link group">
           <div class="flex items-center space-x-4 p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-100 hover:border-green-200 transition-all duration-200">
             <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors duration-200">
               <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 18.75h15M6.75 4.5h10.5a2.25 2.25 0 012.25 2.25v8.25a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 15V6.75A2.25 2.25 0 016.75 4.5zM8.25 8.25h7.5"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 5.25h16M4 9.75h16M4 14.25h10M4 18.75h10"/>
               </svg>
             </div>
             <div>
-              <span class="block text-base sm:text-lg font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">Studio</span>
-              <span class="block text-sm text-gray-600">Edmonton rehearsal space</span>
+              <span class="block text-base sm:text-lg font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">Resources</span>
+              <span class="block text-sm text-gray-600">Helpful booking guides</span>
             </div>
             <svg class="w-5 h-5 text-gray-400 group-hover:text-green-500 transition-colors duration-200 ml-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
             </svg>
           </div>
         </a>
-      </li>
-      <li>
-        <a href="/services.html" class="mobile-nav-link group">
-          <div class="flex items-center space-x-4 p-4 rounded-xl bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-100 hover:border-pink-200 transition-all duration-200">
-            <div class="flex-shrink-0 w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center group-hover:bg-pink-200 transition-colors duration-200">
-              <svg class="w-5 h-5 text-pink-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3.75v3M15.75 3.75v3M3.75 9.75h16.5M6 6.75h12A2.25 2.25 0 0120.25 9v9A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V9A2.25 2.25 0 016 6.75zM9 15l2 2 4-4"/>
-              </svg>
-            </div>
-            <div>
-              <span class="block text-base sm:text-lg font-semibold text-gray-900 group-hover:text-pink-700 transition-colors duration-200">Booking</span>
-              <span class="block text-sm text-gray-600">Book rehearsal time</span>
-            </div>
-            <svg class="w-5 h-5 text-gray-400 group-hover:text-pink-500 transition-colors duration-200 ml-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-            </svg>
+        <div class="ml-14 mt-2 rounded-xl border border-green-100 bg-white/90 p-2">
+          <p class="px-2 pb-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500">Helpful Resources</p>
+          <div class="space-y-1">
+            <a href="/edmonton-rehearsal-checklist.html" class="block rounded-lg px-2 py-1.5 text-xs font-semibold text-gray-700 transition hover:bg-slate-50 hover:text-slate-700">Edmonton Rehearsal Checklist</a>
+            <a href="/do-i-need-gear-to-rehearse.html" class="block rounded-lg px-2 py-1.5 text-xs font-semibold text-gray-700 transition hover:bg-slate-50 hover:text-slate-700">Do I Need Gear to Rehearse?</a>
+            <a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="block rounded-lg px-2 py-1.5 text-xs font-semibold text-gray-700 transition hover:bg-slate-50 hover:text-slate-700">Hourly vs Minimum-Block Rentals</a>
           </div>
-        </a>
+        </div>
       </li>
     </ul>
 
@@ -329,7 +339,7 @@
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3.75v3M15.75 3.75v3M3.75 9.75h16.5M6 6.75h12A2.25 2.25 0 0120.25 9v9A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V9A2.25 2.25 0 016 6.75zM9 15l2 2 4-4"/>
         </svg>
-        Book Now
+        Check Availability
       </a>
     </div>
     
@@ -357,6 +367,7 @@
   </div>
 </nav>
 
+  <script defer src="/assets/js/header-behavior.js"></script>
 
 <!-- Navigation Styles -->
 <style>
@@ -568,66 +579,26 @@
   }
 </style>
 
-<!-- Header Behavior Scripts -->
-<script defer>
-  document.addEventListener("DOMContentLoaded", () => {
-    const logoContainer = document.getElementById("logo-container");
-    const toggleBtn = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const backdrop = document.getElementById("mobile-backdrop");
-    const mobileCloseBtn = document.getElementById("mobile-close");
-    const menuLinks = document.querySelectorAll('#mobile-menu a');
-
-    // Shrink logo on scroll
-    window.addEventListener("scroll", () => {
-      if (logoContainer) {
-        logoContainer.classList.toggle("scale-90", window.scrollY > 40);
-      }
-    });
-
-    const openMenu = () => {
-      mobileMenu.classList.remove("hidden");
-      backdrop.classList.remove("hidden");
-      document.body.classList.add("overflow-hidden");
-    };
-
-    const closeMenu = () => {
-      mobileMenu.classList.add("hidden");
-      backdrop.classList.add("hidden");
-      document.body.classList.remove("overflow-hidden");
-    };
-
-    toggleBtn.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      isOpen ? closeMenu() : openMenu();
-    });
-
-    backdrop.addEventListener("click", closeMenu);
-    mobileCloseBtn.addEventListener("click", closeMenu);
-    menuLinks.forEach(link => link.addEventListener("click", closeMenu));
-  });
-</script>
-
 <!-- Full Services Catalog -->
-<section class="relative z-10 overflow-hidden bg-gradient-to-b from-white via-rose-50/35 to-white px-4 pb-16 pt-36 sm:px-6">
+<section id="podcast-page" class="relative z-10 overflow-hidden bg-gradient-to-b from-white via-rose-50/35 to-white px-4 pb-16 pt-32 sm:px-6 sm:pt-36">
   <div class="pointer-events-none absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-200/45 blur-3xl"></div>
   <div class="pointer-events-none absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 translate-y-1/3 rounded-full bg-purple-200/40 blur-3xl"></div>
 
   <div class="relative mx-auto max-w-6xl">
     <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-      <span class="mb-4 inline-flex rounded-full border border-rose-200 bg-rose-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rose-700">Podcast Room Rental Edmonton</span>
-      <nav aria-label="Breadcrumb" class="mb-3 text-[10px] text-gray-500">
+      <span class="mb-4 inline-flex rounded-full border border-rose-200 bg-rose-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rose-700">Podcast Recording Studio Edmonton</span>
+      <nav aria-label="Breadcrumb" class="mb-3 flex flex-wrap items-center justify-center gap-x-1 gap-y-1 text-xs text-gray-500">
         <a href="/" class="transition hover:text-rose-700">Home</a>
         <span class="mx-1 text-gray-400">/</span>
         <a href="/services.html" class="transition hover:text-rose-700">Services</a>
         <span class="mx-1 text-gray-400">/</span>
-        <span class="font-semibold text-rose-700">Podcast Room Rental Edmonton</span>
+        <span class="font-semibold text-rose-700">Podcast Recording Studio Edmonton</span>
       </nav>
-      <h1 class="font-heading text-2xl font-extrabold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Podcast and Video Studio Rental in Edmonton</h1>
-      <p class="mt-5 text-base text-gray-700 sm:text-lg">Record podcasts, interviews, and creator content in a flexible Edmonton studio. Choose full production with a videographer, or book the room-only setup and bring your own crew.</p>
+      <h1 class="font-heading text-2xl font-extrabold leading-tight text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">Podcast Recording Studio in Edmonton with Videographer and Full Setup</h1>
+      <p class="mt-5 text-base text-gray-700 sm:text-lg">Whether you are recording a regular informative video, music video, or podcast, OT Vibez has a curated setup for production-ready sessions. Full production includes videographer Tomiwa Ladejoh plus pro camera, sound, and lighting.</p>
       <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Podcast Hero Primary" class="inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-black">Book Full Production</a>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Podcast Hero Secondary" class="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:border-rose-300 hover:text-rose-700">Book Room Only</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Podcast Hero Primary" class="inline-flex w-full min-h-[46px] items-center justify-center rounded-full sm:w-auto bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-black">Check Availability</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Podcast Hero Secondary" class="inline-flex w-full min-h-[46px] items-center justify-center rounded-full sm:w-auto border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:border-rose-300 hover:text-rose-700">Check Availability</a>
       </div>
       <div class="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-xl border border-rose-100 bg-white/90 px-3 py-2 text-xs font-semibold text-gray-700">
         <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-rose-700">Choose full or room-only</span>
@@ -659,53 +630,175 @@
       </article>
     </div>
 
-<div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3" data-aos="fade-up" data-aos-delay="80">
-      <article class="rounded-2xl border border-rose-100 bg-rose-50/50 p-5">
-        <h2 class="font-heading text-lg font-extrabold text-gray-900">A/B Camera Setup</h2>
-        <p class="mt-2 text-sm text-gray-700">Sony FX30 + ZV-E10 coverage for clean multi-angle recordings and professional framing.</p>
+<div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="80">
+      <article class="h-full rounded-2xl border border-rose-100 bg-rose-50/50 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Broadcast-Ready Capture</h2>
+        <p class="mt-2 text-sm text-gray-700">Multi-angle production and clean framing built for podcasts, interviews, and branded creator content.</p>
       </article>
-      <article class="rounded-2xl border border-rose-100 bg-rose-50/40 p-5">
-        <h2 class="font-heading text-lg font-extrabold text-gray-900">Podcast Audio Chain</h2>
-        <p class="mt-2 text-sm text-gray-700">Rode PodMics and wireless capture options for clear voice-first sound in a treated space.</p>
+      <article class="h-full rounded-2xl border border-rose-100 bg-rose-50/40 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Voice-First Audio Clarity</h2>
+        <p class="mt-2 text-sm text-gray-700">Speech-focused audio capture in a treated environment so dialogue stays clear and consistent.</p>
       </article>
-      <article class="rounded-2xl border border-rose-100 bg-rose-50/30 p-5">
-        <h2 class="font-heading text-lg font-extrabold text-gray-900">Flexible Backdrops</h2>
-        <p class="mt-2 text-sm text-gray-700">Black, white, and greenscreen wall options with adjustable lighting for your show style.</p>
+      <article class="h-full rounded-2xl border border-rose-100 bg-rose-50/30 p-5 sm:col-span-2 lg:col-span-1">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Flexible Visual Direction</h2>
+        <p class="mt-2 text-sm text-gray-700">Switch between backdrop and lighting styles quickly to match your episode format and brand look.</p>
       </article>
     </div>
 
-    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
-      <div class="rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
-        <p class="font-semibold text-gray-900">Bring Your Own Team</p>
-        <p>Room-only option available for DIY creators.</p>
+    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="h-full rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
+        <p class="font-semibold text-gray-900">Lead Videographer Included</p>
+        <p>Tomiwa Ladejoh runs full production sessions for video podcasts, interview formats, and artist content.</p>
       </div>
-      <div class="rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
-        <p class="font-semibold text-gray-900">Full Production Option</p>
-        <p>Need support? Book with pro videographer included.</p>
-      </div>
-      <div class="hidden rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700 sm:block">
+      <div class="h-full rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
         <p class="font-semibold text-gray-900">Flexible Visual Setup</p>
-        <p>Choose black, white, or greenscreen backgrounds.</p>
+        <p>Black wall, white wall, or greenscreen wall with stage and sun lamp color options.</p>
+      </div>
+      <div class="h-full rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700 sm:col-span-2 lg:col-span-1">
+        <p class="font-semibold text-gray-900">Bring Your Own Decor</p>
+        <p>Furniture is included, and you can bring your own decor or props to match your brand style.</p>
       </div>
     </div>
-    <details class="mt-2 sm:hidden rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
-      <summary class="cursor-pointer font-semibold text-rose-700">+ More</summary>
-      <div class="mt-2">
-        <p class="font-semibold text-gray-900">Flexible Visual Setup</p>
-        <p>Choose black, white, or greenscreen backgrounds.</p>
+
+    <section class="mt-8 rounded-2xl border border-rose-200 bg-white/95 p-5 sm:p-6" data-aos="fade-up" data-aos-delay="110" aria-label="Podcast studio amenities and gear">
+      <h2 class="font-heading text-2xl font-extrabold text-gray-900">Amenities and Included Production Gear</h2>
+      <p class="mt-2 text-sm text-gray-700">Full video podcast production includes a videographer, camera setup, audio chain, lighting, and in-room set options.</p>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <article class="h-full rounded-xl border border-rose-100 bg-rose-50/40 p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Camera Setup</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>Sony FX30 A Camera</li>
+            <li>Sony ZV-E10 B Camera</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-rose-50/40 p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Sound</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>2 x Rode PodMic Cardioid Dynamic Broadcast Microphones</li>
+            <li>2 x DJI Wireless Mic 2</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-rose-50/40 p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Lighting</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>SmallRig RC120D 120W COB LED Video Light</li>
+            <li>NEEWER CB100 100W LED Video Light</li>
+            <li>Stage Lights (Multi Color)</li>
+            <li>Sun Lamp (Multi Color)</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-rose-50/40 p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Background + Furniture</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>Backgrounds: Black Wall, Greenscreen Wall, White Wall</li>
+            <li>Black Leather Couch (2-Seater)</li>
+            <li>IKEA Black LADOM Tray Side Table</li>
+            <li>Modern White Wooden Mini Round Side Table with Tiered Storage Shelf</li>
+            <li>Bring your own furniture/decor if preferred</li>
+          </ul>
+        </article>
       </div>
-    </details>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-rose-200 bg-gradient-to-r from-white to-rose-50/40 p-5 sm:p-6" data-aos="fade-up" data-aos-delay="115" aria-label="Deliverables booking rules and pricing">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <article class="h-full rounded-xl border border-rose-100 bg-white p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">What You Get</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>Professionally captured A/B camera footage</li>
+            <li>Multi-mic audio recorded for spoken content clarity</li>
+            <li>Lighting and background setup prepared before session start</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-white p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Booking Rules</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>Sessions are booked in 1-hour blocks</li>
+            <li>Editing is optional and billed 1:1 with usable content</li>
+            <li>1 hour usable content equals 1 hour editing time</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-white p-4 md:col-span-2 xl:col-span-1">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Clear Pricing</h3>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-xs sm:text-sm">
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">1 hr</p><p class="text-rose-800">CA$195</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">2 hr</p><p class="text-rose-800">CA$390</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">3 hr</p><p class="text-rose-800">CA$585</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">4 hr</p><p class="text-rose-800">CA$780</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">5 hr</p><p class="text-rose-800">CA$975</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">6 hr</p><p class="text-rose-800">CA$1,170</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">7 hr</p><p class="text-rose-800">CA$1,365</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">8 hr</p><p class="text-rose-800">CA$1,560</p></div>
+          </div>
+          <p class="mt-2 text-xs text-gray-600">Editing add-on: CA$50/hour.</p>
+        </article>
+      </div>
+      <div class="mt-4 flex flex-col gap-2 sm:flex-row">
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-full bg-rose-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-rose-800 sm:w-auto">Check Availability</a>
+        <a href="/services.html" class="inline-flex w-full items-center justify-center rounded-full border border-rose-300 bg-white px-5 py-2.5 text-sm font-semibold text-rose-700 transition hover:border-rose-400 sm:w-auto">Compare All Services</a>
+      </div>
+    </section>
+
+    <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50/60 p-4 sm:p-5" data-helpful-guides-block>
+  <p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-700">Helpful Booking Guides</p>
+  <p class="mt-1 text-sm text-gray-700">Neutral planning resources for musicians and creators comparing rehearsal and recording options.</p>
+  <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+    <a href="/edmonton-rehearsal-checklist.html" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300">Edmonton Rehearsal Checklist</a>
+    <a href="/do-i-need-gear-to-rehearse.html" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300">Do I Need Gear to Rehearse?</a>
+    <a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300">Hourly Rehearsal vs Minimum-Block Rentals</a>
+  </div>
+</div>
+<script>
+  (function () {
+    if (window.__otvibezHelpfulGuidesInitialized) return;
+    window.__otvibezHelpfulGuidesInitialized = true;
+
+    function normalizePath(path) {
+      return (path || "").replace(/\/+$/, "") || "/";
+    }
+
+    function applyHelpfulGuidesVisibility() {
+      var currentPath = normalizePath(window.location.pathname);
+      var blocks = document.querySelectorAll("[data-helpful-guides-block]");
+      blocks.forEach(function (block) {
+        var links = block.querySelectorAll("a[href]");
+        links.forEach(function (link) {
+          var href = link.getAttribute("href");
+          if (!href || href.charAt(0) !== "/") return;
+          if (normalizePath(href) === currentPath) {
+            link.style.display = "none";
+          }
+        });
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", applyHelpfulGuidesVisibility, { once: true });
+    } else {
+      applyHelpfulGuidesVisibility();
+    }
+  })();
+</script>
+
 
     <div class="mt-10 rounded-2xl border border-rose-200 bg-gradient-to-b from-white to-rose-50/45 p-5 sm:p-6" data-aos="fade-up" data-aos-delay="120">
       <h2 class="font-heading text-2xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
       <div class="mt-4 space-y-3">
         <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
-          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Do you offer podcast room rental in Edmonton without a videographer?</summary>
-          <p class="mt-2 text-sm text-gray-700">Yes. You can book our Video & Podcast Space option and bring your own production team.</p>
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Do you offer a podcast recording studio in Edmonton without a videographer?</summary>
+          <p class="mt-2 text-sm text-gray-700">Yes. You can book our room-only video and podcast setup and bring your own production team.</p>
         </details>
         <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
-          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Can OT Vibez handle full podcast and video production?</summary>
-          <p class="mt-2 text-sm text-gray-700">Yes. Our full package includes a professional videographer and complete setup for recording.</p>
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">What is included in full video podcast production?</summary>
+          <p class="mt-2 text-sm text-gray-700">Full production includes videographer Tomiwa Ladejoh, Sony FX30 + Sony ZV-E10 camera setup, pro microphones, wireless mics, and studio lighting with multiple background options.</p>
+        </details>
+        <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">What are your booking and editing rules?</summary>
+          <p class="mt-2 text-sm text-gray-700">Sessions are booked in 1-hour blocks. Editing is available as an add-on at CA$50/hour, measured 1:1 with usable content.</p>
+        </details>
+        <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">How much does podcast video production cost?</summary>
+          <p class="mt-2 text-sm text-gray-700">Pricing starts at CA$195 for 1 hour and scales to CA$1,560 for 8 hours, with transparent hourly increments.</p>
         </details>
         <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
           <summary class="cursor-pointer text-sm font-semibold text-gray-900">What basic home podcast setup do you recommend for beginners?</summary>
@@ -799,9 +892,9 @@
       <div class="space-y-4 lg:col-span-4">
         <span class="type-label inline-flex items-center rounded-full border border-purple-200/70 bg-white/70 px-3 py-1 text-purple-700">OT Vibez Studio</span>
         <h2 class="type-subhead text-gray-900">Ready for your next rehearsal?</h2>
-        <p class="max-w-xl text-sm leading-relaxed text-gray-700">Book your studio time in minutes and keep your session focused on performance.</p>
+        <p class="max-w-xl text-sm leading-relaxed text-gray-700">Check availability in minutes and keep your session focused on performance.</p>
         <div class="flex flex-wrap items-center gap-2">
-          <a href="/services.html" class="inline-flex items-center rounded-lg bg-gradient-to-r from-purple-700 to-fuchsia-600 px-4 py-2 text-xs font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 w-full sm:w-auto justify-center">Book Now</a>
+          <a href="/services.html" class="inline-flex items-center rounded-lg bg-gradient-to-r from-purple-700 to-fuchsia-600 px-4 py-2 text-xs font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 w-full sm:w-auto justify-center">Check Availability</a>
           <a href="mailto:otvibezstudio@gmail.com" class="hidden sm:inline-flex items-center rounded-lg border border-gray-300/80 bg-white/70 px-4 py-2 text-xs font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700 w-full sm:w-auto justify-center">Email Studio</a>
         </div>
         <a href="mailto:otvibezstudio@gmail.com" class="sm:hidden inline-flex text-[11px] font-medium text-gray-500 underline underline-offset-2 transition hover:text-purple-700">Email studio</a>
@@ -819,6 +912,9 @@
                 <li><a href="/band-rehearsal-space-edmonton.html" class="transition hover:text-purple-700">Band Rehearsal Space</a></li>
                 <li><a href="/music-video-studio-edmonton.html" class="transition hover:text-purple-700">Music Video Studio</a></li>
                 <li><a href="/rehearsal-membership-pricing-edmonton.html" class="transition hover:text-purple-700">Membership Pricing</a></li>
+                <li><a href="/edmonton-rehearsal-checklist.html" class="transition hover:text-purple-700">Edmonton Rehearsal Checklist</a></li>
+                <li><a href="/do-i-need-gear-to-rehearse.html" class="transition hover:text-purple-700">Do I Need Gear to Rehearse?</a></li>
+                <li><a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="transition hover:text-purple-700">Hourly vs Minimum-Block Rentals</a></li>
               </ul>
             </details>
             <details class="rounded-xl border border-gray-200/80 bg-white/70 px-3 py-2">
@@ -826,6 +922,9 @@
               <ul class="mt-2 space-y-2 text-sm font-medium text-gray-700">
                 <li><a href="/#studio" class="transition hover:text-purple-700">Edmonton Rehearsal Space</a></li>
                 <li><a href="/#faq" class="transition hover:text-purple-700">Studio FAQs</a></li>
+                <li><a href="/edmonton-rehearsal-checklist.html" class="transition hover:text-purple-700">Edmonton Rehearsal Checklist</a></li>
+                <li><a href="/do-i-need-gear-to-rehearse.html" class="transition hover:text-purple-700">Do I Need Gear to Rehearse?</a></li>
+                <li><a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="transition hover:text-purple-700">Hourly vs Minimum-Block Rentals</a></li>
                 <li><a href="/privacy.html" class="transition hover:text-purple-700">Privacy Policy</a></li>
               </ul>
             </details>
@@ -840,6 +939,9 @@
                 <li><a href="/band-rehearsal-space-edmonton.html" class="transition hover:text-purple-700">Band Rehearsal Space</a></li>
                 <li><a href="/music-video-studio-edmonton.html" class="transition hover:text-purple-700">Music Video Studio</a></li>
                 <li><a href="/rehearsal-membership-pricing-edmonton.html" class="transition hover:text-purple-700">Membership Pricing</a></li>
+                <li><a href="/edmonton-rehearsal-checklist.html" class="transition hover:text-purple-700">Edmonton Rehearsal Checklist</a></li>
+                <li><a href="/do-i-need-gear-to-rehearse.html" class="transition hover:text-purple-700">Do I Need Gear to Rehearse?</a></li>
+                <li><a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="transition hover:text-purple-700">Hourly vs Minimum-Block Rentals</a></li>
               </ul>
             </div>
             <div class="rounded-xl border border-gray-200/80 bg-white/70 px-3 py-3">
@@ -847,6 +949,9 @@
               <ul class="space-y-2 text-sm font-medium text-gray-700">
                 <li><a href="/#studio" class="transition hover:text-purple-700">Edmonton Rehearsal Space</a></li>
                 <li><a href="/#faq" class="transition hover:text-purple-700">Studio FAQs</a></li>
+                <li><a href="/edmonton-rehearsal-checklist.html" class="transition hover:text-purple-700">Edmonton Rehearsal Checklist</a></li>
+                <li><a href="/do-i-need-gear-to-rehearse.html" class="transition hover:text-purple-700">Do I Need Gear to Rehearse?</a></li>
+                <li><a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="transition hover:text-purple-700">Hourly vs Minimum-Block Rentals</a></li>
                 <li><a href="/privacy.html" class="transition hover:text-purple-700">Privacy Policy</a></li>
               </ul>
             </div>
@@ -898,21 +1003,15 @@
 </script>
 <!-- Sticky Mobile Booking CTA -->
 <div class="fixed inset-x-0 z-40 px-3 md:hidden pointer-events-none" style="bottom: env(safe-area-inset-bottom);">
-  <a id="mobile-sticky-book" href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4"
+  <a id="mobile-sticky-book" href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V"
      target="_blank" rel="noopener noreferrer"
      onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Mobile Sticky CTA' }); }"
      class="pointer-events-auto mx-auto inline-flex w-full max-w-xl items-center justify-center rounded-full bg-[#E1306C] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_10px_26px_rgba(225,48,108,0.35)] transition-all duration-300 hover:bg-[#c51d58]">
-    See Availability
+    Check Availability
   </a>
 </div>
 <!-- AOS (Animate on Scroll) -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    once: true,
-    duration: 800
-  });
-</script>
+<script defer src="/assets/js/aos-init.js"></script>
 
 <!-- Structured Data for SEO -->
 <script type="application/ld+json">
@@ -920,7 +1019,7 @@
   "@context": "https://schema.org",
   "@type": "MusicVenue",
   "name": "OT Vibez Studio",
-  "description": "Podcast and video studio rental services in Edmonton with full production and room-only options.",
+  "description": "Podcast recording studio services in Edmonton with videographer-led production, A/B camera setup, and clear hourly pricing.",
   "image": "https://otvibez.com/assets/images/otvibez.png",
   "telephone": "+1-780-522-1807",
   "email": "otvibezstudio@gmail.com",
@@ -962,8 +1061,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Video & Podcast Production",
-  "serviceType": "Podcast and Video Studio Rental",
+  "name": "Podcast Recording Studio Edmonton",
+  "serviceType": "Video Podcast Production",
   "provider": {
     "@type": "MusicVenue",
     "name": "OT Vibez Studio",
@@ -989,18 +1088,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Do you offer podcast room rental in Edmonton without a videographer?",
+      "name": "Do you offer a podcast recording studio in Edmonton without a videographer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. You can book our Video and Podcast Space option and bring your own production team."
+        "text": "Yes. You can book our room-only video and podcast setup and bring your own production team."
       }
     },
     {
       "@type": "Question",
-      "name": "Can OT Vibez handle full podcast and video production?",
+      "name": "What is included in full video podcast production?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Our full package includes a professional videographer and complete setup for recording."
+        "text": "Full production includes videographer Tomiwa Ladejoh, Sony FX30 and Sony ZV-E10 camera setup, professional microphones, wireless mics, and studio lighting with multiple background options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your booking and editing rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sessions are booked in 1-hour blocks. Editing is available as an add-on at CA$50 per hour, measured 1:1 with usable content."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does podcast video production cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing starts at CA$195 for 1 hour and scales to CA$1,560 for 8 hours, with transparent hourly increments."
       }
     },
     {
@@ -1042,7 +1157,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Podcast Room Rental Edmonton",
+      "name": "Podcast Recording Studio Edmonton",
       "item": "https://otvibez.com/podcast-room-rental-edmonton.html"
     }
   ]
@@ -1103,6 +1218,13 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
