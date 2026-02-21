@@ -30,12 +30,20 @@ function initNavDropdownA11y() {
 
     setPanelState(trigger, panel, false);
 
-    group.addEventListener('mouseenter', function () {
-      setPanelState(trigger, panel, true);
-    });
+    trigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      var isOpen = trigger.getAttribute('aria-expanded') === 'true';
 
-    group.addEventListener('mouseleave', function () {
-      setPanelState(trigger, panel, false);
+      triggers.forEach(function (otherTrigger) {
+        if (otherTrigger === trigger) return;
+        var otherGroup = otherTrigger.closest('.group');
+        if (!otherGroup) return;
+        var otherPanel = otherGroup.querySelector('div[class*="absolute"]');
+        if (!otherPanel) return;
+        setPanelState(otherTrigger, otherPanel, false);
+      });
+
+      setPanelState(trigger, panel, !isOpen);
     });
 
     trigger.addEventListener('keydown', function (event) {

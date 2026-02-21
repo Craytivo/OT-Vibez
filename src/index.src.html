@@ -59,7 +59,7 @@
     // Single source of truth for homepage trust metrics used in UI + schema.
     window.OTV_TRUST_METRICS = {
       googleRating: "5.0",
-      reviewCount: "47",
+      reviewCount: "49",
       artistsServed: "200+"
     };
   </script>
@@ -67,7 +67,7 @@
   <!-- Local Business Schema -->
   <script>
     (function () {
-      var metrics = window.OTV_TRUST_METRICS || { googleRating: "5.0", reviewCount: "47" };
+      var metrics = window.OTV_TRUST_METRICS || { googleRating: "5.0", reviewCount: "49" };
       var schema = {
         "@context": "https://schema.org",
         "@type": "MusicVenue",
@@ -938,7 +938,7 @@
     <h1 class="hero-title font-heading font-bold text-gray-900 mb-6 sm:mb-7">
       <span class="block mb-4 sm:mb-5">Rehearse. Record. Create.</span>
       <span class="block text-center whitespace-normal overflow-visible min-h-[4.5rem] sm:min-h-[5rem] flex items-center justify-center transition-all duration-300 ease-in-out max-w-full px-2 sm:px-4">
-        <span id="typed-text" class="font-heading break-words text-balance w-full max-w-4xl mx-auto text-xl sm:text-2xl md:text-3xl leading-snug font-bold text-sky-600"></span>
+        <span id="typed-text" class="font-heading break-words text-balance w-full max-w-4xl mx-auto text-xl sm:text-2xl md:text-3xl leading-snug font-bold text-violet-700"></span>
       </span>
     </h1>
 
@@ -1105,7 +1105,7 @@
 <!-- Hero Initialization: typewriter + AOS (deduped) -->
 <script>
   (function () {
-    const HERO_COLOR_CLASSES = ["text-rose-600", "text-sky-600", "text-emerald-600", "text-indigo-600", "text-amber-600"];
+    const HERO_COLOR_CLASSES = ["text-violet-700", "text-emerald-700", "text-sky-700"];
 
     const onReady = (fn) => {
       if (document.readyState === "loading") {
@@ -1144,9 +1144,9 @@
       if (!typedText) return;
 
       const phrases = [
-        { text: "Studio ready in minutes.", color: "text-rose-600" },
-        { text: "No setup. Just plug in and play.", color: "text-sky-600" },
-        { text: "Book online and start fast.", color: "text-amber-600" }
+        { text: "Studio ready in minutes.", color: "text-violet-700" },
+        { text: "No setup. Just plug in and play.", color: "text-emerald-700" },
+        { text: "Book online and start fast.", color: "text-sky-700" }
       ];
 
       const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1351,7 +1351,7 @@
           <p class="text-[11px] uppercase tracking-[0.1em] text-slate-500">Google Rating</p>
         </div>
         <div class="rounded-xl border border-sky-100 bg-white/90 p-3">
-          <p class="text-xl font-heading font-extrabold text-slate-900" data-trust-metric="reviewCount">47</p>
+          <p class="text-xl font-heading font-extrabold text-slate-900" data-trust-metric="reviewCount">49</p>
           <p class="text-[11px] uppercase tracking-[0.1em] text-slate-500">Reviews</p>
         </div>
         <div class="rounded-xl border border-sky-100 bg-white/90 p-3">
@@ -1715,7 +1715,7 @@
         <span class="font-semibold text-gray-900">Google Rating:</span>
         <span class="font-semibold text-amber-600"><span data-trust-metric="googleRating">5.0</span>/5</span>
         <span class="text-gray-400">|</span>
-        <span><span data-trust-metric="reviewCount">47</span> reviews</span>
+        <span><span data-trust-metric="reviewCount">49</span> reviews</span>
         <span class="text-gray-400">|</span>
         <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="font-semibold text-rose-700 hover:text-rose-800">View on Google</a>
       </div>
@@ -2027,7 +2027,7 @@
 
 <script>
   (function () {
-    var metrics = window.OTV_TRUST_METRICS || { googleRating: "5.0", reviewCount: "47", artistsServed: "200+" };
+    var metrics = window.OTV_TRUST_METRICS || { googleRating: "5.0", reviewCount: "49", artistsServed: "200+" };
     var nodes = document.querySelectorAll("[data-trust-metric]");
     nodes.forEach(function (node) {
       var key = node.getAttribute("data-trust-metric");

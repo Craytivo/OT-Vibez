@@ -2,7 +2,6 @@
   var initialized = false;
   var logoScrollBound = false;
   var focusBound = false;
-  var desktopDropdownBound = false;
 
   function initHeaderBehavior() {
     if (initialized) return;
@@ -83,41 +82,9 @@
     focusBound = true;
   }
 
-  function bindDesktopDropdownAria() {
-    if (desktopDropdownBound) return;
-
-    var dropdowns = document.querySelectorAll('[data-desktop-nav-dropdown]');
-    if (!dropdowns.length) return;
-
-    dropdowns.forEach(function (dropdown) {
-      var trigger = dropdown.querySelector('.nav-dropdown-trigger');
-      if (!trigger) return;
-
-      var setExpanded = function (isExpanded) {
-        trigger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-      };
-
-      dropdown.addEventListener('mouseenter', function () { setExpanded(true); });
-      dropdown.addEventListener('mouseleave', function () { setExpanded(false); });
-      dropdown.addEventListener('focusin', function () { setExpanded(true); });
-      dropdown.addEventListener('focusout', function (event) {
-        if (!dropdown.contains(event.relatedTarget)) {
-          setExpanded(false);
-        }
-      });
-
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') setExpanded(false);
-      });
-    });
-
-    desktopDropdownBound = true;
-  }
-
   function run() {
     initHeaderBehavior();
     bindMenuFocusManagement();
-    bindDesktopDropdownAria();
   }
 
   if (document.readyState === 'loading') {
