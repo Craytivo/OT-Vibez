@@ -2,68 +2,49 @@
 <html lang="en">
   <head>
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMJ5ZCG9CX"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-ZMJ5ZCG9CX');
-  </script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "shimdl0fzx");
-  </script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.__otvTracking = {
+    gtagId: "G-ZMJ5ZCG9CX",
+    clarityId: "shimdl0fzx"
+  };
+</script>
+<script defer src="/assets/js/telemetry-init.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Page Title & SEO -->
-  <title>Podcast Room Rental Edmonton | Video + Podcast Studio | OT Vibez</title>
-  <meta name="description" content="Rent a podcast room in Edmonton at OT Vibez. Book full video production with videographer or room-only podcast/video setup with flexible hourly pricing." />
-  <meta name="keywords" content="podcast room rental Edmonton, podcast studio Edmonton, video podcast production Edmonton, content studio rental Edmonton, OT Vibez podcast" />
+  <title>Podcast Recording Studio Edmonton | Video Podcast Production | OT Vibez</title>
+  <meta name="description" content="Book a podcast recording studio in Edmonton at OT Vibez. Full video podcast production includes videographer, A/B cameras, pro audio, lighting, and clear hourly pricing." />
+  <meta name="keywords" content="podcast recording studio Edmonton, video podcast production Edmonton, podcast studio Edmonton, podcast room rental Edmonton, OT Vibez podcast studio" />
   <link rel="canonical" href="https://otvibez.com/podcast-room-rental-edmonton.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Podcast Room Rental Edmonton | OT Vibez" />
-  <meta property="og:description" content="Book Edmonton podcast and video studio rental with full production or room-only options." />
+  <meta property="og:title" content="Podcast Recording Studio Edmonton | OT Vibez" />
+  <meta property="og:description" content="Video podcast production in Edmonton with videographer, A/B camera setup, pro audio, and clear hourly pricing." />
   <meta property="og:url" content="https://otvibez.com/podcast-room-rental-edmonton.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://otvibez.com/assets/images/otvibez.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Podcast Room Rental Edmonton | OT Vibez" />
-  <meta name="twitter:description" content="Edmonton podcast room rental with pro camera/audio setup and optional videographer support." />
+  <meta name="twitter:title" content="Podcast Recording Studio Edmonton | OT Vibez" />
+  <meta name="twitter:description" content="Book a podcast recording studio in Edmonton with full videographer-led setup, A/B cameras, and pro audio." />
   <meta name="twitter:image" content="https://otvibez.com/assets/images/otvibez.png" />
 
   <!-- Favicon -->
   <link rel="icon" href="assets/images/otvibez-white-bg.png" type="image/x-icon" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Tailwind CSS + Custom Theme -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            heading: ['Poppins', 'sans-serif'],
-            body: ['"Source Sans Pro"', 'sans-serif'],
-          },
-          colors: {
-            primary: '#000000',
-            accent: '#5f5f5f',
-          },
-        },
-      }
-    };
-  </script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
   <!-- Base Fallback Font Style -->
   <style>
@@ -73,7 +54,7 @@
   </style>
 
   <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="/assets/vendor/aos-2.3.4.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <style>
     @media (min-width: 1024px) {
       html { font-size: 103.125%; }
@@ -84,6 +65,7 @@
 <body class="min-h-screen flex flex-col bg-white text-gray-800">
 
   <!-- @include partials/header.html -->
+  <script defer src="/assets/js/header-behavior.js"></script>
 
 <!-- Navigation Styles -->
 <style>
@@ -295,66 +277,26 @@
   }
 </style>
 
-<!-- Header Behavior Scripts -->
-<script defer>
-  document.addEventListener("DOMContentLoaded", () => {
-    const logoContainer = document.getElementById("logo-container");
-    const toggleBtn = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const backdrop = document.getElementById("mobile-backdrop");
-    const mobileCloseBtn = document.getElementById("mobile-close");
-    const menuLinks = document.querySelectorAll('#mobile-menu a');
-
-    // Shrink logo on scroll
-    window.addEventListener("scroll", () => {
-      if (logoContainer) {
-        logoContainer.classList.toggle("scale-90", window.scrollY > 40);
-      }
-    });
-
-    const openMenu = () => {
-      mobileMenu.classList.remove("hidden");
-      backdrop.classList.remove("hidden");
-      document.body.classList.add("overflow-hidden");
-    };
-
-    const closeMenu = () => {
-      mobileMenu.classList.add("hidden");
-      backdrop.classList.add("hidden");
-      document.body.classList.remove("overflow-hidden");
-    };
-
-    toggleBtn.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      isOpen ? closeMenu() : openMenu();
-    });
-
-    backdrop.addEventListener("click", closeMenu);
-    mobileCloseBtn.addEventListener("click", closeMenu);
-    menuLinks.forEach(link => link.addEventListener("click", closeMenu));
-  });
-</script>
-
 <!-- Full Services Catalog -->
-<section class="relative z-10 overflow-hidden bg-gradient-to-b from-white via-rose-50/35 to-white px-4 pb-16 pt-36 sm:px-6">
+<section id="podcast-page" class="relative z-10 overflow-hidden bg-gradient-to-b from-white via-rose-50/35 to-white px-4 pb-16 pt-32 sm:px-6 sm:pt-36">
   <div class="pointer-events-none absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-200/45 blur-3xl"></div>
   <div class="pointer-events-none absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 translate-y-1/3 rounded-full bg-purple-200/40 blur-3xl"></div>
 
   <div class="relative mx-auto max-w-6xl">
     <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-      <span class="mb-4 inline-flex rounded-full border border-rose-200 bg-rose-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rose-700">Podcast Room Rental Edmonton</span>
-      <nav aria-label="Breadcrumb" class="mb-3 text-[10px] text-gray-500">
+      <span class="mb-4 inline-flex rounded-full border border-rose-200 bg-rose-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-rose-700">Podcast Recording Studio Edmonton</span>
+      <nav aria-label="Breadcrumb" class="mb-3 flex flex-wrap items-center justify-center gap-x-1 gap-y-1 text-xs text-gray-500">
         <a href="/" class="transition hover:text-rose-700">Home</a>
         <span class="mx-1 text-gray-400">/</span>
         <a href="/services.html" class="transition hover:text-rose-700">Services</a>
         <span class="mx-1 text-gray-400">/</span>
-        <span class="font-semibold text-rose-700">Podcast Room Rental Edmonton</span>
+        <span class="font-semibold text-rose-700">Podcast Recording Studio Edmonton</span>
       </nav>
-      <h1 class="font-heading text-2xl font-extrabold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Podcast and Video Studio Rental in Edmonton</h1>
-      <p class="mt-5 text-base text-gray-700 sm:text-lg">Record podcasts, interviews, and creator content in a flexible Edmonton studio. Choose full production with a videographer, or book the room-only setup and bring your own crew.</p>
+      <h1 class="font-heading text-2xl font-extrabold leading-tight text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">Podcast Recording Studio in Edmonton with Videographer and Full Setup</h1>
+      <p class="mt-5 text-base text-gray-700 sm:text-lg">Whether you are recording a regular informative video, music video, or podcast, OT Vibez has a curated setup for production-ready sessions. Full production includes videographer Tomiwa Ladejoh plus pro camera, sound, and lighting.</p>
       <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Podcast Hero Primary" class="inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-black">Book Full Production</a>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Podcast Hero Secondary" class="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:border-rose-300 hover:text-rose-700">Book Room Only</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Podcast Hero Primary" class="inline-flex w-full min-h-[46px] items-center justify-center rounded-full sm:w-auto bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-black">Check Availability</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-seo-track="cta" data-seo-label="Podcast Hero Secondary" class="inline-flex w-full min-h-[46px] items-center justify-center rounded-full sm:w-auto border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:border-rose-300 hover:text-rose-700">Check Availability</a>
       </div>
       <div class="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-xl border border-rose-100 bg-white/90 px-3 py-2 text-xs font-semibold text-gray-700">
         <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-rose-700">Choose full or room-only</span>
@@ -386,53 +328,135 @@
       </article>
     </div>
 
-<div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3" data-aos="fade-up" data-aos-delay="80">
-      <article class="rounded-2xl border border-rose-100 bg-rose-50/50 p-5">
-        <h2 class="font-heading text-lg font-extrabold text-gray-900">A/B Camera Setup</h2>
-        <p class="mt-2 text-sm text-gray-700">Sony FX30 + ZV-E10 coverage for clean multi-angle recordings and professional framing.</p>
+<div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="80">
+      <article class="h-full rounded-2xl border border-rose-100 bg-rose-50/50 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Broadcast-Ready Capture</h2>
+        <p class="mt-2 text-sm text-gray-700">Multi-angle production and clean framing built for podcasts, interviews, and branded creator content.</p>
       </article>
-      <article class="rounded-2xl border border-rose-100 bg-rose-50/40 p-5">
-        <h2 class="font-heading text-lg font-extrabold text-gray-900">Podcast Audio Chain</h2>
-        <p class="mt-2 text-sm text-gray-700">Rode PodMics and wireless capture options for clear voice-first sound in a treated space.</p>
+      <article class="h-full rounded-2xl border border-rose-100 bg-rose-50/40 p-5">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Voice-First Audio Clarity</h2>
+        <p class="mt-2 text-sm text-gray-700">Speech-focused audio capture in a treated environment so dialogue stays clear and consistent.</p>
       </article>
-      <article class="rounded-2xl border border-rose-100 bg-rose-50/30 p-5">
-        <h2 class="font-heading text-lg font-extrabold text-gray-900">Flexible Backdrops</h2>
-        <p class="mt-2 text-sm text-gray-700">Black, white, and greenscreen wall options with adjustable lighting for your show style.</p>
+      <article class="h-full rounded-2xl border border-rose-100 bg-rose-50/30 p-5 sm:col-span-2 lg:col-span-1">
+        <h2 class="font-heading text-lg font-extrabold text-gray-900">Flexible Visual Direction</h2>
+        <p class="mt-2 text-sm text-gray-700">Switch between backdrop and lighting styles quickly to match your episode format and brand look.</p>
       </article>
     </div>
 
-    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
-      <div class="rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
-        <p class="font-semibold text-gray-900">Bring Your Own Team</p>
-        <p>Room-only option available for DIY creators.</p>
+    <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="h-full rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
+        <p class="font-semibold text-gray-900">Lead Videographer Included</p>
+        <p>Tomiwa Ladejoh runs full production sessions for video podcasts, interview formats, and artist content.</p>
       </div>
-      <div class="rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
-        <p class="font-semibold text-gray-900">Full Production Option</p>
-        <p>Need support? Book with pro videographer included.</p>
-      </div>
-      <div class="hidden rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700 sm:block">
+      <div class="h-full rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
         <p class="font-semibold text-gray-900">Flexible Visual Setup</p>
-        <p>Choose black, white, or greenscreen backgrounds.</p>
+        <p>Black wall, white wall, or greenscreen wall with stage and sun lamp color options.</p>
+      </div>
+      <div class="h-full rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700 sm:col-span-2 lg:col-span-1">
+        <p class="font-semibold text-gray-900">Bring Your Own Decor</p>
+        <p>Furniture is included, and you can bring your own decor or props to match your brand style.</p>
       </div>
     </div>
-    <details class="mt-2 sm:hidden rounded-xl border border-rose-100 bg-white/90 px-4 py-3 text-sm text-gray-700">
-      <summary class="cursor-pointer font-semibold text-rose-700">+ More</summary>
-      <div class="mt-2">
-        <p class="font-semibold text-gray-900">Flexible Visual Setup</p>
-        <p>Choose black, white, or greenscreen backgrounds.</p>
+
+    <section class="mt-8 rounded-2xl border border-rose-200 bg-white/95 p-5 sm:p-6" data-aos="fade-up" data-aos-delay="110" aria-label="Podcast studio amenities and gear">
+      <h2 class="font-heading text-2xl font-extrabold text-gray-900">Amenities and Included Production Gear</h2>
+      <p class="mt-2 text-sm text-gray-700">Full video podcast production includes a videographer, camera setup, audio chain, lighting, and in-room set options.</p>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <article class="h-full rounded-xl border border-rose-100 bg-rose-50/40 p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Camera Setup</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>Sony FX30 A Camera</li>
+            <li>Sony ZV-E10 B Camera</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-rose-50/40 p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Sound</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>2 x Rode PodMic Cardioid Dynamic Broadcast Microphones</li>
+            <li>2 x DJI Wireless Mic 2</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-rose-50/40 p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Lighting</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>SmallRig RC120D 120W COB LED Video Light</li>
+            <li>NEEWER CB100 100W LED Video Light</li>
+            <li>Stage Lights (Multi Color)</li>
+            <li>Sun Lamp (Multi Color)</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-rose-50/40 p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Background + Furniture</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>Backgrounds: Black Wall, Greenscreen Wall, White Wall</li>
+            <li>Black Leather Couch (2-Seater)</li>
+            <li>IKEA Black LADOM Tray Side Table</li>
+            <li>Modern White Wooden Mini Round Side Table with Tiered Storage Shelf</li>
+            <li>Bring your own furniture/decor if preferred</li>
+          </ul>
+        </article>
       </div>
-    </details>
+    </section>
+
+    <section class="mt-6 rounded-2xl border border-rose-200 bg-gradient-to-r from-white to-rose-50/40 p-5 sm:p-6" data-aos="fade-up" data-aos-delay="115" aria-label="Deliverables booking rules and pricing">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <article class="h-full rounded-xl border border-rose-100 bg-white p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">What You Get</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>Professionally captured A/B camera footage</li>
+            <li>Multi-mic audio recorded for spoken content clarity</li>
+            <li>Lighting and background setup prepared before session start</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-white p-4">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Booking Rules</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+            <li>Sessions are booked in 1-hour blocks</li>
+            <li>Editing is optional and billed 1:1 with usable content</li>
+            <li>1 hour usable content equals 1 hour editing time</li>
+          </ul>
+        </article>
+        <article class="h-full rounded-xl border border-rose-100 bg-white p-4 md:col-span-2 xl:col-span-1">
+          <h3 class="font-heading text-base font-semibold text-gray-900">Clear Pricing</h3>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-xs sm:text-sm">
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">1 hr</p><p class="text-rose-800">CA$195</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">2 hr</p><p class="text-rose-800">CA$390</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">3 hr</p><p class="text-rose-800">CA$585</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">4 hr</p><p class="text-rose-800">CA$780</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">5 hr</p><p class="text-rose-800">CA$975</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">6 hr</p><p class="text-rose-800">CA$1,170</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">7 hr</p><p class="text-rose-800">CA$1,365</p></div>
+            <div class="rounded-lg border border-rose-100 bg-rose-50/40 px-2.5 py-2 text-center"><p class="font-semibold text-gray-900">8 hr</p><p class="text-rose-800">CA$1,560</p></div>
+          </div>
+          <p class="mt-2 text-xs text-gray-600">Editing add-on: CA$50/hour.</p>
+        </article>
+      </div>
+      <div class="mt-4 flex flex-col gap-2 sm:flex-row">
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center rounded-full bg-rose-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-rose-800 sm:w-auto">Check Availability</a>
+        <a href="/services.html" class="inline-flex w-full items-center justify-center rounded-full border border-rose-300 bg-white px-5 py-2.5 text-sm font-semibold text-rose-700 transition hover:border-rose-400 sm:w-auto">Compare All Services</a>
+      </div>
+    </section>
+
+    <!-- @include partials/helpful-booking-guides.html -->
 
     <div class="mt-10 rounded-2xl border border-rose-200 bg-gradient-to-b from-white to-rose-50/45 p-5 sm:p-6" data-aos="fade-up" data-aos-delay="120">
       <h2 class="font-heading text-2xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
       <div class="mt-4 space-y-3">
         <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
-          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Do you offer podcast room rental in Edmonton without a videographer?</summary>
-          <p class="mt-2 text-sm text-gray-700">Yes. You can book our Video & Podcast Space option and bring your own production team.</p>
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Do you offer a podcast recording studio in Edmonton without a videographer?</summary>
+          <p class="mt-2 text-sm text-gray-700">Yes. You can book our room-only video and podcast setup and bring your own production team.</p>
         </details>
         <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
-          <summary class="cursor-pointer text-sm font-semibold text-gray-900">Can OT Vibez handle full podcast and video production?</summary>
-          <p class="mt-2 text-sm text-gray-700">Yes. Our full package includes a professional videographer and complete setup for recording.</p>
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">What is included in full video podcast production?</summary>
+          <p class="mt-2 text-sm text-gray-700">Full production includes videographer Tomiwa Ladejoh, Sony FX30 + Sony ZV-E10 camera setup, pro microphones, wireless mics, and studio lighting with multiple background options.</p>
+        </details>
+        <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">What are your booking and editing rules?</summary>
+          <p class="mt-2 text-sm text-gray-700">Sessions are booked in 1-hour blocks. Editing is available as an add-on at CA$50/hour, measured 1:1 with usable content.</p>
+        </details>
+        <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
+          <summary class="cursor-pointer text-sm font-semibold text-gray-900">How much does podcast video production cost?</summary>
+          <p class="mt-2 text-sm text-gray-700">Pricing starts at CA$195 for 1 hour and scales to CA$1,560 for 8 hours, with transparent hourly increments.</p>
         </details>
         <details class="rounded-xl border border-rose-100 bg-white/90 p-4">
           <summary class="cursor-pointer text-sm font-semibold text-gray-900">What basic home podcast setup do you recommend for beginners?</summary>
@@ -465,21 +489,15 @@
 </script>
 <!-- Sticky Mobile Booking CTA -->
 <div class="fixed inset-x-0 z-40 px-3 md:hidden pointer-events-none" style="bottom: env(safe-area-inset-bottom);">
-  <a id="mobile-sticky-book" href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4"
+  <a id="mobile-sticky-book" href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V"
      target="_blank" rel="noopener noreferrer"
      onclick="if (typeof gtag === 'function') { gtag('event', 'book_now_click', { event_category: 'Services', event_label: 'Mobile Sticky CTA' }); }"
      class="pointer-events-auto mx-auto inline-flex w-full max-w-xl items-center justify-center rounded-full bg-[#E1306C] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_10px_26px_rgba(225,48,108,0.35)] transition-all duration-300 hover:bg-[#c51d58]">
-    See Availability
+    Check Availability
   </a>
 </div>
 <!-- AOS (Animate on Scroll) -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    once: true,
-    duration: 800
-  });
-</script>
+<script defer src="/assets/js/aos-init.js"></script>
 
 <!-- Structured Data for SEO -->
 <script type="application/ld+json">
@@ -487,7 +505,7 @@
   "@context": "https://schema.org",
   "@type": "MusicVenue",
   "name": "OT Vibez Studio",
-  "description": "Podcast and video studio rental services in Edmonton with full production and room-only options.",
+  "description": "Podcast recording studio services in Edmonton with videographer-led production, A/B camera setup, and clear hourly pricing.",
   "image": "https://otvibez.com/assets/images/otvibez.png",
   "telephone": "+1-780-522-1807",
   "email": "otvibezstudio@gmail.com",
@@ -529,8 +547,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Video & Podcast Production",
-  "serviceType": "Podcast and Video Studio Rental",
+  "name": "Podcast Recording Studio Edmonton",
+  "serviceType": "Video Podcast Production",
   "provider": {
     "@type": "MusicVenue",
     "name": "OT Vibez Studio",
@@ -556,18 +574,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Do you offer podcast room rental in Edmonton without a videographer?",
+      "name": "Do you offer a podcast recording studio in Edmonton without a videographer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. You can book our Video and Podcast Space option and bring your own production team."
+        "text": "Yes. You can book our room-only video and podcast setup and bring your own production team."
       }
     },
     {
       "@type": "Question",
-      "name": "Can OT Vibez handle full podcast and video production?",
+      "name": "What is included in full video podcast production?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Our full package includes a professional videographer and complete setup for recording."
+        "text": "Full production includes videographer Tomiwa Ladejoh, Sony FX30 and Sony ZV-E10 camera setup, professional microphones, wireless mics, and studio lighting with multiple background options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your booking and editing rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sessions are booked in 1-hour blocks. Editing is available as an add-on at CA$50 per hour, measured 1:1 with usable content."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does podcast video production cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing starts at CA$195 for 1 hour and scales to CA$1,560 for 8 hours, with transparent hourly increments."
       }
     },
     {
@@ -609,7 +643,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Podcast Room Rental Edmonton",
+      "name": "Podcast Recording Studio Edmonton",
       "item": "https://otvibez.com/podcast-room-rental-edmonton.html"
     }
   ]
@@ -670,6 +704,13 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 

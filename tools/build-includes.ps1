@@ -9,7 +9,10 @@ param(
     'podcast-room-rental-edmonton',
     'band-rehearsal-space-edmonton',
     'music-video-studio-edmonton',
-    'rehearsal-membership-pricing-edmonton'
+    'rehearsal-membership-pricing-edmonton',
+    'edmonton-rehearsal-checklist',
+    'do-i-need-gear-to-rehearse',
+    'hourly-rehearsal-vs-minimum-block-rentals'
   )
 )
 

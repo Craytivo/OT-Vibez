@@ -86,27 +86,29 @@
   function bindDesktopDropdownAria() {
     if (desktopDropdownBound) return;
 
-    var dropdown = document.querySelector('[data-desktop-services-dropdown]');
-    if (!dropdown) return;
+    var dropdowns = document.querySelectorAll('[data-desktop-nav-dropdown]');
+    if (!dropdowns.length) return;
 
-    var trigger = dropdown.querySelector('#services-menu-trigger');
-    if (!trigger) return;
+    dropdowns.forEach(function (dropdown) {
+      var trigger = dropdown.querySelector('.nav-dropdown-trigger');
+      if (!trigger) return;
 
-    var setExpanded = function (isExpanded) {
-      trigger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-    };
+      var setExpanded = function (isExpanded) {
+        trigger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      };
 
-    dropdown.addEventListener('mouseenter', function () { setExpanded(true); });
-    dropdown.addEventListener('mouseleave', function () { setExpanded(false); });
-    dropdown.addEventListener('focusin', function () { setExpanded(true); });
-    dropdown.addEventListener('focusout', function (event) {
-      if (!dropdown.contains(event.relatedTarget)) {
-        setExpanded(false);
-      }
-    });
+      dropdown.addEventListener('mouseenter', function () { setExpanded(true); });
+      dropdown.addEventListener('mouseleave', function () { setExpanded(false); });
+      dropdown.addEventListener('focusin', function () { setExpanded(true); });
+      dropdown.addEventListener('focusout', function (event) {
+        if (!dropdown.contains(event.relatedTarget)) {
+          setExpanded(false);
+        }
+      });
 
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') setExpanded(false);
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setExpanded(false);
+      });
     });
 
     desktopDropdownBound = true;

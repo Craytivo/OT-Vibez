@@ -2,20 +2,17 @@
 <html lang="en">
   <head>
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMJ5ZCG9CX"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-ZMJ5ZCG9CX');
-  </script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "shimdl0fzx");
-  </script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.__otvTracking = {
+    gtagId: "G-ZMJ5ZCG9CX",
+    clarityId: "shimdl0fzx"
+  };
+</script>
+<script defer src="/assets/js/telemetry-init.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Basic Meta -->
   <meta charset="UTF-8" />
@@ -44,26 +41,10 @@
   <link rel="icon" href="assets/images/otvibez-white-bg.png" type="image/x-icon" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400;500&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Tailwind CSS + Custom Theme -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            heading: ['Poppins', 'sans-serif'],
-            body: ['"Source Sans Pro"', 'sans-serif'],
-          },
-          colors: {
-            primary: '#000000',
-            accent: '#5f5f5f',
-          },
-        },
-      }
-    };
-  </script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
   <!-- Base Fallback Font Style -->
   <style>
@@ -73,7 +54,7 @@
   </style>
 
   <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="/assets/vendor/aos-2.3.4.css" rel="stylesheet" media="print" onload="this.media='all'" />
   <style>
     @media (min-width: 1024px) {
       html { font-size: 103.125%; }
@@ -84,6 +65,7 @@
 <body class="min-h-screen flex flex-col bg-white text-gray-800">
 
   <!-- @include partials/header.html -->
+  <script defer src="/assets/js/header-behavior.js"></script>
 
 <!-- Navigation Styles -->
 <style>
@@ -295,46 +277,6 @@
   }
 </style>
 
-<!-- Header Behavior Scripts -->
-<script defer>
-  document.addEventListener("DOMContentLoaded", () => {
-    const logoContainer = document.getElementById("logo-container");
-    const toggleBtn = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const backdrop = document.getElementById("mobile-backdrop");
-    const mobileCloseBtn = document.getElementById("mobile-close");
-    const menuLinks = document.querySelectorAll('#mobile-menu a');
-
-    // Shrink logo on scroll
-    window.addEventListener("scroll", () => {
-      if (logoContainer) {
-        logoContainer.classList.toggle("scale-90", window.scrollY > 40);
-      }
-    });
-
-    const openMenu = () => {
-      mobileMenu.classList.remove("hidden");
-      backdrop.classList.remove("hidden");
-      document.body.classList.add("overflow-hidden");
-    };
-
-    const closeMenu = () => {
-      mobileMenu.classList.add("hidden");
-      backdrop.classList.add("hidden");
-      document.body.classList.remove("overflow-hidden");
-    };
-
-    toggleBtn.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      isOpen ? closeMenu() : openMenu();
-    });
-
-    backdrop.addEventListener("click", closeMenu);
-    mobileCloseBtn.addEventListener("click", closeMenu);
-    menuLinks.forEach(link => link.addEventListener("click", closeMenu));
-  });
-</script>
-
 <!-- Full Services Catalog -->
 <section class="relative z-10 overflow-hidden bg-white px-4 pb-20 pt-36 sm:px-6">
   <div class="pointer-events-none absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-200/50 blur-3xl"></div>
@@ -351,7 +293,9 @@
         <a href="/podcast-room-rental-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Podcast Room Rental Edmonton</a>,
         <a href="/band-rehearsal-space-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Band Rehearsal Space Edmonton</a>,
         <a href="/music-video-studio-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Music Video Studio Edmonton</a>,
-        <a href="/rehearsal-membership-pricing-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Rehearsal Membership Pricing Edmonton</a>.
+        <a href="/rehearsal-membership-pricing-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Rehearsal Membership Pricing Edmonton</a>,
+        <a href="/do-i-need-gear-to-rehearse.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Do I Need Gear to Rehearse?</a>,
+        <a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Hourly Rehearsal vs Minimum-Block Rentals</a>.
       </p>
       <div class="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-xl border border-purple-100 bg-white/85 px-3 py-2 text-xs font-semibold text-gray-700">
         <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-purple-700">1. Pick a service</span>
@@ -371,6 +315,8 @@
       <p class="mt-2 text-[11px] text-gray-600">Affiliate links. Prices and availability may change.</p>
     </div>
 
+    <!-- @include partials/helpful-booking-guides.html -->
+
     <div class="mt-8 flex flex-wrap items-center justify-center gap-2.5" data-aos="fade-up" data-aos-delay="80">
       <button type="button" class="service-filter-btn rounded-full bg-gray-900 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white" data-filter="all" aria-pressed="true">All</button>
       <button type="button" class="service-filter-btn rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-700 transition hover:border-purple-300 hover:text-purple-700" data-filter="rehearsal" aria-pressed="false">Rehearsal</button>
@@ -387,8 +333,8 @@
       <article id="starter-rehearsal" class="service-card featured-service featured-rank-1 group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
         <div class="mb-3 flex flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:justify-between">
           <div class="flex flex-wrap items-center gap-1.5">
-            <span class="whitespace-nowrap rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
-            <span class="whitespace-nowrap rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">On Sale</span>
+            <span class="rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
+            <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">On Sale</span>
           </div>
           <span class="shrink-0 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">2 hr</span>
         </div>
@@ -406,7 +352,7 @@
           <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">CA$70.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4" target="_blank" rel="noopener noreferrer" data-service-name="2-Hour Rehearsal Session" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Rehearsal</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/XE6EZBCGU5WK37J4KFJKQZF4" target="_blank" rel="noopener noreferrer" data-service-name="2-Hour Rehearsal Session" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
@@ -428,7 +374,7 @@
           <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">From CA$270.00/mo</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Membership</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/FHA4D47WMC3NYVV4FRBDKY4J" target="_blank" rel="noopener noreferrer" data-service-name="Monthly Membership - Rehearsal Space" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Start Membership</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/FHA4D47WMC3NYVV4FRBDKY4J" target="_blank" rel="noopener noreferrer" data-service-name="Monthly Membership - Rehearsal Space" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
@@ -458,7 +404,7 @@
           <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">From CA$270.00/mo</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Membership</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VCXXIL2ZOHMOUW5XFXZHSU7Q" target="_blank" rel="noopener noreferrer" data-service-name="Yearly Membership - Rehearsal Space" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Start Yearly Plan</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VCXXIL2ZOHMOUW5XFXZHSU7Q" target="_blank" rel="noopener noreferrer" data-service-name="Yearly Membership - Rehearsal Space" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-sky-200/70 bg-gradient-to-br from-white via-sky-50/40 to-indigo-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="recording">
@@ -473,14 +419,14 @@
           <span class="rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-[11px] font-semibold text-sky-700">CA$105.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Recording</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/4AX5CVUXZHF5CUP5PD2RDR2J" target="_blank" rel="noopener noreferrer" data-service-name="Live Band Recording" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Recording</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/4AX5CVUXZHF5CUP5PD2RDR2J" target="_blank" rel="noopener noreferrer" data-service-name="Live Band Recording" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article id="starter-production" class="service-card featured-service featured-rank-3 group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast">
         <div class="mb-3 flex flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:justify-between">
           <div class="flex flex-wrap items-center gap-1.5">
-            <span class="whitespace-nowrap rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
-            <span class="whitespace-nowrap rounded-full bg-rose-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Full Production</span>
+            <span class="rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
+            <span class="rounded-full bg-rose-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Full Production</span>
           </div>
           <span class="shrink-0 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
@@ -499,7 +445,7 @@
           <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">CA$195.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Podcast</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Production (Professional Videographer & Set Up Included)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Full Production</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/F7RICEJG6ZQ2AXG2YR4ABK6V" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Production (Professional Videographer & Set Up Included)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
@@ -513,7 +459,7 @@
           <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">CA$0.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Tour</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-service-name="Free Space Tour" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Free Tour</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/DFAMKZ5URTB7YQZMQJALCC6K" target="_blank" rel="noopener noreferrer" data-service-name="Free Space Tour" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast">
@@ -528,14 +474,14 @@
           <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">CA$45.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Podcast</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/OWSWZBPK5I6AWOENY4NLVSTZ" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Space (NO Videographer)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Studio Only</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/OWSWZBPK5I6AWOENY4NLVSTZ" target="_blank" rel="noopener noreferrer" data-service-name="Video & Podcast Space (NO Videographer)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article id="starter-solo" class="service-card featured-service featured-rank-2 group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
         <div class="mb-3 flex flex-col items-start gap-1.5 sm:flex-row sm:items-center sm:justify-between">
           <div class="flex flex-wrap items-center gap-1.5">
-            <span class="whitespace-nowrap rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
-            <span class="whitespace-nowrap rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Solo Artist</span>
+            <span class="rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gray-900">Most Booked</span>
+            <span class="rounded-full bg-purple-600 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Solo Artist</span>
           </div>
           <span class="shrink-0 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-gray-700">1 hr</span>
         </div>
@@ -553,7 +499,7 @@
           <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">CA$35.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VKHZ23S3ZQTKDTZXG3LYLHZX" target="_blank" rel="noopener noreferrer" data-service-name="1-Hour Solo Practice" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Solo Practice</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/VKHZ23S3ZQTKDTZXG3LYLHZX" target="_blank" rel="noopener noreferrer" data-service-name="1-Hour Solo Practice" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-purple-200/70 bg-gradient-to-br from-white via-purple-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="rehearsal">
@@ -568,7 +514,7 @@
           <span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-1 text-[11px] font-semibold text-purple-700">CA$0.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Rehearsal</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/2TRQ6MXV3Q7RLUNIEG2YGTTO" target="_blank" rel="noopener noreferrer" data-service-name="XL Tour Rehearsals" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book XL Rehearsal</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/2TRQ6MXV3Q7RLUNIEG2YGTTO" target="_blank" rel="noopener noreferrer" data-service-name="XL Tour Rehearsals" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-emerald-200/70 bg-gradient-to-br from-white via-emerald-50/50 to-green-50/40 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="consult">
@@ -583,7 +529,7 @@
           <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">CA$0.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Consult</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/64WOMPUP6BSOV7JYZ2DOW4XJ" target="_blank" rel="noopener noreferrer" data-service-name="Musical Direction Consult" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Consult</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/64WOMPUP6BSOV7JYZ2DOW4XJ" target="_blank" rel="noopener noreferrer" data-service-name="Musical Direction Consult" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
 
       <article class="service-card group flex flex-col rounded-2xl border border-rose-200/70 bg-gradient-to-br from-white via-rose-50/40 to-pink-50/50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg" data-category="video-podcast recording">
@@ -613,7 +559,7 @@
           <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-semibold text-rose-700">CA$120.00</span>
           <span class="rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-gray-600">Video/Audio</span>
         </div>
-        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/6KE77ISTDMYVAOQIFYK7X5HK" target="_blank" rel="noopener noreferrer" data-service-name="Solo Go Pro Video & Audio Session (1-Camera Angle)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Book Go Pro Session</a>
+        <a href="https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services/6KE77ISTDMYVAOQIFYK7X5HK" target="_blank" rel="noopener noreferrer" data-service-name="Solo Go Pro Video & Audio Session (1-Camera Angle)" class="service-book-btn mt-4 sm:mt-auto inline-flex w-full min-h-[46px] items-center justify-center rounded-xl bg-gray-900 px-4 py-3 text-[15px] leading-none font-semibold text-white transition hover:bg-black">Check Availability</a>
       </article>
     </div>
   </div>
@@ -732,19 +678,13 @@
      target="_blank" rel="noopener noreferrer"
      data-analytics-event="book_now_click"
      data-analytics-category="Services"
-     data-analytics-label="Mobile Sticky CTA - See Availability"
+     data-analytics-label="Mobile Sticky CTA - Check Availability"
      class="pointer-events-auto mx-auto inline-flex w-full max-w-xl items-center justify-center rounded-full bg-[#E1306C] px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_10px_26px_rgba(225,48,108,0.35)] transition-all duration-300 hover:bg-[#c51d58]">
-    See Availability
+    Check Availability
   </a>
 </div>
 <!-- AOS (Animate on Scroll) -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    once: true,
-    duration: 800
-  });
-</script>
+<script defer src="/assets/js/aos-init.js"></script>
 
 <!-- Structured Data for SEO -->
 <script type="application/ld+json">
@@ -824,6 +764,13 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 

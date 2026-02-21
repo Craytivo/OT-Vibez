@@ -1,5 +1,9 @@
-﻿module.exports = {
-  content: ['./index.html'],
+module.exports = {
+  content: [
+    './src/**/*.html',
+    './partials/**/*.html',
+    './assets/js/**/*.js',
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -27,3 +31,4 @@
   },
   plugins: [],
 };
+
