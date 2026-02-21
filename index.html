@@ -463,6 +463,15 @@
       }
     }
 
+    /* Mobile fallback: keep data-aos content visible when AOS init is deferred */
+    @media (max-width: 767px) {
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
     /* Improved FAQ spacing */
     .faq-item {
       padding: 1.5rem 0;
