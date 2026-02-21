@@ -2,6 +2,7 @@
   var tracking = window.__otvTracking || {};
   var gtagId = tracking.gtagId;
   var clarityId = tracking.clarityId;
+  var booted = false;
 
   window.dataLayer = window.dataLayer || [];
   window.gtag =
@@ -43,19 +44,32 @@
   }
 
   function boot() {
+    if (booted) return;
+    booted = true;
     initGtag();
     initClarity();
   }
 
-  if (document.readyState === "complete") {
-    setTimeout(boot, 900);
+  function bindBootTriggers() {
+    var trigger = function () {
+      boot();
+      window.removeEventListener("pointerdown", trigger);
+      window.removeEventListener("keydown", trigger);
+      window.removeEventListener("scroll", trigger);
+      window.removeEventListener("touchstart", trigger);
+    };
+
+    window.addEventListener("pointerdown", trigger, { once: true, passive: true });
+    window.addEventListener("keydown", trigger, { once: true });
+    window.addEventListener("scroll", trigger, { once: true, passive: true });
+    window.addEventListener("touchstart", trigger, { once: true, passive: true });
+
+    setTimeout(boot, 10000);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bindBootTriggers, { once: true });
   } else {
-    window.addEventListener(
-      "load",
-      function () {
-        setTimeout(boot, 900);
-      },
-      { once: true }
-    );
+    bindBootTriggers();
   }
 })();

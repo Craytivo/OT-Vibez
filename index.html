@@ -490,6 +490,20 @@
       height: auto;
     }
 
+    @supports (content-visibility: auto) {
+      #about,
+      #comparison,
+      #services,
+      #equipment,
+      #studio,
+      #testimonials,
+      #booking,
+      #faq {
+        content-visibility: auto;
+        contain-intrinsic-size: 1000px;
+      }
+    }
+
     /* Enhanced focus states for better accessibility */
     a:focus, button:focus, input:focus, textarea:focus {
       outline: 3px solid #8b5cf6;
@@ -2106,11 +2120,12 @@
     }
 
     function scheduleBoot() {
+      var isMobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
       var faqSection = document.getElementById("faq");
       if (!faqSection || !("IntersectionObserver" in window)) {
-        if ("requestIdleCallback" in window) {
+        if (!isMobile && "requestIdleCallback" in window) {
           window.requestIdleCallback(bootFaqInteractive, { timeout: 2200 });
-        } else {
+        } else if (!isMobile) {
           setTimeout(bootFaqInteractive, 1200);
         }
         return;
@@ -2127,10 +2142,12 @@
       }, { rootMargin: "280px 0px" });
 
       observer.observe(faqSection);
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(bootFaqInteractive, { timeout: 3500 });
-      } else {
-        setTimeout(bootFaqInteractive, 2000);
+      if (!isMobile) {
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(bootFaqInteractive, { timeout: 3500 });
+        } else {
+          setTimeout(bootFaqInteractive, 2000);
+        }
       }
     }
 
