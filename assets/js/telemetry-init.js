@@ -2,6 +2,7 @@
   var tracking = window.__otvTracking || {};
   var gtagId = tracking.gtagId;
   var clarityId = tracking.clarityId;
+  var consentKey = "otv_consent_analytics";
   var booted = false;
 
   window.dataLayer = window.dataLayer || [];
@@ -50,6 +51,27 @@
     initClarity();
   }
 
+  function hasAnalyticsConsent() {
+    try {
+      return window.localStorage.getItem(consentKey) === "granted";
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function setAnalyticsConsent(state) {
+    try {
+      if (state === "granted") {
+        window.localStorage.setItem(consentKey, "granted");
+        boot();
+      } else {
+        window.localStorage.setItem(consentKey, "denied");
+      }
+    } catch (error) {
+      // no-op in restricted storage contexts
+    }
+  }
+
   function bindBootTriggers() {
     var trigger = function () {
       boot();
@@ -65,6 +87,19 @@
     window.addEventListener("touchstart", trigger, { once: true, passive: true });
 
     setTimeout(boot, 10000);
+  }
+
+  // Expose lightweight hooks so a consent UI can grant/revoke analytics later.
+  window.OTVConsent = window.OTVConsent || {};
+  window.OTVConsent.grantAnalytics = function () {
+    setAnalyticsConsent("granted");
+  };
+  window.OTVConsent.denyAnalytics = function () {
+    setAnalyticsConsent("denied");
+  };
+
+  if (!hasAnalyticsConsent()) {
+    return;
   }
 
   if (document.readyState === "loading") {
