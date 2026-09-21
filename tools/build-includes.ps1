@@ -56,3 +56,18 @@ foreach ($page in $Pages) {
   Set-Content -Path $outPath -Value ($banner + $built) -NoNewline
   Write-Host "Built $outPath"
 }
+
+# Keep the XML sitemap synchronized with the source page registry.
+$sitemapPath = Join-Path $Root 'sitemap.xml'
+$urls = foreach ($page in $Pages) {
+  $srcPath = Join-Path $Root "src/$page.src.html"
+  $lastmod = (Get-Item $srcPath).LastWriteTimeUtc.ToString('yyyy-MM-dd')
+  $loc = if ($page -eq 'index') { 'https://otvibez.com/' } else { "https://otvibez.com/$page.html" }
+  "  <url>`r`n    <loc>$loc</loc>`r`n    <lastmod>$lastmod</lastmod>`r`n    <changefreq>weekly</changefreq>`r`n  </url>"
+}
+$sitemap = @('<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">') + $urls + '</urlset>'
+Set-Content -Path $sitemapPath -Value ($sitemap -join "`r`n") -NoNewline
+Write-Host "Built $sitemapPath"
+
+$qaPath = Join-Path $Root 'tools/qa.ps1'
+if (Test-Path $qaPath) { & $qaPath -Root $Root }
