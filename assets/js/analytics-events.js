@@ -6,7 +6,12 @@
   }
 
   function track(el) {
-    if (typeof window.gtag !== 'function') return;
+    if (typeof window.gtag !== "function") return;
+    try {
+      if (window.localStorage.getItem("otv_consent_analytics") !== "granted") return;
+    } catch (e) {
+      return;
+    }
 
     var eventName = el.getAttribute('data-analytics-event');
     if (!eventName) return;

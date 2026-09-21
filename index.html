@@ -28,12 +28,7 @@
   <meta name="description" content="OT Vibez is an Edmonton rehearsal studio for bands, solo artists, and creators. Book hourly rehearsal, recording, and podcast sessions with plug-and-play gear, treated sound, and daily 8 a.m.-2 a.m. availability." />
 
   <!-- Canonical URL (prevents duplicate issues) -->
-  <link rel="canonical" href="https://otvibez.com/" />
-
-  <!-- Enhanced Keywords for search engines -->
-  <meta name="keywords" content="Edmonton rehearsal studio, hourly rehearsal studio Edmonton, band rehearsal space Edmonton, recording studio Edmonton, podcast room rental Edmonton, music studio rental Edmonton, rehearsal room Edmonton, OT Vibez Studio" />
-
-  <!-- Author and Language -->
+  <link rel="canonical" href="https://otvibez.com/" /><!-- Author and Language -->
   <meta name="author" content="OT Vibez Studio" />
   <meta name="language" content="English" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -123,38 +118,11 @@
     })();
   </script>
 
-  <!-- Comprehensive Favicon Implementation for Google Search -->
-  <!-- Standard favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-  
-  <!-- Modern browsers - PNG favicon -->
+  <!-- Favicon + app manifest -->
+  <link rel="icon" href="assets/images/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/otvibez-white-bg.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/otvibez-white-bg.png" />
-  
-  <!-- Apple Touch Icon for iOS devices -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/otvibez-white-bg.png" />
-  
-  <!-- Android Chrome icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/otvibez-white-bg.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/otvibez-white-bg.png" />
-  
-  <!-- Microsoft Tiles -->
-  <meta name="msapplication-TileColor" content="#8b5cf6" />
-  <meta name="msapplication-TileImage" content="assets/images/otvibez-white-bg.png" />
-  <meta name="msapplication-config" content="none" />
-  
-  <!-- Theme color for browser UI -->
+  <link rel="apple-touch-icon" href="assets/images/otvibez-white-bg.png" />
   <meta name="theme-color" content="#8b5cf6" />
-  <meta name="msapplication-navbutton-color" content="#8b5cf6" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   
   <!-- Web App Manifest for PWA and better favicon recognition -->
   <link rel="manifest" href="site.webmanifest" />
@@ -481,19 +449,7 @@
     /* Footer spacing is controlled by utility classes in footer markup */
     footer {
       padding: 0;
-    }
-
-    /* Keep lazy images visible with native loading=lazy */
-    .lazy-load {
-      opacity: 1;
-      transition: opacity 0.2s ease-in-out;
-    }
-
-    .lazy-load.loaded {
-      opacity: 1;
-    }
-
-    /* Reduce layout shift */
+    }/* Reduce layout shift */
     img {
       max-width: 100%;
       height: auto;
@@ -854,8 +810,7 @@
   </style>
 
   <!-- Animation on Scroll - Loaded asynchronously -->
-  <link href="/assets/vendor/aos-2.3.4.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <style>
+<style>
     @media (min-width: 1024px) {
       html { font-size: 103.125%; }
     }
@@ -1175,42 +1130,6 @@
 </nav>
 
 
-<!-- Navigation Styles -->
-<style>
-  .nav-link {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 4px;
-    transition: color 0.2s ease;
-  }
-
-  .nav-dropdown-trigger {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .nav-link:hover {
-    color: #374151; /* Tailwind gray-700 */
-  }
-
-  .mobile-nav-link {
-    display: block;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .mobile-nav-link:hover {
-    transform: translateX(4px);
-  }
-
-  .mobile-nav-link:active {
-    transform: scale(0.98);
-  }
-</style>
-
 <!-- Header Behavior Script -->
 <script defer src="/assets/js/header-behavior.js"></script>
 
@@ -1231,7 +1150,7 @@
   </div>
 
   <!-- Hero Card -->
-  <div id="home" data-aos="fade-up" class="relative z-10 w-full max-w-[68rem] rounded-3xl border border-white/70 bg-white/74 px-5 sm:px-11 py-8 sm:py-12 text-center shadow-[0_16px_52px_rgba(15,23,42,0.11)] backdrop-blur-md transition-all duration-700 flex flex-col items-center">
+  <div id="home" class="relative z-10 w-full max-w-[68rem] rounded-3xl border border-white/70 bg-white/74 px-5 sm:px-11 py-8 sm:py-12 text-center shadow-[0_16px_52px_rgba(15,23,42,0.11)] backdrop-blur-md transition-all duration-700 flex flex-col items-center">
     <div class="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/70 to-transparent" aria-hidden="true"></div>
 
     <!-- Hero Tagline -->
@@ -1264,7 +1183,7 @@
     </div>
 
     <div class="hero-stagger order-1 sm:order-2 flex w-full flex-col sm:w-auto sm:flex-row items-center justify-center gap-2 sm:gap-2.5" id="hero-cta-group">
-      <a id="hero-primary-cta" data-hero-stagger style="--hero-delay: 320ms;"
+      <a data-hero-stagger style="--hero-delay: 320ms;"
          href="/services.html"
          data-analytics-event="book_now_click"
          data-analytics-category="Hero"
@@ -1409,204 +1328,22 @@
   }
 </style>
 
-<!-- Hero Initialization: typewriter + AOS (deduped) -->
+<!-- Hero enhancement: initial content is complete without JavaScript. -->
 <script>
-  (function () {
-    const HERO_COLOR_CLASSES = ["text-violet-700", "text-emerald-700", "text-sky-700"];
-
-    const onReady = (fn) => {
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", fn, { once: true });
-      } else {
-        fn();
-      }
-    };
-
-    const loadScriptOnce = (src, id) => {
-      if (id && document.getElementById(id)) return Promise.resolve();
-      const existing = document.querySelector('script[src="' + src + '"]');
-      if (existing) {
-        if (existing.dataset.loaded === "true") return Promise.resolve();
-        return new Promise((resolve, reject) => {
-          existing.addEventListener("load", () => resolve(), { once: true });
-          existing.addEventListener("error", () => reject(new Error("Failed to load " + src)), { once: true });
-        });
-      }
-      return new Promise((resolve, reject) => {
-        const script = document.createElement("script");
-        if (id) script.id = id;
-        script.src = src;
-        script.async = true;
-        script.onload = () => {
-          script.dataset.loaded = "true";
-          resolve();
-        };
-        script.onerror = () => reject(new Error("Failed to load " + src));
-        document.head.appendChild(script);
-      });
-    };
-
-    const initTypewriter = () => {
-      const typedText = document.getElementById("typed-text");
-      if (!typedText) return;
-
-      const phrases = [
-        { text: "Studio ready in minutes.", color: "text-violet-700" },
-        { text: "No setup. Just plug in and play.", color: "text-emerald-700" },
-        { text: "Book online and start fast.", color: "text-sky-700" }
-      ];
-
-      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const isMobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
-      if (reduceMotion || isMobile) {
-        typedText.textContent = phrases[0].text;
-        typedText.classList.remove(...HERO_COLOR_CLASSES);
-        typedText.classList.add(phrases[0].color);
-        return;
-      }
-
-      let phraseIndex = 0;
-      let charIndex = phrases[0].text.length;
-      let isDeleting = true;
-
-      const applyPhraseColor = () => {
-        typedText.classList.remove(...HERO_COLOR_CLASSES);
-        typedText.classList.add(phrases[phraseIndex].color);
-      };
-
-      const tick = () => {
-        const current = phrases[phraseIndex].text;
-        typedText.textContent = current.substring(0, charIndex);
-
-        if (!isDeleting && charIndex === current.length) {
-          isDeleting = true;
-          setTimeout(tick, 2100);
-          return;
-        }
-
-        if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          applyPhraseColor();
-        }
-
-        charIndex += isDeleting ? -1 : 1;
-        setTimeout(tick, isDeleting ? 34 : 82);
-      };
-
-      applyPhraseColor();
-      typedText.textContent = phrases[0].text;
-      setTimeout(tick, 1500);
-    };
-
-    const initHeroStagger = () => {
-      const groups = document.querySelectorAll(".hero-stagger");
-      if (!groups.length) return;
-
-      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      groups.forEach((group) => {
-        if (reduceMotion) {
-          group.classList.add("is-ready");
-          return;
-        }
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => group.classList.add("is-ready"));
-        });
-      });
-    };
-
-    const initHeroCtaExperiment = () => {
-      const heroPrimaryCta = document.getElementById("hero-primary-cta");
-      if (!heroPrimaryCta) return;
-
-      const servicesUrl = "/services.html";
-      const directBookingUrl = "https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services";
-      const storageKey = "otv_hero_cta_variant_v1";
-
-      let variant = localStorage.getItem(storageKey);
-      const isNewAssignment = !variant;
-      if (!variant) {
-        variant = Math.random() < 0.5 ? "services" : "direct";
-        localStorage.setItem(storageKey, variant);
-      }
-
-      const isDirect = variant === "direct";
-      heroPrimaryCta.href = isDirect ? directBookingUrl : servicesUrl;
-      heroPrimaryCta.setAttribute("data-analytics-label", isDirect ? "Hero Primary CTA - Direct Booking" : "Hero Primary CTA - Services");
-      heroPrimaryCta.setAttribute("data-analytics-test", "hero_primary_cta_v1");
-      heroPrimaryCta.setAttribute("data-analytics-variant", variant);
-      heroPrimaryCta.setAttribute("data-analytics-context", "hero");
-
-      if (isDirect) {
-        heroPrimaryCta.setAttribute("target", "_blank");
-        heroPrimaryCta.setAttribute("rel", "noopener noreferrer");
-      } else {
-        heroPrimaryCta.removeAttribute("target");
-        heroPrimaryCta.removeAttribute("rel");
-      }
-
-      if (isNewAssignment && typeof window.gtag === "function") {
-        window.gtag("event", "ab_variant_assigned", {
-          event_category: "Experiment",
-          event_label: "Hero Primary CTA - " + variant
-        });
-      }
-    };
-
-    const initAOS = () => {
-      const isMobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
-      if (isMobile) return;
-
-      const startAOS = () => {
-        if (!window.AOS) return;
-        window.AOS.init({
-          once: true,
-          duration: 900,
-          easing: "ease-out-cubic"
-        });
-        if (typeof window.AOS.refreshHard === "function") {
-          window.AOS.refreshHard();
-        }
-      };
-
-      if (window.AOS) {
-        startAOS();
-        return;
-      }
-
-      loadScriptOnce("/assets/vendor/aos-2.3.4.js", "aos-lib")
-        .then(startAOS)
-        .catch(() => {});
-    };
-
-    const deferUntilIdle = (fn, timeout) => {
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(fn, { timeout: timeout || 1200 });
-        return;
-      }
-      setTimeout(fn, 64);
-    };
-
-    onReady(() => {
-      initHeroCtaExperiment();
-      initHeroStagger();
-
-      deferUntilIdle(() => {
-        const aurora = document.querySelector(".hero-aurora");
-        if (aurora) aurora.classList.add("is-live");
-        initTypewriter();
-      }, 1000);
-
-      window.addEventListener("load", () => {
-        deferUntilIdle(initAOS, 2000);
-      }, { once: true });
-    });
-  })();
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn, { once: true });
+    else fn();
+  }
+  ready(function () {
+    document.querySelectorAll("[data-hero-stagger]").forEach(function (el) { el.classList.add("is-ready"); });
+  });
+})();
 </script>
 
 <!-- Instant Availability + Policy Clarity Strip -->
 <section id="instant-availability" class="bg-white px-4 pb-8 sm:px-6 sm:pb-10">
-  <div class="mx-auto max-w-6xl rounded-2xl border border-sky-100 bg-gradient-to-r from-sky-50 via-white to-emerald-50 p-4 shadow-sm sm:p-5" data-aos="fade-up">
+  <div class="mx-auto max-w-6xl rounded-2xl border border-sky-100 bg-gradient-to-r from-sky-50 via-white to-emerald-50 p-4 shadow-sm sm:p-5">
     <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
       <div class="max-w-3xl">
         <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-sky-700">Book Without Friction</p>
@@ -1641,7 +1378,7 @@
   <div class="pointer-events-none absolute -top-20 left-1/2 h-52 w-52 -translate-x-1/2 rounded-full bg-sky-200/35 blur-3xl"></div>
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-start">
-    <div class="lg:col-span-8 rounded-3xl border border-sky-100 bg-gradient-to-br from-white via-sky-50/70 to-indigo-50/70 p-5 sm:p-7 lg:p-9 text-slate-900 shadow-[0_12px_30px_rgba(15,23,42,0.08)]" data-aos="fade-right">
+    <div class="lg:col-span-8 rounded-3xl border border-sky-100 bg-gradient-to-br from-white via-sky-50/70 to-indigo-50/70 p-5 sm:p-7 lg:p-9 text-slate-900 shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
       <p class="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-sky-700">
         Why Artists Choose OT Vibez
       </p>
@@ -1674,7 +1411,7 @@
       </div>
     </div>
 
-    <div class="lg:col-span-4 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm" data-aos="fade-left">
+    <div class="lg:col-span-4 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm">
       <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">Session Flow</p>
       <h3 class="mt-2 text-xl sm:text-2xl font-heading font-extrabold text-slate-900">What You Can Expect</h3>
       <div class="mt-4 space-y-3">
@@ -1694,7 +1431,7 @@
     </div>
   </div>
 
-  <div class="mt-6 sm:mt-8 max-w-6xl mx-auto" data-aos="fade-up">
+  <div class="mt-6 sm:mt-8 max-w-6xl mx-auto">
     <div class="overflow-hidden rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-sky-50 shadow-[0_14px_34px_rgba(15,23,42,0.08)]">
       <div class="grid gap-5 p-4 sm:p-6 lg:grid-cols-12 lg:gap-6 lg:p-7">
         <div class="lg:col-span-7">
@@ -1740,10 +1477,10 @@
 
             <div class="mt-4 grid grid-cols-2 gap-3">
               <a href="https://www.albertamusic.org/directory-profile/ot-vibez-music-rehearsal-space-studio/" target="_blank" rel="noopener noreferrer" class="flex min-h-[4.75rem] items-center justify-center rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2 transition hover:border-emerald-300">
-                <img src="assets/images/partners/alberta-music.png" alt="Alberta Music directory profile" class="h-14 w-auto object-contain" loading="lazy" decoding="async" />
+                <img src="assets/images/partners/alberta-music.png" alt="Alberta Music directory profile" class="h-14 w-auto object-contain" loading="lazy" decoding="async"  width="600" height="200"/>
               </a>
               <a href="https://www.peerspace.com/ca/pages/listings/65662683e471f9000e94a186" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center rounded-xl border border-violet-200 bg-violet-50 px-3 py-2 transition hover:border-violet-300">
-                <img src="assets/images/partners/peerspace.png" alt="Peerspace listing" class="h-10 w-auto object-contain" loading="lazy" />
+                <img src="assets/images/partners/peerspace.png" alt="Peerspace listing" class="h-10 w-auto object-contain" loading="lazy"  width="128" height="128"/>
               </a>
             </div>
 
@@ -1777,7 +1514,7 @@
 <!-- Comparison Section -->
 <section id="comparison" class="bg-gradient-to-b from-white to-slate-50 px-4 py-10 sm:px-6 sm:py-14">
   <div class="mx-auto max-w-6xl">
-    <div class="text-center" data-aos="fade-up">
+    <div class="text-center">
       <p class="type-kicker inline-block rounded-full bg-slate-100 px-4 py-1 text-slate-700">Session Comparison</p>
       <h2 class="mt-3 text-3xl font-heading font-extrabold leading-tight text-slate-900 sm:text-4xl">
         Edmonton Rehearsal Studio Comparison
@@ -1787,7 +1524,7 @@
       </p>
     </div>
 
-    <div class="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-aos="fade-up" aria-label="Rehearsal options comparison">
+    <div class="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" aria-label="Rehearsal options comparison">
       <div class="hidden border-b border-slate-200 bg-slate-50 px-6 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-slate-600 md:grid md:grid-cols-[1.1fr_0.95fr_0.95fr]">
         <div>Decision Criteria</div>
         <div>OT Vibez</div>
@@ -1819,7 +1556,7 @@
       </div>
     </div>
 
-    <div class="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50/70 px-4 py-4 sm:px-5" data-aos="fade-up">
+    <div class="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50/70 px-4 py-4 sm:px-5">
       <p class="text-sm font-semibold text-emerald-900">What to bring</p>
       <p class="mt-1 text-sm leading-relaxed text-emerald-900">Bring nothing&mdash;gear is included. Bring your instruments, sticks, and project files only if you want personal preferences in your setup.</p>
       <div class="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center">
@@ -1836,14 +1573,28 @@
 
 <!-- OT Vibez Services Section -->
 <section id="services" class="-mt-8 sm:-mt-12 md:-mt-20 py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white text-black font-body">
-  <div class="max-w-7xl mx-auto">
+  <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="type-kicker inline-flex rounded-full bg-purple-100 px-4 py-1 text-purple-700">Studio Services</span>
+      <h2 class="mt-3 font-heading text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">One studio, several ways to create.</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-gray-600">Choose the setup that fits your session, from hourly rehearsal to podcast and video production.</p>
+    </div>
+    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      <a href="/hourly-rehearsal-studio-edmonton.html" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-purple-300 hover:shadow-md"><h3 class="font-heading text-lg font-bold text-gray-900">Hourly Rehearsal</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">Flexible rehearsal sessions with a ready-to-use room.</p></a>
+      <a href="/band-rehearsal-space-edmonton.html" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-purple-300 hover:shadow-md"><h3 class="font-heading text-lg font-bold text-gray-900">Band Rehearsal</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">A practical space for full-band sessions and repeat bookings.</p></a>
+      <a href="/podcast-room-rental-edmonton.html" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-purple-300 hover:shadow-md"><h3 class="font-heading text-lg font-bold text-gray-900">Podcast Room</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">A prepared room for podcast recording and video production.</p></a>
+      <a href="/music-video-studio-edmonton.html" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-purple-300 hover:shadow-md"><h3 class="font-heading text-lg font-bold text-gray-900">Music Video</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">Capture performance footage, promo clips, and social content.</p></a>
+      <a href="/rehearsal-membership-pricing-edmonton.html" class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-purple-300 hover:shadow-md"><h3 class="font-heading text-lg font-bold text-gray-900">Memberships</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">Monthly and yearly options for more consistent rehearsal time.</p></a>
+    </div>
+  </div>
+</section>
 
 <!-- Equipment Section -->
 <section id="equipment" class="bg-white pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 md:px-0">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
     
     <!-- Text Column -->
-    <div class="text-left" data-aos="fade-right">
+    <div class="text-left">
       <span class="type-kicker inline-block text-purple-600 bg-purple-100 px-4 py-1 rounded-full mb-3">
         Equipment & Gear
       </span>
@@ -1901,7 +1652,7 @@
     </div>
 
     <!-- Image Column -->
-    <div data-aos="fade-left">
+    <div>
       <div class="rounded-2xl overflow-hidden shadow-xl border border-purple-200 bg-white/10 backdrop-blur-xl transition hover:scale-105 duration-300">
         <img src="assets/images/Equipment/yassine-khalfalli-I3ZzOkiAbTI-unsplash.jpg"
              alt="Studio gear preview"
@@ -1921,8 +1672,7 @@
 <section id="studio" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gray-50 text-black font-body">
   <div class="max-w-7xl mx-auto">
 
-    <!-- Section Heading -->
-    <div class="text-center mb-10 sm:mb-14" data-aos="fade-up">
+    <div class="text-center mb-10 sm:mb-14">
       <span class="type-kicker inline-block text-indigo-600 bg-indigo-100 px-4 py-1 rounded-full mb-3">
         Studio Showcase
       </span>
@@ -1934,60 +1684,24 @@
       </p>
     </div>
 
-    <!-- Desktop Gallery -->
-    <div class="hidden md:block overflow-x-auto scroll-smooth pb-6">
-      <div class="flex gap-6 w-max">
-
-        <!-- Image Panel -->
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/microphone-setup.webp" alt="Professional Microphone Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/microphone-setup.webp">
-          <img src="assets/images/studio-gallery/drum-kit-setup.webp" alt="Professional Drum Kit Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/drum-kit-setup.webp">
-          <img src="assets/images/studio-gallery/studio-lighting-setup.jpg" alt="Professional Studio Lighting Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-lighting-setup.jpg">
-          <img src="assets/images/studio-gallery/audio-mixer-setup.webp" alt="Professional Audio Mixer Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/audio-mixer-setup.webp">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/snack-bar-refreshments.webp" alt="Studio Snack Bar and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-bar-refreshments.webp">
-          <img src="assets/images/studio-gallery/studio-monitor-setup.webp" alt="Professional Studio Monitor Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-monitor-setup.webp">
-          <img src="assets/images/studio-gallery/keyboard-piano-setup.webp" alt="Professional Keyboard and Piano Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-piano-setup.webp">
-          <img src="assets/images/studio-gallery/lounge-area.webp" alt="Studio Lounge and Relaxation Area" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/lounge-area.webp">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/led-lighting-system.jpg" alt="Professional LED Lighting System" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/led-lighting-system.jpg">
-          <img src="assets/images/studio-gallery/mixer-audio-equipment.jpg" alt="Professional Mixer and Audio Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/mixer-audio-equipment.jpg">
-          <img src="assets/images/studio-gallery/snack-station.jpg" alt="Studio Snack Station and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-station.jpg">
-          <img src="assets/images/studio-gallery/dual-monitor-setup.jpg" alt="Dual Monitor Professional Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/dual-monitor-setup.jpg">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/keyboard-equipment.jpg" alt="Professional Keyboard and Piano Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-equipment.jpg">
-          <img src="assets/images/studio-gallery/studio-desk-setup.webp" alt="Professional Studio Desk Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-desk-setup.webp">
-          <img src="assets/images/studio-gallery/wide-studio-view.webp" alt="Wide Studio View with Professional Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/wide-studio-view.webp">
-        </div>
-
-      </div>
+    <!-- One responsive gallery: no desktop/mobile duplicate markup. -->
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4" aria-label="OT Vibez studio gallery">
+      <img src="assets/images/studio-gallery/microphone-setup.webp" alt="Professional microphone setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/drum-kit-setup.webp" alt="Professional drum kit setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/studio-lighting-setup.jpg" alt="Professional studio lighting setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/audio-mixer-setup.webp" alt="Professional audio mixer setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/snack-bar-refreshments.webp" alt="Studio snack bar and refreshments" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/studio-monitor-setup.webp" alt="Professional studio monitor setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/keyboard-piano-setup.webp" alt="Professional keyboard and piano setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/lounge-area.webp" alt="Studio lounge and relaxation area" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/led-lighting-system.jpg" alt="Professional LED lighting system" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/mixer-audio-equipment.jpg" alt="Professional mixer and audio equipment" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/snack-station.jpg" alt="Studio snack station and refreshments" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/dual-monitor-setup.jpg" alt="Dual monitor professional setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/keyboard-equipment.jpg" alt="Professional keyboard and piano equipment" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/studio-desk-setup.webp" alt="Professional studio desk setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/wide-studio-view.webp" alt="Wide studio view with professional equipment" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
     </div>
-
-    <!-- Mobile Gallery -->
-    <div class="md:hidden flex space-x-3 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory" data-aos="fade-up">
-      <img src="assets/images/studio-gallery/microphone-setup.webp" alt="Professional Microphone Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/microphone-setup.webp">
-      <img src="assets/images/studio-gallery/drum-kit-setup.webp" alt="Professional Drum Kit Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/drum-kit-setup.webp">
-      <img src="assets/images/studio-gallery/studio-lighting-setup.jpg" alt="Professional Studio Lighting Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-lighting-setup.jpg">
-      <img src="assets/images/studio-gallery/audio-mixer-setup.webp" alt="Professional Audio Mixer Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/audio-mixer-setup.webp">
-      <img src="assets/images/studio-gallery/snack-bar-refreshments.webp" alt="Studio Snack Bar and Refreshments" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-bar-refreshments.webp">
-      <img src="assets/images/studio-gallery/studio-monitor-setup.webp" alt="Professional Studio Monitor Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-monitor-setup.webp">
-      <img src="assets/images/studio-gallery/keyboard-piano-setup.webp" alt="Professional Keyboard and Piano Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-piano-setup.webp">
-      <img src="assets/images/studio-gallery/lounge-area.webp" alt="Studio Lounge and Relaxation Area" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/lounge-area.webp">
-      <img src="assets/images/studio-gallery/led-lighting-system.jpg" alt="Professional LED Lighting System" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/led-lighting-system.jpg">
-      <img src="assets/images/studio-gallery/mixer-audio-equipment.jpg" alt="Professional Mixer and Audio Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/mixer-audio-equipment.jpg">
-      <img src="assets/images/studio-gallery/snack-station.jpg" alt="Studio Snack Station and Refreshments" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-station.jpg">
-      <img src="assets/images/studio-gallery/dual-monitor-setup.jpg" alt="Dual Monitor Professional Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/dual-monitor-setup.jpg">
-      <img src="assets/images/studio-gallery/keyboard-equipment.jpg" alt="Professional Keyboard and Piano Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-equipment.jpg">
-      <img src="assets/images/studio-gallery/studio-desk-setup.webp" alt="Professional Studio Desk Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-desk-setup.webp">
-      <img src="assets/images/studio-gallery/wide-studio-view.webp" alt="Wide Studio View with Professional Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/wide-studio-view.webp">
-    </div>
-
   </div>
 </section>
 
@@ -2010,7 +1724,7 @@
 <!-- Testimonials Section -->
 <section id="testimonials" class="py-12 sm:py-16 lg:py-12 px-4 sm:px-6 bg-white text-black font-body">
   <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-8 sm:mb-10" data-aos="fade-up">
+    <div class="text-center mb-8 sm:mb-10">
       <span class="type-kicker inline-block text-rose-600 bg-purple-100 px-4 py-2 rounded-full mb-4">Google Reviews</span>
       <h3 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold mb-4 leading-tight">
         Trusted by Edmonton Artists
@@ -2029,7 +1743,7 @@
     </div>
 
     <p class="swipe-hint">Swipe for more reviews</p>
-    <div class="testimonial-rail grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4" data-aos="fade-up">
+    <div class="testimonial-rail grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4">
       <div class="testimonial-card">
         <div class="card">
           <div class="testimonial-meta">
@@ -2070,7 +1784,7 @@
       </div>
     </div>
 
-    <div class="mt-8 flex flex-col items-center justify-center gap-2 sm:flex-row" data-aos="fade-up">
+    <div class="mt-8 flex flex-col items-center justify-center gap-2 sm:flex-row">
       <a href="/services.html" data-analytics-event="book_now_click" data-analytics-category="Testimonials" data-analytics-label="Testimonials CTA - Check Availability" class="inline-flex items-center justify-center rounded-full bg-[#E1306C] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#c51d58]">
         Check Availability
       </a>
@@ -2273,13 +1987,13 @@
         <div class="pt-5 border-t border-gray-300">
           <p class="text-xs text-gray-600 mb-3">In partnership with:</p>
           <div class="flex items-center gap-3 flex-wrap">
-            <img src="assets/images/partners/alberta-music.png" alt="Alberta Music Industry Association" class="h-12 object-contain lazy-load" loading="lazy" data-src="assets/images/partners/alberta-music.png" />
+            <img src="assets/images/partners/alberta-music.png" alt="Alberta Music Industry Association" class="h-12 object-contain" loading="lazy"  width="600" height="200"/>
             <a href="https://www.peerspace.com/ca/pages/listings/65662683e471f9000e94a186" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg border border-gray-200 bg-white px-2 py-1 transition hover:border-violet-300" aria-label="OT Vibez Peerspace listing">
-              <img src="assets/images/partners/peerspace.png" alt="Peerspace" class="h-8 w-8 object-contain" loading="lazy" />
+              <img src="assets/images/partners/peerspace.png" alt="Peerspace" class="h-8 w-8 object-contain" loading="lazy"  width="128" height="128"/>
             </a>
-            <img src="assets/images/partners/melafrique.png" alt="Melafrique Music" class="h-10 object-contain lazy-load" loading="lazy" data-src="assets/images/partners/melafrique.png" />
-            <img src="assets/images/partners/stone-hearts-entertainment.png" alt="Stone Hearts Entertainment" class="h-12 object-contain lazy-load" loading="lazy" data-src="assets/images/partners/stone-hearts-entertainment.png" />
-            <img src="assets/images/partners/craytivo.png" alt="Craytivo" class="h-10 object-contain lazy-load" loading="lazy" data-src="assets/images/partners/craytivo.png" />
+            <img src="assets/images/partners/melafrique.png" alt="Melafrique Music" class="h-10 object-contain" loading="lazy"  width="600" height="200"/>
+            <img src="assets/images/partners/stone-hearts-entertainment.png" alt="Stone Hearts Entertainment" class="h-12 object-contain" loading="lazy"  width="600" height="200"/>
+            <img src="assets/images/partners/craytivo.png" alt="Craytivo" class="h-10 object-contain" loading="lazy"  width="600" height="200"/>
           </div>
         </div>
       </div>
@@ -2347,7 +2061,7 @@
 <!-- FAQ Section -->
 <section id="faq" class="border-t border-gray-200 bg-gradient-to-b from-white to-amber-50/30 px-4 pb-4 pt-12 sm:px-6 md:pb-6 md:pt-16">
   <div class="mx-auto max-w-4xl" x-data="faqComponent()">
-    <div class="mb-10 text-center" data-aos="fade-up">
+    <div class="mb-10 text-center">
       <span class="type-kicker mb-4 inline-flex rounded-full bg-amber-100 px-4 py-1.5 text-amber-700">
         Frequently Asked Questions
       </span>
@@ -2359,7 +2073,7 @@
       </p>
     </div>
 
-    <div class="mb-4" data-aos="fade-up">
+    <div class="mb-4">
       <label for="faq-search" class="sr-only">Search FAQs</label>
       <div class="relative">
         <input
@@ -2381,7 +2095,7 @@
       <p class="mt-2 text-xs text-gray-500"><span x-text="displayedFaqs.length"></span> shown</p>
     </div>
 
-    <div class="mb-6 flex flex-wrap gap-2" data-aos="fade-up" data-aos-delay="40">
+    <div class="mb-6 flex flex-wrap gap-2" data-aos-delay="40">
       <template x-for="topic in topics" :key="topic.id">
         <button
           type="button"
@@ -2394,7 +2108,7 @@
       </template>
     </div>
 
-    <div class="space-y-3" data-aos="fade-up">
+    <div class="space-y-3">
       <template x-for="(item, index) in displayedFaqs" :key="item.q">
         <article class="overflow-hidden rounded-xl border border-gray-200 bg-white/85 shadow-sm">
           <button
@@ -2450,7 +2164,7 @@
       </div>
     </div>
 
-    <div class="mt-4 text-center" x-show="!search.trim().length && filteredFaqs.length > defaultVisible" data-aos="fade-up">
+    <div class="mt-4 text-center" x-show="!search.trim().length && filteredFaqs.length > defaultVisible">
       <button
         type="button"
         @click="toggleExpanded()"
@@ -2459,7 +2173,7 @@
       ></button>
     </div>
 
-    <div class="mt-6 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-purple-50 p-4 sm:p-5" data-aos="fade-up" data-aos-delay="80">
+    <div class="mt-6 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-purple-50 p-4 sm:p-5" data-aos-delay="80">
       <p class="type-kicker mb-3 text-amber-700">Related Pages</p>
       <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
         <a href="/hourly-rehearsal-studio-edmonton.html" class="rounded-xl border border-amber-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-amber-300 hover:text-amber-700">Hourly Rehearsal Studio Edmonton</a>
@@ -2483,7 +2197,7 @@
 </script>
 
 <section class="px-4 pb-10 sm:px-6" aria-label="Helpful resources">
-  <div class="mx-auto max-w-6xl rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 via-white to-emerald-50/50 p-4 sm:p-6" data-aos="fade-up">
+  <div class="mx-auto max-w-6xl rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 via-white to-emerald-50/50 p-4 sm:p-6">
     <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div class="max-w-3xl">
         <p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-700">Resources</p>
@@ -2616,6 +2330,21 @@
   </div>
 </footer>
 <script defer src="/assets/js/analytics-events.js"></script>
+
+<div id="analytics-consent" class="fixed inset-x-4 bottom-4 z-[10000] hidden max-w-xl rounded-2xl border border-gray-200 bg-white p-4 shadow-2xl sm:left-auto sm:right-6 sm:max-w-md" role="dialog" aria-labelledby="analytics-consent-title" aria-describedby="analytics-consent-copy">
+  <div class="flex gap-3">
+    <div class="min-w-0 flex-1">
+      <h2 id="analytics-consent-title" class="font-heading text-sm font-bold text-gray-900">Website analytics</h2>
+      <p id="analytics-consent-copy" class="mt-1 text-xs leading-relaxed text-gray-600">We use optional analytics to understand site usage and improve the booking experience. You can allow or decline it.</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <button type="button" id="analytics-consent-allow" class="rounded-full bg-black px-4 py-2 text-xs font-semibold text-white hover:bg-gray-800">Allow analytics</button>
+        <button type="button" id="analytics-consent-deny" class="rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50">Decline</button>
+      </div>
+    </div>
+    <button type="button" id="analytics-consent-close" class="h-8 w-8 shrink-0 rounded-full text-gray-500 hover:bg-gray-100" aria-label="Close analytics notice">×</button>
+  </div>
+</div>
+<script defer src="/assets/js/analytics-consent.js"></script>
 
 <script defer src="/assets/js/footer-behavior.js"></script>
 

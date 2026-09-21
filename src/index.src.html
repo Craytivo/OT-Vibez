@@ -27,12 +27,7 @@
   <meta name="description" content="OT Vibez is an Edmonton rehearsal studio for bands, solo artists, and creators. Book hourly rehearsal, recording, and podcast sessions with plug-and-play gear, treated sound, and daily 8 a.m.-2 a.m. availability." />
 
   <!-- Canonical URL (prevents duplicate issues) -->
-  <link rel="canonical" href="https://otvibez.com/" />
-
-  <!-- Enhanced Keywords for search engines -->
-  <meta name="keywords" content="Edmonton rehearsal studio, hourly rehearsal studio Edmonton, band rehearsal space Edmonton, recording studio Edmonton, podcast room rental Edmonton, music studio rental Edmonton, rehearsal room Edmonton, OT Vibez Studio" />
-
-  <!-- Author and Language -->
+  <link rel="canonical" href="https://otvibez.com/" /><!-- Author and Language -->
   <meta name="author" content="OT Vibez Studio" />
   <meta name="language" content="English" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -122,38 +117,11 @@
     })();
   </script>
 
-  <!-- Comprehensive Favicon Implementation for Google Search -->
-  <!-- Standard favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-  
-  <!-- Modern browsers - PNG favicon -->
+  <!-- Favicon + app manifest -->
+  <link rel="icon" href="assets/images/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/otvibez-white-bg.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/otvibez-white-bg.png" />
-  
-  <!-- Apple Touch Icon for iOS devices -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/otvibez-white-bg.png" />
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/otvibez-white-bg.png" />
-  
-  <!-- Android Chrome icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/otvibez-white-bg.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/otvibez-white-bg.png" />
-  
-  <!-- Microsoft Tiles -->
-  <meta name="msapplication-TileColor" content="#8b5cf6" />
-  <meta name="msapplication-TileImage" content="assets/images/otvibez-white-bg.png" />
-  <meta name="msapplication-config" content="none" />
-  
-  <!-- Theme color for browser UI -->
+  <link rel="apple-touch-icon" href="assets/images/otvibez-white-bg.png" />
   <meta name="theme-color" content="#8b5cf6" />
-  <meta name="msapplication-navbutton-color" content="#8b5cf6" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   
   <!-- Web App Manifest for PWA and better favicon recognition -->
   <link rel="manifest" href="site.webmanifest" />
@@ -480,19 +448,7 @@
     /* Footer spacing is controlled by utility classes in footer markup */
     footer {
       padding: 0;
-    }
-
-    /* Keep lazy images visible with native loading=lazy */
-    .lazy-load {
-      opacity: 1;
-      transition: opacity 0.2s ease-in-out;
-    }
-
-    .lazy-load.loaded {
-      opacity: 1;
-    }
-
-    /* Reduce layout shift */
+    }/* Reduce layout shift */
     img {
       max-width: 100%;
       height: auto;
@@ -853,8 +809,7 @@
   </style>
 
   <!-- Animation on Scroll - Loaded asynchronously -->
-  <link href="/assets/vendor/aos-2.3.4.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <style>
+<style>
     @media (min-width: 1024px) {
       html { font-size: 103.125%; }
     }
@@ -867,42 +822,6 @@
   
 
 <!-- @include partials/header.html -->
-
-<!-- Navigation Styles -->
-<style>
-  .nav-link {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 4px;
-    transition: color 0.2s ease;
-  }
-
-  .nav-dropdown-trigger {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .nav-link:hover {
-    color: #374151; /* Tailwind gray-700 */
-  }
-
-  .mobile-nav-link {
-    display: block;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .mobile-nav-link:hover {
-    transform: translateX(4px);
-  }
-
-  .mobile-nav-link:active {
-    transform: scale(0.98);
-  }
-</style>
 
 <!-- Header Behavior Script -->
 <script defer src="/assets/js/header-behavior.js"></script>
@@ -924,7 +843,7 @@
   </div>
 
   <!-- Hero Card -->
-  <div id="home" data-aos="fade-up" class="relative z-10 w-full max-w-[68rem] rounded-3xl border border-white/70 bg-white/74 px-5 sm:px-11 py-8 sm:py-12 text-center shadow-[0_16px_52px_rgba(15,23,42,0.11)] backdrop-blur-md transition-all duration-700 flex flex-col items-center">
+  <div id="home" class="relative z-10 w-full max-w-[68rem] rounded-3xl border border-white/70 bg-white/74 px-5 sm:px-11 py-8 sm:py-12 text-center shadow-[0_16px_52px_rgba(15,23,42,0.11)] backdrop-blur-md transition-all duration-700 flex flex-col items-center">
     <div class="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/70 to-transparent" aria-hidden="true"></div>
 
     <!-- Hero Tagline -->
@@ -957,7 +876,7 @@
     </div>
 
     <div class="hero-stagger order-1 sm:order-2 flex w-full flex-col sm:w-auto sm:flex-row items-center justify-center gap-2 sm:gap-2.5" id="hero-cta-group">
-      <a id="hero-primary-cta" data-hero-stagger style="--hero-delay: 320ms;"
+      <a data-hero-stagger style="--hero-delay: 320ms;"
          href="/services.html"
          data-analytics-event="book_now_click"
          data-analytics-category="Hero"
@@ -1102,365 +1021,24 @@
   }
 </style>
 
-<!-- Hero Initialization: typewriter + AOS (deduped) -->
+<!-- Hero enhancement: initial content is complete without JavaScript. -->
 <script>
-  (function () {
-    const HERO_COLOR_CLASSES = ["text-violet-700", "text-emerald-700", "text-sky-700"];
-
-    const onReady = (fn) => {
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", fn, { once: true });
-      } else {
-        fn();
-      }
-    };
-
-    const loadScriptOnce = (src, id) => {
-      if (id && document.getElementById(id)) return Promise.resolve();
-      const existing = document.querySelector('script[src="' + src + '"]');
-      if (existing) {
-        if (existing.dataset.loaded === "true") return Promise.resolve();
-        return new Promise((resolve, reject) => {
-          existing.addEventListener("load", () => resolve(), { once: true });
-          existing.addEventListener("error", () => reject(new Error("Failed to load " + src)), { once: true });
-        });
-      }
-      return new Promise((resolve, reject) => {
-        const script = document.createElement("script");
-        if (id) script.id = id;
-        script.src = src;
-        script.async = true;
-        script.onload = () => {
-          script.dataset.loaded = "true";
-          resolve();
-        };
-        script.onerror = () => reject(new Error("Failed to load " + src));
-        document.head.appendChild(script);
-      });
-    };
-
-    const initTypewriter = () => {
-      const typedText = document.getElementById("typed-text");
-      if (!typedText) return;
-
-      const phrases = [
-        { text: "Studio ready in minutes.", color: "text-violet-700" },
-        { text: "No setup. Just plug in and play.", color: "text-emerald-700" },
-        { text: "Book online and start fast.", color: "text-sky-700" }
-      ];
-
-      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const isMobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
-      if (reduceMotion || isMobile) {
-        typedText.textContent = phrases[0].text;
-        typedText.classList.remove(...HERO_COLOR_CLASSES);
-        typedText.classList.add(phrases[0].color);
-        return;
-      }
-
-      let phraseIndex = 0;
-      let charIndex = phrases[0].text.length;
-      let isDeleting = true;
-
-      const applyPhraseColor = () => {
-        typedText.classList.remove(...HERO_COLOR_CLASSES);
-        typedText.classList.add(phrases[phraseIndex].color);
-      };
-
-      const tick = () => {
-        const current = phrases[phraseIndex].text;
-        typedText.textContent = current.substring(0, charIndex);
-
-        if (!isDeleting && charIndex === current.length) {
-          isDeleting = true;
-          setTimeout(tick, 2100);
-          return;
-        }
-
-        if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          applyPhraseColor();
-        }
-
-        charIndex += isDeleting ? -1 : 1;
-        setTimeout(tick, isDeleting ? 34 : 82);
-      };
-
-      applyPhraseColor();
-      typedText.textContent = phrases[0].text;
-      setTimeout(tick, 1500);
-    };
-
-    const initHeroStagger = () => {
-      const groups = document.querySelectorAll(".hero-stagger");
-      if (!groups.length) return;
-
-      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      groups.forEach((group) => {
-        if (reduceMotion) {
-          group.classList.add("is-ready");
-          return;
-        }
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => group.classList.add("is-ready"));
-        });
-      });
-    };
-
-    const initHeroCtaExperiment = () => {
-      const heroPrimaryCta = document.getElementById("hero-primary-cta");
-      if (!heroPrimaryCta) return;
-
-      const servicesUrl = "/services.html";
-      const directBookingUrl = "https://book.squareup.com/appointments/dcefn1rzex4bcs/location/L8GNSC31EZPQ3/services";
-      const storageKey = "otv_hero_cta_variant_v1";
-
-      let variant = localStorage.getItem(storageKey);
-      const isNewAssignment = !variant;
-      if (!variant) {
-        variant = Math.random() < 0.5 ? "services" : "direct";
-        localStorage.setItem(storageKey, variant);
-      }
-
-      const isDirect = variant === "direct";
-      heroPrimaryCta.href = isDirect ? directBookingUrl : servicesUrl;
-      heroPrimaryCta.setAttribute("data-analytics-label", isDirect ? "Hero Primary CTA - Direct Booking" : "Hero Primary CTA - Services");
-      heroPrimaryCta.setAttribute("data-analytics-test", "hero_primary_cta_v1");
-      heroPrimaryCta.setAttribute("data-analytics-variant", variant);
-      heroPrimaryCta.setAttribute("data-analytics-context", "hero");
-
-      if (isDirect) {
-        heroPrimaryCta.setAttribute("target", "_blank");
-        heroPrimaryCta.setAttribute("rel", "noopener noreferrer");
-      } else {
-        heroPrimaryCta.removeAttribute("target");
-        heroPrimaryCta.removeAttribute("rel");
-      }
-
-      if (isNewAssignment && typeof window.gtag === "function") {
-        window.gtag("event", "ab_variant_assigned", {
-          event_category: "Experiment",
-          event_label: "Hero Primary CTA - " + variant
-        });
-      }
-    };
-
-    const initAOS = () => {
-      const isMobile = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
-      if (isMobile) return;
-
-      const startAOS = () => {
-        if (!window.AOS) return;
-        window.AOS.init({
-          once: true,
-          duration: 900,
-          easing: "ease-out-cubic"
-        });
-        if (typeof window.AOS.refreshHard === "function") {
-          window.AOS.refreshHard();
-        }
-      };
-
-      if (window.AOS) {
-        startAOS();
-        return;
-      }
-
-      loadScriptOnce("/assets/vendor/aos-2.3.4.js", "aos-lib")
-        .then(startAOS)
-        .catch(() => {});
-    };
-
-    const deferUntilIdle = (fn, timeout) => {
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(fn, { timeout: timeout || 1200 });
-        return;
-      }
-      setTimeout(fn, 64);
-    };
-
-    onReady(() => {
-      initHeroCtaExperiment();
-      initHeroStagger();
-
-      deferUntilIdle(() => {
-        const aurora = document.querySelector(".hero-aurora");
-        if (aurora) aurora.classList.add("is-live");
-        initTypewriter();
-      }, 1000);
-
-      window.addEventListener("load", () => {
-        deferUntilIdle(initAOS, 2000);
-      }, { once: true });
-    });
-  })();
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn, { once: true });
+    else fn();
+  }
+  ready(function () {
+    document.querySelectorAll("[data-hero-stagger]").forEach(function (el) { el.classList.add("is-ready"); });
+  });
+})();
 </script>
 
 <!-- Instant Availability + Policy Clarity Strip -->
-<section id="instant-availability" class="bg-white px-4 pb-8 sm:px-6 sm:pb-10">
-  <div class="mx-auto max-w-6xl rounded-2xl border border-sky-100 bg-gradient-to-r from-sky-50 via-white to-emerald-50 p-4 shadow-sm sm:p-5" data-aos="fade-up">
-    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-      <div class="max-w-3xl">
-        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-sky-700">Book Without Friction</p>
-        <h2 class="mt-1 text-xl font-heading font-extrabold leading-tight text-slate-900 sm:text-2xl">
-          Instant Availability, Transparent Policies, No Setup Surprises
-        </h2>
-        <p class="mt-2 text-sm leading-relaxed text-slate-700 sm:text-base">
-          Skip request-to-book delays. View real-time openings, see cancellation terms before checkout, and book with clear pricing. Gear is included with your session and there is no extra setup fee for standard in-room equipment.
-        </p>
-        <div class="mt-3 flex flex-wrap gap-2">
-          <span class="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-semibold text-sky-700">Live Availability</span>
-          <span class="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[11px] font-semibold text-emerald-700">Clear Cancellation Terms</span>
-          <span class="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-[11px] font-semibold text-violet-700">No Hidden Fees</span>
-          <span class="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-[11px] font-semibold text-rose-700">Gear Included</span>
-        </div>
-      </div>
-
-      <div class="flex w-full flex-col gap-2 sm:w-auto sm:flex-row lg:flex-col">
-        <a href="/services.html" data-analytics-event="book_now_click" data-analytics-category="Instant Availability Strip" data-analytics-label="Instant Availability Strip CTA - Check Live Availability" class="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800">
-          Check Live Availability
-        </a>
-        <a href="/hourly-rehearsal-studio-edmonton.html" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900">
-          View Hourly Policies
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- @include partials/instant-availability.html -->
 
 <!-- Why Choose OT Vibez -->
-<section id="about" class="relative pt-0 pb-10 sm:py-14 lg:py-20 px-4 sm:px-6 bg-gradient-to-b from-white via-slate-50/60 to-white text-black font-body overflow-hidden">
-  <div class="pointer-events-none absolute -top-20 left-1/2 h-52 w-52 -translate-x-1/2 rounded-full bg-sky-200/35 blur-3xl"></div>
-
-  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-start">
-    <div class="lg:col-span-8 rounded-3xl border border-sky-100 bg-gradient-to-br from-white via-sky-50/70 to-indigo-50/70 p-5 sm:p-7 lg:p-9 text-slate-900 shadow-[0_12px_30px_rgba(15,23,42,0.08)]" data-aos="fade-right">
-      <p class="inline-flex items-center rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-sky-700">
-        Why Artists Choose OT Vibez
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold leading-tight">
-        Rehearsal Sessions That Start Fast and Stay Focused
-      </h2>
-      <p class="mt-4 max-w-2xl text-slate-700 text-base sm:text-lg leading-relaxed">
-        OT Vibez gives Edmonton artists a clean, sound-treated room with reliable setup so less time goes to troubleshooting and more time goes to performance.
-      </p>
-
-      <div class="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
-        <div class="rounded-xl border border-sky-100 bg-white/90 p-3">
-          <p class="text-xl font-heading font-extrabold text-slate-900" data-trust-metric="googleRating">5.0</p>
-          <p class="text-[11px] uppercase tracking-[0.1em] text-slate-500">Google Rating</p>
-        </div>
-        <div class="rounded-xl border border-sky-100 bg-white/90 p-3">
-          <p class="text-xl font-heading font-extrabold text-slate-900" data-trust-metric="reviewCount">49</p>
-          <p class="text-[11px] uppercase tracking-[0.1em] text-slate-500">Reviews</p>
-        </div>
-        <div class="rounded-xl border border-sky-100 bg-white/90 p-3">
-          <p class="text-xl font-heading font-extrabold text-slate-900" data-trust-metric="artistsServed">200+</p>
-          <p class="text-[11px] uppercase tracking-[0.1em] text-slate-500">Artists Served</p>
-        </div>
-      </div>
-
-      <div class="mt-6 flex justify-center lg:justify-start">
-        <a href="/services.html" class="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
-          Check Availability
-        </a>
-      </div>
-    </div>
-
-    <div class="lg:col-span-4 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm" data-aos="fade-left">
-      <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">Session Flow</p>
-      <h3 class="mt-2 text-xl sm:text-2xl font-heading font-extrabold text-slate-900">What You Can Expect</h3>
-      <div class="mt-4 space-y-3">
-        <div class="flex gap-3">
-          <span class="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500"></span>
-          <p class="text-sm text-slate-700 leading-relaxed">Quick check-in and plug-and-play setup.</p>
-        </div>
-        <div class="flex gap-3">
-          <span class="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-          <p class="text-sm text-slate-700 leading-relaxed">Consistent room acoustics and gear layout.</p>
-        </div>
-        <div class="flex gap-3">
-          <span class="mt-1 h-2.5 w-2.5 rounded-full bg-violet-500"></span>
-          <p class="text-sm text-slate-700 leading-relaxed">More time creating, less time resetting.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-6 sm:mt-8 max-w-6xl mx-auto" data-aos="fade-up">
-    <div class="overflow-hidden rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-sky-50 shadow-[0_14px_34px_rgba(15,23,42,0.08)]">
-      <div class="grid gap-5 p-4 sm:p-6 lg:grid-cols-12 lg:gap-6 lg:p-7">
-        <div class="lg:col-span-7">
-          <p class="inline-flex items-center rounded-full border border-emerald-200 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.13em] text-emerald-700">Flexible Studio Access</p>
-          <h3 class="mt-3 text-2xl font-heading font-extrabold leading-tight text-slate-900 sm:text-3xl">
-            Membership Plans Built for Consistent Rehearsal Schedules
-          </h3>
-          <p class="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
-            Keep your booking rhythm predictable with membership options designed for Edmonton artists, bands, and creators who rehearse regularly.
-          </p>
-
-          <div class="mt-4 grid gap-2 sm:grid-cols-3">
-            <div class="rounded-xl border border-emerald-200 bg-white p-3">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.1em] text-emerald-700">Cost Control</p>
-              <p class="mt-1 text-sm font-semibold text-slate-900">Preferred Member Rates</p>
-            </div>
-            <div class="rounded-xl border border-emerald-200 bg-white p-3">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.1em] text-emerald-700">Access</p>
-              <p class="mt-1 text-sm font-semibold text-slate-900">Priority Booking Windows</p>
-            </div>
-            <div class="rounded-xl border border-emerald-200 bg-white p-3">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.1em] text-emerald-700">Consistency</p>
-              <p class="mt-1 text-sm font-semibold text-slate-900">Reliable Weekly Cadence</p>
-            </div>
-          </div>
-
-          <div class="mt-4 flex flex-col gap-2 sm:flex-row">
-            <a href="/rehearsal-membership-pricing-edmonton.html" class="inline-flex items-center justify-center rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-800">
-              View Membership Options
-            </a>
-            <a href="/services.html" class="inline-flex items-center justify-center rounded-full border border-emerald-300 bg-white px-5 py-2.5 text-sm font-semibold text-emerald-800 transition hover:border-emerald-400 hover:text-emerald-900">
-              Compare All Sessions
-            </a>
-          </div>
-        </div>
-
-        <aside class="lg:col-span-5">
-          <div class="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Trusted Listings</p>
-            <p class="mt-2 text-sm leading-relaxed text-slate-700">
-              OT Vibez is an Edmonton rehearsal studio for hourly rehearsal, recording sessions, and podcast room bookings, with profiles on trusted music and venue directories. Alberta Music partners receive member benefits and perks.
-            </p>
-
-            <div class="mt-4 grid grid-cols-2 gap-3">
-              <a href="https://www.albertamusic.org/directory-profile/ot-vibez-music-rehearsal-space-studio/" target="_blank" rel="noopener noreferrer" class="flex min-h-[4.75rem] items-center justify-center rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2 transition hover:border-emerald-300">
-                <img src="assets/images/partners/alberta-music.png" alt="Alberta Music directory profile" class="h-14 w-auto object-contain" loading="lazy" decoding="async" />
-              </a>
-              <a href="https://www.peerspace.com/ca/pages/listings/65662683e471f9000e94a186" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center rounded-xl border border-violet-200 bg-violet-50 px-3 py-2 transition hover:border-violet-300">
-                <img src="assets/images/partners/peerspace.png" alt="Peerspace listing" class="h-10 w-auto object-contain" loading="lazy" />
-              </a>
-            </div>
-
-            <div class="mt-4 space-y-2 text-xs sm:text-sm text-slate-700">
-              <p class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span><span>Published policies for easier planning before checkout.</span></p>
-              <p class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span><span>Live availability and fast booking flow for repeat sessions.</span></p>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-
-    <p class="mt-4 text-center text-[11px] sm:text-xs text-gray-500">
-      OT Vibez is listed in the
-      <a href="https://www.albertamusic.org/directory-profile/ot-vibez-music-rehearsal-space-studio/" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-700 hover:text-emerald-900">Alberta Music directory</a>.
-      Also listed on
-      <a href="https://www.peerspace.com/ca/pages/listings/65662683e471f9000e94a186" target="_blank" rel="noopener noreferrer" class="font-semibold text-violet-700 hover:text-violet-900">Peerspace</a>.
-      Website support by
-      <a href="https://craytivo.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-violet-700 hover:text-violet-900">Craytivo</a>.
-    </p>
-  </div>
-
-  <hr class="border-t border-emerald-100 mt-7 sm:mt-10 max-w-3xl mx-auto" />
-</section>
+<!-- @include partials/about.html -->
 
 
 
@@ -1468,221 +1046,17 @@
 
 
 <!-- Comparison Section -->
-<section id="comparison" class="bg-gradient-to-b from-white to-slate-50 px-4 py-10 sm:px-6 sm:py-14">
-  <div class="mx-auto max-w-6xl">
-    <div class="text-center" data-aos="fade-up">
-      <p class="type-kicker inline-block rounded-full bg-slate-100 px-4 py-1 text-slate-700">Session Comparison</p>
-      <h2 class="mt-3 text-3xl font-heading font-extrabold leading-tight text-slate-900 sm:text-4xl">
-        Edmonton Rehearsal Studio Comparison
-      </h2>
-      <p class="mx-auto mt-3 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
-        OT Vibez is built for private, loud-friendly rehearsal with music-first backline and late-night access.
-      </p>
-    </div>
-
-    <div class="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-aos="fade-up" aria-label="Rehearsal options comparison">
-      <div class="hidden border-b border-slate-200 bg-slate-50 px-6 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-slate-600 md:grid md:grid-cols-[1.1fr_0.95fr_0.95fr]">
-        <div>Decision Criteria</div>
-        <div>OT Vibez</div>
-        <div>Common Low-Cost Alternatives</div>
-      </div>
-
-      <div class="border-b border-slate-100 px-4 py-4 md:grid md:grid-cols-[1.1fr_0.95fr_0.95fr] md:gap-4 md:px-6">
-        <p class="text-sm font-semibold text-slate-900">Space and sound freedom</p>
-        <p class="mt-2 text-sm text-slate-700 md:mt-0"><span class="mr-1 inline-flex rounded bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-emerald-700 md:hidden">OT Vibez</span>Private rehearsal room designed for loud full-band practice.</p>
-        <p class="mt-2 text-sm text-slate-700 md:mt-0"><span class="mr-1 inline-flex rounded bg-slate-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-600 md:hidden">Alternatives</span>Some public studio spaces publish volume limits (for example, 90 dB).</p>
-      </div>
-
-      <div class="border-b border-slate-100 px-4 py-4 md:grid md:grid-cols-[1.1fr_0.95fr_0.95fr] md:gap-4 md:px-6">
-        <p class="font-semibold text-slate-900">Setup requirements</p>
-        <p class="mt-2 text-sm text-slate-700 md:mt-0"><span class="mr-1 inline-flex rounded bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-emerald-700 md:hidden">OT Vibez</span>Music-first backline and in-room essentials are ready at check-in.</p>
-        <p class="mt-2 text-sm text-slate-700 md:mt-0"><span class="mr-1 inline-flex rounded bg-slate-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-600 md:hidden">Alternatives</span>Some public studio programs require certification or policy onboarding first.</p>
-      </div>
-
-      <div class="border-b border-slate-100 px-4 py-4 md:grid md:grid-cols-[1.1fr_0.95fr_0.95fr] md:gap-4 md:px-6">
-        <p class="font-semibold text-slate-900">Minimum booking window</p>
-        <p class="mt-2 text-sm text-slate-700 md:mt-0"><span class="mr-1 inline-flex rounded bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-emerald-700 md:hidden">OT Vibez</span>Flexible session lengths for weekday and weekend rehearsal blocks.</p>
-        <p class="mt-2 text-sm text-slate-700 md:mt-0"><span class="mr-1 inline-flex rounded bg-slate-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-600 md:hidden">Alternatives</span>Some low-cost rooms publish minimum bookings of 4 hours or more.</p>
-      </div>
-
-      <div class="px-4 py-4 md:grid md:grid-cols-[1.1fr_0.95fr_0.95fr] md:gap-4 md:px-6">
-        <p class="font-semibold text-slate-900">Operating hours</p>
-        <p class="mt-2 text-sm text-slate-700 md:mt-0"><span class="mr-1 inline-flex rounded bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-emerald-700 md:hidden">OT Vibez</span>Open daily from 8 a.m. to 2 a.m. for evening and late-night practice.</p>
-        <p class="mt-2 text-sm text-slate-700 md:mt-0"><span class="mr-1 inline-flex rounded bg-slate-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-600 md:hidden">Alternatives</span>Community or shared rooms often close earlier than music-focused private studios.</p>
-      </div>
-    </div>
-
-    <div class="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50/70 px-4 py-4 sm:px-5" data-aos="fade-up">
-      <p class="text-sm font-semibold text-emerald-900">What to bring</p>
-      <p class="mt-1 text-sm leading-relaxed text-emerald-900">Bring nothing&mdash;gear is included. Bring your instruments, sticks, and project files only if you want personal preferences in your setup.</p>
-      <div class="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center">
-        <a href="/services.html" class="inline-flex w-full items-center justify-center rounded-full bg-emerald-800 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-900 sm:w-auto">Check Availability</a>
-        <a href="/hourly-rehearsal-studio-edmonton.html" class="inline-flex w-full items-center justify-center rounded-full border border-emerald-300 bg-white px-5 py-2.5 text-sm font-semibold text-emerald-800 transition hover:border-emerald-400 sm:w-auto">View Hourly Rehearsal Details</a>
-      </div>
-    </div>
-
-    <p class="mt-3 mb-6 text-center text-[11px] leading-relaxed text-slate-500 sm:mb-8 sm:text-xs">
-      Factual comparison based on publicly listed policies as of February 20, 2026. Always confirm current rules before booking.
-    </p>
-  </div>
-</section>
+<!-- @include partials/comparison.html -->
 
 <!-- OT Vibez Services Section -->
-<section id="services" class="-mt-8 sm:-mt-12 md:-mt-20 py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white text-black font-body">
-  <div class="max-w-7xl mx-auto">
+<!-- @include partials/services-overview.html -->
 
 <!-- Equipment Section -->
-<section id="equipment" class="bg-white pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 md:px-0">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
-    
-    <!-- Text Column -->
-    <div class="text-left" data-aos="fade-right">
-      <span class="type-kicker inline-block text-purple-600 bg-purple-100 px-4 py-1 rounded-full mb-3">
-        Equipment & Gear
-      </span>
-      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-gray-900 mb-4 leading-tight">
-        Premium Rehearsal & Recording <span class="text-purple-600">Equipment</span>
-      </h2>
-      <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
-        OT Vibez includes pro mics, PA, monitoring, and backline so you can walk in and start fast. Built for hourly rehearsal studio sessions, recording, and podcast room rental in Edmonton.
-      </p>
-      <p class="mb-4 text-sm text-gray-600">
-        Popular pages:
-        <a href="/hourly-rehearsal-studio-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Hourly Rehearsal Studio Edmonton</a>,
-        <a href="/podcast-room-rental-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Podcast Room Rental Edmonton</a>,
-        <a href="/band-rehearsal-space-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Band Rehearsal Space Edmonton</a>,
-        <a href="/music-video-studio-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Music Video Studio Edmonton</a>,
-        <a href="/rehearsal-membership-pricing-edmonton.html" class="font-semibold text-purple-700 underline-offset-2 hover:underline">Rehearsal Membership Pricing Edmonton</a>.
-      </p>
-
-      <div class="sm:hidden flex flex-wrap gap-2 mb-4">
-        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-[11px] font-semibold text-purple-700">Pro Mics</span>
-        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-[11px] font-semibold text-purple-700">PA + Monitors</span>
-        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-[11px] font-semibold text-purple-700">Backline Ready</span>
-      </div>
-
-      <div class="hidden sm:flex flex-wrap gap-2 mb-5">
-        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">Pro Mics</span>
-        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">PA + Monitors</span>
-        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">Backline Ready</span>
-        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">Podcast Setup</span>
-        <span class="inline-flex items-center rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">Session Lighting</span>
-      </div>
-
-      <div class="mb-5 rounded-xl border border-purple-100 bg-purple-50/50 p-3 sm:p-4">
-        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-purple-700">Recommended Home Setup</p>
-        <div class="mt-2 flex flex-wrap gap-2">
-          <a href="https://amzn.to/3MTJuDb" target="_blank" rel="nofollow sponsored noopener noreferrer" data-analytics-event="affiliate_click" data-analytics-category="Homepage Equipment" data-analytics-label="AT2020 Cardioid" class="inline-flex items-center rounded-full border border-purple-200 bg-white px-3 py-1.5 text-xs font-semibold text-purple-700 transition hover:border-purple-300 hover:bg-purple-100/60">AT2020 Cardioid</a>
-          <a href="https://amzn.to/3OhnKlc" target="_blank" rel="nofollow sponsored noopener noreferrer" data-analytics-event="affiliate_click" data-analytics-category="Homepage Equipment" data-analytics-label="Focusrite Scarlett Solo 4th Gen" class="inline-flex items-center rounded-full border border-purple-200 bg-white px-3 py-1.5 text-xs font-semibold text-purple-700 transition hover:border-purple-300 hover:bg-purple-100/60">Scarlett Solo 4th Gen</a>
-          <a href="https://amzn.to/4tLvf3M" target="_blank" rel="nofollow sponsored noopener noreferrer" data-analytics-event="affiliate_click" data-analytics-category="Homepage Equipment" data-analytics-label="ATH-M40X Headphones" class="inline-flex items-center rounded-full border border-purple-200 bg-white px-3 py-1.5 text-xs font-semibold text-purple-700 transition hover:border-purple-300 hover:bg-purple-100/60">ATH-M40X Headphones</a>
-        </div>
-        <p class="mt-2 text-[11px] text-gray-600">Practice-ready picks for home sessions between studio visits.</p>
-      </div>
-
-      <div class="flex w-full flex-col sm:w-auto sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-2.5 sm:gap-3 mb-3">
-        <a href="/services.html" class="inline-flex items-center justify-center rounded-full bg-purple-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-purple-700">
-          Check Availability
-        </a>
-        <a href="services.html" class="inline-flex items-center justify-center rounded-full border border-purple-200 bg-white px-4 py-2.5 text-sm font-semibold text-purple-700 transition hover:border-purple-300 hover:bg-purple-50">
-          Compare Options
-        </a>
-      </div>
-
-      <p class="text-gray-600 text-xs sm:text-sm">
-        Included with booking. No extra setup fee for standard in-room gear.
-      </p>
-    </div>
-
-    <!-- Image Column -->
-    <div data-aos="fade-left">
-      <div class="rounded-2xl overflow-hidden shadow-xl border border-purple-200 bg-white/10 backdrop-blur-xl transition hover:scale-105 duration-300">
-        <img src="assets/images/Equipment/yassine-khalfalli-I3ZzOkiAbTI-unsplash.jpg"
-             alt="Studio gear preview"
-             class="object-cover w-full h-full max-h-[340px] lg:max-h-[380px]"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800">
-      </div>
-    </div>
-
-  </div>
-</section>
+<!-- @include partials/equipment.html -->
 
 
 
-<section id="studio" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gray-50 text-black font-body">
-  <div class="max-w-7xl mx-auto">
-
-    <!-- Section Heading -->
-    <div class="text-center mb-10 sm:mb-14" data-aos="fade-up">
-      <span class="type-kicker inline-block text-indigo-600 bg-indigo-100 px-4 py-1 rounded-full mb-3">
-        Studio Showcase
-      </span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold mb-4 leading-tight">
-        Inside <span class="text-indigo-600">OT Vibez Studio</span>
-      </h2>
-      <p class="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto">
-        Explore our acoustically treated rehearsal and recording spaces - clean, professional, and optimized for creators.
-      </p>
-    </div>
-
-    <!-- Desktop Gallery -->
-    <div class="hidden md:block overflow-x-auto scroll-smooth pb-6">
-      <div class="flex gap-6 w-max">
-
-        <!-- Image Panel -->
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/microphone-setup.webp" alt="Professional Microphone Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/microphone-setup.webp">
-          <img src="assets/images/studio-gallery/drum-kit-setup.webp" alt="Professional Drum Kit Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/drum-kit-setup.webp">
-          <img src="assets/images/studio-gallery/studio-lighting-setup.jpg" alt="Professional Studio Lighting Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-lighting-setup.jpg">
-          <img src="assets/images/studio-gallery/audio-mixer-setup.webp" alt="Professional Audio Mixer Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/audio-mixer-setup.webp">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/snack-bar-refreshments.webp" alt="Studio Snack Bar and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-bar-refreshments.webp">
-          <img src="assets/images/studio-gallery/studio-monitor-setup.webp" alt="Professional Studio Monitor Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-monitor-setup.webp">
-          <img src="assets/images/studio-gallery/keyboard-piano-setup.webp" alt="Professional Keyboard and Piano Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-piano-setup.webp">
-          <img src="assets/images/studio-gallery/lounge-area.webp" alt="Studio Lounge and Relaxation Area" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/lounge-area.webp">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/led-lighting-system.jpg" alt="Professional LED Lighting System" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/led-lighting-system.jpg">
-          <img src="assets/images/studio-gallery/mixer-audio-equipment.jpg" alt="Professional Mixer and Audio Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/mixer-audio-equipment.jpg">
-          <img src="assets/images/studio-gallery/snack-station.jpg" alt="Studio Snack Station and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-station.jpg">
-          <img src="assets/images/studio-gallery/dual-monitor-setup.jpg" alt="Dual Monitor Professional Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/dual-monitor-setup.jpg">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/keyboard-equipment.jpg" alt="Professional Keyboard and Piano Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-equipment.jpg">
-          <img src="assets/images/studio-gallery/studio-desk-setup.webp" alt="Professional Studio Desk Setup" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-desk-setup.webp">
-          <img src="assets/images/studio-gallery/wide-studio-view.webp" alt="Wide Studio View with Professional Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/wide-studio-view.webp">
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Mobile Gallery -->
-    <div class="md:hidden flex space-x-3 overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory" data-aos="fade-up">
-      <img src="assets/images/studio-gallery/microphone-setup.webp" alt="Professional Microphone Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/microphone-setup.webp">
-      <img src="assets/images/studio-gallery/drum-kit-setup.webp" alt="Professional Drum Kit Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/drum-kit-setup.webp">
-      <img src="assets/images/studio-gallery/studio-lighting-setup.jpg" alt="Professional Studio Lighting Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-lighting-setup.jpg">
-      <img src="assets/images/studio-gallery/audio-mixer-setup.webp" alt="Professional Audio Mixer Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/audio-mixer-setup.webp">
-      <img src="assets/images/studio-gallery/snack-bar-refreshments.webp" alt="Studio Snack Bar and Refreshments" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-bar-refreshments.webp">
-      <img src="assets/images/studio-gallery/studio-monitor-setup.webp" alt="Professional Studio Monitor Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-monitor-setup.webp">
-      <img src="assets/images/studio-gallery/keyboard-piano-setup.webp" alt="Professional Keyboard and Piano Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-piano-setup.webp">
-      <img src="assets/images/studio-gallery/lounge-area.webp" alt="Studio Lounge and Relaxation Area" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/lounge-area.webp">
-      <img src="assets/images/studio-gallery/led-lighting-system.jpg" alt="Professional LED Lighting System" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/led-lighting-system.jpg">
-      <img src="assets/images/studio-gallery/mixer-audio-equipment.jpg" alt="Professional Mixer and Audio Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/mixer-audio-equipment.jpg">
-      <img src="assets/images/studio-gallery/snack-station.jpg" alt="Studio Snack Station and Refreshments" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/snack-station.jpg">
-      <img src="assets/images/studio-gallery/dual-monitor-setup.jpg" alt="Dual Monitor Professional Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/dual-monitor-setup.jpg">
-      <img src="assets/images/studio-gallery/keyboard-equipment.jpg" alt="Professional Keyboard and Piano Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/keyboard-equipment.jpg">
-      <img src="assets/images/studio-gallery/studio-desk-setup.webp" alt="Professional Studio Desk Setup" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/studio-desk-setup.webp">
-      <img src="assets/images/studio-gallery/wide-studio-view.webp" alt="Wide Studio View with Professional Equipment" class="w-[78vw] max-w-[20rem] h-44 sm:h-52 object-cover rounded-xl shadow-md snap-start shrink-0 lazy-load" loading="lazy" data-src="assets/images/studio-gallery/wide-studio-view.webp">
-    </div>
-
-  </div>
-</section>
+<!-- @include partials/studio.html -->
 
 <section class="bg-white px-4 pb-10 sm:px-6 sm:pb-12">
   <div class="mx-auto max-w-5xl rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-50 via-white to-amber-50 px-4 py-4 shadow-sm sm:px-6 sm:py-5">
@@ -1701,78 +1075,7 @@
 </section>
 
 <!-- Testimonials Section -->
-<section id="testimonials" class="py-12 sm:py-16 lg:py-12 px-4 sm:px-6 bg-white text-black font-body">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-8 sm:mb-10" data-aos="fade-up">
-      <span class="type-kicker inline-block text-rose-600 bg-purple-100 px-4 py-2 rounded-full mb-4">Google Reviews</span>
-      <h3 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold mb-4 leading-tight">
-        Trusted by Edmonton Artists
-      </h3>
-      <p class="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-        Real feedback from bands, creators, and producers who rehearse and record at OT Vibez.
-      </p>
-      <div class="mx-auto mt-4 flex w-full max-w-2xl flex-wrap items-center justify-center gap-2 rounded-xl border border-rose-100 bg-rose-50/60 px-3 py-2 text-xs sm:text-sm text-gray-700">
-        <span class="font-semibold text-gray-900">Google Rating:</span>
-        <span class="font-semibold text-amber-600"><span data-trust-metric="googleRating">5.0</span>/5</span>
-        <span class="text-gray-400">|</span>
-        <span><span data-trust-metric="reviewCount">49</span> reviews</span>
-        <span class="text-gray-400">|</span>
-        <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="font-semibold text-rose-700 hover:text-rose-800">View on Google</a>
-      </div>
-    </div>
-
-    <p class="swipe-hint">Swipe for more reviews</p>
-    <div class="testimonial-rail grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4" data-aos="fade-up">
-      <div class="testimonial-card">
-        <div class="card">
-          <div class="testimonial-meta">
-            <div class="testimonial-source">Google Review</div>
-            <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          </div>
-          <p class="testimonial-quote">What a nice experience with OT VIBEZ. Oshane was so welcoming, friendly, and very helpful with everything we needed during rehearsal. It is a beautiful studio and very spacious. Would definitely recommend.</p>
-          <div class="testimonial-name">ACES BAND</div>
-          <div class="testimonial-proof">Google Review | 5.0 | Verified</div>
-          <div class="testimonial-role">Band</div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="card">
-          <div class="testimonial-meta">
-            <div class="testimonial-source">Google Review</div>
-            <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          </div>
-          <p class="testimonial-quote">Love this place. The vibe is vibey and it has become my new hangout spot with the music crew. The space is well kept, the team is welcoming, and they go the extra mile to keep it comfortable and clean.</p>
-          <div class="testimonial-name">Shantel Williams</div>
-          <div class="testimonial-proof">Google Review | 5.0 | Verified</div>
-          <div class="testimonial-role">Artist</div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="card">
-          <div class="testimonial-meta">
-            <div class="testimonial-source">Google Review</div>
-            <div class="testimonial-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          </div>
-          <p class="testimonial-quote">Great room with killer sound. I brought a guitar and pedals and got a great tone in minutes, as loud as I wanted. Highly recommend for the price, and the owners are awesome people.</p>
-          <div class="testimonial-name">Flickering Madness</div>
-          <div class="testimonial-proof">Google Review | 5.0 | Verified</div>
-          <div class="testimonial-role">Band</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-8 flex flex-col items-center justify-center gap-2 sm:flex-row" data-aos="fade-up">
-      <a href="/services.html" data-analytics-event="book_now_click" data-analytics-category="Testimonials" data-analytics-label="Testimonials CTA - Check Availability" class="inline-flex items-center justify-center rounded-full bg-[#E1306C] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#c51d58]">
-        Check Availability
-      </a>
-      <a href="https://www.google.com/maps/place/OT+Vibez+Music+Rehearsal+Space+%26+Studio/@53.487035,-113.4624793,17z/data=!3m1!5s0x53a018c3dfd8635f:0x36271e39a0d0abf1!4m8!3m7!1s0x539ff517e80b19a9:0x97dbec5eeaacd9ef!8m2!3d53.4870318!4d-113.4599044!9m1!1b1!16s%2Fg%2F11stbg2b2q?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-5 py-3 text-sm font-semibold text-gray-700 transition hover:border-rose-300 hover:text-rose-700">
-        Read More Reviews
-      </a>
-    </div>
-  </div>
-</section>
+<!-- @include partials/testimonials.html -->
 
 
 
@@ -1922,108 +1225,7 @@
 
 
 <!-- Booking Section -->
-<section id="booking" class="relative z-10 py-12 px-4 sm:px-6 bg-white font-body text-gray-900">
-  <!-- Offset Background -->
-  <div class="absolute inset-0 max-w-6xl mx-auto rounded-3xl bg-[#E1306C] opacity-10 -rotate-1 -z-10 shadow-md"></div>
-
-  <div class="relative max-w-6xl mx-auto bg-white/90 backdrop-blur-xl border border-white/30 rounded-3xl shadow-xl px-6 sm:px-10 py-10 space-y-8 text-gray-800">
-
-    <!-- Title -->
-    <div class="text-center max-w-3xl mx-auto space-y-4">
-      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold tracking-tight text-gray-900">
-        Book Studio Time in Edmonton
-      </h2>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-        Reserve your spot at <span class="text-[#E1306C] font-semibold">OT Vibez</span> - an hourly rehearsal studio in Edmonton for bands, recording sessions, and podcast room bookings.
-      </p>
-    </div>
-
-    <!-- Grid Layout -->
-    <div class="grid md:grid-cols-2 gap-10 items-start md:items-center">
-
-      <!-- Left: Booking Copy -->
-      <div class="space-y-4 text-sm sm:text-base">
-        <ul class="space-y-3 text-gray-700 leading-relaxed">
-          <li>Plug-and-play rehearsal and recording setup. Show up and start creating.</li>
-          <li>Trusted by <strong><span data-trust-metric="artistsServed">200+</span> artists, labels, and podcasters</strong> across Edmonton.</li>
-        </ul>
-
-        <!-- Primary CTA -->
-        <div class="rounded-xl bg-[#E1306C] text-white border border-[#c0255b] shadow-lg p-4 sm:p-5">
-          <p class="text-sm sm:text-base text-white/95 mb-4 font-semibold">
-            Peak hours fill quickly. Secure your studio time now.
-          </p>
-          <a href="/services.html"
-             data-analytics-event="book_now_click"
-             data-analytics-category="Booking"
-             data-analytics-label="Booking CTA - Check Availability"
-             class="inline-flex w-full sm:w-auto justify-center items-center bg-white text-[#E1306C] px-6 py-3 text-sm sm:text-base font-heading font-bold rounded-full shadow hover:bg-pink-100 transition-transform hover:-translate-y-0.5">
-            Check Availability
-          </a>
-        </div>
-
-        <!-- Social Proof -->
-        <div class="pt-5 border-t border-gray-300">
-          <p class="text-xs text-gray-600 mb-3">In partnership with:</p>
-          <div class="flex items-center gap-3 flex-wrap">
-            <img src="assets/images/partners/alberta-music.png" alt="Alberta Music Industry Association" class="h-12 object-contain lazy-load" loading="lazy" data-src="assets/images/partners/alberta-music.png" />
-            <a href="https://www.peerspace.com/ca/pages/listings/65662683e471f9000e94a186" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg border border-gray-200 bg-white px-2 py-1 transition hover:border-violet-300" aria-label="OT Vibez Peerspace listing">
-              <img src="assets/images/partners/peerspace.png" alt="Peerspace" class="h-8 w-8 object-contain" loading="lazy" />
-            </a>
-            <img src="assets/images/partners/melafrique.png" alt="Melafrique Music" class="h-10 object-contain lazy-load" loading="lazy" data-src="assets/images/partners/melafrique.png" />
-            <img src="assets/images/partners/stone-hearts-entertainment.png" alt="Stone Hearts Entertainment" class="h-12 object-contain lazy-load" loading="lazy" data-src="assets/images/partners/stone-hearts-entertainment.png" />
-            <img src="assets/images/partners/craytivo.png" alt="Craytivo" class="h-10 object-contain lazy-load" loading="lazy" data-src="assets/images/partners/craytivo.png" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Studio Info + Map (Desktop) -->
-      <div class="hidden md:flex flex-col justify-start items-start text-left gap-4 bg-[#fff0f5] border border-[#E1306C]/20 rounded-2xl p-5 text-sm sm:text-base">
-        <p><strong>Location:</strong><br> 8762 50 Ave NW #202, Edmonton, AB T6B 1E8</p>
-        <p><strong>Phone:</strong> <a data-site-phone-text data-site-phone href="tel:+17805221807" class="text-[#E1306C] hover:underline">(780) 522-1807</a></p>
-        <p><strong>Hours:</strong><br> Daily | 8 a.m. - 2 a.m.</p>
-
-        <div class="w-full rounded-xl overflow-hidden border border-white/30 shadow-md mt-2">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24161.357758432823!2d-113.453!3d53.4723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021dbb576e065%3A0xf305162c1e999e4a!2s8762%2050%20Ave%20NW%20%23202%2C%20Edmonton%2C%20AB%20T6B%201E8!5e0!3m2!1sen!2sca!4v1717798495473!5m2!1sen!2sca"
-            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-            class="w-full h-[200px] border-0">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Right: Studio Info + Map (Mobile Collapsible) -->
-      <details class="md:hidden rounded-2xl border border-[#E1306C]/20 bg-[#fff0f5] overflow-hidden">
-        <summary class="list-none cursor-pointer px-4 py-3 flex items-center justify-between">
-          <div>
-            <p class="text-sm font-semibold text-[#E1306C]">Studio Details</p>
-            <p class="text-xs text-gray-600">Location, phone, hours</p>
-          </div>
-          <span class="text-xs text-gray-600">Tap to expand</span>
-        </summary>
-        <div class="border-t border-white/60 p-4 flex flex-col gap-4 text-sm">
-          <p><strong>Location:</strong><br> 8762 50 Ave NW #202, Edmonton, AB T6B 1E8</p>
-          <p><strong>Phone:</strong> <a data-site-phone-text data-site-phone href="tel:+17805221807" class="text-[#E1306C] hover:underline">(780) 522-1807</a></p>
-          <p><strong>Hours:</strong><br> Daily | 8 a.m. - 2 a.m.</p>
-
-          <details class="w-full rounded-xl border border-white/40 bg-white/60">
-            <summary class="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-[#E1306C] flex items-center justify-between">
-              View map
-              <span class="text-xs text-gray-600">Tap to expand</span>
-            </summary>
-            <div class="border-t border-white/50">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24161.357758432823!2d-113.453!3d53.4723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a021dbb576e065%3A0xf305162c1e999e4a!2s8762%2050%20Ave%20NW%20%23202%2C%20Edmonton%2C%20AB%20T6B%201E8!5e0!3m2!1sen!2sca!4v1717798495473!5m2!1sen!2sca"
-                width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"
-                class="w-full h-[180px] border-0">
-              </iframe>
-            </div>
-          </details>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
+<!-- @include partials/booking.html -->
 
 <script>
   (function () {
@@ -2038,134 +1240,7 @@
 </script>
 
 <!-- FAQ Section -->
-<section id="faq" class="border-t border-gray-200 bg-gradient-to-b from-white to-amber-50/30 px-4 pb-4 pt-12 sm:px-6 md:pb-6 md:pt-16">
-  <div class="mx-auto max-w-4xl" x-data="faqComponent()">
-    <div class="mb-10 text-center" data-aos="fade-up">
-      <span class="type-kicker mb-4 inline-flex rounded-full bg-amber-100 px-4 py-1.5 text-amber-700">
-        Frequently Asked Questions
-      </span>
-      <h3 class="font-heading text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-        Answers Before You Book
-      </h3>
-      <p class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-gray-600 md:text-base">
-        Clear answers on bookings, sessions, amenities, and studio access.
-      </p>
-    </div>
-
-    <div class="mb-4" data-aos="fade-up">
-      <label for="faq-search" class="sr-only">Search FAQs</label>
-      <div class="relative">
-        <input
-          id="faq-search"
-          type="text"
-          placeholder="Search questions..."
-          x-model="search"
-          class="w-full rounded-xl border border-gray-300 bg-white/90 px-4 py-3 pr-28 text-base shadow-sm transition focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/40"
-        />
-        <button
-          x-show="search.trim().length"
-          @click="clearSearch()"
-          class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 transition hover:border-gray-400"
-          aria-label="Clear FAQ search"
-        >
-          Clear
-        </button>
-      </div>
-      <p class="mt-2 text-xs text-gray-500"><span x-text="displayedFaqs.length"></span> shown</p>
-    </div>
-
-    <div class="mb-6 flex flex-wrap gap-2" data-aos="fade-up" data-aos-delay="40">
-      <template x-for="topic in topics" :key="topic.id">
-        <button
-          type="button"
-          @click="setTopic(topic.id)"
-          :aria-pressed="activeTopic === topic.id"
-          :class="activeTopic === topic.id ? 'border-amber-400 bg-amber-100 text-amber-800' : 'border-gray-300 bg-white text-gray-700 hover:border-gray-400'"
-          class="rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-wide transition"
-          x-text="topic.label"
-        ></button>
-      </template>
-    </div>
-
-    <div class="space-y-3" data-aos="fade-up">
-      <template x-for="(item, index) in displayedFaqs" :key="item.q">
-        <article class="overflow-hidden rounded-xl border border-gray-200 bg-white/85 shadow-sm">
-          <button
-            @click="toggleFaq(item.q)"
-            :aria-expanded="isOpen(item.q)"
-            :aria-controls="'faq-answer-' + index"
-            class="flex w-full items-start justify-between gap-3 px-4 py-4 text-left"
-          >
-            <span class="text-[15px] font-semibold leading-snug text-gray-900 md:text-base" x-html="highlightText(item.q)"></span>
-            <span class="mt-0.5 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-700">
-              <svg :class="isOpen(item.q) ? 'rotate-180' : ''" class="h-4 w-4 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </button>
-          <div
-            :id="'faq-answer-' + index"
-            role="region"
-            class="overflow-hidden transition-all duration-300 ease-out"
-            :class="isOpen(item.q) ? 'max-h-96 opacity-100 border-t border-gray-100' : 'max-h-0 opacity-0 border-t border-transparent'"
-          >
-            <div class="px-4 pb-4 pt-3 text-sm leading-relaxed text-gray-700 md:text-base">
-              <p x-text="item.a"></p>
-              <template x-if="item.links && item.links.length">
-                <ul class="mt-2 list-disc space-y-1 pl-5">
-                  <template x-for="link in item.links" :key="link.url">
-                    <li>
-                      <a
-                        :href="link.url"
-                        @click="trackAffiliateClick(link.label, link.url)"
-                        target="_blank"
-                        rel="nofollow sponsored noopener noreferrer"
-                        class="font-semibold text-amber-700 underline underline-offset-2 transition hover:text-amber-800"
-                        x-text="link.label"
-                      ></a>
-                    </li>
-                  </template>
-                </ul>
-              </template>
-              <template x-if="item.ctaUrl">
-                <p class="mt-2">
-                  <a :href="item.ctaUrl" class="font-semibold text-amber-700 underline underline-offset-2 transition hover:text-amber-800" x-text="item.ctaLabel || 'View availability'"></a>
-                </p>
-              </template>
-            </div>
-          </div>
-        </article>
-      </template>
-
-      <div x-show="filteredFaqs.length === 0" class="rounded-xl border border-dashed border-gray-300 bg-white px-4 py-6 text-center text-sm text-gray-600">
-        No matching question found. You can <a class="font-semibold text-amber-700 underline" href="/services.html">view services</a> or email
-        <a class="font-semibold text-amber-700 underline" href="mailto:otvibezstudio@gmail.com">otvibezstudio@gmail.com</a>.
-      </div>
-    </div>
-
-    <div class="mt-4 text-center" x-show="!search.trim().length && filteredFaqs.length > defaultVisible" data-aos="fade-up">
-      <button
-        type="button"
-        @click="toggleExpanded()"
-        class="inline-flex items-center rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-700 transition hover:border-gray-400"
-        x-text="expanded ? 'Show fewer FAQs' : 'Show all FAQs'"
-      ></button>
-    </div>
-
-    <div class="mt-6 rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 via-white to-purple-50 p-4 sm:p-5" data-aos="fade-up" data-aos-delay="80">
-      <p class="type-kicker mb-3 text-amber-700">Related Pages</p>
-      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
-        <a href="/hourly-rehearsal-studio-edmonton.html" class="rounded-xl border border-amber-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-amber-300 hover:text-amber-700">Hourly Rehearsal Studio Edmonton</a>
-        <a href="/podcast-room-rental-edmonton.html" class="rounded-xl border border-purple-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-purple-300 hover:text-purple-700">Podcast Room Rental Edmonton</a>
-        <a href="/band-rehearsal-space-edmonton.html" class="rounded-xl border border-indigo-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700">Band Rehearsal Space Edmonton</a>
-        <a href="/music-video-studio-edmonton.html" class="rounded-xl border border-rose-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-rose-300 hover:text-rose-700">Music Video Studio Edmonton</a>
-        <a href="/rehearsal-membership-pricing-edmonton.html" class="rounded-xl border border-emerald-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-emerald-300 hover:text-emerald-700">Rehearsal Membership Pricing Edmonton</a>
-        <a href="/do-i-need-gear-to-rehearse.html" class="rounded-xl border border-slate-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">Do I Need Gear to Rehearse?</a>
-        <a href="/hourly-rehearsal-vs-minimum-block-rentals.html" class="rounded-xl border border-slate-200/80 bg-white px-3 py-2 text-sm font-semibold text-gray-800 transition hover:border-slate-300 hover:text-slate-900">Hourly vs Minimum-Block Rentals</a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- @include partials/faq.html -->
 
 <script type="application/ld+json" id="faq-schema-jsonld">
 {
@@ -2176,7 +1251,7 @@
 </script>
 
 <section class="px-4 pb-10 sm:px-6" aria-label="Helpful resources">
-  <div class="mx-auto max-w-6xl rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 via-white to-emerald-50/50 p-4 sm:p-6" data-aos="fade-up">
+  <div class="mx-auto max-w-6xl rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 via-white to-emerald-50/50 p-4 sm:p-6">
     <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div class="max-w-3xl">
         <p class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-700">Resources</p>

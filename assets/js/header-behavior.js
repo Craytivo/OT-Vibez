@@ -1,5 +1,6 @@
 (function () {
   var initialized = false;
+  var lastFocusedElement = null;
   var logoScrollBound = false;
   var focusBound = false;
 
@@ -29,9 +30,11 @@
       document.body.classList.remove('overflow-hidden');
       toggleBtn.setAttribute('aria-expanded', 'false');
       mobileMenu.setAttribute('aria-hidden', 'true');
+      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') lastFocusedElement.focus();
     };
 
     var openMenu = function () {
+      lastFocusedElement = document.activeElement;
       mobileMenu.classList.remove('hidden');
       backdrop.classList.remove('hidden');
       document.body.classList.add('overflow-hidden');
@@ -77,6 +80,19 @@
       setTimeout(function () {
         mobileToggle.focus();
       }, 100);
+    });
+
+    mobileMenu.addEventListener('keydown', function (event) {
+      if (event.key !== 'Tab') return;
+      var focusable = mobileMenu.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault(); last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first.focus();
+      }
     });
 
     focusBound = true;
