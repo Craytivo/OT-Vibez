@@ -11,9 +11,9 @@ foreach ($page in $pages) {
   if ($html -match '<img[^>]+src=["'']\s*["'']') { $errors.Add("$($page.Name): empty image src") }
   if ($html -match 'data-src=') { $errors.Add("$($page.Name): legacy data-src remains") }
   if ($html -match 'class=["''][^"'']*lazy-load') { $errors.Add("$($page.Name): legacy lazy-load hook remains") }
-  $images = [regex]::Matches($html, '<img\\b[^>]*>', 'IgnoreCase')
+  $images = [regex]::Matches($html, '<img\b[^>]*>', 'IgnoreCase')
   foreach ($image in $images) {
-    if ($image.Value -notmatch '\\bwidth=["'']\\d+["'']' -or $image.Value -notmatch '\\bheight=["'']\\d+["'']') {
+    if ($image.Value -notmatch '\bwidth=["'']\\d+["'']' -or $image.Value -notmatch '\bheight=["'']\\d+["'']') {
       $errors.Add("$($page.Name): image is missing width/height: $($image.Value.Substring(0, [Math]::Min(140, $image.Value.Length)))")
     }
   }
