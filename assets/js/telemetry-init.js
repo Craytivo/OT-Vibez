@@ -5,23 +5,10 @@
   var consentKey = "otv_consent_analytics";
   var booted = false;
 
-  window.dataLayer = window.dataLayer || [];
-  window.gtag =
-    window.gtag ||
-    function () {
-      window.dataLayer.push(arguments);
-    };
-
-  function loadScript(src, onload) {
-    var script = document.createElement("script");
-    script.src = src;
-    script.async = true;
-    if (typeof onload === "function") script.onload = onload;
-    document.head.appendChild(script);
-  }
-
   function initGtag() {
     if (!gtagId) return;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
     loadScript("https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(gtagId), function () {
       window.gtag("js", new Date());
       window.gtag("config", gtagId);
@@ -72,23 +59,6 @@
     }
   }
 
-  function bindBootTriggers() {
-    var trigger = function () {
-      boot();
-      window.removeEventListener("pointerdown", trigger);
-      window.removeEventListener("keydown", trigger);
-      window.removeEventListener("scroll", trigger);
-      window.removeEventListener("touchstart", trigger);
-    };
-
-    window.addEventListener("pointerdown", trigger, { once: true, passive: true });
-    window.addEventListener("keydown", trigger, { once: true });
-    window.addEventListener("scroll", trigger, { once: true, passive: true });
-    window.addEventListener("touchstart", trigger, { once: true, passive: true });
-
-    setTimeout(boot, 10000);
-  }
-
   // Expose lightweight hooks so a consent UI can grant/revoke analytics later.
   window.OTVConsent = window.OTVConsent || {};
   window.OTVConsent.grantAnalytics = function () {
@@ -98,9 +68,7 @@
     setAnalyticsConsent("denied");
   };
 
-  if (!hasAnalyticsConsent()) {
-    return;
-  }
+  if (!hasAnalyticsConsent()) return;
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", bindBootTriggers, { once: true });
