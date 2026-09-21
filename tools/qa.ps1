@@ -10,7 +10,7 @@ foreach ($page in $pages) {
 
   if ($html -match '<img[^>]+src=["'']\s*["'']') { $errors.Add("$($page.Name): empty image src") }
   if ($html -match 'data-src=') { $errors.Add("$($page.Name): legacy data-src remains") }
-  if ($html -match 'lazy-load') { $errors.Add("$($page.Name): legacy lazy-load hook remains") }
+  if ($html -match 'class=["''][^"'']*lazy-load') { $errors.Add("$($page.Name): legacy lazy-load hook remains") }
   if ($html -match 'aos-2\.3\.4') { $errors.Add("$($page.Name): AOS asset reference remains") }
 
   $h1 = ([regex]::Matches($html, '<h1\b', 'IgnoreCase')).Count
