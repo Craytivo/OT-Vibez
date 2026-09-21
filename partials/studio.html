@@ -1,7 +1,6 @@
 <section id="studio" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gray-50 text-black font-body">
   <div class="max-w-7xl mx-auto">
 
-    <!-- Section Heading -->
     <div class="text-center mb-10 sm:mb-14">
       <span class="type-kicker inline-block text-indigo-600 bg-indigo-100 px-4 py-1 rounded-full mb-3">
         Studio Showcase
@@ -14,38 +13,23 @@
       </p>
     </div>
 
-    <!-- Desktop Gallery -->
-    <div class="grid grid-cols-2 gap-3 pb-6 sm:grid-cols-3 md:grid-cols-4">
-      <div class="flex gap-6 w-max">
-
-        <!-- Image Panel -->
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/microphone-setup.webp" alt="Professional Microphone Setup" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/drum-kit-setup.webp" alt="Professional Drum Kit Setup" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/studio-lighting-setup.jpg" alt="Professional Studio Lighting Setup" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/audio-mixer-setup.webp" alt="Professional Audio Mixer Setup" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/snack-bar-refreshments.webp" alt="Studio Snack Bar and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/studio-monitor-setup.webp" alt="Professional Studio Monitor Setup" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/keyboard-piano-setup.webp" alt="Professional Keyboard and Piano Setup" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/lounge-area.webp" alt="Studio Lounge and Relaxation Area" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/led-lighting-system.jpg" alt="Professional LED Lighting System" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/mixer-audio-equipment.jpg" alt="Professional Mixer and Audio Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/snack-station.jpg" alt="Studio Snack Station and Refreshments" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/dual-monitor-setup.jpg" alt="Dual Monitor Professional Setup" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 shrink-0 w-[min(800px,88vw)]">
-          <img src="assets/images/studio-gallery/keyboard-equipment.jpg" alt="Professional Keyboard and Piano Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/studio-desk-setup.webp" alt="Professional Studio Desk Setup" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-          <img src="assets/images/studio-gallery/wide-studio-view.webp" alt="Wide Studio View with Professional Equipment" class="shadow-lg object-cover w-full h-56 lg:h-64" loading="lazy" width="1200" height="800" decoding="async">
-        </div>
-
-      </div>
+    <!-- One responsive gallery: no desktop/mobile duplicate markup. -->
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4" aria-label="OT Vibez studio gallery">
+      <img src="assets/images/studio-gallery/microphone-setup.webp" alt="Professional microphone setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/drum-kit-setup.webp" alt="Professional drum kit setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/studio-lighting-setup.jpg" alt="Professional studio lighting setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/audio-mixer-setup.webp" alt="Professional audio mixer setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/snack-bar-refreshments.webp" alt="Studio snack bar and refreshments" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/studio-monitor-setup.webp" alt="Professional studio monitor setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/keyboard-piano-setup.webp" alt="Professional keyboard and piano setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/lounge-area.webp" alt="Studio lounge and relaxation area" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/led-lighting-system.jpg" alt="Professional LED lighting system" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/mixer-audio-equipment.jpg" alt="Professional mixer and audio equipment" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/snack-station.jpg" alt="Studio snack station and refreshments" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/dual-monitor-setup.jpg" alt="Dual monitor professional setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/keyboard-equipment.jpg" alt="Professional keyboard and piano equipment" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/studio-desk-setup.webp" alt="Professional studio desk setup" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
+      <img src="assets/images/studio-gallery/wide-studio-view.webp" alt="Wide studio view with professional equipment" class="shadow-lg object-cover w-full aspect-[3/2] rounded-lg" loading="lazy" decoding="async" width="1200" height="800" sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw">
     </div>
+  </div>
 </section>
