@@ -13,7 +13,7 @@ foreach ($page in $pages) {
   if ($html -match 'class=["''][^"'']*lazy-load') { $errors.Add("$($page.Name): legacy lazy-load hook remains") }
   $images = [regex]::Matches($html, '<img\b[^>]*>', 'IgnoreCase')
   foreach ($image in $images) {
-    if ($image.Value -notmatch '\bwidth=["'']\\d+["'']' -or $image.Value -notmatch '\bheight=["'']\\d+["'']') {
+    if ($image.Value -notmatch '\bwidth=["'']\d+["'']' -or $image.Value -notmatch '\bheight=["'']\d+["'']') {
       $errors.Add("$($page.Name): image is missing width/height: $($image.Value.Substring(0, [Math]::Min(140, $image.Value.Length)))")
     }
   }
