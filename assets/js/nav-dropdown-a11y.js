@@ -25,7 +25,8 @@ function initNavDropdownA11y() {
     var group = trigger.closest('.group');
     if (!group || group.dataset.dropdownBound === 'true') return;
 
-    var panel = group.querySelector('div[class*="absolute"]');
+    var panelId = trigger.getAttribute("aria-controls");
+    var panel = panelId ? document.getElementById(panelId) : null;
     if (!panel) return;
 
     setPanelState(trigger, panel, false);
@@ -38,7 +39,8 @@ function initNavDropdownA11y() {
         if (otherTrigger === trigger) return;
         var otherGroup = otherTrigger.closest('.group');
         if (!otherGroup) return;
-        var otherPanel = otherGroup.querySelector('div[class*="absolute"]');
+        var otherPanelId = otherTrigger.getAttribute("aria-controls");
+        var otherPanel = otherPanelId ? document.getElementById(otherPanelId) : null;
         if (!otherPanel) return;
         setPanelState(otherTrigger, otherPanel, false);
       });
